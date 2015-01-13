@@ -28,6 +28,7 @@
 *.fdb_latexmk
 *.synctex.gz
 *.synctex.gz(busy)
+*.synctex
 *.pdfsync
 
 ## Auxiliary and intermediate files from other packages:
