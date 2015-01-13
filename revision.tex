@@ -1,0 +1,625 @@
+% AEJ-Article.tex for AEA last revised 22 June 2011
+\documentclass[authoryear, review]{elsarticle}
+
+% Uncomment the next line to use the natbib package with bibtex 
+%\usepackage{natbib}
+
+%\usepackage[authordate,backend=biber,block=space]{biblatex-chicago}
+\usepackage{csquotes}
+%\setlength{\bibitemsep}{\baselineskip}
+\usepackage[american]{babel}
+%\addbibresource{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
+%\usepackage{natbib}
+%\usepackage[backend=biber,block=space,style=authoryear-comp]{natbib}
+%\addbibresource{C:/Users/kbuzard/Dropbox/Research/xBibs/tradeagreements.bib}
+
+%\renewcommand{\newunitpunct}{,}
+%\renewbibmacro{in:}{}
+
+
+\usepackage[pdftex,
+bookmarks=true,
+bookmarksnumbered=false,
+pdfview=fitH,
+bookmarksopen=true,hyperfootnotes=false]{hyperref}
+%\usepackage[pdftex]{graphicx}
+
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{cite}
+\usepackage{times, verbatim,bm,pifont,pdfsync}
+%\usepackage[hang,flushmargin]{footmisc}%unindents footnotes
+
+% disables chapter, section and subsection numbering
+%\setcounter{secnumdepth}{-1} 
+
+\usepackage{amsbsy,amssymb, amsmath, amsthm, MnSymbol,bbding}
+%\usepackage[hang,flushmargin]{footmisc} 
+
+%\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lem}{Lemma}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+%\newtheorem{fact}{Fact}
+\newtheorem{result}{Result}
+
+
+
+
+
+\newcommand{\ve}{\theta}
+\newcommand{\ta}{\theta}
+\newcommand{\ov}{\overline}
+\newcommand{\un}{\underline}
+\newcommand{\al}{\alpha}
+\newcommand{\Ta}{\Theta}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\Bt}{B(\bm{\tau^a})}
+\newcommand{\bta}{\bm{\tau^a}}
+\newcommand{\bte}{\bm{\tau^E}}
+\newcommand{\btn}{\bm{\tau^n}}
+\newcommand{\ga}{\gamma}
+\newcommand{\btw}{\bm{\tau^{tw}}}
+\newcommand{\de}{\delta}
+
+\begin{document}
+
+\title{Self-enforcing Trade Agreements, Dispute Settlement and Separation of Powers}
+%\shortTitle{Self-enforcing Trade Agreements and Dispute Settlement}
+\author{Kristy Buzard}
+\ead{kbuzard@syr.edu}
+\ead[url]{http://faculty.maxwell.syr.edu/kbuzard}
+\address{110 Eggers Hall, Economics Department, Syracuse University, Syracuse, NY 13244. 315-443-4079.}
+\date{\today}
+%\pubMonth{Month}
+%\pubYear{Year}
+%\pubVolume{Vol}
+%\pubIssue{Issue}
+%\JEL{F13,F53,C73,D72}
+%\Keywords{}
+
+\begin{abstract}
+In an environment where international trade agreements must be enforced via promises of future cooperation, the presence of an import-competing lobby has important implications for optimal punishments, and therefore dispute resolution procedures. When lobbies work to disrupt trade agreements, the optimal punishment must balance two, conflicting objectives. Longer punishments help to enforce cooperation by increasing the government's costs of defecting, but because the lobby prefers the punishment outcome, this also incentivizes lobbying effort and with it political pressure to break the agreement. Thus the model generates new predictions for the design of mechanisms for resolving trade disputes: there is an optimal length for dispute resolutions procedures, and it depends directly on the political influence of the lobbies. Trade agreement tariffs are shown to be increasing in the political influence of the lobbies, as well as their patience levels.
+\end{abstract}
+
+\begin{keyword}
+
+trade agreements \sep lobbying \sep WTO \sep dispute settlement \sep repeated games \sep enforcement
+
+\end{keyword}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+In the absence of strong external enforcement mechanisms for international trade agreements, we generally assume that cooperation is enforced by promises of future cooperation, or, equivalently, promises of future punishment for exploitative behavior. When repeated-game incentives are used to enforce cooperation and prevent players from defecting in a prisoner's dilemma-style stage game, the strongest punishment available is usually assumed to be the grim trigger strategy of defecting forever upon encountering a defection by one's partner.
+
+Unfortunately, the ability of players to renegotiate out of punishment sequences can interfere with the efficacy of grim-trigger strategies for supporting cooperation; indeed, a variety of concerns about welfare and realism may lead us to explore alternative punishment sequences. Combining this with the observation that lobbies are not only relevant but critically-active players in the repeated game, I argue that we can derive optimal (non-grim-trigger) punishments directly from the players' incentive constraints. In the context of international trade agreements, these punishments can be interpreted as arising from the design and implementation of rules likes those established in the World Trade Organization's Dispute Settlement Understanding.
+
+Not only does adding lobbies suggest an optimal length for dispute settlement procedures; it also turns out that this optimal punishment length itself depends on how readily special interests are able to influence the political process. That is, the optimal length of the dispute settlement procedure is a function of the strength of the lobbies, reinforcing the idea that including lobbying in such analyses can be can be critically important for institutional design questions. We shall also see that, for a fixed dispute settlement procedure, as lobbies become more influential or more patient, the equilibrium trade agreement tariff that must be provided in order to overcome the ratification hurdle increases. 
+
+The structure of the model is similar to that of \citet{bs2005} with two main changes: the political-economy weights are endogenously determined, and in place of a unitary government that has different preferences before and after signing a trade agreement, this model has two branches of government with differing preferences who share policy-making power as in \citet{mr97}, \citet{song} and \citet{buzard2013b}.
+
+This paper incorporates such a separation-of-powers policy-making process with endogenous lobbying along the lines of \citet{gh94,gh95} into a repeated-game setting with a dispute settlement institution (DSI) to take account of the threat to cooperation posed by renegotiation. This DSI is patterned on that of \citet{krw}, who propose a notion of \textit{recurrent agreement} that takes into account the possibility of renegotiation via such a DSI loosely patterned on the Dispute Settlement Body of the World Trade Organization. The DSI helps trading partners to credibly condition their negotiations on the state of their relationship and avoid the problems created by renegotiation.
+
+Here, welfare-maximizing executives use their control over trade-agreement tariffs as a kind of political commitment device:\footnote{This is a different kind of domestic commitment role for trade agreements than that identified by \citet{mrc2007}, who show that trade agreements can be useful for helping governments commit vis-\`{a}-vis private firms in their investment decisions.} by setting tariffs to optimally reduce lobbying incentives, they reduce the political pressure on the legislatures. This changes the legislatures's incentives, so that they do not break the agreement as they would have if they had faced more intense political pressure.\footnote{This is not to say that the legislature itself is made better off by the reduction in political pressure, although \citet{buzard2014} demonstrates that this is possible. It only means that the executive can use the commitment power of the trade agreement to improve its welfare, which is assumed to differ from that of the legislature. The commonly-made assumption that the executive is less protectionist than the legislature is a special case of the finding that susceptibility to special interests generally declines with the size of one's constituency. One simple illustration from the realm of trade policy is the following: a legislator whose district has a large concentration of a particular industry does not take into account the impact of tariffs on the welfare of consumers in other districts, while the executive, whose constituency encompasses the whole country, will internalize these diffuse consumption effects. For a detailed argument, see \citet{lohohal}.\label{fn:ga_l_e3}}
+
+Given that all actors have perfect information about the effect of lobbying effort on the outcome of the political process, the executives maximize social welfare by choosing the lowest tariffs that make it unattractive for the lobbies to provoke the legislature to initiate a trade dispute.\footnote{With no uncertainty of any kind, there will be no trade disputes in equilibrium. Political uncertainty can be easily added to the model, in which case lobbying effort is typically non-zero and there is a positive probability of dispute in equilibrium.} So even when there are no disputes in equilibrium, the out-of-equilibrium threat that a lobby might provoke a trade war is crucial in determining the equilibrium trade agreement structure.
+
+Thus the problem with the lobby has an extra constraint relative to the standard problem. The constraint on the key repeated-game player, which here is the legislature, is loosened by increasing the punishment length because defections become relatively more unattractive. However, the new constraint due to the presence of lobbying becomes tighter as the punishment becomes more severe because the lobby \textit{prefers} punishment periods. Because the tariffs during punishment, and thus the lobby's profits, are higher compared to those they receive during a cooperative period, the lobby has increased incentive to exert effort as the punishment lengthens.
+
+The optimal punishment length must balance these two competing forces. Where the balance falls depends in large part on how influential the lobby is in the legislative process. If the lobby has very little power, the optimal punishment converges to that of the model without a lobby: longer punishments are better because the key constraint is the legislature's. As the lobby becomes stronger, the optimal punishment becomes shorter because the lobby's incentive becomes more important.
+
+Quite intuitively, it is also shown that, for a given punishment length, increases in the lobby's strength lead to lower required payments to provoke trade dispute and therefore higher equilibrium trade agreement tariffs to avoid those disputes. Increases in the lobby's patience have the same qualitative effects, while increases in the patience of the legislature work in the opposite direction: the lobby must pay more to induce the legislature to endure the punishment and the executive can accordingly reduce trade agreement tariffs without fear that they will be broken.
+
+The recurrent agreement approach to renegotiation in a WTO-like environment following \citet{krw} (hereafter KRW) complements contributions by \citet{cotmitch}, \citet{ludema2001} and \citet{beshkar2010a} that study \textit{renegotiation-proof} trade agreements. Whereas the \textit{renegotiation-proof} concept of \citet{br89} and \citet{fm89} assumes that joint-value punishments are infeasible, the recurrent agreement approach argues that joint-value punishments can be made feasible by an institution such as the DSI.
+
+Related is also a growing literature on renegotiation in one-shot models of trade agreements, ranging from the limited forms of renegotiation in \citet{bs1999} and \citet{beshkar2010b} to the richer models of renegotiation in \citet{beshkar2013} and \citet{ms2013,ms2012a}. These consider a substantively different question: instead of being concerned with the undermining of cooperation due to the renegotiation of punishments, they assume perfect external enforcement and ask questions about the optimality of various agreement and institutional designs given that the parties have some ability to change the terms of their agreement within the one-shot interaction. \citet{ethier} and \citet{ms2011} study the role of dispute settlement procedures where there is perfect external enforcement and no possibility of renegotiation.
+
+Repeated non-cooperative game models of trade agreements without renegotiation have been considered by \citet{mcm86,mcm89}, \citet{dixit1987}, \citet{bs1990, bs1997a, bs1997b, bs2002}, \citet{kovthurs}, \citet{maggi99}, \citet{ederington}, \citet{rosendorff}, \citet{bagwell2009}, and \citet{park}. In particular, \citet{hungerford}, \citet{riezman1991}, and \citet{martinvergote} consider the impact of different assumptions about reactions and timing of punishments for deviations from agreements. Here, I assume the simplest case---that the trading partners remain in a symmetric trade war until the dispute resolution process has concluded. Although officially-sanctioned retaliation is not often imposed, and if it is, it is with delay, this timing is consistent with the idea that trading partners exact `vigilante justice' through various means such as imposing unrelated anti-dumping duties.\footnote{See the discussions in \citet{bown2005} and \citet{martinvergote} for evidence on informal versus formal retaliation.}
+
+I begin in the next section by describing in detail the stage game, which is closely related to the model in \citet{buzard2013b}. Both papers employ the separation-of-powers government structure with endogenous lobbying. While the current paper focuses on the implications of the self-enforcement and renegotiation constraints for the optimal design of trade agreements and dispute-settlement institutions, \citet{buzard2013b} abstracts from enforcement issues and demonstrates that taking into account the separation-of-powers structure can resolve the empirical puzzle surrounding the \citet{gh94} model, highlights the importance of the threat of ratification failures on the formation of trade agreements and develops new results about the role of political uncertainty in the policy-making process.
+
+Section~\ref{sec:repeated} then sets out the dispute settlement institution and the set-up of the repeated game. I describe the structure and properties of optimal trade agreements in Section~\ref{sec:structure} and explore the forces shaping optimal dispute resolution procedures in Section~\ref{sec:optimal} before concluding in Section~\ref{sec:concl3}.
+
+
+\section{Stage Game}
+\label{sec:stage}
+I employ a two good partial equilibrium model with two countries: home (no asterisk) and foreign (asterisk).  The countries trade two goods, $X$ and $Y$, where $P_i$ denotes the home price of good $i \in \left\{X,Y\right\}$ and $P_i^*$ denotes the foreign price of good $i$. In each country, the demand functions are taken to be identical for both traded goods, respectively $D(P_i)$ in home and $D(P_i^*)$ in foreign and are assumed strictly decreasing and twice continuously differentiable.
+
+The supply functions for good $X$ are $Q_X(P_X)$ and $Q_X^*(P_X^*)$ and are assumed strictly increasing and twice continuously differentiable for all prices that elicit positive supply. I also assume $Q_X^*(P_X) > Q_X(P_X)$ for any such $P_X$ so that the home country is a net importer of good $X$. The production structure for good $Y$ is taken to be symmetric, with both demand and supply such that the economy is separable in goods $X$ and $Y$. As is standard, it is assumed that the production of each good requires the possession of a sector-specific factor that is available in inelastic supply and is non-tradable so that the income of owners of the specific factors is tied to the price of the good in whose production their factor is used.
+
+For simplicity, I assume each government's only trade policy instrument is a specific tariff on its import-competing good: the home country levies a tariff $\tau$ on good $X$ while the foreign country applies a tariff $\tau^*$ to good $Y$. Local prices are then $P_X = P_X^W + \tau$, $P_X^* = P_X^W$, $P_Y = P_Y^W$ and $P_Y^* = P_Y^W + \tau^*$ where a $W$ superscript indicates world prices and equilibrium prices are determined by the market clearing conditions
+$$M_X(P_X)= D(P_X)-Q_X(P_X) = Q_X^*(P_X^*) - D(P_X^*) = E_X^*(P_X^*)$$
+$$E_Y(P_Y)=Q_Y(P_Y)-D(P_Y) = D(P_Y^*)-Q_Y^*(P_Y) = M_Y^*(P_Y^*)$$
+where $M_X$ are home-county imports and $E_X^*$ are foreign exports of good $X$ and $E_Y$ are home-county exports and $M_Y^*$ are foreign imports of good $Y$.
+
+It follows that $P_X^W$ and $P_Y^W$ are decreasing in $\tau$ and $\tau^*$ respectively, while $P_X$ and $P_Y^*$ are increasing in the respective domestic tariff. This gives rise to a standard terms-of-trade externality. As profits and producer surplus (identical in this model) in a sector are increasing in the price of its good, profits in the import-competing sector are also increasing in the domestic tariff. This economic fact, combined with the assumptions on specific factor ownership, is what motivates political activity.
+
+I next describe the politically-relevant actors. In order to focus attention on protectionist political forces, I assume that only the import-competing industry in each country is politically-organized and able to lobby and that it is represented by a single lobbying organization.\footnote{Adding a pro-trade lobby for the exporting industry would modify the magnitude of the effects and make free trade attainable for a range of parameter values, but it would not modify the essential dynamic.} Each country's government is composed of two branches: an executive who can conclude trade agreements and a legislature that has final say on trade policy. In summary, the political process is modeled as involving three players in each country: the lobby, the executive, and the legislature.
+
+The stage-game timing is as follows. First, the executives set trade policy cooperatively in an international agreement. In the context of the repeated game, this can be construed as concluding an agreement in the first period and then potentially renegotiating at the beginning of each subsequent period, or as forming a new agreement each period. After the trade agreement is concluded in each period, the lobbies attempt to persuade the legislatures in their respective countries to break the trade agreement. Next, the legislatures decide whether to abide by the agreement or to provoke a trade war. In the event that the trade agreement does not remain in force, there is a final stage of lobbying and voting to set the trade-war tariffs. Once all political decisions are taken, producers and consumers make their decisions.
+
+We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. As this game is solved by backward induction, it is intuitive to start by describing the incentives of the legislatures, whose decisions I model as being taken by a median legislator. As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
+
+The per-period welfare function of the home legislature is
+\begin{equation}
+  W_\text{ML} = \mathit{CS}_X(\tau) + \ga(e) \cdot \mathit{PS}_X(\tau) + \mathit{CS}_Y(\tau^*) + \mathit{PS}_Y(\tau^*) + \mathit{TR}(\tau)
+  \label{eq:ml3}
+\end{equation}
+where $\mathit{CS}$ is consumer surplus, $\mathit{PS}$ is producer surplus, $\ga(e)$ is the weight placed on producer surplus (profits) in the import-competing industry, $e$ is lobbying effort, and $\mathit{TR}$ is tariff revenue. Here, the weight the median legislator places on the profits of the import-competing industry, $\ga(e)$ is affected by the level of lobbying effort.\footnote{The standard PFS modeling would specify $W_\text{ML} = C + aW$, but as will be seen when we come to the preferences of the executive, this is not sufficiently general for the purposes of this model. Although complex, an isomorphism can be made between the two forms in a special case as discussed in \citet{buzard2013b}.}
+
+Notice that, aside from the endogeneity of the weight the legislature places on the lobbying industry's profits, this is precisely the \textit{deus ex machina} government objective function popularized by \citet{baldwin} that is commonly employed in the literature on the political economy of trade agreements. Since trade policies are overwhelmingly determined within the context of trade agreements, it is useful to have a framework to bring together the endogenous political pressure of PFS-style modeling with the trade agreements approach; the formulation in Equation~\ref{eq:ml3} is intended to be a bridge between the two. Modeling the objective function so closely on the standard in the trade agreements literature allows for direct comparisons to the large extant body of work that studies exogenous shocks only, revealing cleanly the effects of the addition of endogenous lobbying.
+
+\begin{assumption}
+  $\ga(e)$ is continuously differentiable, strictly increasing and concave in $e$.
+  \label{as:ga_c3}
+\end{assumption}
+
+Assumption~\ref{as:ga_c3} formalizes the intuition that the legislature favors the import-competing industry more the higher is its lobbying effort, but that there are diminishing returns to lobbying activity.\footnote{The diminishing returns here take the form of declining increments to the lobby's influence as effort increases; \citet{ethier2012} has an alternate form in which the returns to lobbying decline with higher levels of protection.} The assumption of diminishing returns to lobbying effort has been present in the literature going back at least to \citet{fw}. \citet{dgh97} point out the linearity in contributions assumed in the Protection for Sale model prevents complete analysis of distributional questions and restricts the returns to lobbying activity to be constant. They generalize the functional form as $G(a,c)$ where $a$ is the policy vector in a general policy-setting environment and show that the PFS equilibrium analysis can be extended to this more general setting.
+
+Lobbying affects only the weight the legislature places on the profits of the import-competing industry. These profits are higher in a trade war than under a trade agreement, so given Assumption~\ref{as:ga_c3}, the legislature becomes more favorably inclined toward the high trade-war tariff and associated profits as lobbying increases and therefore more likely to break the trade agreement.
+
+Given the legislature's preferences, the home lobby chooses its lobbying effort ($e_b$ to influence the break decision and $e_{tw}$ to influence the trade war tariff) to maximize the welfare function:
+\begin{equation}
+  U_\text{L} = \left[ \pi(\tau^{\mathit{tw}}) - e_{tw} \right]1{\hskip -2.5 pt}\hbox{I} \left[ \text{Trade War} \right] + \pi(\tau^a)1{\hskip -2.5 pt}\hbox{I} \left[ \text{TradeAgreement} \right]  - e_b
+  \label{eq:lv3}
+\end{equation}
+where $\pi(\cdot)$ is the current-period profit and $\tau^a \ (\tau^\mathit{tw})$ is the home country's tariff on the import good under a trade agreement (war). I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
+
+I assume the lobby's contribution is not observable to the foreign legislature. The implication is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected.\footnote{cfr. \citet{gh95}, page 685-686.}
+
+In the first stage, the executives choose the trade agreement tariffs $\bta=\left(\tau^a,\tau^{*a} \right)$ via a negotiating process that I assume to be efficient. In this symmetric environment, this process maximizes the joint payoffs of the trade agreement:\footnote{If political uncertainty is present, the joint payoffs must take into account the possibility that the trade agreement will be broken. In the case of certainty, agreement will always be maintained on the equilibrium path and so this specification is sufficient.}
+\begin{equation}
+  \bm{W_\text{E}}(\bta) = W_\text{E}(\bta) + W_\text{E}^*(\bta)
+  \label{eq:jv3}
+\end{equation}
+
+I model the executives' choice via the Nash bargaining solution where the disagreement point is the executives' welfare resulting from the Nash equilibrium in the non-cooperative game (i.e. in the absence of a trade agreement) between the legislatures.
+
+The executives are assumed, for simplicity, to be social-welfare maximizers who can make transfers between them.\footnote{It is trivial to relax the assumption of social-welfare maximizing executives; in the present symmetric environment with no disputes, the same is true of the assumption about transfers.} Therefore the home executive's welfare is specified as follows:
+\[
+  W_\text{E} = \mathit{CS}_X(\tau) + \mathit{PS}_X(\tau) + \mathit{CS}_Y(\tau^*) + \mathit{PS}_Y(\tau^*) + \mathit{TR}(\tau)
+\]
+Note that this is identical to the welfare function for the legislature aside from the weight on the profits of the import industry, which is not a function of lobbying effort and here is assumed to be $1$ for simplicity. This assumption does \textit{not} require that the executives are not lobbied; only that their preferences are not directly altered in a significant way by lobbying over trade---that they do not sell protection in order to finance their re-election campaigns. In the case of the post-war United States, where the Congress has consistently been significantly more protectionist than the President, this seems to reasonably reflect the political reality. For trade policy, where there are concentrated benefits but harm is diffuse, there are good reasons for this to be the case. Because the President has the largest constituency possible, delegating authority to the executive branch may simply be a mechanism for ``concentrating'' the benefits since consumers seem unable to overcome the free-riding problem. In fact, a strong argument can be made that power over trade policy has been delegated to the executive branch precisely \textit{because} it is less susceptible to the influence of special interests \citet{destler}.
+
+Therefore, in line with both the theoretical and empirical literature, I will assume that $\ga(e) \geq 1$ for all $e$. That is, even for the least favorable outcome of the lobbying process, the legislature will be at least weakly more protectionist than the executive. 
+
+\begin{assumption}
+  $\ga(e) \geq 1 \ \forall e$.
+  \label{as:ga_l_e3}
+\end{assumption}
+
+Assumption~\ref{as:ga_l_e3} ensures that $\tau^a < \tau^{tw}$, and more generally, that the legislature's incentives are more closely aligned with the lobby's than are those of the executive. This is not essential but simplifies the analysis and matches well the empirical findings that politicians with larger constituencies are less sensitive to special interests (See \citet{destler} and footnote~\ref{fn:ga_l_e3} above).
+
+Although the political process here matches most closely that of the United States in the post-war era, I believe the model or one of its extensions is applicable for a broad range of countries for which authority over the formation and maintenance of trade policy is diffuse and subject to political pressure either at home or in a trading partner.\footnote{In particular, the binary decision by the legislature about whether to abide by or break the trade agreement is modeled on the ``Fast Track Authority'' that the U.S. Congress granted to the Executive branch almost continuously from 1974-1994 and then again as ``Trade Promotion Authority'' from 2002-2007.} 
+
+\section{Repeated Game}
+\label{sec:repeated}
+\subsection{Dispute Settlement Institution}
+Following KRW, I will assume that the countries submit themselves to an external Dispute Settlement Institution (DSI) for the purposes of overcoming the renegotiation problem: that is, the incentive to renegotiate out of punishment phases that destroys the ability of the punishments to enforce cooperation. One way to (informally) make adherence to the DSI incentive compatible is to imagine that many trading partners use the DSI and that all will punish a country who deviates in any bilateral agreement.
+
+The DSI is assumed to keep records of the negotiated agreements, complaints, and violations, and to settle disputes when agreements are violated. 
+The simple DSI employed here conditions the interaction of the countries in the following manner.\footnote{See KRW Section 5.1 for more details.} The DSI keeps records in terms of two possible states of the trade relationship, ``cooperative'' and ``dispute.'' At the start of any period, it is assumed that either there is no dispute pending, or else the DSI is in the process of resolving a dispute triggered by a violation in some prior period. I refer to the former situation as the ``cooperative state,'' or state $C$. If a dispute is pending, then the period begins in the ``dispute state,'' or state $D$. When a tariff agreement is violated, the DSI switches the state from $C$ to $D$, and a dispute settlement process (DSP) begins, as described below. When settlement is achieved, the DSI switches the state from $D$ back to $C$. 
+
+Importantly, the DSI cannot be directly manipulated by the countries involved in a dispute, so countries continue to negotiate agreements and choose tariffs as before, except their negotiation can be conditioned on the DSI's state. Therefore, the negotiation problem that countries face following a
+dispute history may be different than the negotiation problem they face following a cooperative history.
+
+Rather than developing a detailed model of the DSP, KRW treat the DSP as a ``black box,'' where the key feature is that settlement occurs with delay. For a period that begins in the $D$ state, the dispute is resolved, and the state is switched to $C$, with probability $p$ where $p$ is exogenous and is meant to capture the idea that dispute resolution may entail costs including delay. I will follow an alternative and equivalent convention by assuming that the state is switched back to the ``cooperative state'' $T$ periods after a dispute is initiated.
+
+Thus the timing of actions is the following. If the countries are in state $C$ at the start of period $t$, they choose any agreement that is supportable in state $C$ and communicate the agreement to the DSI. As long as their tariff choices adhere to the agreement, they remain in state $C$ at the start of period $t+1$. If one or both countries defect from the agreement, however, a dispute arises, and the state is switched to $D$ at the start of period $t+1$.
+
+If the countries are in state $D$ at the start of period $t$, the state will only be switched back to $C$ if $t-1$ was the $T$th period since the beginning of the dispute. In this case, the countries immediately negotiate an agreement supportable in the cooperative state and communicate it to the DSI. If the dispute is unresolved, the state remains $D$ through the start of period $t+1$, irrespective of what tariffs the countries select in the current period. In this event, the countries choose an agreement from among those that are supportable in the dispute state.
+
+KRW define a recurrent agreement to be a subgame perfect equilibrium in which, in each period, the continuation value is consistent with this theory of negotiation. This requires, first, that countries agree to do as well as possible in each state; and second, that agreement is recurrent, in that continuation payoffs are always drawn from those that are supportable in the current state, but the countries are unable to alter the state as part of their agreement. The solution concept employed here is that of the maximal recurrent agreement; that is, the recurrent agreement that maximizes the welfare of the executives, who I assume for simplicity are social welfare maximizers.
+
+\subsection{Trade Agreements with External Enforcement}
+Standard repeated-game models have one player in each country; here there are three, each with distinctive roles that mirror those laid out in the stage game. To review, in each period, the executives can re-negotiate the trade agreement, the lobby can choose whether or not to exert lobbying effort and how much effort to exert, and the legislature can break the trade agreement and set trade-war tariffs.
+
+Given that each trading partner submits to the DSI, we can determine the repeated-game incentives in each state. The executives will jointly maximize social welfare given the state, but have no opportunity to affect the state other than to choose tariffs that are supportable. Thus the executives maximize joint welfare subject to the incentive constraints of the other players. Again, because of symmetry and separability, it suffices to restrict attention to the home country.
+
+In state $D$, no action of either the lobby or the legislature will change the state; that is, the continuation payoffs will be the same regardless of their actions. When $x$ periods of punishment are remaining, the supportability condition for the legislature to adhere to any tariff $\bm{\tau^D}$, given the level of lobbying effort $e_{tw}$, is
+\[
+  W_\text{ML}(\ga(e_{tw}),\bm{\tau^D}) + \de_\text{ML} V^D_\text{ML} \geq W_\text{ML}(\ga(e_{tw}),\tau^R(\tau^{*D}),\tau^{*D}) + \de_\text{ML} V^D_\text{ML} 
+\]
+where $V^D_\text{ML}$ is the continuation value of the median legislator in the dispute state and $\tau^R(\tau^{*D})$ is the home legislature's best response to $\tau^{*D}$ given $\ga(e_{tw})$. $\de_\text{ML}$ is the discount factor of the median legislator, while $\de_\text{L}$ will be used to represent the discount factor of the lobby and $\de_E$ that of the executive branch.
+
+Since future payoffs will not be impacted by current actions, the legislature has no incentive to choose anything other than its static best response for all $x$. Thus the only tariffs that can be supported in state $D$ are the tariffs that unilaterally maximize Equation~\ref{eq:ml3} given $\tau^*$ and the lobby's choice $e_{tw}$. The separability of the economy implies that there are no interactions between the decision problems of the legislatures and the lobbies respectively, so the home and foreign best response tariffs are independent and the home country's tariff in a dispute period maximizes weighted home-country welfare in the $X$-sector only. The foreign legislature's decision problem is analogous, and unilateral optimization leads to what I refer to as the trade war tariffs as the solution to the following first order condition:
+\[
+		\frac{\partial \mathit{CS}_X(\tau)}{\partial \tau^{tw}} + \ga(e_{tw}) \cdot \frac{\partial \mathit{PS}_X(\tau)}{\partial \tau^{tw}} +  \frac{\partial \mathit{TR}(\tau)}{\partial \tau^{tw}} = 0
+\]
+
+\noindent The lobby faces an analogous problem. Because nothing the lobby does can impact the disposition of the DSP, it will choose the effort level that maximizes static profits. Thus the lobby chooses its effort $e$ given the above tariff-setting behavior by maximizing its profits net of effort: $\pi\left(\tau^{tw}\left(\ga\left(e_{tw}\right)\right)\right) - e_{tw}$. (Note this is Equation~\ref{eq:lv3} simplified by the resolution of uncertainty over the legislature's decision on the trade agreement). This implies a first order condition of
+\begin{equation}
+	\frac{\partial \pi(\tau^{tw}(\ga(e)))}{\partial e_{tw}} = 1
+  \label{eq:lobtw}
+\end{equation}
+That is, at this stage, the lobby chooses the level of effort that equates its expected marginal increase in profits with its marginal payment. I label these tariffs $\btw = (\tau^{tw},\tau^{*tw})$.
+
+The supportability conditions in state $C$ are quite different. I will assume that one legislature is randomly assigned the opportunity to break the agreement in any given period. It does so by choosing a tariff, $\tau^b$, that triggers a trade dispute. I will remain agnostic as to how $\tau^b$ is set, requiring only that it satisfy three intuitive criteria: it must be higher than the tariff set in the trade agreement $\tau^a$ in order to trigger a dispute; it must provide higher welfare to the median legislator at $e=e_b$ than the trade agreement tariff in order to be a tempting ``cheater's'' payoff; and it must provide lower welfare to the median legislator at $e=e_b$ than the trade war tariff in order for the trade war to be felt as a punishment.
+
+This implies the following constraint on the trade agreement tariffs $\bta$:
+\[
+  W_\text{ML}(\ga(e_b),\bta) + \de_\text{ML} V^C_\text{ML} \geq W_\text{ML}(\ga(e_b),\tau^b,\tau^{*a}) + \de_\text{ML} V^D_\text{ML}
+\]
+where $V^C_\text{ML}$ is the continuation value of the median legislator in the cooperative state. If the punishment is $T$ periods in the dispute state (where only trade-war tariffs can be chosen), then the only part of the continuation values that need be considered are the next $T$ periods because after those $T$ periods, the relationship will revert back to cooperation in either state and so the continuation value will be the same from period $T+1$ on. When in state $C$ in the future, the executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the  same supportability conditions; in state $D$, the argument above shows that $\btw$ must be chosen. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^i = \sum_{t=1}^i = \sum_{t=1}^\infty - \sum_{t=i+1}^\infty = \frac{\de}{1-\de} - \frac{\de^{i+1}}{1-\de} = \frac{\de - \de^{i+1}}{1-\de} $.}
+\begin{multline}
+  W_\text{ML}(\ga(e_b),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\bta) \geq \\
+	W_\text{ML}(\ga(e_b),\tau^b,\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\btw)
+  \label{ine:leg}
+\end{multline}
+and
+\begin{equation}
+  \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \pi(\tau^a) \geq \pi(\tau^b) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] - e_b
+  \label{ine:lob}
+\end{equation}
+Because the countries will not be able to do anything to change the disposition of the DSI after a dispute has been triggered, it is only these constraints for $T$-length punishments that must be checked; once a punishment has been triggered, the dispute-state incentive conditions are the relevant ones.
+
+
+
+\section{Trade Agreement Structure}
+\label{sec:structure}
+We can write the executives' joint problem as
+\begin{equation}
+  \max_{\bta} \frac{\bm{W_\text{E}}(\bta)}{1-\de_\text{E}} \hskip.2in \text{subject to } (\ref{ine:leg2}) \text{ and } (\ref{ine:lob2})
+  \label{prob:max}
+\end{equation}
+\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),\btw) \right] \geq \\
+	W_{\text{ML}}(\ga(e_b),\tau^b,\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
+  \label{ine:leg2}
+\end{multline}
+\begin{equation}
+  e_b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+  \label{ine:lob2}
+\end{equation}
+where Inequalities \ref{ine:leg2} and \ref{ine:lob2} are simple rearrangements of \ref{ine:leg} and \ref{ine:lob}.
+
+To understand how the executives optimally structure trade agreements, we must first examine the incentives of the lobbies and how the legislatures make decisions regarding breach of the trade agreement. The symmetric structure of the model permits restriction of attention to the home country.
+
+I will consider the economically interesting case in which, for a given $\bm{\de}=\left(\de_\text{E},\de_\text{ML},\de_\text{L}\right)$ and $T$, there exists a non-trivial trade agreement in the absence of lobbying, that is, one in which the lowest supportable cooperative tariffs are strictly lower than the trade-war (i.e. non-cooperative) level. Call the trade-agreement tariffs in the absence of lobbies $\bta_{\text{NL}}$. If $\bta_{\text{NL}} = \btw$, the lobby has no incentive to be active and the extra constraint implied by the presence of the lobby does not bind.
+
+In state $C$, the lobby has a two-stage problem. First, for the given $\bta$, $\bm{\de}$ and $T$, it calculates the minimum $e_b$ required to induce the legislature to break the trade agreement. Call this minimum effort level $\ov{e}(\bta)$. This calculation of precise indifference is possible because it is assumed here that the political process is certain---that is, all actors know precisely how lobbying effort affects the identity of the median legislator through $\ga(e_b)$.
+
+Given the $e_b$ required to break the agreement, the lobby will then compare its current and future payoffs from inducing a dispute net of lobbying effort $\left(\text{that is, }\pi(\tau^b) + \de_\text{L} V^D_L - \ov{e}\right)$ to the profit stream from the trade agreement with no lobbying effort $\left(\pi(\tau^a) + \de_\text{L} V^C_L\right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}$. If the former is larger, it induces the cheapest possible break; if the latter is larger, the lobby chooses to be inactive and the agreement remains in force.
+
+The executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. Thus they must raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ and disengaging completely,\footnote{Here I assume that the lobby does not exert effort when indifferent; if one were to assume the opposite, tariffs would have to be raised by an additional $\varepsilon$.} provided that this also satisfies the legislative constraint. By construction, the legislative constraint will always be slack because the $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium, $\bta$ is chosen so that the lobby disengages. When the lobby is disengaged $\left(e_b=0\right)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when $e_b=0$ than when $e_b=\ov{e}(\bta)$.
+
+\hyperlink{Lem3}{Lemma~\ref{lem:exist}} in the Appendix demonstrates that the solution to the executives' problem is well-defined. This combined with the immediately preceding discussion demonstrates the following result.
+\begin{result}
+  In the case of political certainty, the equilibrium trade agreement induces zero lobbying effort and is never be subject to dispute. The executives choose the minimum tariff level that induces the lobby to choose $e_b=0$.
+  \label{res:eqm}
+\end{result}
+At the equilibrium tariffs, the lobby's constraint binds, while the legislature's does not. The amount of effort the lobby would have to exert to provoke a dispute, however, is derived from the legislature's constraint. This cost is then used in the lobby's constraint to calculate the lowest tariff level that will induce the lobby to disengage (that is, choose $e_b =0$ over $e_b=\ov{e}(\bta)$) and therefore make the median legislator's constraint slack and induce \textit{her} to choose the internationally-agreed-upon $\tau^a$ over $\tau^b$ and the implied dispute.\footnote{The results would be altered in magnitude but not in spirit by assuming that the trade agreement tariffs are weak bindings---that is, tariff caps---instead of strong bindings. The most important implication is that there would be positive lobbying in equilibrium as the lobby would need to put forth effort to bid protection levels up to the cap. There would still be no trade disputes in equilibrium.}
+
+So, although in this simple model we do not see disputes in equilibrium, the lobby's out-of-equilibrium incentives to exert effort to provoke a dispute are essential in determining the tariff-setting behavior of the executives.
+
+\subsection{Trade Agreement Properties}
+Following Result~\ref{res:eqm}, we know that the lobby first uses Expression~\ref{ine:leg2} at equality to determine $\ov{e}(\bta)$: that is, how much it has to pay for any $\bta$ in order to induce the legislature to choose noncooperation. We can re-write this condition as
+\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right] \\
+	- \left[ W_\text{ML}(\ga(\ov{e}),\tau^b,\tau^{*a}) - W_\text{ML}(\ga(\ov{e}),\bta) \right] = 0
+  \label{eq:leg2}
+\end{multline}
+
+With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{ine:lob2} at equality to determine the required $\tau^a$:\footnote{There are analogous expression for $\tau^{*a}$ throughout that can be ignored by symmetry.} that is, the trade agreement tariff that is just high enough to induce the lobby to disengage, causing the equilibrium outcome to be $e_b = 0$ and the trade agreement tariff to remain in place. We can rewrite this condition as
+\begin{equation}
+  \ov{e}(\bta) - \left[ \pi(\tau^b) - \pi(\tau^a) \right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right] = 0
+  \label{eq:lob2}
+\end{equation}
+
+Although explicit expressions for the solution functions $\ov{e}(\cdot)$ and $\tau^a(\cdot)$ cannot be arrived at without imposing further assumptions, significant intuition can be derived implicitly. An overview of the results will be provided here, while the mathematical details are in the Appendix.
+
+A central question is how the two equations are linked, that is, what is the nature of the relationship between $\tau^a$ and $\ov{e}$, and it is straightforward. 
+\begin{corollary}
+  An increase in the trade agreement tariff, \emph{ceteris paribus}, leads to an increase in the minimum lobbying effort ($\ov{e}$) required to break the trade agreement.
+  \label{cor:et}
+\end{corollary}
+
+Proof: See the \hyperlink{Cor_et}{Appendix}.
+
+\noindent Because $\ov{e}$ makes the median legislator indifferent between the trade agreement tariff and the higher ``cheater's'' tariff balanced by a future punishment, we know that the median legislator's most preferred tariff when $e_b=\ov{e}$ must be higher than the trade agreement tariff. Therefore raising $\tau^a$ brings the trade agreement tariff closer to the legislature's ideal point, and thus the lobby must pay more to make the legislature willing to break the agreement.
+
+Corollary~\ref{cor:et} helps to answer the comparative static question of how changes in the patience level of the lobby effect the equilibrium trade agreement tariffs.
+
+\begin{corollary}
+  As the lobby becomes more patient ($\de_\emph{L}$ increases), the trade agreement tariff also increases, \emph{ceteris paribus}.
+  \label{cor:tdl}
+\end{corollary}
+
+Proof: See the \hyperlink{Cor_tdl}{Appendix}.\footnote{In the Appendix, I explain that it must be assumed that trade agreement tariffs are set such that the lobby would have incentive to exert effort to sustain a trade war. Restricting attention to this case is not trivial; see the conclusion for discussion of a planned extension that more fully explores the trade-war phase.}
+
+\noindent When the lobby becomes more patient, the equilibrium trade agreement tariff must be raised because the lobby now places relatively less value on the cost of $e_b$ it pays in the current period in order to attain the benefit of higher tariffs under a trade war in future periods, which are now valued relatively more. The break tariff $\tau^b$ (which is lower than $\tau^{tw}$) in the current period is not the lobby's primary goal but is used to incentivize the legislature. Thus the lobby's incentives to exert effort must be reduced by increasing the trade agreement tariff, thus reducing the profit gap between the trade war and the trade agreement.
+
+A change in $\de_\text{L}$ might reflect a change in firms' planning horizons, or even their operational horizons---although it is not entirely clear in which direction this might work for firms who are facing extinction without sufficient protection. The lobby's patience level might also change with a change in the administrative leadership of the lobby, or as a reduced form for changes in risk aversion in a model with political uncertainty---a more risk-averse lobby would effectively weigh the future, uncertain gains less relative to the current, certain cost.
+
+Turning to the patience of the median legislator, we start with the effect on the minimum lobbying effort level.
+
+\begin{corollary}
+  As the median legislator becomes more patient ($\de_\emph{ML}$ increases), the minimum lobbying effort ($\ov{e}$) required to break the trade agreement increases \emph{ceteris paribus}.
+  \label{cor:edm}
+\end{corollary}
+
+Proof: See the \hyperlink{Cor_edm}{Appendix}.
+
+\noindent A more patient median legislator weighs the future punishment for deviating more heavily relative to the gain from the cheater's payoff in the current period for any given level of effort. The lobby must compensate by putting forth more effort in the current period to bend the median legislator's preferences toward higher tariffs.
+
+What does an increase in $\de_\text{ML}$, leading to an increase in $\ov{e}$, imply for the optimal trade agreement tariff? The math is in the Appendix, but the intuition is straightforward.
+
+\begin{corollary}
+  As the median legislator becomes more patient ($\de_\emph{ML}$ increases), the trade agreement tariff decreases \emph{ceteris paribus}.
+  \label{cor:tdm}
+\end{corollary}
+
+Proof: See the \hyperlink{Cor_tdm}{Appendix}.
+
+\noindent This result contrasts with Corollary~\ref{cor:tdl}. When the median legislator becomes more patient, the executives are able to decrease the trade agreement tariff \textit{because} the cutoff lobbying expenditure increases. This is because the lobby must now pay more to convince the legislature to choose short-run gains in the face of future punishment, so a wider profit gap between the trade war and trade agreement tariffs is consistent with disengaging the lobby.
+
+Here the result comes through the legislature's indifference condition instead of directly from the lobby's indifference condition, but the intuition is the same: the trade agreement tariff is determined as whatever it takes to quell the lobby's willingness to exert effort to break the agreement.
+
+The median legislator's patience level will increase with any change that makes her less susceptible to challenges from incumbents and therefore more likely to remain in office into the future. Changes to electoral rules, the strength of her party and similar political environment variables are influential here. Also influencing $\de_\text{ML}$ are electoral timing issues and individual decisions about seeking re-election.
+
+Let's turn to another variable that impacts the equilibrium trade agreement in important ways: the weight the median legislator places on the profits of the import-competing sector. This political weighting function, $\ga(e)$, is endogenous to many of the decisions underpinning the equilibrium, but here we examine the effect of an exogenous change in $\ga$. First, on the cutoff effort level:
+
+\begin{corollary}
+  \label{cor:eg}
+  Exogenous positive shifts in the political weighting function $\ga(e)$ reduce the minimum lobbying effort ($\ov{e}$) required to break the trade agreement, \emph{ceteris paribus}.
+
+\end{corollary}
+
+Proof: See the \hyperlink{Cor_eg}{Appendix}.
+
+\noindent In accordance with intuition, if there is a shift in the political weighting function so that the legislature weights the profits of the import-competing sector more heavily for a given amount of lobbying effort, the lobby will have to exert less effort in order to induce a trade disruption.
+
+This translates in a straightforward way to an impact on the trade agreement tariff.
+
+\begin{corollary}
+  Exogenous positive shifts in the political weighting function $\ga(e)$ lead to higher trade agreement tariffs, \emph{ceteris paribus}.
+  \label{cor:tg}
+\end{corollary}
+
+Proof: See the \hyperlink{Cor_tg}{Appendix}.
+
+\noindent This makes sense given that an upward shift in the political weighting function in effect means that the lobby becomes more powerful, that is, it has a larger impact on the median legislator for a given level of effort. This is why the minimum effort level required to break the trade agreement is reduced, and therefore why the trade agreement tariff must be increased: when the lobby has to pay less to break the agreement for any given tariff level, the agreement must be made more agreeable to the lobby.
+
+Examples of phenomena that would shift $\ga(\cdot)$ abound: the lobby becoming more effectively organized, a national news story that makes the industry more sympathetic in the eyes of voters, or the appointment of an individual who is particularly supportive to a key leadership role in the legislature would all shift the political weighting function upward.
+
+\section{Optimal Dispute Resolution}
+\label{sec:optimal}
+In an environment without lobbying, KRW show that social welfare increases (that is, trade-agreement tariffs can be reduced) as punishments are made stronger. This can be seen here if we restrict attention to the legislature's constraint:
+\begin{multline*}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_\text{ML}(\ga(e_b),\btw) \right] \geq \\
+	W_\text{ML}(\ga(e_b),\tau^b,\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta)
+\end{multline*}
+This constraint is made less binding as $T$ increases---that is, as we increase the number of periods of punishment. The intuition is straightforward: the per-period punishment is felt for more periods as the one period of gain from defecting remains the same. Thus larger deviation payoffs remain consistent with equilibrium cooperation as $T$ increases.
+\begin{lemma}
+  The slackness of the legislative constraint is increasing in $T$.
+  \label{lem:legcon}
+\end{lemma}
+This is why the standard environment with no lobby gives no model-based prediction about the optimal length of punishment. Longer is better, although there are renegotiation constraints that must be taken into account that are typically outside of the model as well as other concerns.
+
+The lobby's constraint
+\[
+  e_b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) \right]
+\]
+works in the opposite direction in relation to $T$. Here, the lobby benefits in each dispute period, and so the total profit from a dispute is increasing in $T$. Thus we have
+\begin{lemma}
+  The slackness of the lobbying constraint is decreasing in $T$.
+  \label{lem:lobcon}
+\end{lemma}
+
+Although the interaction of the impact of the length of the punishment on these two constraints is quite nuanced, in many cases, adding the lobbying constraint provides a prediction for the optimal $T$.
+
+As the executives choose the smallest $\bta$ that makes the lobby indifferent at $\ov{e}(\bta)$, we must analyze the lobby's constraint (Expression \ref{eq:lob2}) evaluated at $\ov{e}(\bta)$ to determine the optimal $T$. Obtaining the derivative of $\ov{e}(\bta)$ from Equation~\ref{eq:leg2} via the Implicit Function Theorem, the derivative of the lobby's constraint with respect to $T$ is
+\begin{equation}
+ 	\frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi(\tau^b) - \pi(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi(\tau^{tw}) - \pi(\tau^a) \right]} +  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) \right]
+ 	\label{ine:T}
+\end{equation}
+If this expression is negative for all $T$, the lobby's constraint is most slack at $T=0$. The optimal punishment length cannot be zero, however, because the median legislator's constraint cannot be satisfied with a punishment period of length zero. In this case, which occurs only when the lobby is extraordinarily strong relative to the legislature, we must invoke an ad-hoc constraint on the minimum feasible length.
+
+On the other hand, if this expression is positive for all $T$, the constraint is most slack as $T$ approaches infinity and so we are in a case similar to that of the model without lobbying where a ad-hoc renegotiation constraint determines the upper bound on the punishment length. Here, the legislative constraint outweighs concerns about provoking lobbying effort. Perhaps of most interest are intermediate cases where the optimal $T$ is interior---that is, the punishment length optimally balances the need to punish legislators for deviating with that of not rewarding lobbies too much for provoking a dispute.
+
+The intuition is clearest if we examine the case of perfectly patient actors, that is, let $\de_\text{L}$ and $\de_\text{ML} \rightarrow 1$. In essence, this removes the influence of the period of cheater's payoffs in which the interests of the legislature and the lobby are aligned (both do better in the defection stage) and exposes the differences between them in the dispute phase. In the limit, the derivative of the constraint with respect to $T$ becomes
+\begin{equation}
+  \frac{ W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) }{\frac{\partial \ga}{\partial e} \left\{
+  \left[ \pi(\tau^b) - \pi(\tau^a) \right] + T \left[ \pi(\tau^{tw}) - \pi(\tau^a) \right]\right\}} - \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) \right]
+ 	\label{ine:Tdelta1}
+\end{equation}
+$\ov{e}$ is determined so that $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ is always positive,\footnote{See the discussion in the proof of Corollary~\ref{cor:edm} for a full treatment.} so the numerator of the first fraction is positive. The trade-agreement tariff is always lower than both the trade war tariff and the cheater's tariff ($\tau^b$) and $\frac{\partial \ga}{\partial e}$ is positive by Assumption \ref{as:ga_c3}, so the denominator is always positive. Note that the only influence of $T$ on the entire expression is through this denominator, so the value of the expression is decreasing in $T$.
+
+The second term, the lobby's gain from a break in the trade agreement, can for extremely large values of $\bta$ be negative. Intuitively, the lobby would have no incentive to exert effort in the trade war phase and therefore would have nothing to gain from causing a break, so I rule out this case.\footnote{See further discussion on this point in the proof of Corollary~\ref{cor:tdl} and in the Conclusion.} Note that if this were the case, the entire expression would be positive and the optimal $T$ would be the largest value possible. Essentially, only the legislature's incentives would be of concern.
+
+In the case of interest where the lobby potentially has an interest in breaking the agreement, the right-hand term is positive. Here where we've taken $\de_\text{L} \rightarrow 1$, the rate of change of the lobby's gain is constant.
+
+Depending on the relative magnitudes, the overall expression may be positive for small $T$ and then become negative, or it may be negative throughout. In the former case, the optimal interior $T$ can be determined, while in the latter we must choose the shortest feasible $T$. The expression cannot be positive for all values of $T$, so it cannot be optimal to have arbitrarily long punishments when the players approach perfect patience.
+
+\begin{result}
+  When both the legislature and lobby are perfectly patient, the optimal punishment scheme precisely balances the future incentives of the lobby and legislature. It always lasts a finite number of periods and may be of some minimum feasible length if the influence of lobbying on legislative preferences is extraordinarily strong $\left(\frac{\partial \ga}{\partial e}\text{ is sufficiently high}\right)$.
+  \label{res:opt1}
+\end{result}
+
+The key intuition for distinguishing between the situations described in Result~\ref{res:opt1} comes from examining the properties of the political process. If $\frac{\partial \ga}{\partial e}$ is moderate, the positive term in Expression~\ref{ine:Tdelta1} is more likely to dominate in the beginning and lead to an interior value for the optimal $T$, whereas extremely large values for $\frac{\partial \ga}{\partial e}$ make it more likely that the boundary case occurs. For a given effort level, this derivative will be smaller when the lobby is less influential; that is, when a marginal increase in $e$ creates a smaller increase in the legislature's preferences. Thus when the lobby is less powerful $\left(\frac{\partial \ga}{\partial e}\text{ is smaller}\right)$, longer punishments are desirable. If the lobby is very influential, the same length of punishment will have a larger impact on the legislature's decisions (the impact on the gain accruing to the lobby does not change). This tips the balance in favor of shorter punishments.
+
+This intuition generalizes for all $\left(\de_\text{ML},\de_\text{L}\right)$ as in Expression (\ref{ine:T}). Here the second-order condition is more complicated and can be positive if $\frac{\partial \ga}{\partial e}$ is very small. That is, if the lobby has very little influence in the legislature, it is conceivable that welfare will be maximized by making $T$ arbitrarily large (subject, of course, to other concerns about long punishments).
+
+\begin{result}
+  If non-trivial cooperation is possible in the presence of a lobby, the optimal punishment scheme is finite when the influence of lobbying on legislative preferences is sufficiently strong $\left(\frac{\partial \ga}{\partial e}\text{ is sufficiently high}\right)$.
+\end{result}
+
+This helps to complete the comparison to the standard repeated-game model without lobbying. There, grim-trigger (i.e. infinite-period) punishments are most helpful for enforcing cooperation (cfr. KRW's Proposition 4). I have shown here that the addition of lobbies makes shorter punishments optimal in many cases. This is because long punishments incentivize the lobby to exert more effort to break trade agreements.
+
+However, the model with no lobbies and one with very strong lobbies can be seen as two ends of a spectrum parameterized by the strength of the lobby. The optimal punishment will lengthen as the political influence of the lobby wanes and the desire to discipline the legislature becomes more important relative to the need to de-motivate the lobby.
+
+
+
+%\section{Discussion}
+%\label{sec:dis}
+
+
+
+%\section{Extensions}
+%\label{sec:ext}
+
+
+
+\section{Conclusion}
+\label{sec:concl3}
+I have integrated a separation-of-powers policy-making structure with lobbying into a theory of recurrent trade agreements. This theory takes seriously the idea that the threat of renegotiation can undermine punishment when cooperation is meant to be enforced through repeated interaction alone. Assuming that countries can bind themselves to condition their negotiations on the state designation of a dispute settlement institution allows punishments to become incentive compatible.
+
+I have shown here that, given no uncertainty about the outcome of the lobbying and political process, the executives maximize social welfare by choosing the lowest tariffs that make it unattractive for the lobbies to exert effort toward provoking a trade dispute. Although there are no disputes in equilibrium in this simple model, this extra constraint added by the lobby---apparently out-of-equilibrium---plays a key role in the determination of the optimal tariff levels and in the optimal dispute settlement procedure. While the constraint on the key repeated-game player, which here is the legislature, is loosened by increasing the punishment length, this new constraint due to the presence of lobbying becomes tighter as the punishment becomes more severe. This happens because the lobby \textit{prefers} punishment periods in which tariffs, and thus its profits, are higher. It thus has increased incentive to exert effort as the punishment lengthens.
+
+In a model with only the legislature, welfare increases with the punishment length. Here, this result only occurs if the lobby is sufficiently weak. As the lobby's political influence grows, the optimal punishment length becomes shorter---in the race between incentivizing the legislature and the lobby, the need to de-motivate the lobby begins to win. This suggests that a key consideration when designing the length of dispute settlement procedures is how to optimally balance the incentives of those capable of breaking trade agreements with the political forces who influence them, \textit{given} the strength of that influence.
+
+Future work is planned in at least two, related directions. In order for disputes to occur in equilibrium, I will add political uncertainty to the model as in \citet{buzard2013b} (alternatively, asymmetric information could be introduced, or possibly both). The model will then be able to address questions about the impact of political uncertainty on trade agreements and optimal dispute resolution mechanisms.
+
+It will also be possible to explore whether accounting for the endogeneity of political pressure can explain the observed variation in the outcomes of dispute settlement cases (\citet{buschrein}) because, in this context, it becomes meaningful to ask when lobbies have the incentive to exert effort to perpetuate a dispute (hence removing the ad-hoc assumption imposed in the proof of Corollary~\ref{cor:tdl} that the trade agreement tariff is always low enough to incentivize the lobby to exert effort during the trade war). Once political uncertainty has been added to the model, this is a completely natural extension that helps display the range and flexibility of the base model presented here.
+
+
+\section{Bibliography}
+\bibliographystyle{aea}
+\bibliography{C:/Users/kbuzard/Dropbox/Research/xBibs/tradeagreements}
+%\bibliography{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
+
+% The appendix command is issued once, prior to all appendices, if any.
+\appendix
+
+\section{Mathematical Appendix}
+{\hypertarget{Lem3}{\begin{lemma}}
+  A solution to the executives' problem (\ref{prob:max}) exists for all $\de$ and all $T$.
+  \label{lem:exist}	 
+\end{lemma}
+Proof: The executives' problem is to minimize $\bta$ such that both the legislature's and the lobby's constraints are satisfied. If the solution to the problem in the absence of lobbies (i.e. with only the legislature's constraint, and that evaluated at $e_b=0$) cannot be satisfied for any $\bta < \btw$ (that is, $\bta_\text{NL} = \btw$), then the solution to (\ref{prob:max}) will also be $\btw$.
+
+Consider the case where $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
+\begin{multline}
+  \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(e),\bta) - W_\text{ML}(\ga(e),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e),\tau^b,\tau^{*a}) - W_\text{ML}(\ga(e),\bta) \right]   \geq 0
+\end{multline}
+\vskip-.4in
+\begin{multline}
+  \left(1-\mathrm{e}^{-r\Delta}\right) e_b - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b) - \pi(\tau^a) \right] - \\
+	\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq 0
+  \label{ine:lobnorm}
+\end{multline}
+The proof is via the Intermediate Value Theorem. I take as the leftmost boundary $\bta_\text{NL}$ (the trade agreement chosen by the executives when there is no lobby) because this is the lowest possible tariff the executives can achieve before the additional constraint implied by the presence of lobbies is added. By construction, $\ov{e}(\bta_\text{NL})=0$. The gain to the lobby of a break in the trade agreement here is 
+\[
+  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b) - \pi(\tau^a_\text{NL}) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a_\text{NL}) \right] 
+\]
+If this gain is non-positive, the lobby has no incentive to exert effort and so $\bta_\text{NL}$ is the solution to the executives' problem.\footnote{Note, in particular, that this is the case if both $\Delta$ and $\Delta T \rightarrow 0$. This is also possible for some very large $\tau^a_\text{NL}$ if $\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a_\text{NL})< 0$, a case that is beyond the scope of this paper. See the proof of Corollary~\ref{cor:tdl} and the Conclusion for a discussion.} If the lobby's gain is strictly positive, the left-hand size of Expression~\ref{ine:lobnorm} is negative. The executives will have to raise the trade-agreement tariff to prevent the agreement from being broken in this case because the lobby's constraint is not satisfied.
+
+Next, look at the rightmost boundary, that is $\bta=\btw$. The executives have no incentive to set a trade-agreement tariff above the trade-war (i.e. non-cooperative) level, as this is the highest tariff-level they will have to face even if the trade-agreement is broken. When $\bta=\btw$, the legislature's constraint becomes vacuous: even if the median legislator prefers a lower tariff than $\tau^{tw}$, the only actions available are to maintain the trade agreement by choosing $\tau^a=\tau^{tw}$ or to choose the cheater's tariff. But the cheater's tariff when $\tau^a=\tau^{tw}$ is $\tau^b=\tau^{tw}$ and both lead to the same outcome.
+
+The lobby's gain will then be 
+\begin{multline*}
+  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^{tw}) - \pi(\tau^{tw}) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^{tw}) \right] \\
+	= - \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) e_{tw}
+\end{multline*}
+Therefore, at $\bta=\btw$, the left-hand side of Expression (\ref{ine:lobnorm}) is
+\[
+  \left(1-\mathrm{e}^{-r\Delta}\right) e_{tw} + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) e_{tw} = \left(1 - \mathrm{e}^{-r\left(\Delta +\Delta T\right)} \right)e_{tw}.
+\]
+This is always strictly positive as long as $\Delta$ and $\Delta T$ are not both zero (recall that the special case of both $\Delta$ and $\Delta T \rightarrow 0$ has been treated above).
+
+In order to apply the Intermediate Value Theorem, it is left to show that the left-hand side of Expression~(\ref{ine:lobnorm}) is continuous in $\bta$. The lobby's gain is continuous in the tariffs by the assumptions on profits in Section~\ref{sec:stage}. Given Assumption~\ref{as:ga_c3} and the assumptions in Section~\ref{sec:stage}, $\ov{e}$ is continuous by the Implicit Function Theorem. Because the sum of continuous functions is continuous, we have the desired result and the Intermediate Value Theorem can be applied to ensure that, under the conditions stated above, the left-hand side of Expression (\ref{ine:lobnorm}) attains zero on the interval $\left[\bta_\text{NL},\btw\right]$ at least once; the solution to Problem~\ref{prob:max} is at the largest $\bm{\tau}$ at which Expression~(\ref{ine:lobnorm}) attains zero.\footnote{In the proof of Corollary~\ref{cor:tdl}, I show that an analogous equation is increasing in $\tau^a$, so there is only one value of $\tau^a$ that makes Expression~(\ref{ine:lobnorm}) hold with equality; if there were more than one and the executive chose the smallest, whatever dynamic caused the expression to become negative again would give the lobby incentive to break the agreement.\label{fn:lem3}}  $\hfill\blacksquare$
+
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_et}{Proof of Corollary~\ref{cor:et}}}: \\
+Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\left(\cdot\right)$ and $\Pi\left(\cdot\right)$, for notational convenience, these equations can be represented as\footnote{Note that all expressions also depend on the fundamentals of the welfare function---$D,Q_X,Q_Y$---but these are suppressed for simplicity.}
+\begin{equation}
+  \Omega\left(\ov{e}\left(\de_\text{ML},\ga,\bta \right),\de_\text{ML},\ga,\bta \right) = 0
+	\label{eq:leg3}
+\end{equation}
+\begin{equation}
+  \Pi\left(\bta\left(\de_\text{L},\de_\text{ML},\ga\right),\ov{e}\left(\de_\text{ML},\ga,\bta\right),\de_\text{L},\de_\text{ML},\ga \right) = 0
+  \label{eq:lob3}
+\end{equation}
+
+
+By the Implicit Function Theorem:
+\begin{equation}
+ 	\frac{\partial \ov{e}}{\partial \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b) - \pi(\tau^{a}) \right]}
+	\label{eq:coret}
+\end{equation}
+
+\noindent In order for the median legislator to be made indifferent (that is, for Equation~\ref{eq:leg2} to hold), $\ga(\ov{e})$ must be such that the cheater payoff $W_\text{ML}(\ga(\ov{e}),\tau^b,\tau^{*a})$ is higher than the payoff at $\tau^{tw}$ \textit{and} such that the same is true of $\tau^a$ and $\tau^{tw}$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is to the right of $\tau^a$ (and to the left of $\tau^{tw}$), implying that the numerator is positive.
+
+Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a < \tau^{tw}$ and $\tau^b$ is also smaller than the trade war tariff. Therefore the denominator is negative. Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
+
+
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_tdl}{Proof of Corollary~\ref{cor:tdl}}}: \\
+By the Implicit Function Theorem:
+\begin{equation}
+ 	\frac{\partial \tau^a}{\partial \de_\text{L}} = -\frac{\frac{\partial \Pi}{\partial \ov{\de_\text{L}}}}{\frac{\partial \Pi}{\partial \tau^a}} = 
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a} }
+\end{equation}
+
+First I will show that $\frac{1 - \left(T+1\right)\de^T + T \de^{T+1}}{(1-\de)^2}$ is positive. Focusing on the numerator and rearranging, we have
+\[
+  1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1} = \left(1 - \de_\text{L}^T \right) - T \de_\text{L}^T \left(1 -\de_\text{L} \right) = \left(1 - \de_\text{L} \right) \sum_{i=0}^{i=T-1}\de^i - T \de_\text{L}^T \left(1 -\de_\text{L} \right)
+\]
+\[
+  = \left(1 - \de_\text{L} \right) \left[ \left(\sum_{i=0}^{i=T-1}\de_\text{L}^i \right) - T \de_\text{L}^T \right] = \left(1 - \de_\text{L} \right) \left[ \sum_{i=0}^{i=T-1}\de_\text{L}^i -  \de_\text{L}^T \right] > 0 \ \text{for all } \de_\text{L} < 1.
+\]
+Therefore $\frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{(1-\de_\text{L})^2}$ is positive. 
+
+The bracketed term must be positive in order for the lobby to have the incentive to lobby in the trade-war phase. I will assume that this is the case, but note that restricting attention to this case is not trivial; see the conclusion for discussion of a planned extension that more fully explores the trade-war phase.
+
+Corollary~\ref{cor:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. Thus the denominator is the sum of three positive terms,\footnote{This establishes that Equation~(\ref{ine:lobnorm}) is increasing as referenced in Footnote~\ref{fn:lem3} in the proof Lemma~\ref{lem:exist}.} and $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. $\hfill\blacksquare$
+
+
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_edm}{Proof of Corollary~\ref{cor:edm}}}: \\
+By the Implicit Function Theorem:
+\begin{equation}
+ 	\textstyle \frac{\partial \ov{e}}{\partial \de_\text{ML}} = -\frac{\frac{\partial \Omega}{\partial \de_\text{ML}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{ML}^T + T \de_\text{ML}^{T+1}}{\left(1-\de_\text{ML} \right)^2} \left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b) - \pi(\tau^{a}) \right]}
+ 	\label{eq:e_de}
+\end{equation}
+
+I have shown in the proof of Corollary~\ref{cor:tdl} that the first term in the numerator is positive. The bracketed term is positive because $\ov{e}$ is always determined via Equation~\ref{eq:leg2} so that $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ is positive: the trade-war tariff is the punishment relative to the trade agreement tariff. Therefore the numerator of the fraction is positive. The denominator is shown to be negative in the proof of Corollary~\ref{cor:et}. Therefore $\frac{\partial \ov{e}}{\partial \de_\text{ML}}$ is positive. $\hfill\blacksquare$
+
+
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_tdm}{Proof of Corollary~\ref{cor:tdm}}}: \\
+Differentiating Equation~\ref{eq:lob3} with respect to $\de_\text{ML}$, we have
+\[
+  \frac{\partial \Pi}{\partial \tau^a}\frac{\partial \tau^a}{\partial \de_\text{ML}} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \de_\text{ML}} + \frac{\partial \Pi}{\partial \de_\text{ML}} = 0
+\]
+
+There is no direct effect of $\de_\text{ML}$ on this equation, so $\frac{\partial \Pi}{\partial \de_\text{ML}} = 0$. Thus
+
+\begin{equation}
+ 	\frac{\partial \tau^a}{\partial \de_\text{ML}} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \de_\text{ML}}}{\frac{\partial \Pi}{\partial \tau^a}} = -
+	\frac{1 \cdot \frac{\partial \ov{e}}{\partial \de_\text{ML}}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
+\end{equation}
+
+By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator is positive. Because $\frac{\partial \ov{e}}{\partial \de_\text{ML}}$ is positive by Corollary~\ref{cor:edm}, $\frac{\partial \tau^a}{\partial \ov{e}(\de_\text{ML})}$ is negative. $\hfill\blacksquare$
+
+
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_eg}{Proof of Corollary~\ref{cor:eg}}}: \\
+By the Implicit Function Theorem:
+\begin{equation}
+ 	\frac{\partial \ov{e}}{\partial \ga} = -\frac{\frac{\partial \Omega}{\partial \ga}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \left[ \pi(\tau^b) - \pi(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b) - \pi(\tau^{a}) \right]}
+\end{equation}
+
+We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga}{\partial \ov{e}}} < 0$. $\hfill\blacksquare$
+
+
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_tg}{Proof of Corollary~\ref{cor:tg}}}: \\
+Differentiating the executives' condition, Equation~\ref{eq:lob3} with respect to $\ga$, we have
+\[
+  \frac{\partial \Pi}{\partial \tau^a}\frac{\partial \tau^a}{\partial \ga} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \ga} + \frac{\partial \Pi}{\partial \ga} = 0
+\]
+Because $\frac{\partial \Pi}{\partial \ga}$ = 0, we are looking for
+\begin{equation}
+ 	\frac{\partial \tau^a}{\partial \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
+	\frac{1 \cdot \frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
+\end{equation}
+As shown in Corollary~\ref{cor:eg}, $\frac{\partial \ov{e}}{\partial \ga}$ is negative. The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\partial \tau^a}{\partial \ga}$ is positive. $\hfill\blacksquare$
+\end{document}
+
