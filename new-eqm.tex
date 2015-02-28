@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+
+\addtolength{\textwidth}{1.4in}
+\addtolength{\oddsidemargin}{-.7in} %left margin
+\addtolength{\evensidemargin}{-.7in}
+\setlength{\textheight}{8.5in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\headheight}{0.0in}
+\setlength{\footskip}{.5in}
+\renewcommand{\baselinestretch}{1.0}
+\setlength{\parindent}{0pt}
+\linespread{1.1}
+
+\usepackage{amssymb, amsmath, amsthm, bm}
+\usepackage{graphicx,csquotes,verbatim}
+\usepackage[backend=biber,block=space,style=authoryear]{biblatex}
+\setlength{\bibitemsep}{\baselineskip}
+\usepackage[american]{babel}
+%dell laptop
+%\addbibresource{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements.bib}
+%\addbibresource{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
+\renewcommand{\newunitpunct}{,}
+\renewbibmacro{in:}{}
+
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\usepackage{xcolor}
+\hbadness=10000
+
+\newcommand{\ve}{\varepsilon}
+\newcommand{\ov}{\overline}
+\newcommand{\un}{\underline}
+\newcommand{\ta}{\theta}
+\newcommand{\al}{\alpha}
+\newcommand{\Ta}{\Theta}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\Bt}{B(\bm{\tau^a})}
+\newcommand{\bta}{\bm{\tau^a}}
+\newcommand{\btn}{\bm{\tau^n}}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+
+\begin{document}
+\begin{center}
+New Equilibrium Construction
+\end{center}
+
+From ``to\_do\_list.tex'': \\
+\vskip.2in
+
+Take out renegotiation
+		\begin{itemize}
+			\item Add more basic tradeoff
+			\item (??) Draw inverted U for lobby
+			\item Now my short punishments don't rest on renegotiation
+				\begin{itemize}
+					\item So now, for main analysis, must assume that we're constraining attention to a certain class of punishments: symmetric, and ``Punish for $T$ periods then go back to cooperation''
+						\begin{itemize}
+							\item Go back to start if deviate should work for governments, but I think I need something else for lobbies since they would like that
+						\end{itemize}
+					\item Can I show that mine are optimal in this class?
+				\end{itemize}
+		\end{itemize}
+
+\vskip.5in
+January 17, 2015
+\begin{itemize}
+	\item Must show players are best responding in every subgame, on and off the eqm path
+	\item I'm going to try to use reversion to the static nash, but this is not necessarily subgame perfect (deviations can trigger changes in future periods)
+		\begin{itemize}
+			\item Basic intuition: lobby wants punishment to go longer, leg wants it to go shorter
+			\item Ideally, want each to choose static BR in each period of punishment: in non-cooperative state, you can pick whatever you want, but the other guy is doing whatever he wants; $\tau^{tw}$ is independent of what he does
+				\begin{itemize}
+					\item BUT it's not independent of lobby's effort
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+	
+\vskip.3in
+Equilibrium: Executives set trade agreement at $t=0$. At $t \geq 1$, lobbies choose $e$, leg chooses applied $\tau$
+\begin{itemize}
+	\item $\forall \ t \geq 1$, leg applies $\tau^A$ if 
+		\begin{enumerate}
+			\item $\tau \leq \tau^A$ was applied last period
+			\item There have been $T$ periods of punishment: I think $\tau \geq \tau^N$ and $e \leq e^N$
+		\end{enumerate}
+	\item Not sure how to specify lobby in these cooperation periods: $e = 0$ if $\tau \geq \tau^A$ (in any period? how are they involved in punishment? they're not really)
+	\item if $\tau > \tau^A$ within the last $T$ periods, leg applies $\tau^N(e^N)$
+\end{itemize}
+	
+\vskip.5in
+January 19, 2015
+\begin{itemize}
+	\item Think of punishment scheme being designed either by execs or by supranational body like WTO
+	\item Then want to know whether it's an eqm for leg and lobbies to follow the rules
+
+\end{itemize}
+
+\vskip.2in
+Classes of subgames
+\begin{enumerate}
+	\item $\tau \leq \tau^A$ last period, $e=0$, and no violation within last $T$ periods (i.e. these conditions have held for at least $T$ previous periods)
+	\item Conditions in (1) held for at least $T$ periods up to previous period, but there was a violation last period
+		\begin{itemize}
+			\item Implies we start punishing this period, and punish for $T-1$ more periods before switching back to (1)
+		\end{itemize}
+	\item A punishment was initiated within the last $T-1$ periods, and punishment has been followed since then
+		\begin{itemize}
+			\item Implies we punish for the rest of the duration of the specified punishment period (if there have been $i$ periods of punishment so far, we punish this period and $T-i-1$ more periods before switching back to (1)
+		\end{itemize}
+	\item Like 2, but someone did not follow the punishment in $t-1$
+		\begin{itemize}
+			\item If it was legislature and $\tau^D > \tau^N$, we don't care. (can describe punishment as $\tau \geq \tau^N$ I think)
+				\begin{itemize}
+					\item If it was leg and $\tau^D < \tau^N$, restart at (2)
+				\end{itemize}
+			\item If it was lobby and $e^D > e^N$, we don't care. (can describe punishment as $e \geq e^N$ I think)
+				\begin{itemize}
+					\item If it was leg and $e^D < e^N$, restart at (1)
+				\end{itemize}
+		\end{itemize}
+	\item Like 3, but someone did not follow the punishment in $t-1$
+		\begin{itemize}
+			\item Same as 4, except constraints may differ by length of remaining punishment
+				\begin{itemize}
+					\item I've shown condition for lobby is constant through time except in last period, where they'll never pay
+					\item Need to pay special attention to leg's condition in this last period
+				\end{itemize}
+		\end{itemize}
+\end{enumerate}
+	
+	
+\end{document}
