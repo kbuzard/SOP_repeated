@@ -14,14 +14,14 @@
 
 \usepackage{amssymb, amsmath, amsthm, bm}
 \usepackage{graphicx,csquotes,verbatim}
-\usepackage[backend=biber,block=space,style=authoryear]{biblatex}
-\setlength{\bibitemsep}{\baselineskip}
-\usepackage[american]{babel}
+%\usepackage[backend=biber,block=space,style=authoryear]{biblatex}
+%\setlength{\bibitemsep}{\baselineskip}
+%\usepackage[american]{babel}
 %dell laptop
 %\addbibresource{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements.bib}
 %\addbibresource{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
-\renewcommand{\newunitpunct}{,}
-\renewbibmacro{in:}{}
+%\renewcommand{\newunitpunct}{,}
+%\renewbibmacro{in:}{}
 
 
 \DeclareMathOperator*{\argmax}{arg\,max}
@@ -102,6 +102,9 @@ January 19, 2015
 Classes of subgames
 \begin{enumerate}
 	\item $\tau \leq \tau^A$ and $e=0$ last period; if there had ever been a violation, it was at least $T$ periods previous.
+		\begin{itemize}
+			\item Should I have ``and $e < \ov{e}$'' instead?
+		\end{itemize}
 	\item Conditions in (1) held in period $t-2$, but there was a violation in period $t-1$
 		\begin{itemize}
 			\item Play static Nash this period and for $T-1$ more periods before switching back to (1); more precisely, $\tau^D \geq \tau^N$ and $e^D \geq e^N$.
@@ -122,9 +125,12 @@ Classes of subgames
 	
 	\vskip.5in
 	From old construction, need to be rechecked:
-			\begin{itemize}
-					\item I've shown condition for lobby is constant through time except in last period, where they'll never pay
-					\item Need to pay special attention to leg's condition in this last period
+		\begin{itemize}
+			\item I've shown condition for lobby is constant through time except in last period, where they'll never pay
+				\begin{itemize}
+					\item In general, need to check how conditions change through time in punishment
+				\end{itemize}
+			\item Need to pay special attention to leg's condition in the last period
 		\end{itemize}
 	
 \end{document}
