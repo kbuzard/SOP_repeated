@@ -120,6 +120,10 @@ Classes of subgames
 	\item In any punishment period, lobby does not follow punishment: $e^D < e^N$
 		\begin{itemize}
 			\item Legislature chooses (??) BR to $e^D$, then restart at (1)
+				\begin{itemize}
+					\item Lobby \textit{must} pay in final period of punishment, or else IC for leg will not hold. That is why the equilibrium is being re-worked.
+					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
+				\end{itemize}
 		\end{itemize}
 \end{enumerate}
 
@@ -135,9 +139,21 @@ Conditions for equilibrium
 				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
 			\item Lobby:
 				\[
-				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a)\right]
+				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a)\right]
 				\]
-				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a$, which is necessary for any of this to be interesting, this condition holds.
+				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a$, which is necessary for any of this to be interesting, this condition holds. \\
+				Since the best deviation is to the Nash tariff, it reduces to
+				\[
+				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^a)\right]
+				\]
+				\[
+				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right] \geq 0
+				\]
+				(This now seems less of a conflict with the constraint in the main problem of
+				\[
+				  e^b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right]
+				\]
+				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting.)
 		\end{itemize}
 \end{itemize}
 	
