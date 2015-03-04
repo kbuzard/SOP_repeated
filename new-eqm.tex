@@ -122,6 +122,24 @@ Classes of subgames
 			\item Legislature chooses (??) BR to $e^D$, then restart at (1)
 		\end{itemize}
 \end{enumerate}
+
+\vskip.5in
+Conditions for equilibrium
+\begin{itemize}
+	\item Checking that punishment is incentive compatible
+		\begin{itemize}
+			\item Legislature:
+				\[
+				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+2}}{1-\de}W(\ga(e^N),\tau^N)
+				\]
+				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
+			\item Lobby:
+				\[
+				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a)\right]
+				\]
+				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a$, which is necessary for any of this to be interesting, this condition holds.
+		\end{itemize}
+\end{itemize}
 	
 	\vskip.5in
 	From old construction, need to be rechecked:
