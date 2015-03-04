@@ -119,7 +119,7 @@ Classes of subgames
 		\end{itemize}
 	\item In any punishment period, lobby does not follow punishment: $e^D < e^N$
 		\begin{itemize}
-			\item Legislature chooses (??) BR to $e^D$, then restart at (1)
+			\item Legislature chooses (??) BR to $e^D$, then restart at (1); if anything else, restart punishment from (2)
 				\begin{itemize}
 					\item Lobby \textit{must} pay in final period of punishment, or else IC for leg will not hold. That is why the equilibrium is being re-worked.
 					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
@@ -137,6 +137,9 @@ Conditions for equilibrium
 				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+2}}{1-\de}W(\ga(e^N),\tau^N)
 				\]
 				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
+					\begin{itemize}
+						\item Is this punishment IC for leg? Yes, condition is satisfied. Best responding in current period--would do the same in best deviation; future is trade agreement instead of restart of punishment for any other tariff.
+					\end{itemize}
 			\item Lobby:
 				\[
 				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a)\right]
@@ -146,14 +149,20 @@ Conditions for equilibrium
 				\[
 				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^a)\right]
 				\]
-				\[
+				\begin{equation}
 				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right] \geq 0
-				\]
+					\label{lobdev}
+				\end{equation}
 				This now seems less of a conflict with the constraint in the main problem of
 				\[
 				  e^b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right]
 				\]
-				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting.
+				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting. \\
+				Note that Expression~\ref{lobdev} will hold for all $T/i$.
+					\begin{itemize}
+						\item In last period of punishment, will hold with equality
+						\item Note that if a deviation were to occur (off eqm path), leg would apply a ``punishment'' tariff that is too low, which would normally cause the punishment to reset; but here, it's because the lobby deviated, so we re-start cooperation to punish the lobby further after giving the reduced tariff in the period in which the lobby deviates
+					\end{itemize}
 		\end{itemize}
 \end{itemize}
 	
