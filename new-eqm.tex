@@ -149,20 +149,21 @@ Conditions for equilibrium
 				\[
 				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right] \geq 0
 				\]
-				(This now seems less of a conflict with the constraint in the main problem of
+				This now seems less of a conflict with the constraint in the main problem of
 				\[
 				  e^b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right]
 				\]
-				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting.)
+				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting.
 		\end{itemize}
 \end{itemize}
 	
 	\vskip.5in
 	From old construction, need to be rechecked:
 		\begin{itemize}
-			\item I've shown condition for lobby is constant through time except in last period, where they'll never pay
+			\item I've shown condition for lobby is constant through time except in last period, where they'll never pay (this was, obviously, for older model that doesn't enforce lobby paying in final period of punishment)
 				\begin{itemize}
 					\item In general, need to check how conditions change through time in punishment
+					\item $\frac{\de - \de^{T+1}}{1-\de}$ is increasing in $T$, which means it gets smaller as you move toward the end of the punishment (there are fewer periods of punishment payoffs left)
 				\end{itemize}
 			\item Need to pay special attention to leg's condition in the last period
 		\end{itemize}
