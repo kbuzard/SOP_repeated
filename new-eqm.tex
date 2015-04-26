@@ -115,11 +115,11 @@ Classes of subgames
 		\end{itemize}
 	\item In any punishment period, legislature does not follow punishment: i.e. $\tau^D < \tau^N$
 		\begin{itemize}
-			\item Restart punishment at (2)
+			\item Restart punishment at (2); lobby happy to do this
 		\end{itemize}
 	\item In any punishment period, lobby does not follow punishment: $e^D < e^N$
 		\begin{itemize}
-			\item Legislature chooses (??) BR to $e^D$, then restart at (1); if anything else, restart punishment from (2)
+			\item Legislature chooses (??) BR to $e^D$, then restart at (1); if anything else, restart punishment from (2). BR + eqm, so okay
 				\begin{itemize}
 					\item Lobby \textit{must} pay in final period of punishment, or else IC for leg will not hold. That is why the equilibrium is being re-worked.
 					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
@@ -130,7 +130,7 @@ Classes of subgames
 \vskip.5in
 Conditions for equilibrium
 \begin{itemize}
-	\item Checking that punishment is incentive compatible
+	\item Checking that punishment (2) is incentive compatible given (4) and (5)
 		\begin{itemize}
 			\item Legislature:
 				\[
@@ -139,8 +139,9 @@ Conditions for equilibrium
 				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
 					\begin{itemize}
 						\item Is this punishment IC for leg? Yes, condition is satisfied. Best responding in current period--would do the same in best deviation; future is trade agreement instead of restart of punishment for any other tariff.
+						\item This conditions is always satisfied; the above equation is for the first period of the punishment. In later periods, there are more periods of the punishment that get repeated, so the constraint becomes looser
 					\end{itemize}
-			\item Lobby:
+			\item Lobby [(2) is incentive compatible given (4) and (5)]:
 				\[
 				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a)\right]
 				\]
@@ -160,7 +161,7 @@ Conditions for equilibrium
 				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting. \\
 				Note that Expression~\ref{lobdev} will hold for all $T/i$.
 					\begin{itemize}
-						\item In last period of punishment, will hold with equality
+						\item In last period of punishment, will hold with equality. Is tighest at the end of the punishment, looser at beginning. Holds for all $T$, i.e. always holds.
 						\item Note that if a deviation were to occur (off eqm path), leg would apply a ``punishment'' tariff that is too low, which would normally cause the punishment to reset; but here, it's because the lobby deviated, so we re-start cooperation to punish the lobby further after giving the reduced tariff in the period in which the lobby deviates
 					\end{itemize}
 				\item Legislature's constraint holds $\forall \ T$ (but is tighter for large $T$)
