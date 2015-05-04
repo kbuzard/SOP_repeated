@@ -79,7 +79,7 @@ January 17, 2015
 \end{itemize}
 	
 \vskip.3in
-Equilibrium: Executives set trade agreement at $t=0$. At $t \geq 1$, lobbies choose $e$, leg chooses applied $\tau$
+Equilibrium: Executives set trade agreement tariffs $\tau^A$ at $\tau^A=0$. At $t \geq 1$, lobbies choose $e$, leg chooses applied $\tau$
 \begin{itemize}
 	\item $\forall \ t \geq 1$, leg applies $\tau^A$ if 
 		\begin{enumerate}
@@ -101,25 +101,25 @@ January 19, 2015
 \vskip.2in
 Classes of subgames
 \begin{enumerate}
-	\item $\tau \leq \tau^A$ and $e=0$ last period; if there had ever been a violation, it was at least $T$ periods previous.
+	\item $\tau \leq \tau^A$ and $e < \ov{e}$ last period; if there had ever been a violation, it ended at least $T$ periods previous.
 		\begin{itemize}
-			\item Should I have ``and $e < \ov{e}$'' instead?
+			\item Play $\tau = \tau^A$ and $e=0$
 		\end{itemize}
 	\item Conditions in (1) held in period $t-2$, but there was a violation in period $t-1$
 		\begin{itemize}
 			\item Play static Nash this period and for $T-1$ more periods before switching back to (1); more precisely, $\tau^D \geq \tau^N$ and $e^D \geq e^N$.
 		\end{itemize}
-	\item Static Nash punishment was initiated $i<T$ periods ago, and punishment has been followed since then
+	\item Static Nash punishment was initiated $i<T$ periods ago, and punishment has been followed since then, i.e. $\tau^D \geq \tau^N$ and $e^D \geq e^N$ $\forall t \in$ (need to figure out indexing so I can say this precisely)
 		\begin{itemize}
 			\item Punish this period and $T-i-1$ more periods before switching back to (1)
 		\end{itemize}
-	\item In any punishment period, legislature does not follow punishment: i.e. $\tau^D < \tau^N$
+	\item In any punishment period (i.e. classes 2 and 3 above), legislature does not follow punishment: i.e. $\tau^D < \tau^N$
 		\begin{itemize}
 			\item Restart punishment at (2); lobby happy to do this
 		\end{itemize}
 	\item In any punishment period, lobby does not follow punishment: $e^D < e^N$
 		\begin{itemize}
-			\item Legislature chooses (??) BR to $e^D$, then restart at (1); if anything else, restart punishment from (2). BR + eqm, so okay
+			\item Legislature chooses BR (make this precise: $\tau^D(e^D)) = ...$) to $e^D$, then restart at (1); if anything else, restart punishment from (2). BR + eqm, so okay
 				\begin{itemize}
 					\item Lobby \textit{must} pay in final period of punishment, or else IC for leg will not hold. That is why the equilibrium is being re-worked.
 					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
@@ -134,7 +134,7 @@ Conditions for equilibrium
 		\begin{itemize}
 			\item Legislature:
 				\[
-				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+2}}{1-\de}W(\ga(e^N),\tau^N)
+				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N)
 				\]
 				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
 					\begin{itemize}
@@ -143,7 +143,7 @@ Conditions for equilibrium
 					\end{itemize}
 			\item Lobby [(2) is incentive compatible given (4) and (5)]:
 				\[
-				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a)\right]
+				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^a)\right]
 				\]
 				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a$, which is necessary for any of this to be interesting, this condition holds. \\
 				Since the best deviation is to the Nash tariff, it reduces to
@@ -159,7 +159,7 @@ Conditions for equilibrium
 				  e^b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right]
 				\]
 				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting. \\
-				Note that Expression~\ref{lobdev} will hold for all $T/i$.
+				Note that Expression~\ref{lobdev} will hold for all $T$ (or, alternatively, $i$).
 					\begin{itemize}
 						\item In last period of punishment, will hold with equality. Is tighest at the end of the punishment, looser at beginning. Holds for all $T$, i.e. always holds.
 						\item Note that if a deviation were to occur (off eqm path), leg would apply a ``punishment'' tariff that is too low, which would normally cause the punishment to reset; but here, it's because the lobby deviated, so we re-start cooperation to punish the lobby further after giving the reduced tariff in the period in which the lobby deviates
@@ -172,5 +172,11 @@ Conditions for equilibrium
 		\end{itemize}
 \end{itemize}
 	
+\vskip.5in
+Conditions for punishment
+\begin{itemize}
+	\item Legislature's condition (for class 4 above):
+\end{itemize}
+
 	
 \end{document}
