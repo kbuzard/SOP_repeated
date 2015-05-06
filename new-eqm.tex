@@ -99,6 +99,7 @@ January 19, 2015
 \end{itemize}
 
 \vskip.2in
+\newpage
 Classes of subgames
 \begin{enumerate}
 	\item $\tau \leq \tau^A$ and $e < \ov{e}$ last period; if there had ever been a violation, it ended at least $T$ periods previous.
@@ -176,6 +177,24 @@ Conditions for equilibrium
 Conditions for punishment
 \begin{itemize}
 	\item Legislature's condition (for class 4 above):
+		\[
+		  \frac{1 - \de^{T}}{1-\de} W(\ga(e^N),\tau^N) + \de^{T} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) 
+		\]
+			\begin{itemize}
+				\item The $\cdot$ on the right hand side is where we fill in the best deviation. Given that this deviation can't affect the future path of play (any deviation triggers the resetting of the punishment phase), this should be a unilateral best response.
+				\item The unilateral best response is $\tau^N$, so this ``deviation'' could not even be detected as a deviation. There is no incentive to deviate from the punishment given the strategy for punishing deviations from the punishment
+				\item This same logic holds at any point during the punishment (replace $T$ with $r < T$). Logic stays the same.
+			\end{itemize}
+		\item Lobby's condition (for class 5 above)
+			\[
+			  \frac{1 - \de^{T}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \frac{\de^{T}}{1-\de}\pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de}{1-\de} \pi(\tau^a)
+			\]
+			\begin{itemize}
+				\item What is best deviation? Would lobby want to choose $e^D=0$ and get $\tau(\ga(0))$?
+				\item Given that the lobby can't affect the future path and that the legislature will provide the unilateral tariff that is its best response to $e^D=0$, the lobby's best deviation payoff is the unilateral best choice, i.e. the trade war lobbying effort / tariff.
+				\item If the lobby deviates to something lower, it both gets a lower tariff in return (less than what is optimal for it in the one-shot game, which is what it was doing before) and gets stuck with the trade agreement tariff ever after
+				\item NOTE: EVERYTHING hinges on whether this is a valid punishment, this two-stage, dynamic punishment
+			\end{itemize}
 \end{itemize}
 
 	
