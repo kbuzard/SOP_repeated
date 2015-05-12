@@ -215,6 +215,7 @@ If the countries are in state $D$ at the start of period $t$, the state will onl
 KRW define a recurrent agreement to be a subgame perfect equilibrium in which, in each period, the continuation value is consistent with this theory of negotiation. This requires, first, that countries agree to do as well as possible in each state; and second, that agreement is recurrent, in that continuation payoffs are always drawn from those that are supportable in the current state, but the countries are unable to alter the state as part of their agreement. The solution concept employed here is that of the maximal recurrent agreement; that is, the recurrent agreement that maximizes the welfare of the executives, who I assume for simplicity are social welfare maximizers.
 
 \subsection{Trade Agreements with External Enforcement}
+\label{sec:external}
 Standard repeated-game models have one player in each country; here there are three, each with distinctive roles that mirror those laid out in the stage game. To review, in each period, the executives can re-negotiate the trade agreement, the lobby can choose whether or not to exert lobbying effort and how much effort to exert, and the legislature can break the trade agreement and set trade-war tariffs.
 
 Given that each trading partner submits to the DSI, we can determine the repeated-game incentives in each state. The executives will jointly maximize social welfare given the state, but have no opportunity to affect the state other than to choose tariffs that are supportable. Thus the executives maximize joint welfare subject to the incentive constraints of the other players. Again, because of symmetry and separability, it suffices to restrict attention to the home country.
@@ -237,7 +238,7 @@ Since future payoffs will not be impacted by current actions, the legislature ha
 \end{equation}
 That is, at this stage, the lobby chooses the level of effort that equates its expected marginal increase in profits with its marginal payment. I label these tariffs $\btw = (\tau^{tw},\tau^{*tw})$.
 
-The supportability conditions in state $C$ are quite different. I will assume that one legislature is randomly assigned the opportunity to break the agreement in any given period. It does so by choosing a tariff, $\tau^b$, that triggers a trade dispute. I will remain agnostic as to how $\tau^b$ is set, requiring only that it satisfy three intuitive criteria: it must be higher than the tariff set in the trade agreement $\tau^a$ in order to trigger a dispute; it must provide higher welfare to the median legislator at $e=e_b$ than the trade agreement tariff in order to be a tempting ``cheater's'' payoff; and it must provide higher welfare to the median legislator at $e=e_b$ than the trade war tariff in order for the trade war to be felt as a punishment. [NOTE: the welfare received at $\tau^b$ when receiving $e_b$ is the highest it can be because the legislature is choosing 
+The supportability conditions in state $C$ are quite different. I will assume that one legislature is randomly assigned the opportunity to break the agreement in any given period. It does so by choosing a tariff, $\tau^b$, that triggers a trade dispute. I will remain agnostic as to how $\tau^b$ is set, requiring only that it satisfy three intuitive criteria: it must be higher than the tariff set in the trade agreement $\tau^a$ in order to trigger a dispute; it must provide higher welfare to the median legislator at $e=e_b$ than the trade agreement tariff in order to be a tempting ``cheater's'' payoff; and it must provide higher welfare to the median legislator at $e=e_b$ than the trade war tariff in order for the trade war to be felt as a punishment. [NOTE: the welfare received at $\tau^b$ when receiving $e_b$ is the highest it can be for any given $\tau^*$ because the legislature is unilaterally maximizing. Although $\tau^*$ is different at trade war outcome than break outcome, $\tau^{*tw} > \tau^{*a}$, so trade war outcome is unambiguously worse than break outcome] 
 
 This implies the following constraint on the trade agreement tariffs $\bta$:
 \[
@@ -284,7 +285,17 @@ In state $C$, the lobby has a two-stage problem. First, for the given $\bta$, $\
 
 Given the $e_b$ required to break the agreement, the lobby will then compare its current and future payoffs from inducing a dispute net of lobbying effort $\left(\text{that is, }\pi(\tau^b) + \de_\text{L} V^D_L - \ov{e}\right)$ to the profit stream from the trade agreement with no lobbying effort $\left(\pi(\tau^a) + \de_\text{L} V^C_L\right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}$. If the former is larger, it induces the cheapest possible break; if the latter is larger, the lobby chooses to be inactive and the agreement remains in force.
 
-The executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. Thus they must raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ and disengaging completely,\footnote{Here I assume that the lobby does not exert effort when indifferent; if one were to assume the opposite, tariffs would have to be raised by an additional $\varepsilon$.} provided that this also satisfies the legislative constraint. By construction, the legislative constraint will always be slack because the $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium, $\bta$ is chosen so that the lobby disengages. When the lobby is disengaged $\left(e_b=0\right)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when $e_b=0$ than when $e_b=\ov{e}(\bta)$.
+The executives choose the trade agreement tariffs subject to this decision-making process of the lobby. Corollary~\ref{cor:et} shows that the relationship between $\tau^a$ and $\ov{e}$ is straightforward. 
+\begin{lemma}
+  An increase in the trade agreement tariff, \emph{ceteris paribus}, leads to an increase in the minimum lobbying effort ($\ov{e}$) required to break the trade agreement.
+  \label{cor:et}
+\end{lemma}
+
+Proof: See the \hyperlink{Cor_et}{Appendix}.
+
+\noindent The intuition is as follows: $\ov{e}$ must make the median legislator indifferent between the trade agreement tariff and the higher ``cheater's'' tariff balanced by a future punishment. This means that the median legislator's most preferred tariff when $e_b=\ov{e}$ must be higher than the trade agreement tariff. Raising $\tau^a$ brings the trade agreement tariff closer to the legislature's ideal point, requiring the lobby to pay more to make the legislature willing to break the agreement.
+
+Given this relationship between trade agreement tariffs and lobbying behavior, the executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. They raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ and disengaging completely,\footnote{Here I assume that the lobby does not exert effort when indifferent; if one were to assume the opposite, tariffs would have to be raised by an additional $\varepsilon$.} provided that this also satisfies the legislative constraint. By construction, the legislative constraint will always be slack because the $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium, $\bta$ is chosen so that the lobby disengages. When the lobby is disengaged $\left(e_b=0\right)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when $e_b=0$ than when $e_b=\ov{e}(\bta)$.
 
 \hyperlink{Lem3}{Lemma~\ref{lem:exist}} in the Appendix demonstrates that the solution to the executives' problem is well-defined. This combined with the immediately preceding discussion demonstrates the following result.
 \begin{result}
@@ -311,17 +322,7 @@ With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{ine:lob2} at 
 
 Although explicit expressions for the solution functions $\ov{e}(\cdot)$ and $\tau^a(\cdot)$ cannot be arrived at without imposing further assumptions, significant intuition can be derived implicitly. An overview of the results will be provided here, while the mathematical details are in the Appendix.
 
-A central question is how the two equations are linked, that is, what is the nature of the relationship between $\tau^a$ and $\ov{e}$, and it is straightforward. 
-\begin{corollary}
-  An increase in the trade agreement tariff, \emph{ceteris paribus}, leads to an increase in the minimum lobbying effort ($\ov{e}$) required to break the trade agreement.
-  \label{cor:et}
-\end{corollary}
-
-Proof: See the \hyperlink{Cor_et}{Appendix}.
-
-\noindent Because $\ov{e}$ makes the median legislator indifferent between the trade agreement tariff and the higher ``cheater's'' tariff balanced by a future punishment, we know that the median legislator's most preferred tariff when $e_b=\ov{e}$ must be higher than the trade agreement tariff. Therefore raising $\tau^a$ brings the trade agreement tariff closer to the legislature's ideal point, and thus the lobby must pay more to make the legislature willing to break the agreement.
-
-Corollary~\ref{cor:et} helps to answer the comparative static question of how changes in the patience level of the lobby effect the equilibrium trade agreement tariffs.
+We begin with the comparative static question of how changes in the patience level of the lobby effect the equilibrium trade agreement tariffs.
 
 \begin{corollary}
   As the lobby becomes more patient ($\de_\emph{L}$ increases), the trade agreement tariff also increases, \emph{ceteris paribus}.
@@ -485,6 +486,31 @@ It will also be possible to explore whether accounting for the endogeneity of po
 \appendix
 
 \section{Mathematical Appendix}
+\vskip.4in
+\noindent \textbf{\hypertarget{Cor_et}{Proof of Lemma~\ref{cor:et}}}: \\
+Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\left(\cdot\right)$ and $\Pi\left(\cdot\right)$, for notational convenience, these equations can be represented as\footnote{Note that all expressions also depend on the fundamentals of the welfare function---$D,Q_X,Q_Y$---but these are suppressed for simplicity.}
+\begin{equation}
+  \Omega\left(\ov{e}\left(\de_\text{ML},\ga,\bta \right),\de_\text{ML},\ga,\bta \right) = 0
+	\label{eq:leg3}
+\end{equation}
+\begin{equation}
+  \Pi\left(\bta\left(\de_\text{L},\de_\text{ML},\ga\right),\ov{e}\left(\de_\text{ML},\ga,\bta\right),\de_\text{L},\de_\text{ML},\ga \right) = 0
+  \label{eq:lob3}
+\end{equation}
+
+
+By the Implicit Function Theorem:
+\begin{equation}
+ 	\frac{\partial \ov{e}}{\partial \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b) - \pi(\tau^{a}) \right]}
+	\label{eq:coret}
+\end{equation}
+
+\noindent In order for the median legislator to be made indifferent (that is, for Equation~\ref{eq:leg2} to hold), $\ga(\ov{e})$ must be such that the cheater payoff $W_\text{ML}(\ga(\ov{e}),\tau^b,\tau^{*a})$ is higher than the payoff at $\tau^{tw}$ \textit{and} such that the same is true of $\tau^a$ and $\tau^{tw}$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is to the right of $\tau^a$ (and to the left of $\tau^{tw}$), implying that the numerator is positive.
+
+Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a < \tau^{tw}$ and $\tau^b$ is also smaller than the trade war tariff. Therefore the denominator is negative. Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
+
+
 {\hypertarget{Lem3}{\begin{lemma}}
   A solution to the executives' problem (\ref{prob:max}) exists for all $\de$ and all $T$.
   \label{lem:exist}	 
@@ -521,31 +547,6 @@ Therefore, at $\bta=\btw$, the left-hand side of Expression (\ref{ine:lobnorm}) 
 This is always strictly positive as long as $\Delta$ and $\Delta T$ are not both zero (recall that the special case of both $\Delta$ and $\Delta T \rightarrow 0$ has been treated above).
 
 In order to apply the Intermediate Value Theorem, it is left to show that the left-hand side of Expression~(\ref{ine:lobnorm}) is continuous in $\bta$. The lobby's gain is continuous in the tariffs by the assumptions on profits in Section~\ref{sec:stage}. Given Assumption~\ref{as:ga_c3} and the assumptions in Section~\ref{sec:stage}, $\ov{e}$ is continuous by the Implicit Function Theorem. Because the sum of continuous functions is continuous, we have the desired result and the Intermediate Value Theorem can be applied to ensure that, under the conditions stated above, the left-hand side of Expression (\ref{ine:lobnorm}) attains zero on the interval $\left[\bta_\text{NL},\btw\right]$ at least once; the solution to Problem~\ref{prob:max} is at the largest $\bm{\tau}$ at which Expression~(\ref{ine:lobnorm}) attains zero.\footnote{In the proof of Corollary~\ref{cor:tdl}, I show that an analogous equation is increasing in $\tau^a$, so there is only one value of $\tau^a$ that makes Expression~(\ref{ine:lobnorm}) hold with equality; if there were more than one and the executive chose the smallest, whatever dynamic caused the expression to become negative again would give the lobby incentive to break the agreement.\label{fn:lem3}}  $\hfill\blacksquare$
-
-\vskip.4in
-\noindent \textbf{\hypertarget{Cor_et}{Proof of Corollary~\ref{cor:et}}}: \\
-Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\left(\cdot\right)$ and $\Pi\left(\cdot\right)$, for notational convenience, these equations can be represented as\footnote{Note that all expressions also depend on the fundamentals of the welfare function---$D,Q_X,Q_Y$---but these are suppressed for simplicity.}
-\begin{equation}
-  \Omega\left(\ov{e}\left(\de_\text{ML},\ga,\bta \right),\de_\text{ML},\ga,\bta \right) = 0
-	\label{eq:leg3}
-\end{equation}
-\begin{equation}
-  \Pi\left(\bta\left(\de_\text{L},\de_\text{ML},\ga\right),\ov{e}\left(\de_\text{ML},\ga,\bta\right),\de_\text{L},\de_\text{ML},\ga \right) = 0
-  \label{eq:lob3}
-\end{equation}
-
-
-By the Implicit Function Theorem:
-\begin{equation}
- 	\frac{\partial \ov{e}}{\partial \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b) - \pi(\tau^{a}) \right]}
-	\label{eq:coret}
-\end{equation}
-
-\noindent In order for the median legislator to be made indifferent (that is, for Equation~\ref{eq:leg2} to hold), $\ga(\ov{e})$ must be such that the cheater payoff $W_\text{ML}(\ga(\ov{e}),\tau^b,\tau^{*a})$ is higher than the payoff at $\tau^{tw}$ \textit{and} such that the same is true of $\tau^a$ and $\tau^{tw}$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is to the right of $\tau^a$ (and to the left of $\tau^{tw}$), implying that the numerator is positive.
-
-Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a < \tau^{tw}$ and $\tau^b$ is also smaller than the trade war tariff. Therefore the denominator is negative. Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
-
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_tdl}{Proof of Corollary~\ref{cor:tdl}}}: \\
