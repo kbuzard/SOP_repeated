@@ -38,6 +38,7 @@
 \newcommand{\Bt}{B(\bm{\tau^a})}
 \newcommand{\bta}{\bm{\tau^a}}
 \newcommand{\btn}{\bm{\tau^n}}
+\newcommand{\btw}{\bm{\tau^{tw}}}
 \newcommand{\ga}{\gamma}
 \newcommand{\Ga}{\Gamma}
 \newcommand{\de}{\delta}
@@ -51,6 +52,53 @@ Modified Legislative Constraint
 Here I change the legislative constraint so that future political economy weights are evaluated according to anticipated lobbying effort, instead of the current period, or ``break'' lobbying effort as in the draft submitted to the JIE
 \begin{itemize}
 	\item This is an attempt to keep the legislative constraint from collapsing when acknowledging the endogenous impact of lobbying effort on the break tariff, which I had not fully incorporated in the previous drafts
+\end{itemize}
+
+\vskip.3in
+We can write the executives' joint problem as
+\begin{equation}
+  \max_{\bta} \frac{\bm{W_\text{E}}(\bta)}{1-\de_\text{E}} \hskip.2in \text{subject to}
+  \label{prob:max}
+\end{equation}
+\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(0),\bta) - W_{\text{ML}}(\ga(e_{tw}),\btw) \right] \geq
+	W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
+  \label{ine:leg2}
+\end{multline}
+\begin{center}
+and
+\end{center}
+\begin{equation}
+  e_b \geq \pi(\tau^b(e_b)) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+  \label{ine:lob2}
+\end{equation}
+
+\vskip.3in
+\begin{itemize}
+	\item Lobby's condition can't hold unless $\ov{e} \geq e_{tw}$
+		\begin{itemize}
+			\item Intuition: lobby's net profit is maximized at $e_{tw}$: if you're using an effort level below this to reduce the net profit and make the lobbying constraint hold, the lobby will just increase effort up to $e_{tw}$. So have to force lobbying effort above lobby's optimal level
+			\item Only holds at $\ov{e} = e_{tw}$ if net profit is exactly $\pi(\tau^a)$, in which case lobby is indifferent between trade war and trade agreement.
+		\end{itemize}
+	\item So, the question is: when does there exist a $\tau^a$ such that $\ov{e} \geq e_{tw}$ and the pair $\left(\tau^a,\ov{e}\right)$  satisfies the lobby's constraint?
+		\begin{itemize}
+			\item Intuitively, how do you need to set $\tau^a$ so that $\ov{e}$, which is derived from Expression~\ref{ine:leg2} at equality, implies that $\tau^b$ is enough larger than $\tau^{tw}$ so that Expression~\ref{ine:lob2} holds?
+			\item Or, am I even thinking about $\ov{e}$ anymore?
+				\begin{itemize}
+					\item Yes, but it has to be driven by setting $\tau^a$ high enough (otherwise, lobby would choose lower effort level, and Expression \ref{ine:lob2} would fail
+				\end{itemize}
+	
+		\item Take $\tau^b = \tau^{tw}$ (note that lobby's constraint is still probably a problem, but this is a benchmark). Then it must be that $e_b = e_{tw}$. 
+  		\begin{multline}
+				\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(0),\bta) - W_{\text{ML}}(\ga(e_{tw}),\btw) \right] \geq	W_{\text{ML}}(\ga(e_{tw}),\tau^{tw},\tau^{*a}) - W_{\text{ML}}(\ga(e_{tw}),\bta)
+			\end{multline}
+				\begin{itemize}
+					\item Can we say anything about what $\tau^a$ must be?
+					\item Not sure if there is some $\tau^a$ that makes this equal. The left hand side is positive and largest when $\tau^a = 0$ and becomes negative and smallest when $\tau^a = \tau^{tw}$. The right hand side varies from positive to zero. I haven't tried very hard, but don't see a way to sign the total expression at $\tau^a =0$
+				\end{itemize}
+
+		\end{itemize}
+	
 \end{itemize}
 	
 \end{document}
