@@ -108,7 +108,7 @@ Lobby's condition will hold if $\pi(\tau^{tw}) -e_{tw} = \pi(\tau^a)$
 		\begin{itemize}
 			\item At the same time, raising $\tau^a$ reduces the RHS
 		\end{itemize}
-	\item Lemma 1 is going to need some modifications: $\frac{\partial \ov{e}}{\partial \tau^a} > 0$ IF increase in $\ga(e_{tw})$ term outweighs potential decrease in $\ga(0)$ term
+	\item Lemma 1 is going to need some modifications: $\frac{\partial \ov{e}}{\partial \tau^a} > 0$ IF increase in $\ga(e_{b})$ term outweighs potential decrease in $\ga(0)$ term
 \end{itemize}
 	
 \vskip.3in
@@ -118,6 +118,35 @@ To be clear about how legislature's decision is made:
 		\begin{itemize}
 			\item holds, choose $\tau^a$ (that is, there are lots of $e^b$ that make the leg unilaterally prefer a tariff higher than $\tau^a$, but dynamic incentives lead the leg to stick with the trade agreement)
 			\item does not hold, choose $\tau^b$ (if breaking the agreement, want to choose static unilateral optimal tariff)
+		\end{itemize}
+\end{itemize}
+
+\vskip.3in
+For legislature, there is some $\tau^a$ (call it $\tau^A$) such that $W_\text{ML}(\ga(0),\tau^A,\tau^{*A}) = W_{\text{ML}}(\ga(e_{tw}),\btw)$
+\begin{itemize}
+	\item Trade war will only look like a punishment if $\tau^a < \tau^A$.
+	\item So must have $\tau^a \leq \tau^A$ or else legislature will cheat. Take $\tau^A$ as rightmost boundary?
+		\begin{itemize}
+			\item Can I prove something about the comparison of $W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*A})$ and $W_{\text{ML}}(\ga(e_b),\tau^A,\tau^{*A})$?
+		\end{itemize}
+	\item Must have $\ov{e}$ rise above $e_{tw}$ before $\tau^a$ exceeds $\tau^A$
+		\begin{itemize}
+			\item Remember: $\frac{\partial \ov{e}}{\partial \tau^a} > 0$ IF increase in $\ga(e_{b})$ term outweighs decrease in $\ga(0)$ term (loss from $\ga(0)$ term is zero at optimal unilateral tariff by envelope theorem)
+				\begin{itemize}
+					\item I don't know where $\frac{\partial \ov{e}}{\partial \tau^a} = 0$ (that is, where $\ov{e}$ starts to decrease in $\tau^a$)
+					\item If the curve starts to decrease before lobby's constraint is satisfied, whether there's a solution or not depends on whether $\pi(\tau^b(e_b)) - e_b$ decreases faster than $\pi(\tau^a)$
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+	
+	
+\vskip.5in
+What do I need to show?
+\begin{itemize}
+	\item That, taking into account the dependency of $\tau^b$ on $e_b$, there exists a cutoff $\ov{e}$
+	\item And, given this $\ov{e}$, the lobby's constraint binds
+		\begin{itemize}
+			\item It's really the same procedure as before: use Expression~\ref{ine:leg2} to define pairs of trade agreement tariffs and cutoff expenditure levels; then choose the pair with the lowest $\tau^a$ that satisfies Expression~\ref{ine:lob2}
 		\end{itemize}
 \end{itemize}
 	
