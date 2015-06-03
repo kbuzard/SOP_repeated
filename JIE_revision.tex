@@ -481,11 +481,11 @@ It will also be possible to explore whether accounting for the endogeneity of po
 \bibliography{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements}
 %\bibliography{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
 
+\newpage
 % The appendix command is issued once, prior to all appendices, if any.
 \appendix
 
 \section{Mathematical Appendix}
-\vskip.4in
 \noindent \textbf{\hypertarget{Cor_et}{Proof of Lemma~\ref{cor:et}}}: \\
 Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\left(\cdot\right)$ and $\Pi\left(\cdot\right)$, for notational convenience, these equations can be represented as\footnote{Note that all expressions also depend on the fundamentals of the welfare function---$D,Q_X,Q_Y$---but these are suppressed for simplicity.}
 \begin{equation}
@@ -509,7 +509,8 @@ By the Implicit Function Theorem:
 
 Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a < \tau^{tw}$ and $\tau^b$ is also smaller than the trade war tariff. Therefore the denominator is negative. Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
 
-
+\vskip.4in
+\newpage
 {\hypertarget{Lem3}{\begin{lemma}}
   A solution to the executives' problem (\ref{prob:max}) exists for all $\bm{\de}$ and all $T$.
   \label{lem:exist}	 
@@ -518,7 +519,7 @@ Proof: The executives' problem is to minimize $\bta$ such that both the legislat
 
 Consider the case where $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
 \begin{multline}
-  \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(e),\bta) - W_\text{ML}(\ga(e),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e),\tau^b(e),\tau^{*a}) - W_\text{ML}(\ga(e),\bta) \right]   \geq 0
+  \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(0),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta) \right]   \geq 0
 \end{multline}
 \vskip-.4in
 \begin{multline}
