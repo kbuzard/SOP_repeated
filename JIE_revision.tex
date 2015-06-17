@@ -284,11 +284,11 @@ In state $C$, the lobby has a two-stage problem. First, for the given $\bta$, $\
 
 Given the effort level required to break the agreement, the lobby will then compare its current and future payoffs from inducing a dispute net of lobbying effort $\left(\text{that is, }\pi(\tau^b(\ov{e})) + \de_\text{L} V^D_L - \ov{e}\right)$ to the profit stream from the trade agreement with no lobbying effort $\left(\pi(\tau^a) + \de_\text{L} V^C_L\right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}$. If the former is larger, the lobby induces the cheapest possible break; if the latter is larger, the lobby chooses to be inactive and the agreement remains in force.
 
-The executives choose the trade agreement tariffs subject to this decision-making process of the lobby. Corollary~\ref{cor:et} shows that the relationship between $\tau^a$ and $\ov{e}$ is straightforward. 
-\begin{corollary}
+The executives choose the trade agreement tariffs subject to this decision-making process of the lobby. Lemma~\ref{cor:et} shows that the relationship between $\tau^a$ and $\ov{e}$ is straightforward. 
+\begin{lemma}
   An increase in the trade agreement tariff, \emph{ceteris paribus}, leads to an increase in the minimum lobbying effort ($\ov{e}$) required to break the trade agreement.
   \label{cor:et}
-\end{corollary}
+\end{lemma}
 
 Proof: See the \hyperlink{Cor_et}{Appendix}.
 
@@ -487,7 +487,7 @@ It will also be possible to explore whether accounting for the endogeneity of po
 \appendix
 
 \section{Mathematical Appendix}
-\noindent \textbf{\hypertarget{Cor_et}{Proof of Corollary~\ref{cor:et}}}: \\
+\noindent \textbf{\hypertarget{Cor_et}{Proof of Lemma~\ref{cor:et}}}: \\
 Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\left(\cdot\right)$ and $\Pi\left(\cdot\right)$, for notational convenience, these equations can be represented as\footnote{Note that all expressions also depend on the fundamentals of the welfare function---$D,Q_X,Q_Y$---but these are suppressed for simplicity.}
 \begin{equation}
   \Omega\left(\ov{e}\left(\de_\text{ML},\ga,\bta \right),\de_\text{ML},\ga,\bta \right) = 0
@@ -568,7 +568,7 @@ Therefore $\frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{(1-\
 
 The bracketed term must be positive in order for the lobby to have the incentive to lobby in the trade-war phase. I will assume that this is the case, but note that restricting attention to this case is not trivial; see the conclusion for discussion of a planned extension that more fully explores the trade-war phase.
 
-Corollary~\ref{cor:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. Thus the denominator is the sum of three positive terms,\footnote{This establishes that Equation~(\ref{ine:lobnorm}) is increasing as referenced in Footnote~\ref{fn:lem3} in the proof Lemma~\ref{lem:exist}.} and $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. $\hfill\blacksquare$
+Lemma~\ref{cor:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. Thus the denominator is the sum of three positive terms,\footnote{This establishes that Equation~(\ref{ine:lobnorm}) is increasing as referenced in Footnote~\ref{fn:lem3} in the proof Lemma~\ref{lem:exist}.} and $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. $\hfill\blacksquare$
 
 
 \vskip.4in
@@ -580,7 +580,7 @@ By the Implicit Function Theorem:
  	\label{eq:e_de}
 \end{equation}
 
-I have shown in the proof of Corollary~\ref{cor:tdl} that the first term in the numerator is positive. The bracketed term is positive because $\ov{e}$ is always determined via Equation~\ref{eq:leg2} so that $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ is positive: the trade-war tariff is the punishment relative to the trade agreement tariff. Therefore the numerator of the fraction is positive. The denominator is shown to be negative in the proof of Corollary~\ref{cor:et}. Therefore $\frac{\partial \ov{e}}{\partial \de_\text{ML}}$ is positive. $\hfill\blacksquare$
+I have shown in the proof of Corollary~\ref{cor:tdl} that the first term in the numerator is positive. The bracketed term is positive because $\ov{e}$ is always determined via Equation~\ref{eq:leg2} so that $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ is positive: the trade-war tariff is the punishment relative to the trade agreement tariff. Therefore the numerator of the fraction is positive. The denominator is shown to be negative in the proof of Lemma~\ref{cor:et}. Therefore $\frac{\partial \ov{e}}{\partial \de_\text{ML}}$ is positive. $\hfill\blacksquare$
 
 
 \vskip.4in
