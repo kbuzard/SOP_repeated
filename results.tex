@@ -80,7 +80,7 @@ We can write the executives' joint problem as
   \label{prob:max}
 \end{equation}
 \begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),\btw) \right] \geq \\
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_a),\bta) - W_{\text{ML}}(\ga(e_{tw}),\btw) \right] \geq \\
 	W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
   \label{ine:leg2}
 \end{multline}
@@ -88,17 +88,17 @@ We can write the executives' joint problem as
 and
 \end{center}
 \begin{equation}
-  e_b \geq \pi(\tau^b(e_b)) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+  e_b \geq \pi(\tau^b(e_b)) - \left(\pi(\tau^a) - e_a \right) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \left(\pi(\tau^a) - e_a \right) \right]
   \label{ine:lob2}
 \end{equation}
 
 \begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right] \\
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_a),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] \\
 	- \left[ W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*a}) - W_\text{ML}(\ga(\ov{e}),\bta) \right] = 0
   \label{eq:leg2}
 \end{multline}
 \begin{equation}
-  \ov{e}(\bta) - \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right] = 0
+  \ov{e}(\bta) - \left[ \pi(\tau^b(\ov{e})) - \left(\pi(\tau^a) - e_a \right) \right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \left(\pi(\tau^a) - e_a \right) \right] = 0
   \label{eq:lob2}
 \end{equation}
 
