@@ -205,12 +205,12 @@ Proof: The executives' problem is to minimize $\bta$ such that both the legislat
 
 Consider the case where $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
 \begin{multline}
-  \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(0),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta) \right]   \geq 0
+  \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(e_a),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta) \right]   \geq 0
 \end{multline}
 \vskip-.4in
 \begin{multline}
-  \left(1-\mathrm{e}^{-r\Delta}\right) e_b - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(e_b)) - \pi(\tau^a) \right] - \\
-	\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq 0
+  \left(1-\mathrm{e}^{-r\Delta}\right) e_b - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(e_b)) - \left(\pi(\tau^a) - e_a \right) \right] - \\
+	\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \left(\pi(\tau^a) - e_a \right) \right] \geq 0
   \label{ine:lobnorm}
 \end{multline}
 The proof is via the Intermediate Value Theorem. I take as the leftmost boundary $\bta_\text{NL}$ because this is the lowest possible tariff the executives can achieve before the additional constraint implied by the presence of lobbies is added. By construction, $\ov{e}(\bta_\text{NL})=0$. The gain to the lobby of a break in the trade agreement here is 
@@ -236,6 +236,12 @@ In order to apply the Intermediate Value Theorem, it is left to show that the le
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_tdl}{Proof of Corollary~\ref{cor:tdl}}}: \\
+
+\begin{itemize}
+	\item Needs modification for $e_a$; net profits rise in $\tau^a$ since net profits are maximized at $\tau^{tw}$
+\end{itemize}
+
+
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\partial \tau^a}{\partial \de_\text{L}} = -\frac{\frac{\partial \Pi}{\partial \ov{\de_\text{L}}}}{\frac{\partial \Pi}{\partial \tau^a}} = 
@@ -258,6 +264,11 @@ Corollary~\ref{cor:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_edm}{Proof of Corollary~\ref{cor:edm}}}: \\
+
+\begin{itemize}
+	\item needs to change for new values of $e$ and argumentation changed to match, but otherwise fine
+\end{itemize}
+
 By the Implicit Function Theorem:
 \begin{equation}
  	\textstyle \frac{\partial \ov{e}}{\partial \de_\text{ML}} = -\frac{\frac{\partial \Omega}{\partial \de_\text{ML}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
@@ -270,6 +281,11 @@ I have shown in the proof of Corollary~\ref{cor:tdl} that the first term in the 
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_tdm}{Proof of Corollary~\ref{cor:tdm}}}: \\
+
+\begin{itemize}
+	\item Have extra term due to dependence on $e_b$. The total effect on $\Pi$ of $\ov{e}$ is the negative of the lobby's FOC. The lobby's FOC decreases to the right of $e_{tw}$ since $e_{tw}$ is the optimum. And $\ov{e}$ must be $\geq e_{tw}$ in equilibrium because this condition is required for the lobby's constraint to bind. So the effect of $\ov{e}$ is positive
+\end{itemize}
+
 Differentiating Equation~\ref{eq:lob3} with respect to $\de_\text{ML}$, we have
 \[
   \frac{\partial \Pi}{\partial \tau^a}\frac{\partial \tau^a}{\partial \de_\text{ML}} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \de_\text{ML}} + \frac{\partial \Pi}{\partial \de_\text{ML}} = 0
@@ -287,6 +303,11 @@ By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_eg}{Proof of Corollary~\ref{cor:eg}}}: \\
+
+\begin{itemize}
+	\item This could be a little off b/c $\ga$ is not evaluated at the exact same point. Not sure if I want to say anything about it
+\end{itemize}
+
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\partial \ov{e}}{\partial \ga} = -\frac{\frac{\partial \Omega}{\partial \ga}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
@@ -298,6 +319,11 @@ We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and 
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_tg}{Proof of Corollary~\ref{cor:tg}}}: \\
+
+\begin{itemize}
+	\item same adjustment as corollary 3
+\end{itemize}
+
 Differentiating the executives' condition, Equation~\ref{eq:lob3} with respect to $\ga$, we have
 \[
   \frac{\partial \Pi}{\partial \tau^a}\frac{\partial \tau^a}{\partial \ga} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \ga} + \frac{\partial \Pi}{\partial \ga} = 0
