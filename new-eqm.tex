@@ -175,7 +175,7 @@ Conditions for punishment
 \begin{itemize}
 	\item Legislature's condition (for class 4 above):
 		\[
-		  \frac{1 - \de^{T}}{1-\de} W(\ga(e^N),\tau^N) + \de^{T} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) 
+		  \frac{1 - \de^{T}}{1-\de} W(\ga(e^N),\tau^N) + \de^{T} W(\ga(e_a),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(e_a),\tau^a) 
 		\]
 			\begin{itemize}
 				\item The $\cdot$ on the right hand side is where we fill in the best deviation. Given that this deviation can't affect the future path of play (any deviation triggers the resetting of the punishment phase), this should be a unilateral best response.
@@ -184,7 +184,7 @@ Conditions for punishment
 			\end{itemize}
 		\item Lobby's condition (for class 5 above)
 			\[
-			  \frac{1 - \de^{T}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \frac{\de^{T}}{1-\de}\pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de}{1-\de} \pi(\tau^a)
+			  \frac{1 - \de^{T}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \frac{\de^{T}}{1-\de}\left[\pi(\tau^a) - e_a \right] \geq \pi(\tau^D) -e^D + \frac{\de}{1-\de} \left[ \pi(\tau^a) - e_a \right]
 			\]
 			\begin{itemize}
 				\item What is best deviation? Would lobby want to choose $e^D=0$ and get $\tau(\ga(0))$?
