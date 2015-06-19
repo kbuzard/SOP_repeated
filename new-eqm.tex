@@ -135,7 +135,7 @@ Conditions for equilibrium
 		\begin{itemize}
 			\item Legislature:
 				\[
-				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N)
+				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(e_a),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N)
 				\]
 				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
 					\begin{itemize}
@@ -144,22 +144,19 @@ Conditions for equilibrium
 					\end{itemize}
 			\item Lobby [(2) is incentive compatible given (4) and (5)]:
 				\[
-				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^a)\right]
+				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \left[\pi(\tau^a) -e_a \right] \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \left[\pi(\tau^a) -e_a\right]
 				\]
-				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a$, which is necessary for any of this to be interesting, this condition holds. \\
+				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a -e_a$, which is necessary for any of this to be interesting, this condition holds. \\
 				Since the best deviation is to the Nash tariff, it reduces to
 				\[
-				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^a)\right]
+				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^a) - e_a\right]
 				\]
 				\begin{equation}
-				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right] \geq 0
+				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a) +e_a\right] \geq 0
 					\label{lobdev}
 				\end{equation}
-				This now seems less of a conflict with the constraint in the main problem of
-				\[
-				  e^b \geq \pi(\tau^b) - \pi(\tau^a) + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a)\right]
-				\]
-				there's still a push and pull, but it's easier to satisfy---in particular, we already assume that $\pi(\tau^N) - e^N - \pi(\tau^a) > 0$ or the problem is not interesting. \\
+				This is always true. \\
+				\vskip.2in
 				Note that Expression~\ref{lobdev} will hold for all $T$ (or, alternatively, $i$).
 					\begin{itemize}
 						\item In last period of punishment, will hold with equality. Is tighest at the end of the punishment, looser at beginning. Holds for all $T$, i.e. always holds.
