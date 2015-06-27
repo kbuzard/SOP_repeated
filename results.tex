@@ -203,7 +203,7 @@ Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partia
 \end{lemma}
 Proof: The executives' problem is to minimize $\bta$ such that both the legislature's and the lobby's constraints are satisfied. If the solution to the problem in the absence of lobbies (i.e. with only the legislature's constraint and $e_b=0$) cannot be satisfied for any $\bta < \btw$ (that is, $\bta_\text{NL} = \btw$ where $\bta_\text{NL}$ is the trade agreement chosen by the executives when there is no lobby), then the solution to (\ref{prob:max}) will also be $\btw$.
 
-It is left to establish that an optimal trade agreement exists when $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
+It is left to establish that an optimal trade agreement tariff exists when $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
 \begin{multline}
   \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(e_a),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta) \right]   \geq 0
 \end{multline}
@@ -215,7 +215,7 @@ It is left to establish that an optimal trade agreement exists when $\bta_\text{
 \end{multline}
 The proof is via the Intermediate Value Theorem. I take as the leftmost boundary $\bta_\text{NL}$ because this is the lowest possible tariff the executives can achieve before the additional constraint implied by the presence of lobbies is added. By construction, $\ov{e}(\bta_\text{NL})=0$. The gain to the lobby of a break in the trade agreement here is 
 \[
-  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(0)) - \pi(\tau^a_\text{NL}) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a_\text{NL}) \right] 
+  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(0)) - \left(\pi(\tau^a_\text{NL}) - e_a \right) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \left(\pi(\tau^a_\text{NL}) - e_a \right) \right] 
 \]
 If this gain is non-positive, since the lobby does not need to exert any effort to effect a break in the trade agreement at $\bta_\text{NL}$, the lobby has no incentive to exert effort and so $\bta_\text{NL}$ is the solution to the executives' problem.\footnote{Note, in particular, that this is the case if both $\Delta$ and $\Delta T \rightarrow 0$. This is also possible for some very large $\tau^a_\text{NL}$ if $\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a_\text{NL})< 0$, a case that is beyond the scope of this paper. See the proof of Corollary~\ref{cor:tdl} and the Conclusion for a discussion.} On the other hand, if the lobby's gain when $\ov{e}=0$ is strictly positive, the left-hand side of Expression~\ref{ine:lobnorm} is negative. The executives will have to raise the trade-agreement tariff to prevent the agreement from being broken in this case because the lobby's constraint is not satisfied.
 
