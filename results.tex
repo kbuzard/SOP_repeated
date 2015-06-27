@@ -206,6 +206,7 @@ Proof: The executives' problem is to minimize $\bta$ such that both the legislat
 It is left to establish that an optimal trade agreement tariff exists when $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
 \begin{multline}
   \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(e_a),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta) \right]   \geq 0
+	\label{ine:legnorm}
 \end{multline}
 \vskip-.4in
 \begin{multline}
@@ -222,18 +223,13 @@ After cancelling the terms in brackets, we see the right hand side is always pos
 
 Intuitively, the lobby's gain from exerting effort to break the trade agreement at $\bta_\text{NL}$ is strictly positive. The only chance for a trade agreement is if the executives can find a higher trade-agreement tariff at which the lobby's constraint is satisfied.
 
-Next, look at the rightmost boundary, that is $\bta=\btw$. The executives have no incentive to set a trade-agreement tariff above the trade-war (i.e. non-cooperative) level, as this is the highest tariff-level they will have to face even if the trade-agreement is broken. When $\bta=\btw$, the legislature's constraint becomes vacuous: even if the median legislator prefers a lower tariff than $\tau^{tw}$, the only actions available are to maintain the trade agreement by choosing $\tau^a=\tau^{tw}$ or to choose the cheater's tariff. But the cheater's tariff when $\tau^a=\tau^{tw}$ is $\tau^b=\tau^{tw}$ and both lead to the same outcome.
+Next, look at the rightmost boundary, that is $\bta=\btw$. Here we see that $\ov{e} = e_{tw}$ and $\tau^b = \tau^{tw}$ so that the legislature's constraint (Expression~\ref{ine:legnorm}) is trivially satisfied.
 
-The lobby's gain will then be 
+The the lobby's constraint (\ref{ine:lobnorm}) will be 
 \begin{multline*}
-  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^{tw}) - \pi(\tau^{tw}) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^{tw}) \right] \\
-	= - \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) e_{tw}
+ - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^{tw}) - e_{tw} - \left(\pi(\tau^{tw}) - e_{tw} \right)\right] - \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \left(\pi(\tau^{tw}) - e_{tw} \right) \right] \geq 0
 \end{multline*}
-Therefore, at $\bta=\btw$, the left-hand side of Expression (\ref{ine:lobnorm}) is
-\[
-  \left(1-\mathrm{e}^{-r\Delta}\right) e_{tw} + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) e_{tw} = \left(1 - \mathrm{e}^{-r\left(\Delta +\Delta T\right)} \right)e_{tw}.
-\]
-This is always strictly positive as long as $\Delta$ and $\Delta T$ are not both zero (recall that the special case of both $\Delta$ and $\Delta T \rightarrow 0$ has been treated above).
+Therefore, at $\bta=\btw$, the left-hand side of Expression (\ref{ine:lobnorm}) is identically zero.
 
 In order to apply the Intermediate Value Theorem, it is left to show that the left-hand side of Expression~(\ref{ine:lobnorm}) is continuous in $\bta$. The lobby's gain is continuous in the tariffs by the assumptions on profits in Section~\ref{sec:stage}. Given Assumption~\ref{as:ga_c3} and the assumptions in Section~\ref{sec:stage}, $\ov{e}$ is continuous by the Implicit Function Theorem. Because the sum of continuous functions is continuous, we have the desired result and the Intermediate Value Theorem can be applied to ensure that, under the conditions stated above, the left-hand side of Expression (\ref{ine:lobnorm}) attains zero on the interval $\left[\bta_\text{NL},\btw\right]$ at least once; the solution to Problem~\ref{prob:max} is at the largest $\bm{\tau}$ at which Expression~(\ref{ine:lobnorm}) attains zero.\footnote{In the proof of Corollary~\ref{cor:tdl}, I show that an analogous equation is increasing in $\tau^a$, so there is only one value of $\tau^a$ that makes Expression~(\ref{ine:lobnorm}) hold with equality; if there were more than one and the executive chose the smallest, whatever dynamic caused the expression to become negative again would give the lobby incentive to break the agreement.\label{fn:lem3}}  $\hfill\blacksquare$
 
