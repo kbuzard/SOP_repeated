@@ -44,6 +44,19 @@ bookmarksopen=true,hyperfootnotes=false]{hyperref}
 %\newtheorem{fact}{Fact}
 \newtheorem{result}{Result}
 
+\makeatletter
+
+\newenvironment{customlemma}[1]
+  {\count@\c@lemma
+   \global\c@lemma#1 %
+    \global\advance\c@lemma\m@ne
+   \lemma}
+  {\endlemma
+   \global\c@lemma\count@}
+
+\makeatother
+
+
 \newcommand{\ve}{\theta}
 \newcommand{\ta}{\theta}
 \newcommand{\ov}{\overline}
@@ -393,10 +406,16 @@ In an environment without lobbying, KRW show that social welfare increases (that
 	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta)
 \end{multline*}
 This constraint is made less binding as $T$ increases---that is, as we increase the number of periods of punishment. The intuition is straightforward: the per-period punishment is felt for more periods as the one period of gain from defecting remains the same. Thus larger deviation payoffs remain consistent with equilibrium cooperation as $T$ increases.
-\begin{lemma}
+
+\begin{customlemma}{3}
   The slackness of the legislative constraint is increasing in $T$.
   \label{lem:legcon}
-\end{lemma}
+\end{customlemma}
+
+%\begin{lemma}
+%  The slackness of the legislative constraint is increasing in $T$.
+%  \label{lem:legcon}
+%\end{lemma}
 This is why the standard environment with no lobby gives no model-based prediction about the optimal length of punishment. Longer is better, although there are renegotiation constraints that must be taken into account that are typically outside of the model as well as other concerns.
 
 The lobby's constraint
@@ -404,10 +423,10 @@ The lobby's constraint
   e_b \geq \pi(\tau^b(e_b)) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) \right]
 \]
 works in the opposite direction in relation to $T$. Here, the lobby benefits in each dispute period, and so the total profit from a dispute is increasing in $T$. Thus we have
-\begin{lemma}
+\begin{customlemma}{4}
   The slackness of the lobbying constraint is decreasing in $T$.
   \label{lem:lobcon}
-\end{lemma}
+\end{customlemma}
 
 Although the interaction of the impact of the length of the punishment on these two constraints is quite nuanced, in many cases, adding the lobbying constraint provides a prediction for the optimal $T$.
 
