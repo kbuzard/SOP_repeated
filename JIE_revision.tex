@@ -286,7 +286,7 @@ Given the effort level required to break the agreement, the lobby will then comp
 
 The executives choose the trade agreement tariffs subject to this decision-making process of the lobby. Lemma~\ref{cor:et} shows that the relationship between $\tau^a$ and $\ov{e}$ is straightforward. 
 \begin{lemma}
-  An increase in the trade agreement tariff, \emph{ceteris paribus}, leads to an increase in the minimum lobbying effort ($\ov{e}$) required to break the trade agreement.
+  The minimum lobbying effort ($\ov{e}$) required to break the trade agreement is increasing in the trade agreement tariff $\tau^a$.
   \label{cor:et}
 \end{lemma}
 
@@ -478,9 +478,9 @@ It will also be possible to explore whether accounting for the endogeneity of po
 
 \section{Bibliography}
 \bibliographystyle{aea}
-%\bibliography{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements}
+\bibliography{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements} %dell home laptop
 %\bibliography{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
-\bibliography{C:/Users/kbuzard/Dropbox/Research/xBibs/tradeagreements} %surface
+%\bibliography{C:/Users/kbuzard/Dropbox/Research/xBibs/tradeagreements} %surface
 
 \newpage
 % The appendix command is issued once, prior to all appendices, if any.
@@ -506,12 +506,11 @@ By the Implicit Function Theorem:
 	\label{eq:coret}
 \end{equation}
 
-\noindent In order for the median legislator to be made indifferent (that is, for Equation~\ref{eq:leg2} to hold), $\ga(\ov{e})$ must be such that the cheater payoff $W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*a})$ is higher than the payoff at $\tau^{tw}$ \textit{and} such that the same is true of $\tau^a$ and $\tau^{tw}$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is to the right of $\tau^a$ (and to the left of $\tau^{tw}$), implying that the numerator is positive.
+\noindent In order for the lobby's incentive constraint (Equation~\ref{eq:lob2}) to hold in equilibrium, $\ov{e}$ must be at least as large as $e_{tw}$. Since the executives have no incentive to set the trade agreement tariff above the trade war tariff, this means that $\tau^a \leq \tau^{tw} \leq \tau^b$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is (weakly) to the right of $\tau^a$, implying that the numerator is (weakly) positive.
 
-Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a < \tau^{tw}$ and $\tau^b$ is also smaller than the trade war tariff. Therefore the denominator is negative. Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
+Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a \leq \tau^{tw} \leq \tau^b$. Therefore the denominator is negative.\footnote{Note that when $\tau^a = \tau^{tw} = \tau^b$, only the trivial trade agreement is possible and so this result and those that build upon it are not of interest.} Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
 
 \vskip.4in
-\newpage
 {\hypertarget{Lem3}{\begin{lemma}}
   A solution to the executives' problem (\ref{prob:max}) exists for all $\bm{\de}$ and all $T$.
   \label{lem:exist}	 
