@@ -360,7 +360,35 @@ Notes for existence/non-existence of modified old construction (what was Lemma 4
 				\item This means that lobby's constraint is slack at $\btw$, i.e. LHS $> 0$
 				\item LHS $< 0$ at $\bta_\text{NL}$
 			\end{itemize}
-	\item The solution to the problem is the smallest $\bta$ at which Expression~\ref{ine:lob2} is satisfied
+	\item The solution to the problem is the smallest $\bta$ at which Expression~\ref{ine:lob2} is satisfied, as long as $\ov{e} \geq e_{tw}$
+		\begin{itemize}
+			\item If executives choose $\bta$ for which $\ov{e} < e_{tw}$, lobby will choose $e_{tw}$ and break this IC
+			\item The lobby's constraint will always be satisfied when $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$. The results of the paper do not apply to this kind of solution, but it does exist, so name this $\tau^a_{NF}$ since there is no future gain for the lobby. Since the highest net profits in one period are also achieved at the trade war tariff, there can be no contemporaneous gain either, so the lobby has no incentive to exert effort.
+				\begin{itemize}
+					\item Legislature's constraint: as written, may not hold. Leg may want to apply a \textit{lower} tariff. But this won't break the agreement. Just need to be clear in set up that only need IC to hold in case where $\tau^b(e_b) > \tau^a$.
+				\end{itemize}
+		\end{itemize}
+	\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$ (other than that where $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$),
+		\begin{itemize}
+			\item we know that at $\ov{e} = e_{tw}$, the lobby's constraint cannot hold (simple math)
+		\end{itemize}
+	\item Way to exposit it:
+		\begin{enumerate}
+			\item Leg constraint traces out $\left(\tau^a,\ov{e}\left(\tau^a\right)\right)$ pairs
+			\item This function is concave in $\tau^a$
+				\begin{enumerate}
+					\item Have to show two separate results and how they combine
+				\end{enumerate}
+			\item In order for lobby's constraint to be satisfied, $\ov{e}$ must be greater than $e_{tw}$
+				\begin{itemize}
+					\item Do I want to re-write constraints? If so, which ones?
+				\end{itemize}
+			\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$...
+				\begin{itemize}
+				  \item IF $\ov{e} = e_{tw}$ for the first time, $\frac{\partial \ov{e}}{\partial \tau^a}$ must still be on the increasing portion of the curve (it will hit again at $\tau^a = \tau^{tw}$, but we don't need to get there)
+					\item It may increase enough to satisfy leg constraint before $\tau^a_{NF}$, or it may start to decrease and decrease too quickly
+				\end{itemize}
+		\end{enumerate}
 \end{itemize}
 	
 \end{document}
