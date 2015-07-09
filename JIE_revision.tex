@@ -309,6 +309,29 @@ Proof: See the \hyperlink{Cor_et}{Appendix}.
 
 Given the relationship identified in Lemma~\ref{lem:et} between trade agreement tariffs and lobbying behavior, the executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. They raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ and disengaging completely,\footnote{Here I assume that the lobby does not exert effort when indifferent; if the opposite assumption were made, tariffs would have to be raised by an additional $\varepsilon$.} provided that this also satisfies the legislative constraint. By construction, the legislative constraint will always be slack in equilibrium because the $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium, $\bta$ is chosen so that the lobby disengages. When the lobby is disengaged $\left(e_b=0\right)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when $e_b=0$ than when $e_b=\ov{e}(\bta)$.
 
+\begin{itemize}	
+	\item The solution to the problem is the smallest $\bta$ at which Expression~\ref{ine:lob2} is satisfied
+		\begin{enumerate}
+			\item Leg constraint traces out $\left(\tau^a,\ov{e}\left(\tau^a\right)\right)$ pairs
+			\item This function is concave in $\tau^a$
+				\begin{enumerate}
+					\item Have to show two separate results and how they combine
+				\end{enumerate}
+			\item In order for lobby's constraint to be satisfied, $\ov{e}$ must be greater than $e_{tw}$
+				\begin{itemize}
+					\item Do I want to re-write constraints? If so, which ones?
+					\item If executives choose $\bta$ for which $\ov{e} < e_{tw}$, lobby will choose $e_{tw}$ and break this IC
+				\end{itemize}
+			\item The lobby's constraint will always be satisfied when $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$. The results of the paper do not apply to this kind of solution, but it does exist, so name this $\tau^a_{NF}$ since there is no future gain for the lobby. Since the highest net profits in one period are also achieved at the trade war tariff, there can be no contemporaneous gain either, so the lobby has no incentive to exert effort.\footnote{Legislature's constraint: Leg may want to apply a \textit{lower} tariff. But this won't break the agreement. Need to be clear in set up that only need IC to hold in case where $\tau^b(e_b) > \tau^a$.}
+			\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$, there may be another solution
+				\begin{itemize}
+					\item we know that at $\ov{e} = e_{tw}$, the lobby's constraint cannot hold (simple math)
+					\item IF $\ov{e} = e_{tw}$ for the first time, $\frac{\partial \ov{e}}{\partial \tau^a}$ must still be on the increasing portion of the curve (it will hit again at $\tau^a = \tau^{tw}$, but we don't need to get there)
+					\item It may increase enough to satisfy leg constraint before $\tau^a_{NF}$, or it may start to decrease and decrease too quickly
+				\end{itemize}
+		\end{enumerate}
+\end{itemize}
+
 \hyperlink{Lem3}{Lemma~\ref{lem:exist}} in the Appendix demonstrates that the solution to the executives' problem is well-defined. This combined with the immediately preceding discussion demonstrates the following result.
 \begin{result}
   In the case of political certainty, the equilibrium trade agreement induces zero lobbying effort and is never subject to dispute. The executives choose the minimum tariff level that induces the lobby to choose $e_b=0$.
