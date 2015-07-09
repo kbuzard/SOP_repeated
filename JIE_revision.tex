@@ -253,7 +253,7 @@ This implies the following constraint on the trade agreement tariffs $\bta$:
 \[
   W_\text{ML}(\ga(e_b),\bta) + \de_\text{ML} V^C_\text{ML} \geq W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \de_\text{ML} V^D_\text{ML}
 \]
-where $V^C_\text{ML}$ is the continuation value of the median legislator in the cooperative state. If the punishment is $T$ periods in the dispute state (where only trade-war tariffs can be chosen), then the only part of the continuation values that need be considered are the next $T$ periods because after those $T$ periods, the relationship will revert back to cooperation in either state and so the continuation value will be the same from period $T+1$ on. When in state $C$ in the future, the executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the  same supportability conditions; in state $D$, the argument above shows that $\btw$ must be chosen. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^i = \sum_{t=1}^i \de= \sum_{t=1}^\infty \de - \sum_{t=i+1}^\infty \de = \frac{\de}{1-\de} - \frac{\de^{i+1}}{1-\de} = \frac{\de - \de^{i+1}}{1-\de} $.}
+where $V^C_\text{ML}$ is the continuation value of the median legislator in the cooperative state. If the punishment is $T$ periods in the dispute state (where only trade-war tariffs can be chosen), then the only part of the continuation values that need be considered are the next $T$ periods because after those $T$ periods, the relationship will revert back to cooperation in either state and so the continuation value will be the same from period $T+1$ on. When in state $C$ in the future, the executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the  same supportability conditions; in state $D$, the argument above shows that $\btw$ must be chosen. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^i = \sum_{t=1}^i \de^t= \sum_{t=1}^\infty \de^t - \sum_{t=i+1}^\infty \de^t = \frac{\de}{1-\de} - \frac{\de^{i+1}}{1-\de} = \frac{\de - \de^{i+1}}{1-\de} $.}
 \begin{multline}
   W_\text{ML}(\ga(e_b),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\bta) \geq \\
 	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\btw)
@@ -351,16 +351,16 @@ Following Result~\ref{res:eqm}, we know that the lobby first uses Expression~\re
 
 With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{eq:lob2} at equality to determine the required $\tau^a$:\footnote{There are analogous expression for $\tau^{*a}$ throughout that can be ignored by symmetry.} that is, the trade agreement tariff that is just high enough to induce the lobby to disengage, causing the equilibrium outcome to be $e_b = 0$ and the trade agreement tariff to remain in place.
 
-Although explicit expressions for the solution functions $\ov{e}(\cdot)$ and $\tau^a(\cdot)$ cannot be arrived at without imposing further assumptions, significant intuition can be derived implicitly. An overview of the results will be provided here, while the mathematical details are in the Appendix.
+Although explicit expressions for the solution functions $\ov{e}(\cdot)$ and $\tau^a(\cdot)$ cannot be arrived at without imposing further assumptions, significant intuition can be derived implicitly. An overview of the results will be provided here, while the mathematical details are in the Appendix. It's important to keep in mind that these results apply to solutions that are truly interior in the sense that the lobby has been disengaged by making exerting effort too expensive.
 
-We begin with the comparative static question of how changes in the patience level of the lobby effect the equilibrium trade agreement tariffs.
+We begin with the comparative static question of how changes in the patience level of the lobby affect the equilibrium trade agreement tariffs.
 
 \begin{corollary}
   As the lobby becomes more patient ($\de_\emph{L}$ increases), the trade agreement tariff also increases, \emph{ceteris paribus}.
   \label{cor:tdl}
 \end{corollary}
 
-Proof: See the \hyperlink{Cor_tdl}{Appendix}.\footnote{In the Appendix, I explain that it must be assumed that trade agreement tariffs are set such that the lobby would have incentive to exert effort to sustain a trade war. Restricting attention to this case is not trivial; see the conclusion for discussion of a planned extension that more fully explores the trade-war phase.}
+Proof: See the \hyperlink{Cor_tdl}{Appendix}.
 
 \noindent When the lobby becomes more patient, the equilibrium trade agreement tariff must be raised because the lobby now places relatively less value on the cost of $e_b$ it pays in the current period in order to attain the benefit of higher tariffs under a trade war in future periods, which are now valued relatively more. The break tariff $\tau^b$ (which is lower than $\tau^{tw}$) in the current period is not the lobby's primary goal but is used to incentivize the legislature. Thus the lobby's incentives to exert effort must be reduced by increasing the trade agreement tariff, thus reducing the profit gap between the trade war and the trade agreement.
 
@@ -575,24 +575,9 @@ First I will show that $\frac{1 - \left(T+1\right)\de^T + T \de^{T+1}}{(1-\de)^2
 \]
 Therefore $\frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{(1-\de_\text{L})^2}$ is positive. 
 
-The bracketed term must be positive in order for the lobby to have the incentive to lobby in the trade-war phase. I will assume that this is the case, but note that restricting attention to this case is not trivial; see the conclusion for discussion of a planned extension that more fully explores the trade-war phase.
+The bracketed term must be positive in order for the lobby to have the incentive to lobby in the trade-war phase. I assume that this is the case, as all the results of this section are not interesting for any trade agreement for which it is violated. See the conclusion for discussion of a planned extension that more fully explores the trade-war phase.
 
-Lemma~\ref{lem:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. Thus the denominator is the sum of three positive terms,\footnote{This establishes that Equation~(\ref{ine:lobnorm}) is increasing as referenced in Footnote~\ref{fn:lem3} in the proof Lemma~\ref{lem:exist}.} and $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. 
-
-GOING TO NEED TO MODIFY SINCE LEM:EXIST GONE
-\begin{multline}
-  \left(1-\mathrm{e}^{-r\Delta}\right) e_b - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(e_b)) - \pi(\tau^a) \right] - \\
-	\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq 0
-  \label{ine:lobnorm}
-\end{multline}
-The proof is via the Intermediate Value Theorem. I take as the leftmost boundary $\bta_\text{NL}$ because this is the lowest possible tariff the executives can achieve before the additional constraint implied by the presence of lobbies is added. By construction, $\ov{e}(\bta_\text{NL})=0$. That is, the legislature will break the agreement if the lobby exerts any effort level above 0. It is easy to see that a trade agreement tariff of $\bta_\text{NL}$ is not enforceable when a lobby is present. Because the legislature will break the trade agreement for any positive level of effort, the lobby will choose its one-shot optimal effort level of $e_{tw}$ leading to a break tariff of $\tau^b = \tau^{tw}$. Then the lobby's constraint (\ref{ine:lobnorm}) becomes
-\begin{equation*}
-  -\left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq
-	\frac{\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)}{\left(1-\mathrm{e}^{-r\Delta}\right)} \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a)  \right]
-\end{equation*}
-After cancelling the terms in brackets, we see the right hand side is always positive and the left hand side is always negative, so the lobby's incentive constraint can never be satisfied at the optimal tariff that is chosen in its absence.
-
-$\hfill\blacksquare$
+Lemma~\ref{lem:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. The denominator is the sum of three positive terms and so positive itself. Since both terms in the numerator have already been shown to be positive, $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. $\hfill\blacksquare$
 
 
 \vskip.4in
