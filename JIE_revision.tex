@@ -293,67 +293,63 @@ To understand how the executives optimally structure trade agreements, we must f
 
 I will consider the economically interesting case in which, for a given $\bm{\de}=\left(\de_\text{E},\de_\text{ML},\de_\text{L}\right)$ and $T$, there exists a non-trivial trade agreement in the absence of lobbying, that is, one in which the lowest supportable cooperative tariffs are strictly lower than the trade-war (i.e. non-cooperative) level. Call the trade-agreement tariffs in the absence of lobbies $\bta_{\text{NL}}$. If $\bta_{\text{NL}} = \btw$, the lobby has no incentive to be active and the extra constraint implied by the presence of the lobby does not bind.
 
-When deciding whether to exert effort to derail a trade agreement, the lobby has a two-stage problem. First, for the given $\bta$, $\bm{\de}$ and $T$, it calculates the minimum $e_b$ required to induce the legislature to break the trade agreement. Call this minimum effort level $\ov{e}(\bta)$; it induces the minimum tariff that will break the agreement, $\tau^b(\ov{e})$.\footnote{It is assumed that only tariffs strictly greater than $\tau^a$ serve to break the agreement.} This calculation of precise indifference is possible because it is assumed here that the political process is certain---that is, all actors know precisely how lobbying effort affects the identity of the median legislator through $\ga(e_b)$.
+When deciding whether to exert effort to derail a trade agreement, the lobby has a two-stage problem. First, for the given $\bta$, $\bm{\de}$ and $T$, it calculates the minimum $e_b$ required to induce the legislature to break the trade agreement. Call this minimum effort level $\ov{e}(\bta)$. It induces the minimum tariff that will break the agreement, $\tau^b(\ov{e})$.\footnote{It is assumed that only tariffs strictly greater than $\tau^a$ serve to break the agreement.}
 
-Given the effort level required to break the agreement, the lobby will then compare its current and future payoffs from inducing a dispute net of lobbying effort $\left(\text{that is, }\pi(\tau^b(\ov{e})) - \ov{e} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw}\right] \right)$ to the profit stream from the trade agreement with no lobbying effort $\left(\pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \pi(\tau^a) \right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}$. If the latter is larger, the lobby chooses to be inactive and the agreement remains in force. On the other hand, if the former is larger, the lobby induces the most profitable possible break.\footnote{Recall that the lobby's myopic profits are maximized $e_{tw}$. This implies that if $\ov{e} < e_{tw}$, the lobby will break the agreement by exerting effort level $e_{tw}$ since its net profits are higher than if it only exerted effort level $\ov{e}$ in this case.}
+The following equation defines $\ov{e}$:
+\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right] \\
+	- \left[ W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*a}) - W_\text{ML}(\ga(\ov{e}),\bta) \right] = 0
+  \label{eq:leg2}
+\end{multline}
+This calculation of precise indifference is possible because it is assumed here that the political process is certain---that is, all actors know precisely how lobbying effort affects the identity of the median legislator through $\ga(e_b)$.
 
-The executives choose the trade agreement tariffs subject to this decision-making process of the lobby. Lemma~\ref{lem:et} shows that the relationship between $\tau^a$ and $\ov{e}$ is straightforward. 
+Given the effort level required to break the agreement, the lobby will then compare its current and future payoffs from inducing a dispute net of lobbying effort $\left(\text{that is, }\pi(\tau^b(\ov{e})) - \ov{e} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw}\right] \right)$ to the profit stream from the trade agreement with no lobbying effort $\left(\pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \pi(\tau^a) \right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}$. If the latter is larger, the lobby chooses to be inactive and the agreement remains in force. On the other hand, if the former is larger, the lobby induces the most profitable possible break.\footnote{Recall that the lobby's myopic profits are maximized at $e_{tw}$. This implies that if $\ov{e} < e_{tw}$, the lobby will break the agreement by exerting effort level $e_{tw}$ since its net profits are higher than if it only exerted effort level $\ov{e}$ in this case.} 
+
+Anticipating this decision-making process of the lobby, the executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. They raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ and disengaging completely.\footnote{Here I assume that the lobby does not exert effort when indifferent; if the opposite assumption were made, tariffs would have to be raised by an additional $\varepsilon$.} That is, they choose tariffs so that the following equation holds:
+\begin{equation}
+  \ov{e}(\bta) - \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right] = 0
+  \label{eq:lob2}
+\end{equation}
+This is simply the lobby's constraint in terms of the net gain to exerting effort when evaluated at $\ov{e}$ at the indifference point.\footnote{By construction, the legislative constraint will always be slack in equilibrium because the $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium, $\bta$ is chosen so that the lobby disengages. When the lobby is disengaged $\left(e_b=0\right)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when $e_b=0$ than when $e_b=\ov{e}(\bta) \geq 0$.}
+
+To understand the dynamics governing the solution to this problem, begin by considering the legislature's constraint at equality, Equation~\ref{eq:leg2}. This traces out a function from the trade agreement tariff into the minimum effort level required to break the trade agreement. The relationship between the home tariff and $\ov{e}$ is straightforward. 
 \begin{lemma}
-  The minimum lobbying effort required to break the trade agreement ($\ov{e}$) is increasing in the trade agreement tariff $\tau^a$.
+  The minimum lobbying effort required to break the trade agreement ($\ov{e}$) is increasing in the home trade agreement tariff $\tau^a$.
   \label{lem:et}
 \end{lemma}
-
 Proof: See the \hyperlink{Cor_et}{Appendix}.
 
-\noindent The intuition is as follows: $\ov{e}$ must make the median legislator indifferent between receiving the trade agreement tariff for $T+1$ periods and deviating to the higher ``cheater's'' tariff $\tau^b$ balanced by a T-period punishment. This means that the median legislator's most preferred tariff when $e_b=\ov{e}$---that is, $\tau^b$---must be higher than the trade agreement tariff.\footnote{Note as well that whenever non-trivial cooperation is sustainable, $\tau^b$ is also necessarily less than the trade war tariff. If $\ov{e}$ were so high as to make $\tau^b \geq \tau^{tw}$, the legislature would not experience the trade war as a punishment.} Raising $\tau^a$ brings the trade agreement tariff closer to the legislature's ideal point, requiring the lobby to pay more to make the legislature willing to break the agreement.
+\noindent The intuition is as follows: $\ov{e}$ must be at least as large as $e_{tw}$ in equilibrium because the lobby's net profits are maximized at $e_{tw}$. If $\ov{e} < e_{tw}$, the lobby's constraint will not be satisfied since the lobby will exert effort level $e_{tw}$. Since the trade agreement tariff is weakly less than the trade war tariff, the median legislator's most preferred tariff when $e_b=\ov{e}$---that is, $\tau^b\left(\ov{e}\right)$---must be higher than the trade agreement tariff.\footnote{Note as well that whenever non-trivial cooperation is sustainable, $\tau^b\left(\ov{e}\right)$ is also necessarily less than the trade war tariff. If $\ov{e}$ were so high as to make $\tau^b \geq \tau^{tw}$, the legislature would not experience the trade war as a punishment.} Raising $\tau^a$ brings the trade agreement tariff closer to the legislature's ideal point, requiring the lobby to pay more to make the legislature willing to break the agreement.
 
-Given the relationship identified in Lemma~\ref{lem:et} between trade agreement tariffs and lobbying behavior, the executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. They raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ and disengaging completely,\footnote{Here I assume that the lobby does not exert effort when indifferent; if the opposite assumption were made, tariffs would have to be raised by an additional $\varepsilon$.} provided that this also satisfies the legislative constraint. By construction, the legislative constraint will always be slack in equilibrium because the $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium, $\bta$ is chosen so that the lobby disengages. When the lobby is disengaged $\left(e_b=0\right)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when $e_b=0$ than when $e_b=\ov{e}(\bta)$.
+The relationship between the foreign trade agreement tariff and $\ov{e}$ is the opposite. This occurs because raising $\tau^{*a}$ make the agreement less attractive to the legislature and therefore requires less effort from the lobby to break.
+\begin{lemma}
+  The minimum lobbying effort required to break the trade agreement ($\ov{e}$) is decreasing in the foreign trade agreement tariff $\tau^{*a}$.
+  \label{lem:ets}
+\end{lemma}
+Proof: See the \hyperlink{Lem_ets}{Appendix}.
 
-\begin{itemize}	
-	\item The solution to the problem is the smallest $\bta$ at which Expression~\ref{ine:lob2} is satisfied
-		\begin{enumerate}
-			\item Leg constraint traces out $\left(\tau^a,\ov{e}\left(\tau^a\right)\right)$ pairs
-			\item This function is concave in $\tau^a$
-				\begin{enumerate}
-					\item Have to show two separate results and how they combine
-				\end{enumerate}
-			\item In order for lobby's constraint to be satisfied, $\ov{e}$ must be greater than $e_{tw}$
-				\begin{itemize}
-					\item Do I want to re-write constraints? If so, which ones?
-					\item If executives choose $\bta$ for which $\ov{e} < e_{tw}$, lobby will choose $e_{tw}$ and break this IC
-				\end{itemize}
-			\item The lobby's constraint will always be satisfied when $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$. The results of the paper do not apply to this kind of solution, but it does exist, so name this $\tau^a_{NF}$ since there is no future gain for the lobby. Since the highest net profits in one period are also achieved at the trade war tariff, there can be no contemporaneous gain either, so the lobby has no incentive to exert effort.\footnote{Legislature's constraint: Leg may want to apply a \textit{lower} tariff. But this won't break the agreement. Need to be clear in set up that only need IC to hold in case where $\tau^b(e_b) > \tau^a$.}
-			\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$, there may be another solution
-				\begin{itemize}
-					\item we know that at $\ov{e} = e_{tw}$, the lobby's constraint cannot hold (simple math)
-					\item IF $\ov{e} = e_{tw}$ for the first time, $\frac{\partial \ov{e}}{\partial \tau^a}$ must still be on the increasing portion of the curve (it will hit again at $\tau^a = \tau^{tw}$, but we don't need to get there)
-					\item It may increase enough to satisfy leg constraint before $\tau^a_{NF}$, or it may start to decrease and decrease too quickly
-				\end{itemize}
-		\end{enumerate}
-\end{itemize}
+When the trade agreement is symmetric, $\tau^a = \tau^{*a}$. In this case, $\ov{e}$ is concave in the trade agreement tariffs since the legislature's optimum in terms of $\tau^a$ is at $\tau^{tw}$ while its optimum in terms of $\tau^{*a}$ is at zero.
 
-\hyperlink{Lem3}{Lemma~\ref{lem:exist}} in the Appendix demonstrates that the solution to the executives' problem is well-defined. This combined with the immediately preceding discussion demonstrates the following result.
+The concavity of this $\ov{e}(\bta)$ function implies that there may not be a truly interior solution to the problem. Of course whenever the solution to the problem in the absence of lobbies cannot be satisfied for any $\bta < \btw$, then the solution to (\ref{prob:max}) will also be $\btw$. If the legislative constraint can be satisfied, then the lobby's constraint will always be satisfied when $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$. Most of the results of this paper do not apply to this kind of solution, but it does exist. Call it $\tau^a_{NF}$ since the essential reason this tariff is a solution is that it implies that there are no future gain for the lobby. Since the highest net profits in one period are also achieved at the trade war tariff, there can be no contemporaneous gain either, so the lobby has no incentive to exert effort.
+
+To see when an equilibrium of interest exists, recall that we need $\ov{e} \geq e_{tw}$ in order for the lobby's constraint to be truly satisfied. Even though it may appear at first sight that the constraint could be satisfied at a $\bta$ for which $\ov{e} < e_{tw}$, in fact the lobby would choose the higher level of effort $e_{tw}$ at which its net profits are maximized, breaking this incentive constraint. For some parameters, there may not exist a $\bta < \bm{\tau^a_{NF}}$ for which $\ov{e} \geq e_{tw}$.
+
+If there does exist $\bta < \btw$ for which $\ov{e} \geq e_{tw}$, there \textit{may} be another solution. What is required is that $\ov{e}(\bta)$ does not begin to decrease too quickly before it can satisfy the lobby's constraint. The more easily the lobby can exert influence, the harder it is to satisfy this constraint: this causes $\ov{e}$ to rise slowly with tariffs and keeps the price of a break low in comparison to the profits.
+
+Whether an interesting solution of the type we go on to examine in the next two sections exists or not, as long as there is a non-trivial trade agreement in the absence of lobbies, a trade agreement always exists and has the same form.				
+
 \begin{result}
   In the case of political certainty, the equilibrium trade agreement induces zero lobbying effort and is never subject to dispute. The executives choose the minimum tariff level that induces the lobby to choose $e_b=0$.
   \label{res:eqm}
 \end{result}
 At the equilibrium tariffs, the lobby's constraint binds, while the legislature's does not. The amount of effort the lobby would have to exert to provoke a dispute, however, is derived from the legislature's constraint. This cost is then used in the lobby's constraint to calculate the lowest tariff level that will induce the lobby to disengage (that is, choose $e_b =0$ over $e_b=\ov{e}(\bta)$) and therefore make the median legislator's constraint slack and induce \textit{her} to choose the internationally-agreed-upon $\tau^a$ over $\tau^b$ and the implied dispute.\footnote{The results would be altered in magnitude but not in spirit by assuming that the trade agreement tariffs are weak bindings---that is, tariff caps---instead of strong bindings. The most important implication is that there would be positive lobbying in equilibrium as the lobby would need to put forth effort to bid protection levels up to the cap. There would still be no trade disputes in equilibrium.}
 
-So, although in this simple model we do not see disputes in equilibrium, the lobby's out-of-equilibrium incentives to exert effort to provoke a dispute are essential in determining the tariff-setting behavior of the executives.
+Although in this simple model we do not see disputes in equilibrium, the lobby's out-of-equilibrium incentives to exert effort to provoke a dispute are essential in determining the tariff-setting behavior of the executives.
 
 \subsection{Trade Agreement Properties}
-Following Result~\ref{res:eqm}, we know that the lobby first uses Expression~\ref{ine:leg2} at equality to determine $\ov{e}(\bta)$: that is, how much it has to pay for any $\bta$ in order to induce the legislature to choose noncooperation. We can re-write this condition as
-\begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right] \\
-	- \left[ W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*a}) - W_\text{ML}(\ga(\ov{e}),\bta) \right] = 0
-  \label{eq:leg2}
-\end{multline}
+Following Result~\ref{res:eqm}, we know that the lobby first uses Expression~\ref{ine:leg2} at equality to determine $\ov{e}(\bta)$: that is, it determines how much effort it has to exert for the given $\bta$ in order to induce the legislature to choose noncooperation. This is accomplishes using Condition~\ref{eq:leg2} above.
 
-With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{ine:lob2} at equality to determine the required $\tau^a$:\footnote{There are analogous expression for $\tau^{*a}$ throughout that can be ignored by symmetry.} that is, the trade agreement tariff that is just high enough to induce the lobby to disengage, causing the equilibrium outcome to be $e_b = 0$ and the trade agreement tariff to remain in place. We can rewrite this condition as
-\begin{equation}
-  \ov{e}(\bta) - \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right] = 0
-  \label{eq:lob2}
-\end{equation}
+With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{eq:lob2} at equality to determine the required $\tau^a$:\footnote{There are analogous expression for $\tau^{*a}$ throughout that can be ignored by symmetry.} that is, the trade agreement tariff that is just high enough to induce the lobby to disengage, causing the equilibrium outcome to be $e_b = 0$ and the trade agreement tariff to remain in place.
 
 Although explicit expressions for the solution functions $\ov{e}(\cdot)$ and $\tau^a(\cdot)$ cannot be arrived at without imposing further assumptions, significant intuition can be derived implicitly. An overview of the results will be provided here, while the mathematical details are in the Appendix.
 
@@ -553,42 +549,14 @@ By the Implicit Function Theorem:
 Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a \leq \tau^{tw} \leq \tau^b$. Therefore the denominator is negative.\footnote{Note that when $\tau^a = \tau^{tw} = \tau^b$, only the trivial trade agreement is possible and so this result and those that build upon it are not of interest.} Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
 
 \vskip.4in
-{\hypertarget{Lem3}{\begin{lemma}}
-  A solution to the executives' problem (\ref{prob:max}) exists for all $\bm{\de}$ and all $T$.
-  \label{lem:exist}	 
-\end{lemma}
-Proof: The executives' problem is to minimize $\bta$ such that both the legislature's and the lobby's constraints are satisfied. If the solution to the problem in the absence of lobbies (i.e. with only the legislature's constraint, and that evaluated at $e_b=0$) cannot be satisfied for any $\bta < \btw$ (that is, $\bta_\text{NL} = \btw$ where $\bta_\text{NL}$ is the trade agreement chosen by the executives when there is no lobby), then the solution to (\ref{prob:max}) will also be $\btw$.
+\noindent \textbf{\hypertarget{Lem_ets}{Proof of Lemma~\ref{lem:ets}}}: \\
+By the Implicit Function Theorem:
+\begin{equation*}
+ 	\frac{\partial \ov{e}}{\partial \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
+\end{equation*}
 
-Consider the case where $\bta_\text{NL} < \btw$. I rewrite the constraints with the payoffs normalized and $\de = \mathrm{e}^{-r\Delta}$ where $r$ is the interest rate and $\Delta$ is the period length:
-\begin{multline}
-  \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)\left[W_\text{ML}(\ga(0),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right] - \\ \left(1-\mathrm{e}^{-r\Delta}\right) \left[W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta) \right]   \geq 0
-\end{multline}
-\vskip-.4in
-\begin{multline}
-  \left(1-\mathrm{e}^{-r\Delta}\right) e_b - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(e_b)) - \pi(\tau^a) \right] - \\
-	\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq 0
-  \label{ine:lobnorm}
-\end{multline}
-The proof is via the Intermediate Value Theorem. I take as the leftmost boundary $\bta_\text{NL}$ because this is the lowest possible tariff the executives can achieve before the additional constraint implied by the presence of lobbies is added. By construction, $\ov{e}(\bta_\text{NL})=0$. The gain to the lobby of a break in the trade agreement here is 
-\[
-  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(0)) - \pi(\tau^a_\text{NL}) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a_\text{NL}) \right] 
-\]
-If this gain is non-positive, since the lobby does not need to exert any effort to effect a break in the trade agreement at $\bta_\text{NL}$, the lobby has no incentive to exert effort and so $\bta_\text{NL}$ is the solution to the executives' problem.\footnote{Note, in particular, that this is the case if both $\Delta$ and $\Delta T \rightarrow 0$. This is also possible for some very large $\tau^a_\text{NL}$ if $\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a_\text{NL})< 0$, a case that is beyond the scope of this paper. See the proof of Corollary~\ref{cor:tdl} and the Conclusion for a discussion.} On the other hand, if the lobby's gain when $\ov{e}=0$ is strictly positive, the left-hand side of Expression~\ref{ine:lobnorm} is negative. The executives will have to raise the trade-agreement tariff to prevent the agreement from being broken in this case because the lobby's constraint is not satisfied.
-
-Next, look at the rightmost boundary, that is $\bta=\btw$. The executives have no incentive to set a trade-agreement tariff above the trade-war (i.e. non-cooperative) level, as this is the highest tariff-level they will have to face even if the trade-agreement is broken. When $\bta=\btw$, the legislature's constraint becomes vacuous: even if the median legislator prefers a lower tariff than $\tau^{tw}$, the only actions available are to maintain the trade agreement by choosing $\tau^a=\tau^{tw}$ or to choose the cheater's tariff. But the cheater's tariff when $\tau^a=\tau^{tw}$ is $\tau^b=\tau^{tw}$ and both lead to the same outcome.
-
-The lobby's gain will then be 
-\begin{multline*}
-  \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^{tw}) - \pi(\tau^{tw}) \right] + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^{tw}) \right] \\
-	= - \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) e_{tw}
-\end{multline*}
-Therefore, at $\bta=\btw$, the left-hand side of Expression (\ref{ine:lobnorm}) is
-\[
-  \left(1-\mathrm{e}^{-r\Delta}\right) e_{tw} + \mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) e_{tw} = \left(1 - \mathrm{e}^{-r\left(\Delta +\Delta T\right)} \right)e_{tw}.
-\]
-This is always strictly positive as long as $\Delta$ and $\Delta T$ are not both zero (recall that the special case of both $\Delta$ and $\Delta T \rightarrow 0$ has been treated above).
-
-In order to apply the Intermediate Value Theorem, it is left to show that the left-hand side of Expression~(\ref{ine:lobnorm}) is continuous in $\bta$. The lobby's gain is continuous in the tariffs by the assumptions on profits in Section~\ref{sec:stage}. Given Assumption~\ref{as:ga_c3} and the assumptions in Section~\ref{sec:stage}, $\ov{e}$ is continuous by the Implicit Function Theorem. Because the sum of continuous functions is continuous, we have the desired result and the Intermediate Value Theorem can be applied to ensure that, under the conditions stated above, the left-hand side of Expression (\ref{ine:lobnorm}) attains zero on the interval $\left[\bta_\text{NL},\btw\right]$ at least once; the solution to Problem~\ref{prob:max} is at the largest $\bm{\tau}$ at which Expression~(\ref{ine:lobnorm}) attains zero.\footnote{In the proof of Corollary~\ref{cor:tdl}, I show that an analogous equation is increasing in $\tau^a$, so there is only one value of $\tau^a$ that makes Expression~(\ref{ine:lobnorm}) hold with equality; if there were more than one and the executive chose the smallest, whatever dynamic caused the expression to become negative again would give the lobby incentive to break the agreement.\label{fn:lem3}}  $\hfill\blacksquare$
+\noindent The numerator is negative since the median legislator's welfare decreases in the foreign tariff (note that two other terms in the numerator cancel each other). The denominator is shown to be negative in the proof of Lemma~\ref{lem:et}. Combined with the negative numerator and the leading negative sign, the expression is negative. $\hfill\blacksquare$
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_tdl}{Proof of Corollary~\ref{cor:tdl}}}: \\
@@ -609,7 +577,22 @@ Therefore $\frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{(1-\
 
 The bracketed term must be positive in order for the lobby to have the incentive to lobby in the trade-war phase. I will assume that this is the case, but note that restricting attention to this case is not trivial; see the conclusion for discussion of a planned extension that more fully explores the trade-war phase.
 
-Lemma~\ref{lem:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. Thus the denominator is the sum of three positive terms,\footnote{This establishes that Equation~(\ref{ine:lobnorm}) is increasing as referenced in Footnote~\ref{fn:lem3} in the proof Lemma~\ref{lem:exist}.} and $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. $\hfill\blacksquare$
+Lemma~\ref{lem:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. Thus the denominator is the sum of three positive terms,\footnote{This establishes that Equation~(\ref{ine:lobnorm}) is increasing as referenced in Footnote~\ref{fn:lem3} in the proof Lemma~\ref{lem:exist}.} and $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. 
+
+GOING TO NEED TO MODIFY SINCE LEM:EXIST GONE
+\begin{multline}
+  \left(1-\mathrm{e}^{-r\Delta}\right) e_b - \left(1-\mathrm{e}^{-r\Delta}\right) \left[\pi(\tau^b(e_b)) - \pi(\tau^a) \right] - \\
+	\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right) \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq 0
+  \label{ine:lobnorm}
+\end{multline}
+The proof is via the Intermediate Value Theorem. I take as the leftmost boundary $\bta_\text{NL}$ because this is the lowest possible tariff the executives can achieve before the additional constraint implied by the presence of lobbies is added. By construction, $\ov{e}(\bta_\text{NL})=0$. That is, the legislature will break the agreement if the lobby exerts any effort level above 0. It is easy to see that a trade agreement tariff of $\bta_\text{NL}$ is not enforceable when a lobby is present. Because the legislature will break the trade agreement for any positive level of effort, the lobby will choose its one-shot optimal effort level of $e_{tw}$ leading to a break tariff of $\tau^b = \tau^{tw}$. Then the lobby's constraint (\ref{ine:lobnorm}) becomes
+\begin{equation*}
+  -\left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) \right] \geq
+	\frac{\mathrm{e}^{-r\Delta}\left(1-\mathrm{e}^{-r\Delta T}\right)}{\left(1-\mathrm{e}^{-r\Delta}\right)} \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a)  \right]
+\end{equation*}
+After cancelling the terms in brackets, we see the right hand side is always positive and the left hand side is always negative, so the lobby's incentive constraint can never be satisfied at the optimal tariff that is chosen in its absence.
+
+$\hfill\blacksquare$
 
 
 \vskip.4in
