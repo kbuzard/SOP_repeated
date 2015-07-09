@@ -346,33 +346,9 @@ As shown in Corollary~\ref{cor:eg}, $\frac{\partial \ov{e}}{\partial \ga}$ is ne
 \end{itemize}
 
 \newpage
-Notes for existence/non-existence of modified old construction (what was Lemma 4, currently renumbered to Lemma 2, i.e. lem:exist
-\begin{itemize}
-	\item At $\tau^{tw}$, $\ov{e}$ must be $e_{tw}$ IF legislature's unilateral optimization problem has a unique solution
-		\begin{multline*}
-			\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(\ov{e}),\btw) - W_\text{ML}(\ga(\ov{e}),\btw) \right] \\
-	- \left[ W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*tw}) - W_\text{ML}(\ga(\ov{e}),\btw) \right] = 0
-		\end{multline*}
-		\[
-			W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*tw}) = W_\text{ML}(\ga(\ov{e}),\btw)
-		\]
-			\begin{itemize}
-				\item This means that lobby's constraint is slack at $\btw$, i.e. LHS $> 0$
-				\item LHS $< 0$ at $\bta_\text{NL}$
-			\end{itemize}
-	\item The solution to the problem is the smallest $\bta$ at which Expression~\ref{ine:lob2} is satisfied, as long as $\ov{e} \geq e_{tw}$
-		\begin{itemize}
-			\item If executives choose $\bta$ for which $\ov{e} < e_{tw}$, lobby will choose $e_{tw}$ and break this IC
-			\item The lobby's constraint will always be satisfied when $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$. The results of the paper do not apply to this kind of solution, but it does exist, so name this $\tau^a_{NF}$ since there is no future gain for the lobby. Since the highest net profits in one period are also achieved at the trade war tariff, there can be no contemporaneous gain either, so the lobby has no incentive to exert effort.
-				\begin{itemize}
-					\item Legislature's constraint: as written, may not hold. Leg may want to apply a \textit{lower} tariff. But this won't break the agreement. Just need to be clear in set up that only need IC to hold in case where $\tau^b(e_b) > \tau^a$.
-				\end{itemize}
-		\end{itemize}
-	\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$ (other than that where $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$),
-		\begin{itemize}
-			\item we know that at $\ov{e} = e_{tw}$, the lobby's constraint cannot hold (simple math)
-		\end{itemize}
-	\item Way to exposit it:
+Notes for existence/non-existence of modified old construction (what was Lemma 4, currently renumbered to Lemma 2, i.e. lem:exist)
+\begin{itemize}	
+	\item The solution to the problem is the smallest $\bta$ at which Expression~\ref{ine:lob2} is satisfied
 		\begin{enumerate}
 			\item Leg constraint traces out $\left(\tau^a,\ov{e}\left(\tau^a\right)\right)$ pairs
 			\item This function is concave in $\tau^a$
@@ -382,10 +358,13 @@ Notes for existence/non-existence of modified old construction (what was Lemma 4
 			\item In order for lobby's constraint to be satisfied, $\ov{e}$ must be greater than $e_{tw}$
 				\begin{itemize}
 					\item Do I want to re-write constraints? If so, which ones?
+					\item If executives choose $\bta$ for which $\ov{e} < e_{tw}$, lobby will choose $e_{tw}$ and break this IC
 				\end{itemize}
-			\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$...
+			\item The lobby's constraint will always be satisfied when $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) =0$. The results of the paper do not apply to this kind of solution, but it does exist, so name this $\tau^a_{NF}$ since there is no future gain for the lobby. Since the highest net profits in one period are also achieved at the trade war tariff, there can be no contemporaneous gain either, so the lobby has no incentive to exert effort.\footnote{Legislature's constraint: Leg may want to apply a \textit{lower} tariff. But this won't break the agreement. Need to be clear in set up that only need IC to hold in case where $\tau^b(e_b) > \tau^a$.}
+			\item IF there exists a $\bta < \btw$ for which $\ov{e} \geq e_{tw}$, there may be another solution
 				\begin{itemize}
-				  \item IF $\ov{e} = e_{tw}$ for the first time, $\frac{\partial \ov{e}}{\partial \tau^a}$ must still be on the increasing portion of the curve (it will hit again at $\tau^a = \tau^{tw}$, but we don't need to get there)
+					\item we know that at $\ov{e} = e_{tw}$, the lobby's constraint cannot hold (simple math)
+					\item IF $\ov{e} = e_{tw}$ for the first time, $\frac{\partial \ov{e}}{\partial \tau^a}$ must still be on the increasing portion of the curve (it will hit again at $\tau^a = \tau^{tw}$, but we don't need to get there)
 					\item It may increase enough to satisfy leg constraint before $\tau^a_{NF}$, or it may start to decrease and decrease too quickly
 				\end{itemize}
 		\end{enumerate}
