@@ -603,10 +603,16 @@ There is no direct effect of $\de_\text{ML}$ on this equation, so $\frac{\partia
 
 \begin{equation}
  	\frac{\partial \tau^a}{\partial \de_\text{ML}} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \de_\text{ML}}}{\frac{\partial \Pi}{\partial \tau^a}} = -
-	\frac{1 \cdot \frac{\partial \ov{e}}{\partial \de_\text{ML}}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
+	\frac{\left(1 - \frac{\partial \pi}{\partial \ov{e}}\right)\cdot \frac{\partial \ov{e}}{\partial \de_\text{ML}}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
 \end{equation}
 
-By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator is positive. Because $\frac{\partial \ov{e}}{\partial \de_\text{ML}}$ is positive by Corollary~\ref{cor:edm}, $\frac{\partial \tau^a}{\partial \ov{e}(\de_\text{ML})}$ is negative. $\hfill\blacksquare$
+The total effect of $\ov{e}$ on $\Pi$ is the negative of the lobby's FOC, that is
+\[
+  \frac{\partial }{\partial \ov{e}} \left[\ov{e} - \pi\left(\tau^b(\ov{e})\right) \right]  = 1 - \frac{\partial \pi}{\partial \ov{e}} = - \left(\frac{\partial \pi}{\partial \ov{e}} - 1 \right).
+\]
+The lobby's FOC decreases to the right of $e_{tw}$ since $e_{tw}$ is the optimum $\left( \frac{\partial \pi}{\partial \ov{e}} = 1 \text{ at } e = e_{tw} \right)$. Since we must have $\ov{e} \geq e_{tw}$ in equilibrium in order for the lobby's constraint to bind, the effect of $\ov{e}$ on $\Pi$ is positive. In addition, $\frac{\partial \ov{e}}{\partial \de_\text{ML}}$ is positive by Corollary~\ref{cor:edm}, so the numerator is positive. 
+
+By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator is positive. Since there is a leading negative sign, $\frac{\partial \tau^a}{\partial \ov{e}(\de_\text{ML})}$ is negative. $\hfill\blacksquare$
 
 
 \vskip.4in
@@ -616,21 +622,20 @@ By the Implicit Function Theorem:
  	\frac{\partial \ov{e}}{\partial \ga} = -\frac{\frac{\partial \Omega}{\partial \ga}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
 	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \left[ \pi(\tau^b(e_b)) - \pi(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(e_b)) - \pi(\tau^{a}) \right]}
 \end{equation}
-
-We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga}{\partial \ov{e}}} < 0$. $\hfill\blacksquare$
+keeping in mind that the numerator is simplified by the envelope theorem. We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga}{\partial \ov{e}}} < 0$. $\hfill\blacksquare$
 
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Cor_tg}{Proof of Corollary~\ref{cor:tg}}}: \\
-Differentiating the executives' condition, Equation~\ref{eq:lob3} with respect to $\ga$, we have
+Differentiating the lobby's condition, Equation~\ref{eq:lob3} with respect to $\ga$, we have
 \[
   \frac{\partial \Pi}{\partial \tau^a}\frac{\partial \tau^a}{\partial \ga} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \ga} + \frac{\partial \Pi}{\partial \ga} = 0
 \]
 Because $\frac{\partial \Pi}{\partial \ga}$ = 0, we are looking for
 \begin{equation}
  	\frac{\partial \tau^a}{\partial \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
-	\frac{1 \cdot \frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
+	\frac{\left(1 - \frac{\partial \pi}{\partial \ov{e}}\right) \cdot \frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
 \end{equation}
-As shown in Corollary~\ref{cor:eg}, $\frac{\partial \ov{e}}{\partial \ga}$ is negative. The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\partial \tau^a}{\partial \ga}$ is positive. $\hfill\blacksquare$
+As shown in Corollary~\ref{cor:eg}, $\frac{\partial \ov{e}}{\partial \ga}$ is negative, whereas Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\partial \pi}{\partial \ov{e}}\right)$ is positive. The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\partial \tau^a}{\partial \ga}$ is positive. $\hfill\blacksquare$
 \end{document}
 
