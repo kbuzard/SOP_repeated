@@ -223,8 +223,18 @@ January 19, 2015
 				\end{multline}
 				\begin{itemize}
 					\item Want to show whether or not this punishment can support lower $\bta$
+					\item Only thing that changed from main construction is $\tau^{tw}$ to 0 in second term
 				\end{itemize}
-
+			\item To truly compare, have to assume we're at an interior for both (although entirely possible that whichever is higher may be on boundary and other is interior)
+				\begin{itemize}
+					\item \textbf{If the lobby's constraint loosens, does it do so everywhere?}
+					\item $\frac{\partial \ov{e}}{\partial \bta}$ \textbf{concave seems to complicate the analysis}
+						\begin{itemize}
+							\item I've verified that it remains concave for this punishment scheme: it looks like Lemmas 1 and 2 could reverse because the denominator could be positive, but this requires $f(\de)\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. But since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e_b - \pi(\tau^a)$, we can put the two together and see that in this case the lobby's constraint is violated. So Lemmas 1 and 2 hold as for the $\tau^{tw}$ punishment.
+						\end{itemize}
+					\item If there is slack, can we for sure lower $\bta$?
+					\item When $\tau^p = \tau^{tw}$, we know $\ov{e} \geq e_{tw}$. When $\tau^p = 0$, $\ov{e}$ still $\geq e_{tw}$, but there is slack in the condition so that we could have a lower $\tau^a$ than the one that leads to $e_{tw}$.
+				\end{itemize}	
 		\end{itemize}
 	\item Punishment
 		\begin{itemize}
