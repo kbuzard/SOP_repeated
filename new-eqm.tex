@@ -212,9 +212,22 @@ January 19, 2015
 		\end{itemize}
 	\item Before worrying about punishment for punishment, go back to TA structure
 		\begin{itemize}
-			\item If $\tau < \tau^a$, lobby's constraint becomes much easier to satisfy
+			\item Lobby no longer wants ``trade war'' (really, punishment period). Only thing they can want is break tariff for one period. Then punishment punishes lobby too
+			  \begin{equation}
+					0 \geq \left[\pi(\tau^b(\ov{e})) - \ov{e}\right] - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+					\label{ine:lob2}
+				\end{equation}
+becomes
+				\begin{equation}
+					0 \geq \left[\pi(\tau^b(\ov{e}')) - \ov{e}'\right] - \pi(\tau^{a'}) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(0) - \pi(\tau^{a'}) \right]
+					\label{ine:lob3}
+				\end{equation}
 				\begin{itemize}
-					\item Lobby no longer wants ``trade war'' (really, punishment period). Only thing they can want is break tariff for one period. Then punishment punishes lobby too
+					\item The last bracketed term goes from positive in Expression~\ref{ine:lob2} to Expression~\ref{ine:lob3}
+					\item The first bracketed term is largest at $\ov{e} = e_{tw}$
+						\begin{itemize}
+							\item When $\tau^p = \tau^{tw}$, we know $\ov{e} \geq e_{tw}$. When $\tau^p = 0$, $\ov{e}$ still $\geq e_{tw}$, but there is slack in the condition so that we could have a lower $\tau^a$ than the one that leads to $e_{tw}$.
+						\end{itemize}
 				\end{itemize}
 			\item For legislature:
 				\begin{multline}
@@ -233,7 +246,6 @@ January 19, 2015
 							\item I've verified that it remains concave for this punishment scheme: it looks like Lemmas 1 and 2 could reverse because the denominator could be positive, but this requires $f(\de)\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. But since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e_b - \pi(\tau^a)$, we can put the two together and see that in this case the lobby's constraint is violated. So Lemmas 1 and 2 hold as for the $\tau^{tw}$ punishment.
 						\end{itemize}
 					\item If there is slack, can we for sure lower $\bta$?
-					\item When $\tau^p = \tau^{tw}$, we know $\ov{e} \geq e_{tw}$. When $\tau^p = 0$, $\ov{e}$ still $\geq e_{tw}$, but there is slack in the condition so that we could have a lower $\tau^a$ than the one that leads to $e_{tw}$.
 				\end{itemize}	
 		\end{itemize}
 	\item Punishment
