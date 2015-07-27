@@ -212,6 +212,23 @@ January 19, 2015
 		\end{itemize}
 	\item Before worrying about punishment for punishment, go back to TA structure
 		\begin{itemize}
+			\item For legislature:
+				\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),0,\tau^{*tw}) \right] \geq \\
+	W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
+				\end{multline}
+				\begin{itemize}
+					\item Want to show whether or not this punishment can support lower $\bta$
+					\item Only thing that changed from main construction is $\tau^{tw}$ to 0 in second term
+					\item For a given $\tau^a$,
+						\[
+						  \frac{\partial \ov{e}}{\partial \tau^p} = -\frac{\frac{\partial \Omega}{\partial \tau^p}}{\frac{\partial \Omega}{\partial \ov{e}}} = -\frac{-\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial }{\partial \tau^p} W_{\text{ML}}(\ga(e_b),\tau^p,\tau^{*tw}) }{(-)} = \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial }{\partial \tau^p} W_{\text{ML}}(\ga(e_b),\tau^p,\tau^{*tw}) }{(-)}
+						\]
+							\begin{itemize}
+								\item $\ov{e}$ is always $\geq$ both $\tau^{tw}$ and 0, so reducing $\tau^p$ reduces this welfare term. Then overall, reducing $\tau^p$ raises $\ov{e}$
+								\item Intuition: punishment gets worse, so have to pay more for a break for any given $\tau^a$
+							\end{itemize}
+				\end{itemize}
 			\item Lobby no longer wants ``trade war'' (really, punishment period). Only thing they can want is break tariff for one period. Then punishment punishes lobby too
 			  \begin{equation}
 					0 \geq \left[\pi(\tau^b(\ov{e})) - \ov{e}\right] - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
@@ -223,20 +240,11 @@ becomes
 					\label{ine:lob3}
 				\end{equation}
 				\begin{itemize}
-					\item The last bracketed term goes from positive in Expression~\ref{ine:lob2} to Expression~\ref{ine:lob3}
-					\item The first bracketed term is largest at $\ov{e} = e_{tw}$
-						\begin{itemize}
-							\item When $\tau^p = \tau^{tw}$, we know $\ov{e} \geq e_{tw}$. When $\tau^p = 0$, $\ov{e}$ still $\geq e_{tw}$, but there is slack in the condition so that we could have a lower $\tau^a$ than the one that leads to $e_{tw}$.
-						\end{itemize}
-				\end{itemize}
-			\item For legislature:
-				\begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),0,\tau^{*tw}) \right] \geq \\
-	W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
-				\end{multline}
-				\begin{itemize}
-					\item Want to show whether or not this punishment can support lower $\bta$
-					\item Only thing that changed from main construction is $\tau^{tw}$ to 0 in second term
+					\item We know from above that starting at the $\bta$ that's optimal when the punishment it $\btn$, $\ov{e}$ goes up when punishment tariff drops to 0. Then net profits (first bracketed term) goes down. The reasoning is as follows: net profits are largest at $\ov{e} = e_{tw}$. When $\tau^p = \tau^{tw}$, we know $\ov{e} \geq e_{tw}$. When $\tau^p = 0$, $\ov{e}$ still $\geq e_{tw}$, but there is slack in the condition so that we could have a lower $\tau^a$ than the one that leads to $e_{tw}$. But this is talking about initial impact, and as long as $\ov{e} \geq e_{tw}$ and $e$ goes up, net profits must decrease.
+					\item For now we're holding $\tau^a$ constant so the profit at $\tau^a$ term stays the same
+					\item The last bracketed term goes from positive in Expression~\ref{ine:lob2} to negative in Expression~\ref{ine:lob3}
+					\item So the whole right side of Expression~\ref{ine:lob3} becomes negative. There is thus slack that can be exploited to reduce $\bta$.
+					\item Reducing $\bta$ will tighten up the condition via the last two terms. It's not clear what happens with net profits because the $\left(\bta,\ov{e}\right)$ correspondence is concave. It may give additional slack, or it may slow you down a little.
 				\end{itemize}
 			\item To truly compare, have to assume we're at an interior for both (although entirely possible that whichever is higher may be on boundary and other is interior)
 				\begin{itemize}
