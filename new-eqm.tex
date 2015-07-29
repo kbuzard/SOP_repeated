@@ -112,15 +112,15 @@ January 19, 2015
 \begin{enumerate}
 	\item $\tau \leq \tau^A$ and $e < \ov{e}$ last period; if there had ever been a violation, it ended at least $T$ periods previous.
 		\begin{itemize}
-			\item Play $\tau = \tau^A$ and $e=e_a$
+			\item Play $\tau = \tau^A$ and $e=0$
 		\end{itemize}
 	\item Conditions in (1) held in period $t-2$, but there was a violation in period $t-1$
 		\begin{itemize}
 			\item Play static Nash this period and for $T-1$ more periods before switching back to (1); more precisely, $\tau^D \geq \tau^N$ and $e^D \geq e^N$.
 		\end{itemize}
-	\item Static Nash punishment was initiated $i<T$ periods ago, and punishment has been followed since then, i.e. $\tau^D \geq \tau^N$ and $e^D \geq e^N$ $\forall t \in$ (need to figure out indexing so I can say this precisely)
+	\item Static Nash punishment was initiated $j<T$ periods ago, and punishment has been followed since then, i.e. $\tau^D \geq \tau^N$ and $e^D \geq e^N$ $\forall t \in \left[t-j,j \right]$ 
 		\begin{itemize}
-			\item Punish this period and $T-i-1$ more periods before switching back to (1)
+			\item Punish this period and $T-j-1$ more periods before switching back to (1)
 		\end{itemize}
 	\item In any punishment period (i.e. classes 2 and 3 above), legislature does not follow punishment: i.e. $\tau^D < \tau^N$
 		\begin{itemize}
@@ -128,7 +128,7 @@ January 19, 2015
 		\end{itemize}
 	\item In any punishment period, lobby does not follow punishment: $e^D < e^N$
 		\begin{itemize}
-			\item Legislature chooses BR (make this precise: $\tau^D(e^D)) = ...$) to $e^D$, then restart at (1); if anything else, restart punishment from (2). BR + eqm, so okay
+			\item Legislature chooses its BR to $e^D$ (i.e. $\tau^D(e^D))$), then restart at (1); if legislature does anything else, restart punishment from (2). BR + eqm, so okay
 				\begin{itemize}
 					\item Lobby \textit{must} pay in final period of punishment, or else IC for leg will not hold. That is why the equilibrium is being re-worked.
 					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
