@@ -150,7 +150,7 @@ I next describe the politically-relevant actors. In order to focus attention on 
 
 The stage-game timing is as follows. First, the executives set trade policy cooperatively in an international agreement. In the context of the repeated game, this can be construed as concluding an agreement in the first period and then potentially renegotiating at the beginning of each subsequent period, or as forming a new agreement each period. After the trade agreement is concluded in each period, the lobbies attempt to persuade the legislatures in their respective countries to break the trade agreement. Next, the legislatures decide whether to abide by the agreement or to provoke a trade war. In the event that the trade agreement does not remain in force, there is a final stage of lobbying and voting to set the trade-war tariffs. Once all political decisions are taken, producers and consumers make their decisions.
 
-We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. As this game is solved by backward induction, it is intuitive to start by describing the incentives of the legislatures, whose decisions I model as being taken by a median legislator. As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
+We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. Whenever this is a possibility of multiple equilibria, I will focus on the one that maximizes the welfare of the executives. As this game is solved by backward induction, it is intuitive to start by describing the incentives of the legislatures, whose decisions I model as being taken by a median legislator. As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
 
 The per-period welfare function of the home legislature is
 \begin{equation}
@@ -206,14 +206,18 @@ Although the political process here matches most closely that of the United Stat
 
 \section{Repeated Game}
 \label{sec:repeated}
-\subsection{Dispute Settlement Institution}
-I will assume that the state is switched back to the ``cooperative state'' $T$ periods after a dispute is initiated.
+This trade policy environment has many features of a standard prisoner's dilemma. Most importantly, the legislatures face unilateral incentives to violate the terms of the agreement. When the legislatures and lobbies set tariffs at the higher stage-game Nash equilibrium level, welfare for the social-welfare conscious executives is reduced. In order to maintain the trade agreement without external enforcement, we turn to repeated game incentives.
 
+Precise conditions for supporting the trade agreement in equilibrium depend on the punishments that are specified, and several possibilities are explored in Section~\ref{sec:repeated2}. For the results that follow, deviations from the trade agreement are punished by reverting to the stage game Nash equilibrium for a specified number of periods. This represents a trade war that is limited in duration and therefore more realistic than infinite Nash reversion. I show in Section~\ref{sec:optimal} that Nash reversion forever is dominated by shorter punishments when lobbies are non-trivial political actors.
+
+
+
+
+\subsection{Dispute Settlement Institution}
 Thus the timing of actions is the following. If the countries are in state $C$ at the start of period $t$, they choose any agreement that is supportable in state $C$ and communicate the agreement to the DSI. As long as their tariff choices adhere to the agreement, they remain in state $C$ at the start of period $t+1$. If one or both countries defect from the agreement, however, a dispute arises, and the state is switched to $D$ at the start of period $t+1$.
 
 If the countries are in state $D$ at the start of period $t$, the state will only be switched back to $C$ if $t-1$ was the $T$th period since the beginning of the dispute. In this case, the countries immediately negotiate an agreement supportable in the cooperative state and communicate it to the DSI. If the dispute is unresolved, the state remains $D$ through the start of period $t+1$, irrespective of what tariffs the countries select in the current period. In this event, the countries choose an agreement from among those that are supportable in the dispute state.
 
-The solution concept employed here is that of the maximal recurrent agreement; that is, the recurrent agreement that maximizes the welfare of the executives, who I assume for simplicity are social welfare maximizers.
 
 \subsection{Trade Agreements with External Enforcement}
 \label{sec:external}
