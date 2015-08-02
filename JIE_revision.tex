@@ -225,6 +225,7 @@ Whenever there is a violation of the agreement---that is, a tariff higher than t
 For the legislature, this is the tariff that unilaterally maximizes Equation~\ref{eq:ml3} given $\tau^*$ and the lobby's choice $e_{p}$. The separability of the economy implies that there are no interactions between the decision problems of the legislatures and the lobbies respectively, so the home and foreign best response tariffs are independent and the home country's tariff in a punishment period maximizes weighted home-country welfare in the $X$-sector only. The foreign legislature's decision problem is analogous, and unilateral optimization leads to what I refer to as the trade war tariffs $\tau^{tw}$ as the solution to the following first order condition:
 \[
 		\frac{\partial \mathit{CS}_X(\tau)}{\partial \tau^{p}} + \ga(e_{p}) \cdot \frac{\partial \mathit{PS}_X(\tau)}{\partial \tau^{p}} +  \frac{\partial \mathit{TR}(\tau)}{\partial \tau^{p}} = 0
+		\label{eq:leguni}
 \]
 
 The lobby chooses its effort $e_p$ given the above tariff-setting behavior by maximizing its profits net of effort: $\pi\left(\tau^{tw}\left(\ga\left(e_{p}\right)\right)\right) - e_{p}$. (Note this is Equation~\ref{eq:lv3} simplified by the resolution of uncertainty over the legislature's decision on the trade agreement). This implies a first order condition of
@@ -236,38 +237,27 @@ That is, at this stage, the lobby chooses the level of effort that equates its e
 
 Unlike with infinite Nash reversion punishments, these $T$-period Nash reversion punishments are not necessarily subgame perfect since the players may want to influence the future path of play during punishment periods. Subgame perfection can be ensured by punishing any deviations \textit{from the punishment} by restarting either the punishment for the legislature or the trade agreement for the lobby. This works because the legislature prefers the trade agreement to the punishment while the lobby's preferences are the reverse. These details do not affect the main results and so are postponed to Section~\ref{sec:nashrev}.
 
-	
+Here we focus on the key issue of the conditions under which the legislature decides to adhere to the trade agreement instead of violating it and triggering a punishment sequence. The trade agreement is broken when the legislature chooses a tariff that is higher than the trade agreement level, $\tau^a$. The level of the break tariff is chosen in the same manner as the trade war tariff, that is, according to Equation~\ref{eq:leguni}, but with the lobby's effort at the break stage replacing $e_p$.
 
-\vskip.2in
-In state $D$, no action of either the lobby or the legislature will change the state; that is, the continuation payoffs will be the same regardless of their actions. When $x$ periods of punishment are remaining, the supportability condition for the legislature to adhere to any tariff $\bm{\tau^D}$, given the level of lobbying effort $e_{tw}$, is
+The legislature will, however, only choose the break tariff over the trade agreement tariff if its continuation value from breaking the agreement is higher than the continuation value it receives from abiding by the agreement. The incentive constraint for the median legislator is essentially a condition on the trade agreement tariffs $\bta$. It can be written as
 \[
-  W_\text{ML}(\ga(e_{tw}),\bm{\tau^D}) + \de_\text{ML} V^D_\text{ML} \geq W_\text{ML}(\ga(e_{tw}),\tau^R(\tau^{*D}),\tau^{*D}) + \de_\text{ML} V^D_\text{ML} 
+  W_\text{ML}(\ga(e_b),\bta) + \de_\text{ML} V^A_\text{ML} \geq W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \de_\text{ML} V^P_\text{ML}
 \]
-where $V^D_\text{ML}$ is the continuation value of the median legislator in the dispute state and $\tau^R(\tau^{*D})$ is the home legislature's best response to $\tau^{*D}$ given $\ga(e_{tw})$. $\de_\text{ML}$ is the discount factor of the median legislator, while $\de_\text{L}$ will be used to represent the discount factor of the lobby and $\de_E$ that of the executive branch.
+where $V^A_\text{ML}$ is the continuation value of the median legislator when it abides by the trade agreement $V^P_\text{ML}$ is the continuation value when it defects and is punished. $\de_\text{ML}$ is the discount factor of the median legislator, while $\de_\text{L}$ will be used to represent the discount factor of the lobby and $\de_E$ that of the executive branch.
 
-Since future payoffs will not be impacted by current actions, the legislature has no incentive to choose anything other than its static best response for all $x$. Thus the only tariffs that can be supported in state $D$ are the tariffs that unilaterally maximize Equation~\ref{eq:ml3} given $\tau^*$ and the lobby's choice $e_{tw}$. 
-
-\vskip.2in
-The supportability conditions in state $C$ are quite different. I will assume that one legislature is randomly assigned the opportunity to break the agreement in any given period. It does so by choosing a tariff, $\tau^b$, that triggers a trade dispute. I will remain agnostic as to how $\tau^b$ is set, requiring only that it satisfy three intuitive criteria: it must be higher than the tariff set in the trade agreement $\tau^a$ in order to trigger a dispute; it must provide higher welfare to the median legislator at $e=e_b$ than the trade agreement tariff in order to be a tempting ``cheater's'' payoff; and it must provide higher welfare to the median legislator at $e=e_b$ than the trade war tariff in order for the trade war to be felt as a punishment. [NOTE: the welfare received at $\tau^b$ when receiving $e_b$ is the highest it can be for any given $\tau^*$ because the legislature is unilaterally maximizing. Although $\tau^*$ is different at trade war outcome than break outcome, $\tau^{*tw} > \tau^{*a}$, so trade war outcome is unambiguously worse than break outcome] 
-
-This implies the following constraint on the trade agreement tariffs $\bta$:
-\[
-  W_\text{ML}(\ga(e_b),\bta) + \de_\text{ML} V^C_\text{ML} \geq W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \de_\text{ML} V^D_\text{ML}
-\]
-where $V^C_\text{ML}$ is the continuation value of the median legislator in the cooperative state. If the punishment is $T$ periods in the dispute state (where only trade-war tariffs can be chosen), then the only part of the continuation values that need be considered are the next $T$ periods because after those $T$ periods, the relationship will revert back to cooperation in either state and so the continuation value will be the same from period $T+1$ on. When in state $C$ in the future, the executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the  same supportability conditions; in state $D$, the argument above shows that $\btw$ must be chosen. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^i = \sum_{t=1}^i \de^t= \sum_{t=1}^\infty \de^t - \sum_{t=i+1}^\infty \de^t = \frac{\de}{1-\de} - \frac{\de^{i+1}}{1-\de} = \frac{\de - \de^{i+1}}{1-\de} $.}
+If the Nash reversion punishment lasts for $T$ periods, then the only part of the continuation values that need be considered are the next $T$ periods: after those $T$ periods, the trade agreement will be in force so the continuation value will be the same from period $T+1$ on. The executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the same conditions in any non-punishment period. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^i = \sum_{t=1}^i \de^t= \sum_{t=1}^\infty \de^t - \sum_{t=i+1}^\infty \de^t = \frac{\de}{1-\de} - \frac{\de^{i+1}}{1-\de} = \frac{\de - \de^{i+1}}{1-\de} $.}
 \begin{multline}
   W_\text{ML}(\ga(e_b),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\bta) \geq \\
-	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\btw)
+	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\btw).
   \label{ine:leg}
 \end{multline}
-and
+
+The condition for the lobby is similar. Under the trade agreement, a break in the trade agreement, and punishment period, the lobby receives its profits at the chosen tariff level net of the effort level it exerts:
 \begin{equation}
-  \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \pi(\tau^a) \geq \pi(\tau^b(e_b)) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] - e_b
+  \pi(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^a) - e_a \right] \geq \pi(\tau^b(e_b)) - e_b + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] .
   \label{ine:lob}
 \end{equation}
-Because the countries will not be able to do anything to change the disposition of the DSI after a dispute has been triggered, it is only these constraints for $T$-length punishments that must be checked; once a punishment has been triggered, the dispute-state incentive conditions are the relevant ones.
-
-
+The next section explores the implications of these incentive constraints for the structure of the equilibrium trade agreement.
 
 \section{Trade Agreement Structure}
 \label{sec:structure}
