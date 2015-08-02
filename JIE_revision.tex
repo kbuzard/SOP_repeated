@@ -496,20 +496,15 @@ However, the model with no lobbies and one with very strong lobbies can be seen 
 
 \subsection{Nash Reversion Punishments}
 \label{sec:nashrev}
+I now turn to a full description of the strategies and incentives for the equilibrium that has been analyzed in the preceding sections. Again, this is a symmetric equilibrium, so I describe strategies for the home country only; similar conditions hold for the foreign country.
+
+In the first period of the game, in any period following a period when the trade agreement has been adhered to, after the successful completing of a punishment, or after a violation of the punishment by the lobby, the lobby chooses $e_b =0$, the legislature chooses to abide by the agreement, the lobby chooses $e_a$ and the legislature chooses $\tau^a$ as the applied tariff.
+
+In any period $t$ in which a violation of the agreement occurred $j+1$ periods previous for $j \in [0,T-1]$ with Nash reversion punishments initiated $j<T$ periods previous and followed in every period until $t$, the lobby chooses $e_p \geq e_{tw}$ and the legislature chooses a tariff at least as large as its unilateral best response given $e_p$.
+
+In any period in which the punishment is supposed to be followed, if the legislature chooses a tariff that is below its unilateral best response to $e_p$, 
 
 \begin{enumerate}
-	\item $\tau \leq \tau^A$ and $e < \ov{e}$ last period; if there had ever been a violation, it ended at least $T$ periods previous.
-		\begin{itemize}
-			\item Play $\tau = \tau^A$ and $e=0$
-		\end{itemize}
-	\item Conditions in (1) held in period $t-2$, but there was a violation in period $t-1$
-		\begin{itemize}
-			\item Play static Nash this period and for $T-1$ more periods before switching back to (1); more precisely, $\tau^D \geq \tau^N$ and $e^D \geq e^N$.
-		\end{itemize}
-	\item Static Nash punishment was initiated $j<T$ periods ago, and punishment has been followed since then, i.e. $\tau^D \geq \tau^N$ and $e^D \geq e^N$ $\forall t \in \left[t-j,j \right]$ 
-		\begin{itemize}
-			\item Punish this period and $T-j-1$ more periods before switching back to (1)
-		\end{itemize}
 	\item In any punishment period (i.e. classes 2 and 3 above), legislature does not follow punishment: i.e. $\tau^D < \tau^N$
 		\begin{itemize}
 			\item Restart punishment at (2); lobby happy to do this
