@@ -497,6 +497,98 @@ However, the model with no lobbies and one with very strong lobbies can be seen 
 \subsection{Nash Reversion Punishments}
 \label{sec:nashrev}
 
+\begin{enumerate}
+	\item $\tau \leq \tau^A$ and $e < \ov{e}$ last period; if there had ever been a violation, it ended at least $T$ periods previous.
+		\begin{itemize}
+			\item Play $\tau = \tau^A$ and $e=0$
+		\end{itemize}
+	\item Conditions in (1) held in period $t-2$, but there was a violation in period $t-1$
+		\begin{itemize}
+			\item Play static Nash this period and for $T-1$ more periods before switching back to (1); more precisely, $\tau^D \geq \tau^N$ and $e^D \geq e^N$.
+		\end{itemize}
+	\item Static Nash punishment was initiated $j<T$ periods ago, and punishment has been followed since then, i.e. $\tau^D \geq \tau^N$ and $e^D \geq e^N$ $\forall t \in \left[t-j,j \right]$ 
+		\begin{itemize}
+			\item Punish this period and $T-j-1$ more periods before switching back to (1)
+		\end{itemize}
+	\item In any punishment period (i.e. classes 2 and 3 above), legislature does not follow punishment: i.e. $\tau^D < \tau^N$
+		\begin{itemize}
+			\item Restart punishment at (2); lobby happy to do this
+		\end{itemize}
+	\item In any punishment period, lobby does not follow punishment: $e^D < e^N$
+		\begin{itemize}
+			\item Legislature chooses its BR to $e^D$ (i.e. $\tau^D(e^D))$), then restart at (1); if legislature does anything else, restart punishment from (2). BR + eqm, so okay
+				\begin{itemize}
+					\item Lobby \textit{must} pay in final period of punishment, or else IC for leg will not hold. That is why the equilibrium is being re-worked.
+					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
+				\end{itemize}
+		\end{itemize}
+\end{enumerate}
+
+\vskip.5in
+Conditions for equilibrium
+\begin{itemize}
+	\item Checking that punishment (2) is incentive compatible given (4) and (5)
+		\begin{itemize}
+			\item Legislature:
+				\[
+				  W(\ga(e^N),\tau^N) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(0),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N)
+				\]
+				by definition, anything provides lower one-shot payoffs than $\tau^N$, and Nash payoffs are lower than trade agreement payoffs (need to prove this--or is it just by assumption?)
+					\begin{itemize}
+						\item Is this punishment IC for leg? Yes, condition is satisfied. Best responding in current period--would do the same in best deviation; future is trade agreement instead of restart of punishment for any other tariff.
+						\item This conditions is always satisfied; the above equation is for the first period of the punishment. In later periods, there are more periods of the punishment that get repeated, so the constraint becomes looser
+					\end{itemize}
+			\item Lobby [(2) is incentive compatible given (4) and (5)]:
+				\[
+				  \pi(\tau^N) - e^N + \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \de^{T+1} \pi(\tau^a) \geq \pi(\tau^D) -e^D + \frac{\de - \de^{T+2}}{1-\de} \pi(\tau^a) 
+				\]
+				best deviation, given that leg will one-shot best respond is also $e^N$; given $\pi(\tau^N) - e^N \geq \tau^a$, which is satisfied in equilibrium, this condition holds. \\
+				Since the best deviation is to the Nash tariff, it reduces to
+				\[
+				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N \right] \geq \frac{\de - \de^{T+1}}{1-\de} \pi(\tau^a)
+				\]
+				\begin{equation}
+				  \frac{\de - \de^{T+1}}{1-\de} \left[\pi(\tau^N) - e^N - \pi(\tau^a) \right] \geq 0
+					\label{lobdev}
+				\end{equation}
+				This is always true in equilibrium. \\
+				\vskip.2in
+				Note that Expression~\ref{lobdev} will hold for all $T$ (or, alternatively, $i$).
+					\begin{itemize}
+						\item In last period of punishment, will hold with equality. Is tighest at the end of the punishment, looser at beginning. Holds for all $T$, i.e. always holds.
+						\item Note that if a deviation were to occur (off eqm path), leg would apply a ``punishment'' tariff that is too low, which would normally cause the punishment to reset; but here, it's because the lobby deviated, so we re-start cooperation to punish the lobby further after giving the reduced tariff in the period in which the lobby deviates
+					\end{itemize}
+				\item Legislature's constraint holds $\forall \ T$ (but is tighter for large $T$)
+				\item Lobby's constraint also holds $\forall \ T$ (but is tighter for small $T$)
+					\begin{itemize}
+						\item $\frac{\de - \de^{T+1}}{1-\de}$ is increasing in $T$, which means it gets smaller as you move toward the end of the punishment (there are fewer periods of punishment payoffs left)
+					\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+\vskip.5in
+Conditions for Punishments
+\begin{itemize}
+	\item Legislature's condition (for class 4 above):
+		\[
+		  \frac{1 - \de^{T}}{1-\de} W(\ga(e^N),\tau^N) + \de^{T} W(\ga(e_a),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(e_a),\tau^a) 
+		\]
+			\begin{itemize}
+				\item The $\cdot$ on the right hand side is where we fill in the best deviation. Given that this deviation can't affect the future path of play (any deviation triggers the resetting of the punishment phase), this should be a unilateral best response.
+				\item The unilateral best response is $\tau^N$, so this ``deviation'' could not even be detected as a deviation. There is no incentive to deviate from the punishment given the strategy for punishing deviations from the punishment
+				\item This same logic holds at any point during the punishment (replace $T$ with $r < T$). Logic stays the same.
+			\end{itemize}
+		\item Lobby's condition (for class 5 above)
+			\[
+			  \frac{1 - \de^{T}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \frac{\de^{T}}{1-\de}\left[\pi(\tau^a) - e_a \right] \geq \pi(\tau^D) -e^D + \frac{\de}{1-\de} \left[ \pi(\tau^a) - e_a \right]
+			\]
+			\begin{itemize}
+				\item What is best deviation? Would lobby want to choose $e^D=0$ and get $\tau(\ga(0))$?
+				\item Given that the lobby can't affect the future path and that the legislature will provide the unilateral tariff that is its best response to $e^D=0$, the lobby's best deviation payoff is the unilateral best choice, i.e. the trade war lobbying effort / tariff.
+				\item If the lobby deviates to something lower, it both gets a lower tariff in return (less than what is optimal for it in the one-shot game, which is what it was doing before) and gets stuck with the trade agreement tariff ever after
+			\end{itemize}
+\end{itemize}
+
 \subsection{Asymmetric Punishments}
 \label{sec:asymmetric}
 
