@@ -245,7 +245,7 @@ The legislature will, however, only choose the break tariff over the trade agree
 \]
 where $V^A_\text{ML}$ is the continuation value of the median legislator when it abides by the trade agreement $V^P_\text{ML}$ is the continuation value when it defects and is punished. $\de_\text{ML}$ is the discount factor of the median legislator, while $\de_\text{L}$ will be used to represent the discount factor of the lobby and $\de_E$ that of the executive branch.
 
-If the Nash reversion punishment lasts for $T$ periods, then the only part of the continuation values that need be considered are the next $T$ periods: after those $T$ periods, the trade agreement will be in force so the continuation value will be the same from period $T+1$ on. The executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the same conditions in any non-punishment period. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^i = \sum_{t=1}^i \de^t= \sum_{t=1}^\infty \de^t - \sum_{t=i+1}^\infty \de^t = \frac{\de}{1-\de} - \frac{\de^{i+1}}{1-\de} = \frac{\de - \de^{i+1}}{1-\de} $.}
+If the Nash reversion punishment lasts for $T$ periods, then the only part of the continuation values that need be considered are the next $T$ periods: after those $T$ periods, the trade agreement will be in force so the continuation value will be the same from period $T+1$ on. The executives will choose the same trade-agreement tariffs because they will maximize welfare subject to the same conditions in any non-punishment period. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^l = \sum_{k=1}^l \de^k= \sum_{k=1}^\infty \de^k - \sum_{k=l+1}^\infty \de^k = \frac{\de}{1-\de} - \frac{\de^{l+1}}{1-\de} = \frac{\de - \de^{l+1}}{1-\de} $.}
 \begin{multline}
   W_\text{ML}(\ga(e_b),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\bta) \geq \\
 	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\btw).
@@ -513,6 +513,7 @@ Section~\ref{sec:repeated} establishes that the cooperative-phase behavior is in
 First examine the incentives for the legislature to adhere to the punishment. Labeling the best deviation tariff as $\tau^D$, the incentive constraint in the first period of a punishment phase is 
   \begin{multline}
 		W(\ga(e_{tw}),\btw) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(e_{tw}),\btw) + \de_\text{ML}^{T} W(\ga(e_a),\bta) \geq \\ W(\ga(e_{tw}),\tau^D,\tau^{*tw}) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(e_{tw}),\btw) + \de_\text{ML}^{T} W(\ga(e_{tw}),\btw)
+		\label{eq:legpun}
 	\end{multline}
 In order to ensure that this condition holds, I assume that the median legislator prefers the trade agreement outcome to the trade war outcome:
 \begin{assumption}
@@ -524,38 +525,21 @@ If Assumption~\ref{as:leg} is violated, both the lobby and the legislature prefe
 The lobby's condition for adhering to the punishment has the same structure:
   \begin{multline}
 	  \pi(\tau^{tw}) - e_{tw} + \frac{\de_\text{L} - \de_\text{L}^T}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] + \de_\text{L}^T \left[\pi(\tau^a) - e_a \right] \geq \\  \pi\left(\tau^R\left(e_D\right)\right) -e_D + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[ \pi(\tau^a) - e_a \right]
+		\label{eq:lobpun}
 	\end{multline}
 Since net profits are maximized at $\left(e_{tw},\tau^{tw}\right)$, this condition always holds. Any current period deviation creates a loss, and this only serves to create additional losses in the future. The size of the loss is the same in each period so the total loss grows with the number of periods in which the trade war tariff is replaced by the trade agreement tariff. This constraint is therefore tightest in the last period of the punishment but clearly holds for any $T$ and at all points within a $T$-length punishment
-		
 
-\vskip.5in
-Conditions for Punishments
-\begin{itemize}
-	\item Legislature's condition (for class 4 above):
-		\[
-		  \frac{1 - \de^{T}}{1-\de} W(\ga(e^N),\tau^N) + \de^{T} W(\ga(e_a),\tau^a) \geq W(\ga(e^N),\cdot) + \frac{\de - \de^{T+1}}{1-\de}W(\ga(e^N),\tau^N) + \de^{T+1} W(\ga(e_a),\tau^a) 
-		\]
-			\begin{itemize}
-				\item The $\cdot$ on the right hand side is where we fill in the best deviation. Given that this deviation can't affect the future path of play (any deviation triggers the resetting of the punishment phase), this should be a unilateral best response.
-				\item The unilateral best response is $\tau^N$, so this ``deviation'' could not even be detected as a deviation. There is no incentive to deviate from the punishment given the strategy for punishing deviations from the punishment
-				\item This same logic holds at any point during the punishment (replace $T$ with $r < T$). Logic stays the same.
-			\end{itemize}
-		\item Lobby's condition (for class 5 above)
-			\[
-			  \frac{1 - \de^{T}}{1-\de} \left[\pi(\tau^N) - e^N \right] + \frac{\de^{T}}{1-\de}\left[\pi(\tau^a) - e_a \right] \geq \pi(\tau^D) -e^D + \frac{\de}{1-\de} \left[ \pi(\tau^a) - e_a \right]
-			\]
-			\begin{itemize}
-				\item What is best deviation? Would lobby want to choose $e^D=0$ and get $\tau(\ga(0))$?
-				\begin{itemize}
-					\item But, if leg is going to BR to lobby's payment and then restart cooperation, lobby should want to continue with punishment. This seems like a realistic set-up (your protection ends if you don't hold up your end of the deal with the promised payments).
-				\end{itemize}
-				\item Given that the lobby can't affect the future path and that the legislature will provide the unilateral tariff that is its best response to $e^D=0$, the lobby's best deviation payoff is the unilateral best choice, i.e. the trade war lobbying effort / tariff.
-				\item If the lobby deviates to something lower, it both gets a lower tariff in return (less than what is optimal for it in the one-shot game, which is what it was doing before) and gets stuck with the trade agreement tariff ever after
-			\end{itemize}
-\end{itemize}
+There is a second type of subgame that must be checked: those in which one of the players has deviated from the prescribed punishments. If the legislature deviates from the punishment, that is, chooses a tariff that is less than its best response to $e_{tw}$, it must be incentive compatible for the lobby to exert $e_{tw}$ in the next period to restart the punishment. The structure of incentives is exactly the same as in Expression~\ref{eq:lobpun}. Since it has been shown that Expression~\ref{eq:lobpun} holds for all $j \in \left[1,T\right]$, the abiding by the punishment is incentive compatible for the lobby. 
 
-\subsection{Asymmetric Punishments}
+Similarly, the legislature's constraint for abiding by the punishment is almost identical to Expression~\ref{eq:legpun}. Only the trade war effort level in the current period payoffs should be replaced by the deviation-from-the-punishment effort level. The logic is the same: the legislature can do no better than its instruction to best respond in the current period, and it would not want to deviate and take a loss in the present period because this only causes future losses. This condition also holds for all $j \in \left[1,T\right]$ so incentive compatibility for the legislature is ensured. Thus the posited equilibrium supported by T-length Nash reversion punishments is subgame perfect.
+
+
+\subsection{Alternative Punishments}
 \label{sec:asymmetric}
+The above-explored symmetric Nash-reversion punishments are of course not the only possible punishments. This section explores an asymmetric punishment scheme in which welfare is reduced for both the legislature and the lobby in the defecting country. Although this type of punishment is not hard to find in practice, it is shown here that it allows for increased cooperation in the form of lower trade agreement tariffs.
+
+
+
 
 \section{Conclusion}
 \label{sec:concl3}
