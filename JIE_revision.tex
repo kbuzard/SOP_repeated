@@ -536,32 +536,18 @@ Similarly, the legislature's constraint for abiding by the punishment is almost 
 
 \subsection{Alternative Punishments}
 \label{sec:asymmetric}
-The above-explored symmetric Nash-reversion punishments are not the only possible punishments. This section explores an asymmetric punishment scheme in which welfare is reduced for both the legislature and the lobby in the defecting country. Although this type of punishment is hard to find in practice, I show here that it allows for increased cooperation in the form of lower trade agreement tariffs.
+The above-explored symmetric Nash-reversion punishments are not the only possible punishments. This section explores an asymmetric punishment scheme in which welfare is reduced for both the legislature and the lobby in the defecting country. Although this type of punishment is hard to find in practice, I show here that in some cases it allows for increased cooperation in the form of lower trade agreement tariffs.
 
-In this scheme, instead of $T$ periods of Nash reversion, the legislature in the defecting country is required to apply a zero tariff during the punishment phase, with an accompanying effort level of zero by the lobby. To keep the analysis simple, the non-defecting country's strategies are kept the same as in the Nash reversion case.
+In this scheme, instead of $T$ periods of Nash reversion, the legislature in the defecting country is required to apply a zero tariff for $T$ periods, with an accompanying effort level of zero by the lobby. To keep the analysis simple, the non-defecting country's strategies are kept the same as in the Nash reversion case.
+
+In order to compare the trade agreement tariffs under the two punishment schemes, I assume that both are interior in the sense that they are strictly less than $\tau^{tw}$ themselves. Compared to the legislature's constraint under Nash reversion (Expression~\ref{eq:leg2}), the only change induced by the alternative punishment scheme is a reduction in the punishment tariff from $\tau^{tw}$ to zero. This term in the constraint changes from $W_\text{ML}(\ga(\ov{e}),\tau^{tw},\tau^{*tw})$ to $W_\text{ML}(\ga(\ov{e}),0,\tau^{*tw})$.
+
+This results in an upward shift of the $\left(\bta,\ov{e}\left(\bta\right) \right)$ function. Intuitively, the punishment becomes harsher for the legislature, so the lobby has to exert more effort to achieve a break at any given level of $\bta$. We know that the punishment becomes harsher because $\ov{e}$ must be at least as large as $e_{tw}$ in equilibrium for the lobbying constraint to hold, implying that the legislature's welfare is maximized at some tariff at least as large as $\tau^{tw}$. Welfare therefore decreases as the tariff is reduced from $\tau^{tw}$, leading to the result that lobbying effort must increase for a given $\bta$ when the tariff is reduced from $\tau^{tw}$.\footnote{To see this formally, fix $\bta$ and examine the following comparative static exercise:
+						$\frac{\partial \ov{e}}{\partial \tau^p} = -\frac{\frac{\partial \Omega}{\partial \tau^p}}{\frac{\partial \Omega}{\partial \ov{e}}}$. The numerator is $ -\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial }{\partial \tau^p} W_{\text{ML}}(\ga(\ov{e}),\tau^p,\tau^{*tw})$. The argument in the preceding text shows that this is negative, while the denominator is shown to be negative in the proof of Lemma~\ref{lem:et}. Thus the expression as a whole is negative.}
 
 
 \vskip.5in
 \begin{itemize}
-	\item Before worrying about punishment for punishment, go back to TA structure
-		\begin{itemize}
-			\item For legislature:
-				\begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),0,\tau^{*tw}) \right] \geq \\
-	W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
-				\end{multline}
-				\begin{itemize}
-					\item Want to show whether or not this punishment can support lower $\bta$
-					\item Only thing that changed from main construction is $\tau^{tw}$ to 0 in second term
-					\item For a given $\tau^a$,
-						\[
-						  \frac{\partial \ov{e}}{\partial \tau^p} = -\frac{\frac{\partial \Omega}{\partial \tau^p}}{\frac{\partial \Omega}{\partial \ov{e}}} = -\frac{-\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial }{\partial \tau^p} W_{\text{ML}}(\ga(e_b),\tau^p,\tau^{*tw}) }{(-)} = \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial }{\partial \tau^p} W_{\text{ML}}(\ga(e_b),\tau^p,\tau^{*tw}) }{(-)}
-						\]
-							\begin{itemize}
-								\item $\ov{e}$ is always $\geq$ both $\tau^{tw}$ and 0, so reducing $\tau^p$ reduces this welfare term. Then overall, reducing $\tau^p$ raises $\ov{e}$
-								\item Intuition: punishment gets worse, so have to pay more for a break for any given $\tau^a$
-							\end{itemize}
-				\end{itemize}
 			\item Lobby no longer wants ``trade war'' (really, punishment period). Only thing they can want is break tariff for one period. Then punishment punishes lobby too
 			  \begin{equation}
 					0 \geq \left[\pi(\tau^b(\ov{e})) - \ov{e}\right] - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
@@ -578,16 +564,14 @@ becomes
 					\item So the whole right side of Expression~\ref{ine:lob3} becomes negative. There is thus slack that can be exploited to reduce $\bta$.
 					\item Reducing $\bta$ will tighten up the condition via the last two terms. It's not clear what happens with net profits because the $\left(\bta,\ov{e}\right)$ correspondence is concave. It may give additional slack, or it may slow you down a little.
 				\end{itemize}
-			\item To truly compare, have to assume we're at an interior for both (although entirely possible that whichever is higher may be on boundary and other is interior)
+			\item \textbf{If the lobby's constraint loosens, does it do so everywhere?}
 				\begin{itemize}
-					\item \textbf{If the lobby's constraint loosens, does it do so everywhere?}
 					\item $\frac{\partial \ov{e}}{\partial \bta}$ \textbf{concave seems to complicate the analysis}
 						\begin{itemize}
 							\item I've verified that it remains concave for this punishment scheme: it looks like Lemmas 1 and 2 could reverse because the denominator could be positive, but this requires $f(\de)\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. But since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e_b - \pi(\tau^a)$, we can put the two together and see that in this case the lobby's constraint is violated. So Lemmas 1 and 2 hold as for the $\tau^{tw}$ punishment.
 						\end{itemize}
 					\item If there is slack, can we for sure lower $\bta$?
 				\end{itemize}	
-		\end{itemize}
 	\item Punishment
 		\begin{itemize}
 			\item Lobby doesn't want to deviate
