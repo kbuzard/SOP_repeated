@@ -545,33 +545,25 @@ In order to compare the trade agreement tariffs under the two punishment schemes
 This results in an upward shift of the $\left(\bta,\ov{e}\left(\bta\right) \right)$ function. Intuitively, the punishment becomes harsher for the legislature, so the lobby has to exert more effort to achieve a break at any given level of $\bta$. We know that the punishment becomes harsher because $\ov{e}$ must be at least as large as $e_{tw}$ in equilibrium for the lobbying constraint to hold, implying that the legislature's welfare is maximized at some tariff at least as large as $\tau^{tw}$. Welfare therefore decreases as the tariff is reduced from $\tau^{tw}$, leading to the result that lobbying effort must increase for a given $\bta$ when the tariff is reduced from $\tau^{tw}$.\footnote{To see this formally, fix $\bta$ and examine the following comparative static exercise:
 						$\frac{\partial \ov{e}}{\partial \tau^p} = -\frac{\frac{\partial \Omega}{\partial \tau^p}}{\frac{\partial \Omega}{\partial \ov{e}}}$. The numerator is $ -\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial }{\partial \tau^p} W_{\text{ML}}(\ga(\ov{e}),\tau^p,\tau^{*tw})$. The argument in the preceding text shows that this is negative, while the denominator is shown to be negative in the proof of Lemma~\ref{lem:et}. Thus the expression as a whole is negative.}
 
-
-\vskip.5in
-\begin{itemize}
-			\item Lobby no longer wants ``trade war'' (really, punishment period). Only thing they can want is break tariff for one period. Then punishment punishes lobby too
-			  \begin{equation}
-					0 \geq \left[\pi(\tau^b(\ov{e})) - \ov{e}\right] - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
-				\end{equation}
-becomes
+With this result in hand, we turn to the lobby's constraint. Here the changes are more complex. The constraint under symmetric $T$-period Nash reversion (Expression~\ref{eq:lob2}) can be written as
+	\[
+	  0 \geq \left[\pi(\tau^b(\ov{e})) - \ov{e}\right] - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+  \]
+Using tick marks to denote quantities under the alternative punishment scheme, this becomes
 				\begin{equation}
 					0 \geq \left[\pi(\tau^b(\ov{e}')) - \ov{e}'\right] - \pi(\tau^{a'}) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(0) - \pi(\tau^{a'}) \right]
 					\label{ine:lob3}
 				\end{equation}
-				\begin{itemize}
-					\item We know from above that starting at the $\bta$ that's optimal when the punishment it $\btn$, $\ov{e}$ goes up when punishment tariff drops to 0. Then net profits (first bracketed term) goes down. The reasoning is as follows: net profits are largest at $\ov{e} = e_{tw}$. When $\tau^p = \tau^{tw}$, we know $\ov{e} \geq e_{tw}$. When $\tau^p = 0$, $\ov{e}$ still $\geq e_{tw}$, but there is slack in the condition so that we could have a lower $\tau^a$ than the one that leads to $e_{tw}$. But this is talking about initial impact, and as long as $\ov{e} \geq e_{tw}$ and $e$ goes up, net profits must decrease.
-					\item For now we're holding $\tau^a$ constant so the profit at $\tau^a$ term stays the same
-					\item The last bracketed term goes from positive in Expression~\ref{ine:lob2} to negative in Expression~\ref{ine:lob3}
-					\item So the whole right side of Expression~\ref{ine:lob3} becomes negative. There is thus slack that can be exploited to reduce $\bta$.
-					\item Reducing $\bta$ will tighten up the condition via the last two terms. It's not clear what happens with net profits because the $\left(\bta,\ov{e}\right)$ correspondence is concave. It may give additional slack, or it may slow you down a little.
-				\end{itemize}
-			\item \textbf{If the lobby's constraint loosens, does it do so everywhere?}
-				\begin{itemize}
-					\item $\frac{\partial \ov{e}}{\partial \bta}$ \textbf{concave seems to complicate the analysis}
-						\begin{itemize}
-							\item I've verified that it remains concave for this punishment scheme: it looks like Lemmas 1 and 2 could reverse because the denominator could be positive, but this requires $f(\de)\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. But since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e_b - \pi(\tau^a)$, we can put the two together and see that in this case the lobby's constraint is violated. So Lemmas 1 and 2 hold as for the $\tau^{tw}$ punishment.
-						\end{itemize}
-					\item If there is slack, can we for sure lower $\bta$?
-				\end{itemize}	
+The first difference to notice is in the final bracket: the future payoff difference goes from positive to negative. The lobby no longer benefits from provoking a dispute. This serves to loosen the constraint.
+
+Turning to the first bracketed term, it is shown above that $\ov{e'} > \ov{e}$. Since it must be the case that $\ov{e} \geq e_{tw}$ where net profits are maximized, this implies that net profits decrease under the alternative punishment scheme. On initial impact, we hold $\tau^a = \tau^{a'}$ so that the middle term is the same. Taken all together, these facts imply that the right side of Expression~\ref{ine:lob3} becomes negative. Changing the punishment scheme thus creates slack in the lobby's constraint.
+
+It is left to verify that this slack can be exploited to reduce $\bta$. It is clear that reducing $\bta$ will tighten up the condition via the last two terms. What happens to net profits is not as straightforward since the $\left(\bta,\ov{e}\right)$ correspondence is concave.\footnote{It is easy to verify that the relationship remains concave under for this punishment scheme. There is the possibility that the results of Lemmas~\ref{lem:et} and \ref{lem:ets} could reverse because the denominator in each expression could be positive, but this requires $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. Since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e_b - \pi(\tau^a)$, combining the two shows that in this case the lobby's constraint is violated. So Lemmas ~\ref{lem:et} and \ref{lem:ets} hold as for the Nash reversion punishment.} If the reduction in the trade agreement tariff increases $\ov{e'}$, additional slack is created that allows further reduction in the trade agreement tariff. If instead $\ov{e'}$ is reduced, net profits will increase. This will limit the amount of reduction in $\tau^{a'}$ that is consistent with satisfying the lobby's constraint. In either case, $\tau^{a'}$ can be reduced below the level that is achieved under $T$-period Nash reversion punishments.
+
+Thus this punishment scheme that is disliked by the lobby as well as the legislature can support lower trade agreement tariffs when it can be sustained. I now turn to the question of the incentive compatibility of the punishments.
+
+\vskip.5in
+\begin{itemize}
 	\item Punishment
 		\begin{itemize}
 			\item Lobby doesn't want to deviate
