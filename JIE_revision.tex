@@ -562,6 +562,20 @@ It is left to verify that this slack can be exploited to reduce $\bta$. It is cl
 
 Thus this punishment scheme that is disliked by the lobby as well as the legislature can support lower trade agreement tariffs when it can be sustained. I now turn to the question of the incentive compatibility of the punishments.
 
+Incentive compatibility will depend on the full equilibrium strategies that are specified. In addition to replacing the $T$-period Nash reversion punishments with a $T$-period punishment of zero tariffs and zero effort, it is also desirable to find the punishments for deviating from the punishments that are most useful for sustaining the trade agreement.
+
+Begin by examining the lobby's incentives for deviating from the punishment. Given that the legislature's action in a punishment period is to choose $\tau^p =0$ regardless of the lobby's choice and that the lobby is already exerting the lowest-cost effort level, the lobby cannot improve its payoff by deviating in the current period. The lobby's incentive constraint will hold if we specify that in the remaining periods of any punishment after a deviation by the lobby, the players play the original punishment actions. In effect, any deviation by the lobby is ignored.
+
+Next, consider the legislature's incentives for deviating from the punishment. The legislature has a very real temptation to deviate to its best response tariff in the current punishment period. Note that with lobbying effort at zero, if one assume that $\gamma(0) = 1$, this would be the standard optimal tariff for a large country. The legislature must be punished if it follows this deviation, and by standard repeated game logic, the punishment outcome should provide higher welfare to the lobby. The strongest such outcome is zero lobbying effort and a prohibitively-high tariff (call it $\tau^P$). For simplicity, let's specify that this punishment for the punishment lasts for the remaining number of periods in the original punishment. Then the relevant portion of the incentive constraint is
+\begin{multline}
+		W(\ga(0),0,\tau^{*tw}) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(0),0,\tau^{*tw}) \geq \\ W(\ga(0),\tau^D,\tau^{*tw}) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(0),\tau^P,\tau^{*tw})
+		\label{eq:legpunasym}
+\end{multline}
+
+This condition is not a strong one, as it is quite likely that the gain from the optimal tariff is far outweighed by the loss from the prohibitive tariff for a non-politically-motivated legislature. However, this condition cannot be guaranteed for all economies.
+
+
+	
 \vskip.5in
 \begin{itemize}
 	\item Punishment
@@ -571,7 +585,6 @@ Thus this punishment scheme that is disliked by the lobby as well as the legisla
 				\begin{itemize}
 					\item Punish with $e=0$, $\tau > \tau^D(0)$ (needs to be higher so that lobby likes it)
 				\end{itemize}
-			\item \textbf{need to make sure payoffs for all of these are lower than eqm payoff for punisher}
 		\end{itemize}
 \end{itemize}
 
