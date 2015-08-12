@@ -333,14 +333,14 @@ Whether an interesting solution of the type we go on to examine in the next two 
   In the case of political certainty, the equilibrium trade agreement induces zero lobbying effort and is never subject to dispute. The executives choose the minimum tariff level that induces the lobby to choose $e_b=0$.
   \label{res:eqm}
 \end{result}
-At the equilibrium tariffs, the lobby's constraint binds, while the legislature's does not. The amount of effort the lobby would have to exert to provoke a dispute, however, is derived from the legislature's constraint. This cost is then used in the lobby's constraint to calculate the lowest tariff level that will induce the lobby to disengage (that is, choose $e_b =0$ over $e_b=\ov{e}(\bta)$) and therefore make the median legislator's constraint slack and induce \textit{her} to choose the internationally-agreed-upon $\tau^a$ over $\tau^b$ and the implied dispute.\footnote{The results would be altered in magnitude but not in spirit by assuming that the trade agreement tariffs are weak bindings---that is, tariff caps---instead of strong bindings. The most important implication is that there would be positive lobbying in equilibrium as the lobby would need to put forth effort to bid protection levels up to the cap. There would still be no trade disputes in equilibrium.}
+At the equilibrium tariffs, the lobby's constraint binds, while the legislature's does not. The amount of effort the lobby would have to exert to provoke a dispute, however, is derived from the legislature's constraint. This cost is then used in the lobby's constraint to calculate the lowest tariff level that will induce the lobby to disengage (that is, choose $e_b =0$ along with $e_a$ over $e_b=\ov{e}(\bta)$ along with $e_{tw}$) and therefore make the median legislator's constraint slack and induce \textit{her} to choose the internationally-agreed-upon $\tau^a$ over $\tau^b$ and the implied dispute.\footnote{The results would be altered in magnitude but not in spirit by assuming that the trade agreement tariffs are strong bindings instead of weak bindings. The most important implication is that there would be zero lobbying effort in equilibrium as the lobby would not need to put forth effort to bid protection levels up to the tariff cap. There would still be no trade disputes in equilibrium.}
 
 Although in this simple model we do not see disputes in equilibrium, the lobby's out-of-equilibrium incentives to exert effort to provoke a dispute are essential in determining the tariff-setting behavior of the executives.
 
 \subsection{Trade Agreement Properties}
 Following Result~\ref{res:eqm}, we know that the lobby first uses Expression~\ref{ine:leg2} at equality to determine $\ov{e}(\bta)$: that is, it determines how much effort it has to exert for the given $\bta$ in order to induce the legislature to choose noncooperation. This it accomplishes using Condition~\ref{eq:leg2} above.
 
-With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{eq:lob2} at equality to determine the required $\tau^a$:\footnote{There are analogous expression for $\tau^{*a}$ throughout that can be ignored by symmetry.} that is, the trade agreement tariff that is just high enough to induce the lobby to disengage, causing the equilibrium outcome to be $e_b = 0$ and the trade agreement tariff to remain in place.
+With $\ov{e}(\bta)$ determined, the executives use Expression~\ref{eq:lob2} at equality to determine the required $\tau^a$:\footnote{There are analogous expression for $\tau^{*a}$ throughout that can be ignored by symmetry.} that is, the trade agreement tariff that is just high enough to induce the lobby to disengage at the break stage, causing the trade agreement tariff to remain in place in equilibrium.
 
 Although one cannot arrive at explicit expressions for the solution functions $\ov{e}(\cdot)$ and $\tau^a(\cdot)$ without imposing further assumptions, significant intuition can be derived implicitly. An overview of the results will be provided here, while the mathematical details are in the Appendix. It's important to keep in mind that these results apply to solutions that are truly interior in the sense that the lobby has been disengaged by making it too costly to exert effort.
 
@@ -637,7 +637,7 @@ Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partia
 \noindent \textbf{\hypertarget{Lem_ets}{Proof of Lemma~\ref{lem:ets}}}: \\
 By the Implicit Function Theorem:
 \begin{equation*}
- 	\frac{\partial \ov{e}}{\partial \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+ 	\frac{\partial \ov{e}}{\partial \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
 	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
 \end{equation*}
 
@@ -648,7 +648,7 @@ By the Implicit Function Theorem:
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\partial \tau^a}{\partial \de_\text{L}} = -\frac{\frac{\partial \Pi}{\partial \ov{\de_\text{L}}}}{\frac{\partial \Pi}{\partial \tau^a}} = 
-	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a} }
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a} }
 \end{equation}
 
 First I will show that $\frac{1 - \left(T+1\right)\de^T + T \de^{T+1}}{(1-\de)^2}$ is positive. Focusing on the numerator and rearranging, we have
@@ -660,7 +660,7 @@ First I will show that $\frac{1 - \left(T+1\right)\de^T + T \de^{T+1}}{(1-\de)^2
 \]
 Therefore $\frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{(1-\de_\text{L})^2}$ is positive. 
 
-The bracketed term must be positive in order for the lobby to have the incentive to lobby in the trade-war phase. I assume that this is the case, as all the results of this section are not interesting for any trade agreement for which it is violated. See the conclusion for discussion of a planned extension that more fully explores the trade-war phase.
+The bracketed term is weakly positive since the trade agreement tariff is weakly smaller than the trade war tariff. In order for the results of this section to be interesting, it must be that $\tau^a < \tau^{tw}$ so that the bracketed term is strictly positive for equilibria of interest.
 
 Lemma~\ref{lem:et} established that $\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. The denominator is the sum of three positive terms and so positive itself. Since both terms in the numerator have already been shown to be positive, $\frac{\partial \tau^a}{\partial \de_\text{L}}$ is positive. $\hfill\blacksquare$
 
@@ -721,6 +721,6 @@ Because $\frac{\partial \Pi}{\partial \ga}$ = 0, we are looking for
  	\frac{\partial \tau^a}{\partial \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
 	\frac{\left(1 - \frac{\partial \pi}{\partial \ov{e}}\right) \cdot \frac{\partial \ov{e}}{\partial \ga}}{\frac{\partial \ov{e}(\tau^a)}{\partial \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
 \end{equation}
-As shown in Corollary~\ref{cor:eg}, $\frac{\partial \ov{e}}{\partial \ga}$ is negative, whereas Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\partial \pi}{\partial \ov{e}}\right)$ is positive. The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\partial \tau^a}{\partial \ga}$ is positive. $\hfill\blacksquare$
+As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\partial \ov{e}}{\partial \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\partial \pi}{\partial \ov{e}}\right)$ is positive. The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\partial \tau^a}{\partial \ga}$ is positive. $\hfill\blacksquare$
 \end{document}
 
