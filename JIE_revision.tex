@@ -158,10 +158,10 @@ We are in an environment of complete information, so the appropriate solution co
 
 The per-period welfare function of the home legislature is
 \begin{equation}
-  W_\text{ML} = \mathit{CS}_X(\tau) + \ga(e) \cdot \mathit{PS}_X(\tau) + \mathit{CS}_Y(\tau^*) + \mathit{PS}_Y(\tau^*) + \mathit{TR}(\tau)
+  W_\text{ML} = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
   \label{eq:ml3}
 \end{equation}
-where $\mathit{CS}$ is consumer surplus, $\mathit{PS}$ is producer surplus, $\ga(e)$ is the weight placed on producer surplus (profits) in the import-competing industry, $e$ is lobbying effort, and $\mathit{TR}$ is tariff revenue. Here, the weight the median legislator places on the profits of the import-competing industry, $\ga(e)$ is affected by the level of lobbying effort.\footnote{The standard PFS modeling would specify $W_\text{ML} = C + aW$, but as will be seen when we come to the preferences of the executive, this is not sufficiently general for the purposes of this model. Although complex, an isomorphism can be made between the two forms in a special case as discussed in \citet{buzard2013b}.}
+where $\mathit{CS}$ is consumer surplus, $\pi$ is profits (identical to producer surplus in this model), $\ga(e)$ is the weight placed on profits in the import-competing industry, $e$ is lobbying effort, and $\mathit{TR}$ is tariff revenue. Here, the weight the median legislator places on the profits of the import-competing industry, $\ga(e)$ is affected by the level of lobbying effort.\footnote{The standard PFS modeling would specify $W_\text{ML} = C + aW$, but as will be seen when we come to the preferences of the executive, this is not sufficiently general for the purposes of this model. Although complex, an isomorphism can be made between the two forms in a special case as discussed in \citet{buzard2013b}.}
 
 Notice that, aside from the endogeneity of the weight the legislature places on the lobbying industry's profits, this is precisely the \textit{deus ex machina} government objective function popularized by \citet{baldwin} that is commonly employed in the literature on the political economy of trade agreements. Since trade policies are overwhelmingly determined within the context of trade agreements, it is useful to have a framework to bring together the endogenous political pressure of PFS-style modeling with the trade agreements approach; the formulation in Equation~\ref{eq:ml3} is intended to be a bridge between the two. Modeling the objective function so closely on the standard in the trade agreements literature allows for direct comparisons to the large extant body of work that studies exogenous shocks only, revealing cleanly the effects of the addition of endogenous lobbying.
 
@@ -193,7 +193,7 @@ I model the executives' choice via the Nash bargaining solution where the disagr
 
 The executives are assumed, for simplicity, to be social-welfare maximizers who can make transfers between them.\footnote{It is trivial to relax the assumption of social-welfare maximizing executives; in the present symmetric environment with no disputes, the same is true of the assumption about transfers.} Therefore the home executive's welfare is specified as follows:
 \[
-  W_\text{E} = \mathit{CS}_X(\tau) + \mathit{PS}_X(\tau) + \mathit{CS}_Y(\tau^*) + \mathit{PS}_Y(\tau^*) + \mathit{TR}(\tau)
+  W_\text{E} = \mathit{CS}_X(\tau) + \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
 \]
 Note that this is identical to the welfare function for the legislature aside from the weight on the profits of the import industry, which is not a function of lobbying effort and here is assumed to be $1$ for simplicity. This assumption does \textit{not} require that the executives are not lobbied; only that their preferences are not directly altered in a significant way by lobbying over trade---that they do not sell protection in order to finance their re-election campaigns. In the case of the post-war United States, where the Congress has consistently been significantly more protectionist than the President, this seems to reasonably reflect the political reality. For trade policy, where there are concentrated benefits but harm is diffuse, there are good reasons for this to be the case. Because the President has the largest constituency possible, delegating authority to the executive branch may simply be a mechanism for ``concentrating'' the benefits since consumers seem unable to overcome the free-riding problem. In fact, a strong argument can be made that power over trade policy has been delegated to the executive branch precisely \textit{because} it is less susceptible to the influence of special interests \citet{destler}.
 
@@ -228,7 +228,7 @@ Whenever there is a violation of the agreement---that is, a tariff higher than t
 
 For the legislature, the Nash outcome is the tariff that unilaterally maximizes Equation~\ref{eq:ml3} given $\tau^*$ and the lobby's choice $e_{p}$. The separability of the economy implies that there are no cross-country interactions in the decision problems, so the home and foreign best response tariffs are independent and the home country's tariff in a punishment period maximizes weighted home-country welfare in the $X$-sector only. The foreign legislature's decision problem is analogous, and unilateral optimization leads to what I refer to as the trade war tariffs $\tau^{tw}$ as the solution to the following first order condition:
 \[
-		\frac{\partial \mathit{CS}_X(\tau)}{\partial \tau^{p}} + \ga(e_{p}) \cdot \frac{\partial \mathit{PS}_X(\tau)}{\partial \tau^{p}} +  \frac{\partial \mathit{TR}(\tau)}{\partial \tau^{p}} = 0
+		\frac{\partial \mathit{CS}_X(\tau)}{\partial \tau^{p}} + \ga(e_{p}) \cdot \frac{\partial \pi_X(\tau)}{\partial \tau^{p}} +  \frac{\partial \mathit{TR}(\tau)}{\partial \tau^{p}} = 0
 		\label{eq:leguni}
 \]
 
