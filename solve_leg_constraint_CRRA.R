@@ -1,5 +1,5 @@
 #given gamma above, solve for trade war effort level, etw$root
-E=.4
+E=.39
 ei = 1/E
 etw <- uniroot(function(cn) (8/49*(1+(8*(1 + ei*cn^E)-5)/(68-8*(1 + ei*cn^E)))*(8*63*.2*(ei*cn^(-.8)))/((68-8*(1 + ei*cn^E))^2))-1, lower=0, upper = 1, tol = 0.00001, maxiter = 1000)
 
@@ -13,17 +13,16 @@ TRtw = (ttw - 6*ttw^2)/7
 CSytw = ((3 +3*ttw)^2)/98
 PSytw = ((4 -3*ttw)^2)/98
 
-# total discounting for legislature
-d = .99
-T=10
-fd = (d -d^(T+1))/(1-d)
+# discounting
+d = .99 #legislature's discount rate
+dl = .99 # lobby's discount rate
+T=54
+fd = (d -d^(T+1))/(1-d) #total discounting for leg
+fdl = (dl -dl^(T+1))/(1-dl) #total discounting for lobby
 
-#discount term for lobby. length of punishment is same as for leg, but delta can be different
-dl = .99
-fdl = (dl -dl^(T+1))/(1-dl)
-
-ta = seq(.05,ttw,.0001) #possible bribe values for legislator located at 0
+ta = seq(.0756,.0758,.000001) #possible bribe values for legislator located at 0
 ea = (E*((68*ta + 5)/(8+8*ta)-1))^ei
+out = matrix(NA,length(ta),4) #pre-reserve space in output matrix
 
 #producer and consumer surpluses (in X and Y industries) and tariff revenue at trade agreement tariff
 PSxta = ((2 +2*ta)^2)/49
@@ -32,9 +31,6 @@ TRta = (ta - 6*ta^2)/7
 CSyta = ((3 +3*ta)^2)/98
 PSyta = ((4 -3*ta)^2)/98
 
-out = matrix(NA,length(ta),3) #pre-reserve space in output matrix
-
-# trade agreement tariff
 for (j in 1:length(ta)) {
   t = ta[j]
   
@@ -46,11 +42,11 @@ ove = uniroot(f, lower = 0, upper = .1, tol = 0.00001, maxiter = 1000)
 
 #This is benefit to lobby
 bl = ((2 +2*(8*(1 + ei*ove$root^E)-5)/(68-8*(1 + ei*ove$root^E)))^2)/49 - PSxta +ea + fdl*(PSxtw - etw$root - PSxta +ea)
-
-#lobby's constraint (need this to be negative, as close to zero as possible)'
-ove$root - bl
+ove$root - bl #lobby's constraint (need this to be positive, as close to zero as possible)'
 
 out[j,1] = t #I needed a loop counter in Matlab; may not need it in R
 out[j,2] = ove$root
 out[j,3] = ove$root - bl[j]
+out[j,4] = T
 }
+View(out)
