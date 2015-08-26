@@ -672,7 +672,7 @@ By the Implicit Function Theorem:
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{L}} = -\frac{\frac{\partial \Pi}{\partial \de_\text{L}}}{\frac{\partial \Pi}{\partial \tau^a}} = 
-	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]}{\frac{\mathrm{d} \ov{e}(\tau^a)}{\mathrm{d} \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a} }
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
 
 First I will show that $\frac{1 - \left(T+1\right)\de^T + T \de^{T+1}}{(1-\de)^2}$ is positive. Focusing on the numerator and rearranging, we have
@@ -686,7 +686,7 @@ Therefore $\frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{(1-\
 
 The bracketed term is weakly positive since the trade agreement tariff is weakly smaller than the trade war tariff. In order for the results of this section to be interesting, it must be that $\tau^a < \tau^{tw}$ so that the bracketed term is strictly positive for equilibria of interest.
 
-Lemma~\ref{lem:et} established that $\frac{\mathrm{d} \ov{e}(\tau^a)}{\mathrm{d} \tau^a}$ is positive, and profits are increasing in $\tau^a$, so the other two terms in the denominator are positive. The denominator is the sum of three positive terms and so positive itself. Since both terms in the numerator have already been shown to be positive, $\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{L}}$ is positive. $\hfill\blacksquare$
+Looking at the denominator, the discounting term is positive, so the term in parentheses is positive. $\tau^a$ is weakly smaller than $\tau^{tw}$ and net profits are increasing until $\tau^{tw}$, so the bracketed term is positive. As the product of two positive terms, the denominator is positive itself. Since both terms in the numerator have already been shown to be positive, $\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{L}}$ is positive. $\hfill\blacksquare$
 
 
 \vskip.4in
@@ -712,7 +712,7 @@ There is no direct effect of $\de_\text{ML}$ on this equation, so $\frac{\partia
 
 \begin{equation}
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{ML}} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}}{\frac{\partial \Pi}{\partial \tau^a}} = -
-	\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)\cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}}{\frac{\mathrm{d} \ov{e}(\tau^a)}{\mathrm{d} \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
+	\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)\cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
 
 The total effect of $\ov{e}$ on $\Pi$ is the negative of the lobby's FOC, that is
@@ -740,11 +740,13 @@ Differentiating the lobby's condition, Equation~\ref{eq:lob3} with respect to $\
 \[
   \frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} + \frac{\partial \Pi}{\partial \ga} = 0
 \]
-Because $\frac{\partial \Pi}{\partial \ga}$ = 0, we are looking for
+Because $\frac{\partial \Pi}{\partial \ga} = -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]$, we are looking for
 \begin{equation}
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
-	\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}}{\frac{\mathrm{d} \ov{e}(\tau^a)}{\mathrm{d} \tau^a} + \frac{\partial \pi(\tau^a)}{\partial \tau^a} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\frac{\partial \pi(\tau^a)}{\partial \tau^a}}
+	\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
-As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive. The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga}$ is positive. $\hfill\blacksquare$
+As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive. The trade war tariff is increasing in $\ga$, as are net trade war profits. With the everywhere-positive discount term multiplying these two positive terms, we have another negative term because of the negative sign. Thus the numerator is negative.
+
+The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga}$ is positive when combined with the leading negative sign. $\hfill\blacksquare$
 \end{document}
 
