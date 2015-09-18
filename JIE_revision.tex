@@ -156,20 +156,29 @@ It follows that $P_X^W$ and $P_Y^W$ are decreasing in $\tau$ and $\tau^*$ respec
 
 I next describe the politically-relevant actors. In order to focus attention on protectionist political forces, I assume that only the import-competing industry in each country is politically-organized and able to lobby and that it is represented by a single lobbying organization.\footnote{Adding a pro-trade lobby for the exporting industry would modify the magnitude of the effects and make free trade attainable for a range of parameter values, but it would not modify the essential dynamic.} Each country's government is composed of two branches: an executive who can conclude trade agreements and a legislature that has final say on trade policy. Thus the political process is modeled as involving three players in each country: the lobby, the executive, and the legislature.
 
-The stage-game timing is as follows. At time zero, the executives set trade policy cooperatively in an international agreement. The agreement takes the form of a cap on tariffs so that if the applied tariff in any period is higher than the agreed-upon level, there is a breach of the agreement.
+The stage-game timing is as follows. At time zero, the executives set trade policy cooperatively in an international agreement. Time zero will be addressed in detail in the next section. 
 
-In each subsequent period, each lobby decides whether to exert the effort to convince the legislature in its respective country to break the trade agreement or to exert the lower effort level that achieves the trade agreement tariff. Depending on lobbying effort, the legislatures then decide whether to abide by the agreement or to provoke a trade war.
+In each period of the repeated game, each lobby decides how much effort to exert to influence its respective legislature's tariff setting. Depending on lobbying effort, the legislatures then set the applied tariff levels.
 
-In the event that at least one of the legislatures chooses a tariff greater than the trade agreement tariff, the trade agreement tariffs are suspended and the relationship moves into a punishment phase. The following period has a different structure: there is no trade agreement to break, so there is simply lobbying to influence the level at which the punishment phase tariff is set and a decision on these tariffs by the legislatures. Once all political decisions are taken, producers and consumers make their decisions.
+As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
 
-We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. Whenever this is a possibility of multiple equilibria, I will focus on the one that maximizes the welfare of the executives. As this game is solved by backward induction, it is intuitive to start by describing the incentives of the legislatures, whose decisions I model as being taken by a median legislator. As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
+The home lobby chooses its lobbying effort to maximize its net profits:
+\begin{equation}
+  U_\text{L} = \pi(\tau)-e
+  \label{eq:lv3}
+\end{equation}
+where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good. I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
+
+%Values of $\tau$ that are of particular interest are $\tau^a, \ \tau^{tw}, \tau^p$ and $\tau^b$, respectively the trade agreement, trade war, punishment and break tariffs. The corresponding effort levels are notated as $e_a$ to influence the applied tariff under the trade agreement, $e_{tw}$ in the trade war, $e_p$ to influence the punishment tariff and $e_b$ to influence the break decision. 
+
+I assume the lobby's contribution is not observable to the foreign legislature. The implication is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected.\footnote{cfr. \citet{gh95}, page 685-686.}
 
 The per-period welfare function of the home legislature is
 \begin{equation}
   W_\text{ML} = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
   \label{eq:ml3}
 \end{equation}
-where $\mathit{CS}$ is consumer surplus, $\pi$ are profits (identical to producer surplus in this model), $\ga(e)$ is the weight placed on profits in the import-competing industry, $e$ is lobbying effort, and $\mathit{TR}$ is tariff revenue. Here, the weight the median legislator places on the profits of the import-competing industry, $\ga(e)$ is affected by the level of lobbying effort.
+where $\mathit{CS}$ is consumer surplus, $\pi$ are profits (identical to producer surplus in this model) and $\mathit{TR}$ is tariff revenue. Here, the weight the median legislator places on the profits of the import-competing industry, $\ga(e)$, is affected by the level of lobbying effort.
 
 Notice that, aside from the endogeneity of the weight the legislature places on the lobbying industry's profits, this is precisely the \textit{deus ex machina} government objective function popularized by \citet{baldwin} that is commonly employed in the literature on the political economy of trade agreements. Since trade policies are often determined within the context of trade agreements, it is useful to have a framework to bring together the endogenous political pressure of `Protection-for-Sale'-style modeling with the trade agreements approach; the formulation in Equation~\ref{eq:ml3} is intended to be a bridge between the two. 
 
@@ -186,15 +195,20 @@ The functional form in Expression~\ref{eq:ml3} with Assumption~\ref{as:ga_c3} ca
 
 Lobbying affects only the weight the legislature places on the profits of the import-competing industry. These profits are higher in a trade war than under a trade agreement, so given Assumption~\ref{as:ga_c3}, the legislature becomes more favorably inclined toward the high trade-war tariff and associated profits as lobbying increases and therefore more likely to break the trade agreement.
 
-Given the legislature's preferences, the home lobby chooses its lobbying effort to maximize its net profits:
-\begin{equation}
-  U_\text{L} = \pi(\tau)-e
-  \label{eq:lv3}
-\end{equation}
-where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good. Values of $\tau$ that are of particular interest are $\tau^a, \ \tau^{tw}, \tau^p$ and $\tau^b$, respectively the trade agreement, trade war, punishment and break tariffs. The corresponding effort levels are notated as $e_a$ to influence the applied tariff under the trade agreement, $e_{tw}$ in the trade war, $e_p$ to influence the punishment tariff and $e_b$ to influence the break decision. I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
 
-I assume the lobby's contribution is not observable to the foreign legislature. The implication is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected.\footnote{cfr. \citet{gh95}, page 685-686.}
+\vskip.5in
 
+whether to exert the effort to convince the legislature in its respective country to break the trade agreement or to exert the lower effort level that achieves the trade agreement tariff. Depending on lobbying effort, the legislatures then sets the applied tariff level, implicitly deciding whether to abide by the agreement or to provoke a trade war.
+
+In the event that at least one of the legislatures chooses a tariff greater than the trade agreement tariff, the trade agreement tariffs are suspended and the relationship moves into a punishment phase. The following period has a different structure: there is no trade agreement to break, so there is simply lobbying to influence the level at which the punishment phase tariff is set and a decision on these tariffs by the legislatures. Once all political decisions are taken, producers and consumers make their decisions.
+
+\section{Repeated Game}
+\label{sec:repeated}
+The agreement takes the form of a cap on tariffs so that if the applied tariff in any period is higher than the agreed-upon level, there is a breach of the agreement.
+
+We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. Whenever this is a possibility of multiple equilibria, I will focus on the one that maximizes the welfare of the executives. As this game is solved by backward induction, it is intuitive to start by describing the incentives of the legislatures, whose decisions I model as being taken by a median legislator. 
+
+\vskip.5in
 In the first stage, the executives choose the trade agreement tariffs $\bta=\left(\tau^a,\tau^{*a} \right)$ via a negotiating process that I assume to be efficient. In this symmetric environment, this process maximizes the joint payoffs of the trade agreement:\footnote{If political uncertainty is present, the joint payoffs must take into account the possibility that the trade agreement will be broken. In the case of certainty, agreement will always be maintained on the equilibrium path and so this specification is sufficient.}
 \begin{equation}
   \bm{W_\text{E}}(\bta) = W_\text{E}(\bta) + W_\text{E}^*(\bta)
@@ -229,8 +243,9 @@ Assumption~\ref{as:ga_l_e3} ensures that the trade agreement tariff is less than
 
 Although the political process here matches most closely that of the United States in the post-war era, I believe the model or one of its extensions is applicable for a broad range of countries for which authority over the formation and maintenance of trade policy is diffuse and subject to political pressure either at home or in a trading partner.\footnote{In particular, the binary decision by the legislature about whether to abide by or break the trade agreement is modeled on the ``Fast Track Authority'' that the U.S. Congress granted to the Executive branch almost continuously from 1974-1994 and then again as ``Trade Promotion Authority'' from 2002-2007.} 
 
-\section{Repeated Game}
-\label{sec:repeated}
+
+
+\vskip.5in
 This trade policy environment has many features of a standard prisoner's dilemma. Most importantly, the legislatures face unilateral incentives to violate the terms of the agreement under pressure from the lobbies. When the legislatures and lobbies set tariffs at the higher stage-game Nash equilibrium level, payoffs for the social-welfare conscious executives are reduced. In order to maintain the trade agreement without external enforcement, we turn to repeated game incentives.
 
 Precise conditions for supporting the trade agreement in equilibrium depend on the full set of punishments that are specified, and the details for several possibilities are given in Section~\ref{sec:repeated2}. For the results in Sections~\ref{sec:structure} and \ref{sec:optimal}, deviations from the trade agreement are punished by reverting to the stage game Nash equilibrium for a specified number of periods before returning to cooperation. This represents a trade war that is limited in duration and therefore more realistic than infinite Nash reversion. I show in Section~\ref{sec:optimal} that infinite Nash reversion punishments are dominated by shorter lengths of Nash reversion when lobbies are non-trivial political actors.
