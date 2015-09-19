@@ -167,13 +167,11 @@ The home lobby chooses its lobbying effort to maximize its net profits:
   U_\text{L} = \pi(\tau)-e
   \label{eq:lv3}
 \end{equation}
-where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good. I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
+where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good.\footnote{I assume the lobby's contribution is not observable to the foreign legislature. The implication is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected. See for reference \citet{gh95}, page 685-686.} I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
 
 %Values of $\tau$ that are of particular interest are $\tau^a, \ \tau^{tw}, \tau^p$ and $\tau^b$, respectively the trade agreement, trade war, punishment and break tariffs. The corresponding effort levels are notated as $e_a$ to influence the applied tariff under the trade agreement, $e_{tw}$ in the trade war, $e_p$ to influence the punishment tariff and $e_b$ to influence the break decision. 
 
-I assume the lobby's contribution is not observable to the foreign legislature. The implication is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected.\footnote{cfr. \citet{gh95}, page 685-686.}
-
-The per-period welfare function of the home legislature is
+The per-period welfare function of the home legislature, whose decisions I model as being taken by a median legislator, is
 \begin{equation}
   W_\text{ML} = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
   \label{eq:ml3}
@@ -206,10 +204,12 @@ In the event that at least one of the legislatures chooses a tariff greater than
 \label{sec:repeated}
 The agreement takes the form of a cap on tariffs so that if the applied tariff in any period is higher than the agreed-upon level, there is a breach of the agreement.
 
-We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. Whenever this is a possibility of multiple equilibria, I will focus on the one that maximizes the welfare of the executives. As this game is solved by backward induction, it is intuitive to start by describing the incentives of the legislatures, whose decisions I model as being taken by a median legislator. 
+We are in an environment of complete information, so the appropriate solution concept is subgame perfect Nash equilibrium. Whenever this is a possibility of multiple equilibria, I will focus on the one that maximizes the welfare of the executives. 
 
-\vskip.5in
-In the first stage, the executives choose the trade agreement tariffs $\bta=\left(\tau^a,\tau^{*a} \right)$ via a negotiating process that I assume to be efficient. In this symmetric environment, this process maximizes the joint payoffs of the trade agreement:\footnote{If political uncertainty is present, the joint payoffs must take into account the possibility that the trade agreement will be broken. In the case of certainty, agreement will always be maintained on the equilibrium path and so this specification is sufficient.}
+
+\subsection{Time Zero: Trade Agreement Negotiation}
+\label{sec:zero}
+At time zero, the executives choose the trade agreement tariffs $\bta=\left(\tau^a,\tau^{*a} \right)$ via a negotiating process that I assume to be efficient. In this symmetric environment, this process maximizes the joint payoffs of the trade agreement:\footnote{If political uncertainty is present, the joint payoffs must take into account the possibility that the trade agreement will be broken. In the case of certainty, agreement will always be maintained on the equilibrium path and so this specification is sufficient.}
 \begin{equation}
   \bm{W_\text{E}}(\bta) = W_\text{E}(\bta) + W_\text{E}^*(\bta)
   \label{eq:jv3}
