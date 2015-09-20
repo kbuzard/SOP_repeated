@@ -241,6 +241,7 @@ Assumption~\ref{as:ga_l_e3} ensures that the trade agreement tariff is less than
 
 Although the political process here matches most closely that of the United States in the post-war era, I believe the model or one of its extensions is applicable for a broad range of countries for which authority over the formation and maintenance of trade policy is diffuse and subject to political pressure either at home or in a trading partner.\footnote{In particular, the binary decision by the legislature about whether to abide by or break the trade agreement is modeled on the ``Fast Track Authority'' that the U.S. Congress granted to the Executive branch almost continuously from 1974-1994 and then again as ``Trade Promotion Authority'' from 2002-2007.} 
 
+
 \subsection{Stage Game Subgame Perfect Nash Equilibrium}
 \label{sec:stagespne}
 The legislature's strategy in the subgame-perfect Nash equilibrium is to to choose the tariff that unilaterally maximizes Equation~\ref{eq:ml3} given $\tau^*$ and the lobby's effort level $e$. The separability of the economy implies that there are no cross-country interactions in the decision problems, so the home and foreign best response tariffs are independent and the home country's tariff in a punishment period maximizes weighted home-country welfare in the $X$-sector only. The foreign legislature's decision problem is analogous, and unilateral optimization leads to what I refer to $\tau^R$ as the solution to the following first order condition:\footnote{That the second order condition is satisfied is not guaranteed. See the appendix of \citet{buzard2013b} for a discussion as well as a sufficient condition when prices are linear in tariffs. At issue is the need to bound the impact of the convexity of the profit term relative to the concavity of the consumer surplus term for any given value of $\ga$.\label{fn:legsoc}}
@@ -257,7 +258,7 @@ The lobby chooses its effort $e$ given the above best response tariff-setting be
 That is, at this stage, the lobby chooses the level of effort that equates its expected marginal increase in profits with its marginal payment. I label this effort level $e_{tw}$ because the result of unilateral optimization within the stage-game is taken to be the trade war outcome. Similarly, I label $\tau^R(\ga(e_{tw}))$ as $\tau^{tw}$, the trade war tariff.\footnote{The most general condition that ensures that the lobby's second order condition holds is the following: $\left| \frac{\partial \tau}{\partial \ga}\frac{\partial^2 \ga}{\partial e^2}\right|>\frac{\partial \pi}{\partial \tau}\left[\frac{\partial \ga}{\partial e}\right]^2\frac{\frac{\partial^2 \pi}{\partial \tau^2}}{\left[\text{ML's SOC}\right]^2}$. Note that to ensure concavity of the lobby's objective function, it's important that the decreasing returns to lobbying effort outweigh the direct impact of effort in increasing the weighting function. Also, if profits either increase too fast in tariffs or are too convex, the second order condition can be violated.\label{fn:lobsoc}}
 
 \subsection{Conditions for Cooperation}
-Unlike with infinite Nash reversion punishments, these $T$-period Nash reversion punishments are not necessarily subgame perfect since the players may want to influence the future path of play during punishment periods. Subgame perfection can be ensured by specifying that all players ignore any deviations from the punishment by any other player.
+Unlike with infinite Nash reversion punishments, $T$-period Nash reversion punishments are not necessarily subgame perfect since the players may want to influence the future path of play during punishment periods. Subgame perfection can be ensured by specifying that all players ignore any deviations from the punishment by any other player.
 
 Here I focus on the key issue of the conditions under which the legislature decides to adhere to the trade agreement instead of violating it and triggering a punishment sequence. The trade agreement is broken when the legislature chooses a tariff that is higher than the trade agreement level, $\tau^a$. The level of the break tariff is chosen in the same manner as the trade war tariff, that is, according to Equation~\ref{eq:leguni}, but with the lobby's effort at the break stage $e_b$ replacing its effort at the punishment stage, $e_p$.
 
@@ -282,24 +283,7 @@ The condition for the lobby is similar to Expression~\ref{ine:leg}. Under the tr
 \end{equation}
 Section~\ref{sec:structure} explores the implications of these incentive constraints for the structure of the equilibrium trade agreement.
 
-
-\newpage
-If both countries apply tariffs less than or equal to the trade agreement level in period $t$, they continue to cooperate under the terms of the trade agreement in period $t+1$. If one or both countries defect from the agreement in period $t$ by applying a tariff greater than the trade agreement level, a dispute arises. In this case, they enter into an applied tariff stage for the $T$ periods beginning in period $t+1$. In each of these periods, the punishment specifies that the lobbies and legislatures in both countries play their stage-game subgame-perfect Nash equilibrium strategies. In period $t+T+1$, the trade agreement is reinstated.
-
-I assume that the punishment scheme and trade agreement are designed so that the legislatures and lobbies behave in such a way that the trade agreement remains in force in equilibrium. In Section~\ref{sec:optimal}, the question of how to optimally design the punishment scheme within this class of $T$-period Nash reversion punishments is addressed.
-
-
-\vskip.25in
-On the equilibrium path, the lobby chooses effort level $e_a$, which is less than a cut-off effort level $\ov{e}$ that would cause the legislature to break the trade agreement. $e_a$ is the effort level at which the legislature chooses $\tau^a$ as its optimal unilateral tariff. The determination of $\ov{e}$ is described in the next section. The legislature never breaks the trade agreement, with an applied tariff equal to the trade agreement tariff $\tau^a$. These choices are made as long as any violation of the agreement was at least $T$ periods in the past.
-
-\vskip.25in
-Lobbying affects only the weight the legislature places on the profits of the import-competing industry. These profits are higher in a trade war than under a trade agreement, so given Assumption~\ref{as:ga_c3}, the legislature becomes more favorably inclined toward the high trade-war tariff and associated profits as lobbying increases and therefore more likely to break the trade agreement. %repeated game stuff, or possibly belongs only in sec:structure
-
-whether to exert the effort to convince the legislature in its respective country to break the trade agreement or to exert the lower effort level that achieves the trade agreement tariff. Depending on lobbying effort, the legislatures then sets the applied tariff level, implicitly deciding whether to abide by the agreement or to provoke a trade war. %repeated game stuff, or possibly belongs only in sec:structure
-
-
-
-\subsection{Nash Reversion Punishments}
+\subsection{Nash Reversion Punishment Scheme}
 \label{sec:nashrev}
 I now turn to a full description of the strategies and incentives for the equilibrium that has been analyzed in the preceding sections--that is, when the punishment is Nash reversion for a limited number of periods. Again, this is a symmetric equilibrium, so I describe strategies for the home country only; similar conditions hold for the foreign country.
 
@@ -307,7 +291,7 @@ At time $t=1$, in any period following a period when the trade agreement has bee
 
 Any period $t$ in which a violation of the agreement occurred $j+1$ periods previous for $j \in [0,T-1]$ with Nash reversion punishments initiated $j<T$ periods previous and followed in every period until $t$ will be labeled a punishment period. In a punishment period, the lobby chooses $e_p \geq e_{tw}$ and the legislature chooses a tariff at least as large as its unilateral best response given $e_p$. Players ignore any deviations from punishment-period prescribed play.
 
-Having fully described the strategies accompanying this punishment scheme, it must be shown that they constitute a subgame perfect equilibrium equilibrium, i.e. that each player's strategy constitutes a best response in every subgame.
+Having fully described the strategies accompanying this punishment scheme, it must be shown that they constitute a subgame perfect Nash equilibrium, i.e. that each player's strategy constitutes a best response in every subgame.
 		
 Section~\ref{sec:repeated} establishes that the cooperative-phase behavior is incentive compatible for both the lobby and legislature given the T-period subgame-perfect Nash reversion punishment. Thus here we must show that it is incentive compatible to play the Nash-reversion punishments given the rest of the scheme.
 
@@ -328,6 +312,25 @@ Since net profits are maximized at $\left(e_{tw},\tau^{tw}\right)$ and the legis
 As for the incentives of the actors in the trading partner, recall that they cannot observe the level of lobbying expenditure, so they cannot react to deviations by the lobby. Although they could in principle respond to deviations by the legislature, all other players are ignoring deviations. Given this fact and the symmetry of the game, the immediately preceding argument concerning deviations from the punishments by the home lobby and legislature can be applied to the lobby and legislature in the foreign country.
 
 Thus the posited equilibrium supported by T-length reversions to the stage-game subgame-perfect Nash equilibrium is subgame perfect.
+
+
+
+
+\newpage
+If both countries apply tariffs less than or equal to the trade agreement level in period $t$, they continue to cooperate under the terms of the trade agreement in period $t+1$. If one or both countries defect from the agreement in period $t$ by applying a tariff greater than the trade agreement level, a dispute arises. In this case, they enter into an applied tariff stage for the $T$ periods beginning in period $t+1$. In each of these periods, the punishment specifies that the lobbies and legislatures in both countries play their stage-game subgame-perfect Nash equilibrium strategies. In period $t+T+1$, the trade agreement is reinstated.
+
+I assume that the punishment scheme and trade agreement are designed so that the legislatures and lobbies behave in such a way that the trade agreement remains in force in equilibrium. In Section~\ref{sec:optimal}, the question of how to optimally design the punishment scheme within this class of $T$-period Nash reversion punishments is addressed.
+
+
+\vskip.25in
+On the equilibrium path, the lobby chooses effort level $e_a$, which is less than a cut-off effort level $\ov{e}$ that would cause the legislature to break the trade agreement. $e_a$ is the effort level at which the legislature chooses $\tau^a$ as its optimal unilateral tariff. The determination of $\ov{e}$ is described in the next section. The legislature never breaks the trade agreement, with an applied tariff equal to the trade agreement tariff $\tau^a$. These choices are made as long as any violation of the agreement was at least $T$ periods in the past.
+
+\vskip.25in
+Lobbying affects only the weight the legislature places on the profits of the import-competing industry. These profits are higher in a trade war than under a trade agreement, so given Assumption~\ref{as:ga_c3}, the legislature becomes more favorably inclined toward the high trade-war tariff and associated profits as lobbying increases and therefore more likely to break the trade agreement. %repeated game stuff, or possibly belongs only in sec:structure
+
+whether to exert the effort to convince the legislature in its respective country to break the trade agreement or to exert the lower effort level that achieves the trade agreement tariff. Depending on lobbying effort, the legislatures then sets the applied tariff level, implicitly deciding whether to abide by the agreement or to provoke a trade war. %repeated game stuff, or possibly belongs only in sec:structure
+
+
 
 \section{Trade Agreement Structure}
 \label{sec:structure}
