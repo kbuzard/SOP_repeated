@@ -136,7 +136,7 @@ For instance, the immediate retaliation that ensures self-enforcement in this mo
 
 I begin in the next section by describing in detail the stage game, which is closely related to the model in \citet{buzard2013b}. Both papers employ the separation-of-powers government structure with endogenous lobbying. While the current paper focuses on the implications of self-enforcement constraints for the optimal design of trade agreements and dispute-settlement institutions, \citet{buzard2013b} abstracts from enforcement issues and demonstrates that taking into account the separation-of-powers structure can resolve the empirical puzzle surrounding the \citet{gh94} `Protection for Sale' model, highlights the importance of the threat of ratification failures on the formation of trade agreements and develops new results about the role of political uncertainty in the policy-making process.
 
-Section~\ref{sec:repeated} then sets out the dispute settlement institution and the set-up of the repeated game. I describe the structure and properties of trade agreements in this environment in Section~\ref{sec:structure} and explore the forces shaping dispute resolution procedures in Section~\ref{sec:optimal}. Section~\ref{sec:repeated2} supplies the details for the repeated game enforcement and explores an alternative punishment scheme. Section~\ref{sec:concl3} concludes.
+Section~\ref{sec:repeated} then sets out the dispute settlement institution and the set-up of the repeated game. I describe the structure and properties of trade agreements in this environment in Section~\ref{sec:structure} and explore the forces shaping dispute resolution procedures in Section~\ref{sec:optimal}. Section~\ref{sec:asymmetric} explores an alternative punishment scheme. Section~\ref{sec:concl3} concludes.
 
 
 \section{Stage Game}
@@ -247,8 +247,9 @@ In order to determine repeated-game incentives, we must fully specify the punish
 
 I assume that the punishment scheme and trade agreement are designed so that the legislatures and lobbies behave in such a way that the trade agreement remains in force in equilibrium. In Section~\ref{sec:optimal}, the question of how to optimally design the punishment scheme within this class of $T$-period Nash reversion punishments is addressed.
 
-Again, because of symmetry and separability, it suffices to restrict attention to the home country. An overview of the punishment scheme is given here; for details and a precise description of equilibrium strategies, see Section~\ref{sec:repeated2}.
+Again, because of symmetry and separability, it suffices to restrict attention to the home country. 
 
+\vskip.5in
 On the equilibrium path, the lobby chooses effort level $e_a$, which is less than a cut-off effort level $\ov{e}$ that would cause the legislature to break the trade agreement. $e_a$ is the effort level at which the legislature chooses $\tau^a$ as its optimal unilateral tariff. The determination of $\ov{e}$ is described in the next section. The legislature never breaks the trade agreement, with an applied tariff equal to the trade agreement tariff $\tau^a$. These choices are made as long as any violation of the agreement was at least $T$ periods in the past.
 
 \vskip.5in
@@ -300,6 +301,36 @@ The condition for the lobby is similar to Expression~\ref{ine:leg}. Under the tr
 \end{equation}
 The next section explores the implications of these incentive constraints for the structure of the equilibrium trade agreement.
 
+
+\subsection{Nash Reversion Punishments}
+\label{sec:nashrev}
+I now turn to a full description of the strategies and incentives for the equilibrium that has been analyzed in the preceding sections--that is, when the punishment is Nash reversion for a limited number of periods. Again, this is a symmetric equilibrium, so I describe strategies for the home country only; similar conditions hold for the foreign country.
+
+In the first period of the game, in any period following a period when the trade agreement has been adhered to, after the successful completion of a punishment, or after a violation of the punishment by the lobby, the lobby chooses $e_b =e_a$ and the legislature chooses $\tau^a$, that is, to abide by the agreement by implementing the tariff cap.
+
+Any period $t$ in which a violation of the agreement occurred $j+1$ periods previous for $j \in [0,T-1]$ with Nash reversion punishments initiated $j<T$ periods previous and followed in every period until $t$ will be labeled a punishment period. In a punishment period, the lobby chooses $e_p \geq e_{tw}$ and the legislature chooses a tariff at least as large as its unilateral best response given $e_p$. Players ignore any deviations from punishment-period prescribed play.
+
+Having fully described the strategies accompanying this punishment scheme, it must be shown that they constitute a subgame perfect equilibrium equilibrium, i.e. that each player's strategy constitutes a best response in every subgame.
+		
+Section~\ref{sec:repeated} establishes that the cooperative-phase behavior is incentive compatible for both the lobby and legislature given the T-period subgame-perfect Nash reversion punishment. Thus here we must show that it is incentive compatible to play the Nash-reversion punishments given the rest of the scheme.
+
+First examine the incentives for the legislature to adhere to the punishment. Labeling the best deviation tariff as $\tau^D$, the incentive constraint in the first period of a punishment phase is 
+  \begin{multline}
+		W(\ga(e_{tw}),\btw) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(e_{tw}),\btw) + \de_\text{ML}^{T} W(\ga(e_a),\bta) \geq \\ W(\ga(e_{tw}),\tau^D,\tau^{*tw}) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(e_{tw}),\btw) + \de_\text{ML}^{T} W(\ga(e_a),\bta)
+		\label{eq:legpun}
+	\end{multline}
+Since $\tau^{tw}$ is the legislature's one-shot best response to $e_{tw}$, there is no profitable deviation for the legislature. By the same logic, the legislature has no incentive to deviate in later periods of the punishment, as a similar incentive constraint holds with $T$ replaced by a smaller number.
+
+The lobby's condition for adhering to the punishment has the same structure:
+  \begin{multline}
+	  \pi(\tau^{tw}) - e_{tw} + \frac{\de_\text{L} - \de_\text{L}^T}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] + \de_\text{L}^T \left[\pi(\tau^a) - e_a \right] \geq \\  \pi\left(\tau^R\left(e_D\right)\right) -e_D + \frac{\de_\text{L} - \de_\text{L}^T}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] + \de_\text{L}^T \left[\pi(\tau^a) - e_a \right]
+		\label{eq:lobpun}
+	\end{multline}
+Since net profits are maximized at $\left(e_{tw},\tau^{tw}\right)$ and the legislature's best response to the trade war level of effort $\tau^R(e_{tw})$ is exactly $\tau^{tw}$, this condition always holds. There is no $e_D$ that will provide higher stage-game payoffs to the lobby than $e_{tw}$ given the stage-game subgame-perfect Nash equilibrium strategies. As for the legislature, the lobby has no incentive to deviate in later periods of the punishment either.
+
+As for the incentives of the actors in the trading partner, recall that they cannot observe the level of lobbying expenditure, so they cannot react to deviations by the lobby. Although they could in principle respond to deviations by the legislature, all other players are ignoring deviations. Given this fact and the symmetry of the game, the immediately preceding argument concerning deviations from the punishments by the home lobby and legislature can be applied to the lobby and legislature in the foreign country.
+
+Thus the posited equilibrium supported by T-length reversions to the stage-game subgame-perfect Nash equilibrium is subgame perfect.
 
 \section{Trade Agreement Structure}
 \label{sec:structure}
@@ -533,41 +564,8 @@ However, the model with no lobbies and one with very strong lobbies can be seen 
 %\section{Extensions}
 %\label{sec:ext}
 
-\section{Repeated Game Enforcement}
-\label{sec:repeated2}
 
-\subsection{Nash Reversion Punishments}
-\label{sec:nashrev}
-I now turn to a full description of the strategies and incentives for the equilibrium that has been analyzed in the preceding sections--that is, when the punishment is Nash reversion for a limited number of periods. Again, this is a symmetric equilibrium, so I describe strategies for the home country only; similar conditions hold for the foreign country.
-
-In the first period of the game, in any period following a period when the trade agreement has been adhered to, after the successful completion of a punishment, or after a violation of the punishment by the lobby, the lobby chooses $e_b =e_a$ and the legislature chooses $\tau^a$, that is, to abide by the agreement by implementing the tariff cap.
-
-Any period $t$ in which a violation of the agreement occurred $j+1$ periods previous for $j \in [0,T-1]$ with Nash reversion punishments initiated $j<T$ periods previous and followed in every period until $t$ will be labeled a punishment period. In a punishment period, the lobby chooses $e_p \geq e_{tw}$ and the legislature chooses a tariff at least as large as its unilateral best response given $e_p$. Players ignore any deviations from punishment-period prescribed play.
-
-Having fully described the strategies accompanying this punishment scheme, it must be shown that they constitute a subgame perfect equilibrium equilibrium, i.e. that each player's strategy constitutes a best response in every subgame.
-		
-Section~\ref{sec:repeated} establishes that the cooperative-phase behavior is incentive compatible for both the lobby and legislature given the T-period subgame-perfect Nash reversion punishment. Thus here we must show that it is incentive compatible to play the Nash-reversion punishments given the rest of the scheme.
-
-First examine the incentives for the legislature to adhere to the punishment. Labeling the best deviation tariff as $\tau^D$, the incentive constraint in the first period of a punishment phase is 
-  \begin{multline}
-		W(\ga(e_{tw}),\btw) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(e_{tw}),\btw) + \de_\text{ML}^{T} W(\ga(e_a),\bta) \geq \\ W(\ga(e_{tw}),\tau^D,\tau^{*tw}) + \frac{\de_\text{ML} - \de_\text{ML}^{T}}{1-\de_\text{ML}}W(\ga(e_{tw}),\btw) + \de_\text{ML}^{T} W(\ga(e_a),\bta)
-		\label{eq:legpun}
-	\end{multline}
-Since $\tau^{tw}$ is the legislature's one-shot best response to $e_{tw}$, there is no profitable deviation for the legislature. By the same logic, the legislature has no incentive to deviate in later periods of the punishment, as a similar incentive constraint holds with $T$ replaced by a smaller number.
-
-The lobby's condition for adhering to the punishment has the same structure:
-  \begin{multline}
-	  \pi(\tau^{tw}) - e_{tw} + \frac{\de_\text{L} - \de_\text{L}^T}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] + \de_\text{L}^T \left[\pi(\tau^a) - e_a \right] \geq \\  \pi\left(\tau^R\left(e_D\right)\right) -e_D + \frac{\de_\text{L} - \de_\text{L}^T}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] + \de_\text{L}^T \left[\pi(\tau^a) - e_a \right]
-		\label{eq:lobpun}
-	\end{multline}
-Since net profits are maximized at $\left(e_{tw},\tau^{tw}\right)$ and the legislature's best response to the trade war level of effort $\tau^R(e_{tw})$ is exactly $\tau^{tw}$, this condition always holds. There is no $e_D$ that will provide higher stage-game payoffs to the lobby than $e_{tw}$ given the stage-game subgame-perfect Nash equilibrium strategies. As for the legislature, the lobby has no incentive to deviate in later periods of the punishment either.
-
-As for the incentives of the actors in the trading partner, recall that they cannot observe the level of lobbying expenditure, so they cannot react to deviations by the lobby. Although they could in principle respond to deviations by the legislature, all other players are ignoring deviations. Given this fact and the symmetry of the game, the immediately preceding argument concerning deviations from the punishments by the home lobby and legislature can be applied to the lobby and legislature in the foreign country.
-
-Thus the posited equilibrium supported by T-length reversions to the stage-game subgame-perfect Nash equilibrium is subgame perfect.
-
-
-\subsection{Alternative Punishments}
+\section{Alternative Punishments}
 \label{sec:asymmetric}
 The above-explored symmetric Nash-reversion punishments are not the only possible punishments. This section explores an asymmetric punishment scheme in which welfare is reduced for both the legislature and the lobby in the defecting country. Although this type of punishment is hard to find in practice, I show here that in some cases it allows for increased cooperation in the form of lower trade agreement tariffs.
 
