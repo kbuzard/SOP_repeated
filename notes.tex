@@ -38,6 +38,7 @@
 \newcommand{\Bt}{B(\bm{\tau^a})}
 \newcommand{\bta}{\bm{\tau^a}}
 \newcommand{\btn}{\bm{\tau^n}}
+\newcommand{\btw}{\bm{\tau^{tw}}}
 \newcommand{\ga}{\gamma}
 \newcommand{\Ga}{\Gamma}
 \newcommand{\de}{\delta}
@@ -122,5 +123,25 @@ Some summaries
 	\item $E=.4$, $\de_L=.99, \ \de_{ML}=.5$, $e_{tw} = .00232$, $\tau^{tw} = .08185$. Optimal $\tau^a = .07802$ at $T = 2$.
 	\item $E=.4$, $\de_L=.99, \ \de_{ML}=.75$, $e_{tw} = .00232$, $\tau^{tw} = .08185$. Optimal $\tau^a = .07629$ at $T = 3$.
 \end{itemize}
+
+\newpage
+Trying to understand what is really going on with constraint in terms of $T$ \\
+
+Write constraint:
+\[
+  \ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a - \frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right] = 0
+\]
+
+For now, assume this has an interior solution so calculus works. \\
+
+First, what does $T$ do to $\ov{e}(\tau^a)$?
+
+By the Implicit Function Theorem:
+\begin{equation}
+ 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+	\textstyle \frac{- \frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
+	\label{eq:coret}
+\end{equation}
+So if $T \uparrow$ then $\ov{e} \uparrow$.
 
 \end{document}
