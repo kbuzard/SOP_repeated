@@ -144,4 +144,30 @@ By the Implicit Function Theorem:
 \end{equation}
 So if $T \uparrow$ then $\ov{e} \uparrow$.
 
+\vskip1in
+Let $\ga(e) = 1 + \frac{1}{1-\ta}e^{1-\ta}$. Or $\ga(e) = 1 + \frac{1}{\sigma}e^{\sigma}$.
+\begin{itemize}
+	\item $\frac{\partial \ga}{\partial e} = e^{\sigma - 1} > 0 \ \forall \sigma$
+	\item $\frac{\partial^2 \ga}{\partial \sigma \partial e} = \ln e \cdot e^{\sigma - 1} < 0$ for $e<1$
+\end{itemize}
+i.e. as $\sigma \downarrow$, $\frac{\partial \ga}{\partial e} \uparrow$.
+
+
+\vskip.5in
+Can I show that the optimal $T$ can go either way when $\sigma$ changes? That is, a counterexample to my quasi-result?
+\begin{itemize}
+	\item My result says that as lobby gets stronger ($\frac{\partial \ga}{\partial e} \uparrow$, so $\sigma \downarrow$), $T$ should have to decrease.
+	\item If optimal $T$ increases when $\sigma$ decreases (i.e. if $T$ is decreasing in $\sigma$), this is a counterexample.
+		\begin{itemize}
+			\item I think it's possible that both cases can happen depending on other parameters, like $\de$.
+		\end{itemize}
+\end{itemize}
+
+Look at legislature's constraint:
+\begin{multline*}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_\text{ML}(\ga(e_b),\btw) \right] \geq \\
+	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta)
+\end{multline*}
+If $T$ is too small, future gap can be smaller than current-period gap. So if $T$ gets too short, can't enforce on legislature.
+
 \end{document}
