@@ -161,9 +161,7 @@ It follows that $P_X^W$ and $P_Y^W$ are decreasing in $\tau$ and $\tau^*$ respec
 \label{sec:stage}
 I next describe the politically-relevant actors. In order to focus attention on protectionist political forces, I assume that only the import-competing industry in each country is politically-organized and able to lobby and that it is represented by a single lobbying organization.\footnote{Adding a pro-trade lobby for the exporting industry would modify the magnitude of the effects and make free trade attainable for a range of parameter values, but it would not modify the essential dynamic.} Each country's government is composed of two branches: an executive who can conclude trade agreements and a legislature that has final say on trade policy. Thus the political process is modeled as involving three players in each country: the lobby, the executive, and the legislature.
 
-The timing of the game is as follows. At time zero, the executives set trade policy cooperatively in an international agreement. Time zero will be addressed in detail in the next section. 
-
-Each period of the repeated game has two phases. In the first phase, each lobby decides how much effort to exert to influence its respective legislature's tariff setting. In the second phase, the legislatures then set the applied tariff levels.
+Each period of the repeated game has two phases. In the first phase, each lobby decides how much effort to exert to influence its respective legislature's tariff setting. In the second phase, the legislatures then set the applied tariff levels.\footnote{The executives move before the repeated game begins and do not have a role during play of the repeated game. Details are in Section~\ref{sec:zero}.}
 
 As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
 
@@ -198,9 +196,14 @@ The functional form in Expression~\ref{eq:ml3} with Assumption~\ref{as:ga_c3} ca
 
 \subsection{Repeated Game}
 \label{sec:repeated}
-This trade policy environment has many features of a standard prisoner's dilemma. Most importantly, the legislatures face unilateral incentives to violate the terms of the agreement under pressure from the lobbies. When the legislatures and lobbies set tariffs at a higher, non-cooperative or ``trade war'' level, payoffs for the social-welfare conscious executives are reduced. In order to maintain the trade agreement without external enforcement, we turn to incentives within the context of an infinitely-repeated game.
+This trade policy environment has many features of a standard prisoner's dilemma. Most importantly, the legislatures face unilateral incentives to violate the terms of any trade agreement under pressure from the lobbies. When the legislatures and lobbies set tariffs at a higher, non-cooperative or ``trade war'' level, payoffs for the social-welfare conscious executives are reduced. In order to maintain the trade agreement without external enforcement, we turn to incentives within the context of an infinitely-repeated game.
 
 Because this repeated game has a dynamic structure as described in Section~\ref{sec:stage}, it is important to carefully describe the informational set-up. To be clear, I will refer to one full play of the stage game as a ``period'' and I will use the term ``phase'' to describe within-stage-game divisions, i.e. the lobbying phase and the applied-tariff-setting phase.
+
+$\de_\text{ML}$ is the discount factor of the median legislator, while $\de_\text{L}$ will be used to represent the discount factor of the lobby and $\de_E$ that of the executive branch.
+
+The timing of the game is as follows. At time zero, the executives set trade policy cooperatively in an international agreement. Time zero will be addressed in detail in Section~\ref{sec:zero}. 
+
 
 \section{Equilibrium Selection and Analysis}
 \label{sec:eqm}
@@ -274,7 +277,7 @@ The legislature will, however, only choose to break the trade agreement if its c
 \[
   W_\text{ML}(\ga(e),\bta) + \de_\text{ML} V^A_\text{ML} \geq W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \de_\text{ML} V^P_\text{ML}
 \]
-where $V^A_\text{ML}$ is the continuation value of the median legislator when it abides by the trade agreement $V^P_\text{ML}$ is the continuation value when it defects and is punished. $\de_\text{ML}$ is the discount factor of the median legislator, while $\de_\text{L}$ will be used to represent the discount factor of the lobby and $\de_E$ that of the executive branch.
+where $V^A_\text{ML}$ is the continuation value of the median legislator when it abides by the trade agreement $V^P_\text{ML}$ is the continuation value when it defects and is punished.
 
 If the Nash reversion punishment lasts for $T$ periods, then the only part of the continuation values that need be considered are the current period and the following $T$ periods: after those $T$ periods, the trade agreement will be in force so the continuation value will be the same from period $T+1$ on. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^l = \sum_{k=1}^l \de^k= \sum_{k=1}^\infty \de^k - \sum_{k=l+1}^\infty \de^k = \frac{\de}{1-\de} - \frac{\de^{l+1}}{1-\de} = \frac{\de - \de^{l+1}}{1-\de} $.}
 \begin{multline}
