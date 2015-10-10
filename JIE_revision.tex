@@ -320,7 +320,6 @@ As for the incentives of the actors in foreign country, recall that they cannot 
 
 Thus the posited equilibrium supported by T-length reversions to the stage-game subgame-perfect Nash equilibrium is public perfect from period to period.
 
-
 \section{Trade Agreement Structure}
 \label{sec:structure}
 We can write the executives' joint problem as
@@ -329,24 +328,24 @@ We can write the executives' joint problem as
   \label{prob:max}
 \end{equation}
 \begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),\btw) \right] \geq \\
-	W_{\text{ML}}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e),\bta) - W_{\text{ML}}(\ga(e),\btw) \right] \geq \\
+	W_{\text{ML}}(\ga(e),\tau^b(e),\tau^{*a}) - W_{\text{ML}}(\ga(e),\bta)
   \label{ine:leg2}
 \end{multline}
 \begin{center}
 and
 \end{center}
 \begin{equation}
-  e_b \geq \pi(\tau^b(e_b)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]
+  e \geq \pi(\tau^b(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]
   \label{ine:lob2}
 \end{equation}
 where Inequalities \ref{ine:leg2} and \ref{ine:lob2} are simple rearrangements of \ref{ine:leg} and \ref{ine:lob}.
 
 To understand how the executives optimally structure trade agreements subject to the given $T$-period Nash reversion punishment scheme, we must first examine the incentives of the lobbies and how the legislatures make decisions regarding breach of the trade agreement. The symmetric structure of the model permits restriction of attention to the home country.
 
-I will consider the economically interesting case in which, for a given $\bm{\de}=\left(\de_\text{E},\de_\text{ML},\de_\text{L}\right)$ and $T$, there exists a non-trivial trade agreement in the absence of lobbying, that is, one in which the lowest supportable cooperative tariffs are strictly lower than the trade-war (i.e. non-cooperative) level. Call the trade-agreement tariffs in the absence of lobbies $\bta_{\text{NL}}$. If $\bta_{\text{NL}} = \btw$, the lobby has no incentive to be active and the extra constraint implied by the presence of the lobby does not bind.
+I will consider the economically interesting case in which, for a given $T$ and $\bm{\de}=\left(\de_\text{E},\de_\text{ML},\de_\text{L}\right)$, the lowest supportable cooperative tariffs are strictly lower than the trade-war (i.e. non-cooperative) level. If there is no non-trivial trade agreement in the absence of lobbying, the lobby has no incentive to be active and the extra constraint implied by the presence of the lobby does not bind.
 
-When deciding whether to exert effort to derail a trade agreement, the lobby has a two-part problem. First, for the given $\bta$, $\bm{\de}$ and $T$, it calculates the minimum $e_b$ required to induce the legislature to break the trade agreement. Call this minimum effort level $\ov{e}(\bta)$. This minimum effort level induces the minimum tariff that will break the agreement, $\tau^b(\ov{e})$.\footnote{Because it is assumed that the trade agreement commitment takes the form of a tariff cap (i.e. weak binding), only tariffs strictly greater than $\tau^a$ serve to break the agreement.}
+When deciding whether to exert effort to derail a trade agreement, the lobby has a two-part problem. First, for the given $\bta$, $\bm{\de}$ and $T$, it calculates the minimum effort level required to induce the legislature to break the trade agreement. Call this minimum effort level $\ov{e}(\bta)$. This minimum effort level induces the minimum tariff that will break the agreement, $\tau^b(\ov{e})$.\footnote{Because it is assumed that the trade agreement commitment takes the form of a tariff cap (i.e. weak binding), only tariffs strictly greater than $\tau^a$ serve to break the agreement.}
 
 The following equation---Expression~\ref{ine:leg2} at equality---defines $\ov{e}$:
 \begin{multline}
@@ -354,7 +353,7 @@ The following equation---Expression~\ref{ine:leg2} at equality---defines $\ov{e}
 	- \left[ W_\text{ML}(\ga(\ov{e}),\tau^b(\ov{e}),\tau^{*a}) - W_\text{ML}(\ga(\ov{e}),\bta) \right] = 0
   \label{eq:leg2}
 \end{multline}
-This calculation of precise indifference is possible because it is assumed here that the political process is certain---that is, all actors know precisely how lobbying effort affects the identity of the median legislator through $\ga(e_b)$.
+This calculation of precise indifference is possible because it is assumed here that the political process is certain---that is, all actors know precisely how lobbying effort affects the identity of the median legislator through $\ga(e)$.
 
 Given the effort level required to break the agreement, the lobby will compare its current and future payoffs from inducing a dispute $\left(\pi(\tau^b(\ov{e})) - \ov{e} + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw}\right] \right)$ to the profit stream from the trade agreement $\left(\pi(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^a) -e_a\right] \right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}$. If the latter is larger, the lobby chooses to lobby only for the trade agreement tariff and the agreement remains in force. On the other hand, if the former is larger, the lobby induces the most profitable possible break.\footnote{Recall that the lobby's myopic profits are maximized at $e_{tw}$. This implies that if $\ov{e} < e_{tw}$, the lobby will break the agreement by exerting effort level $e_{tw}$ since its net profits are higher than if it only exerted effort level $\ov{e}$ in this case.} 
 
@@ -392,7 +391,7 @@ If there does exist $\bta < \btw$ for which $\ov{e} \geq e_{tw}$, there \textit{
 Whether an interesting solution of the type we go on to examine in the next two sections exists or not, as long as there is a non-trivial trade agreement in the absence of lobbies, a trade agreement always exists and has the same form.				
 
 \begin{result}
-  In the case of political certainty, the equilibrium trade agreement induces lobbying effort aimed at achieving the tariff cap only and is never subject to dispute. The executives choose the minimum tariff level that induces the lobby to choose $e_b=e_a$.
+  In the case of political certainty, the equilibrium trade agreement induces lobbying effort aimed at achieving the tariff cap only and is never subject to dispute. The executives choose the minimum tariff level that induces the lobby to choose $e=e_a$.
   \label{res:eqm}
 \end{result}
 At the equilibrium tariffs, the lobby's constraint binds, while the legislature's does not. The amount of effort the lobby would have to exert to provoke a dispute, however, is derived from the legislature's constraint. This cost is then used in the lobby's constraint to calculate the lowest tariff level that will induce the lobby to choose $e_a$ over $\ov{e}(\bta)$ and therefore make the median legislator's constraint slack and induce \textit{her} to choose the internationally-agreed-upon $\tau^a$ over $\tau^b$ and the implied dispute.\footnote{The results would be altered in magnitude but not in spirit by assuming that the trade agreement tariffs are strong bindings instead of weak bindings. The most important implication is that there would be zero lobbying effort in equilibrium as the lobby would not need to put forth effort to bid protection levels up to the tariff cap. There would still be no trade disputes in equilibrium.}
@@ -474,8 +473,8 @@ Examples of phenomena that would shift $\ga(\cdot)$ abound: the lobby becoming m
 \label{sec:optimal}
 In an environment without lobbying, \citet{krw} show that social welfare increases (that is, trade-agreement tariffs can be reduced) as punishments are made stronger. This can be seen here if we restrict attention to the legislature's constraint:
 \begin{multline*}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_\text{ML}(\ga(e_b),\btw) \right] \geq \\
-	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta)
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e),\bta) - W_\text{ML}(\ga(e),\btw) \right] \geq \\
+	W_\text{ML}(\ga(e),\tau^b(e),\tau^{*a}) - W_\text{ML}(\ga(e),\bta)
 \end{multline*}
 This constraint is made less binding as $T$ increases---that is, as we increase the number of periods of punishment. The intuition is straightforward: the per-period punishment is felt for more periods as the one period of gain from defecting remains the same. Thus larger deviation payoffs remain consistent with equilibrium cooperation as $T$ increases.
 
@@ -492,7 +491,7 @@ This is why the standard environment with no lobby gives no model-based predicti
 
 The lobby's constraint
 \[
-  e_b \geq \pi(\tau^b(e_b)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+  e \geq \pi(\tau^b(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
 \]
 works in the opposite direction in relation to $T$. Here, the lobby benefits in each dispute period, and so the total profit from a dispute is increasing in $T$. Thus we have
 \begin{customlemma}{4}
@@ -578,7 +577,7 @@ The first difference to notice is in the final bracket: the future payoff differ
 
 Turning to the first bracketed term, it is shown above that $\ov{e}' > \ov{e}$. Since it must be the case that $\ov{e} \geq e_{tw}$ where net profits are maximized, this implies that net profits decrease under the alternative punishment scheme. On initial impact, we hold $\tau^a = \tau^{a'}$ so that the middle term is the same. Taken all together, these facts imply that the right side of Expression~\ref{ine:lob3} becomes negative. Changing the punishment scheme thus creates slack in the lobby's constraint.
 
-It is left to verify that this slack can be exploited to reduce $\bta$. It is clear that reducing $\bta$ will tighten up the condition via the last two terms. What happens to net profits is not as straightforward since the $\left(\bta,\ov{e}\right)$ correspondence is concave.\footnote{It is easy to verify that the relationship remains concave under for this punishment scheme. There is the possibility that the results of Lemmas~\ref{lem:et} and \ref{lem:ets} could reverse because the denominator in each expression could be positive, but this requires $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. Since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e_b - \pi(\tau^a)$, combining the two shows that in this case the lobby's constraint is violated. So Lemmas ~\ref{lem:et} and \ref{lem:ets} hold as for the limited Nash reversion punishment.} If the reduction in the trade agreement tariff increases $\ov{e}'$, additional slack is created that allows further reduction in the trade agreement tariff. If instead $\ov{e}'$ is reduced, net profits will increase. This will limit the amount of reduction in $\tau^{a'}$ that is consistent with satisfying the lobby's constraint. In either case, $\tau^{a'}$ can be reduced below the level that is achieved under $T$-period Nash reversion punishments.
+It is left to verify that this slack can be exploited to reduce $\bta$. It is clear that reducing $\bta$ will tighten up the condition via the last two terms. What happens to net profits is not as straightforward since the $\left(\bta,\ov{e}\right)$ correspondence is concave.\footnote{It is easy to verify that the relationship remains concave under for this punishment scheme. There is the possibility that the results of Lemmas~\ref{lem:et} and \ref{lem:ets} could reverse because the denominator in each expression could be positive, but this requires $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[\pi(\tau^a) - \pi(0)\right] > \pi(\tau^b) - \pi(\tau^a)$. Since $\pi(\tau^b) - \pi(\tau^a) > \pi(\tau^b) - e - \pi(\tau^a)$, combining the two shows that in this case the lobby's constraint is violated. So Lemmas ~\ref{lem:et} and \ref{lem:ets} hold as for the limited Nash reversion punishment.} If the reduction in the trade agreement tariff increases $\ov{e}'$, additional slack is created that allows further reduction in the trade agreement tariff. If instead $\ov{e}'$ is reduced, net profits will increase. This will limit the amount of reduction in $\tau^{a'}$ that is consistent with satisfying the lobby's constraint. In either case, $\tau^{a'}$ can be reduced below the level that is achieved under $T$-period Nash reversion punishments.
 
 Thus this punishment scheme that is disliked by the lobby as well as the legislature can support lower trade agreement tariffs when it can be sustained. I now turn to the question of the incentive compatibility of the punishments.
 
@@ -730,7 +729,7 @@ By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} = -\frac{\frac{\partial \Omega}{\partial \ga}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \left[ \pi(\tau^b(e_b)) - \pi(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(e_b)) - \pi(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \left[ \pi(\tau^b(e)) - \pi(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(e)) - \pi(\tau^{a}) \right]}
 \end{equation}
 keeping in mind that the numerator is simplified by the envelope theorem. We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga}{\partial \ov{e}}} < 0$. $\hfill\blacksquare$
 
