@@ -296,7 +296,27 @@ The condition for the lobby is similar to Expression~\ref{ine:leg}. Under the tr
   \pi(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^a) - e_a \right] \geq \pi(\tau^R(e)) - e + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] .
   \label{ine:lob}
 \end{equation}
-Section~\ref{sec:structure} explores the implications of these incentive constraints for the structure of the equilibrium trade agreement.
+
+The trade agreement tariffs are thus chosen by the executives according to the following joint maximization problem:
+\begin{equation}
+  \max_{\bta} \frac{\bm{W_\text{E}}(\bta)}{1-\de_\text{E}} \hskip.2in \text{subject to}
+  \label{prob:max}
+\end{equation}
+\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e),\bta) - W_{\text{ML}}(\ga(e),\btw) \right] \geq \\
+	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) - W_{\text{ML}}(\ga(e),\bta)
+  \label{ine:leg2}
+\end{multline}
+\begin{center}
+and
+\end{center}
+\begin{equation}
+  e \geq \pi(\tau^R(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]
+  \label{ine:lob2}
+\end{equation}
+where Inequalities \ref{ine:leg2} and \ref{ine:lob2} are simple rearrangements of \ref{ine:leg} and \ref{ine:lob}.
+
+Section~\ref{sec:structure} explores the structure of the equilibrium trade agreement given this problem faced by the executives.
 
 \subsection{Equilibrium with Limited Nash Reversion Punishments}
 \label{sec:nashrev}
@@ -322,25 +342,6 @@ Thus the posited equilibrium supported by T-length reversions to the stage-game 
 
 \section{Trade Agreement Structure}
 \label{sec:structure}
-We can write the executives' joint problem as
-\begin{equation}
-  \max_{\bta} \frac{\bm{W_\text{E}}(\bta)}{1-\de_\text{E}} \hskip.2in \text{subject to}
-  \label{prob:max}
-\end{equation}
-\begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e),\bta) - W_{\text{ML}}(\ga(e),\btw) \right] \geq \\
-	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) - W_{\text{ML}}(\ga(e),\bta)
-  \label{ine:leg2}
-\end{multline}
-\begin{center}
-and
-\end{center}
-\begin{equation}
-  e \geq \pi(\tau^R(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]
-  \label{ine:lob2}
-\end{equation}
-where Inequalities \ref{ine:leg2} and \ref{ine:lob2} are simple rearrangements of \ref{ine:leg} and \ref{ine:lob}.
-
 To understand how the executives optimally structure trade agreements subject to the given $T$-period Nash reversion punishment scheme, we must first examine the incentives of the lobbies and how the legislatures make decisions regarding breach of the trade agreement. The symmetric structure of the model permits restriction of attention to the home country.
 
 I will consider the economically interesting case in which, for a given $T$ and $\bm{\de}=\left(\de_\text{E},\de_\text{ML},\de_\text{L}\right)$, the lowest supportable cooperative tariffs are strictly lower than the trade-war (i.e. non-cooperative) level. If there is no non-trivial trade agreement in the absence of lobbying, the lobby has no incentive to be active and the extra constraint implied by the presence of the lobby does not bind.
