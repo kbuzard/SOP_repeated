@@ -125,8 +125,19 @@ Some summaries
 \end{itemize}
 
 \newpage
-Trying to understand what is really going on with constraint in terms of $T$ \\
+Trying to understand what is really going on with constraint in terms of $T$
+\begin{itemize}
+	\item Want to get good intuition for why $T$ can go up as $\sigma \downarrow$.
+		\begin{itemize}
+			\item Not obvious that it always does; I think it's possible that the direction of $T$ in response to $\sigma$ is indeterminant
+		\end{itemize}
+	\item I think I need to show effect of $\sigma$ on $\ov{e}$ first (I have informally that $\sigma \uparrow \Rightarrow \ov{e} \downarrow$)
+		\begin{itemize}
+			\item Then, impact of $\sigma$ on $\tau^a$. Next look to see if net profits at $\tau^a$ increase more than those at $\tau^{tw}$, then lobby's future incentives are muted
+		\end{itemize}
+\end{itemize}
 
+\vskip.2in
 Write constraint:
 \[
   \ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a - \frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right] = 0
@@ -138,7 +149,7 @@ First, what does $T$ do to $\ov{e}(\tau^a)$?
 
 By the Implicit Function Theorem:
 \begin{equation}
- 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+ 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
 	\textstyle \frac{- \frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
 	\label{eq:coret}
 \end{equation}
