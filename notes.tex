@@ -43,6 +43,8 @@
 \newcommand{\Ga}{\Gamma}
 \newcommand{\de}{\delta}
 
+\newtheorem{result}{Result}
+
 \begin{document}
 \begin{center}
 Miscellaneous notes on JIE R$\&$R of SOP$\_$Repeated
@@ -137,7 +139,21 @@ Trying to understand what is really going on with constraint in terms of $T$
 		\end{itemize}
 \end{itemize}
 
-\vskip.2in
+\begin{result}
+  $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \sigma} > 0$
+\end{result}
+
+Proof: Corollary 4 shows that $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} < 0$. All that is left is to show that $\frac{\mathrm{d} \ga}{\mathrm{d} \sigma} < 0$.
+\begin{itemize}
+	\item The derivative of $\ga = 1 + \frac{1}{\sigma}e^\sigma$ w.r.t. $\sigma$ is
+			\[
+			  \frac{1}{\sigma} \ln \sigma e^\sigma + e^\sigma \left( -\frac{1}{\sigma^2}\right)
+			\]
+			Both terms are negative given $\sigma \in \left(0,1\right)$ and $e\geq 0$. QED.
+\end{itemize}
+
+
+\vskip1in
 Write constraint:
 \[
   \ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a - \frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right] = 0
@@ -154,6 +170,23 @@ By the Implicit Function Theorem:
 	\label{eq:coret}
 \end{equation}
 So if $T \uparrow$ then $\ov{e} \uparrow$.
+
+\vskip1in
+(Again, assuming) as $\sigma \uparrow, \ \ov{e} \downarrow$ for a given $\tau^a$.
+\begin{itemize}
+	\item So $\tau^a$ has to be raised to satisfy lobby's constraint
+		\begin{itemize}
+			\item Net profits are greatest at $\tau^{tw}$, so relative gap between net profits at $\tau^a$ and $\tau^{tw}$ (future) closes faster than that between break profits and trade agreement profits (present)
+		\end{itemize}
+	\item How much $\tau^a$ adjusts depends on magnitude of $\frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}}$
+	\item $\pi(\tau^b(\ov{e}(\tau^a))) - \ov{e}(\tau^a)$ is negative, gets less negative when $\ov{e}$ is reduced.
+	\item $\pi(\tau^a) - e_a$ is positive, becomes larger as $\tau^a$ rises
+\end{itemize}
+\[
+  0 \geq -\left[\ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a \right] + \frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+\]
+Where present part of constraint in on left and future part is on right. Remember present part must be negative.
+
 
 \vskip1in
 Let $\ga(e) = 1 + \frac{1}{1-\ta}e^{1-\ta}$. Or $\ga(e) = 1 + \frac{1}{\sigma}e^{\sigma}$.
@@ -181,4 +214,10 @@ Look at legislature's constraint:
 \end{multline*}
 If $T$ is too small, future gap can be smaller than current-period gap. So if $T$ gets too short, can't enforce on legislature.
 
+\vskip1in
+Note that changing $\sigma$ changes $\tau^{tw}$
+\begin{itemize}
+	\item $e_{tw}$ is solution to $\frac{\partial \pi}{\partial \tau}\frac{\partial \tau}{\partial \ga}\frac{\partial \ga}{\partial e} = 1$; or $\frac{\partial \pi}{\partial \tau}\frac{\partial \tau}{\partial \ga} = \frac{1}{\frac{\partial \ga}{\partial e}}$
+	\item When $\frac{\partial \ga}{\partial e} \uparrow$, RHS $\downarrow$, so LHS must go down.
+\end{itemize}
 \end{document}
