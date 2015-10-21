@@ -139,6 +139,7 @@ Trying to understand what is really going on with constraint in terms of $T$
 		\end{itemize}
 \end{itemize}
 
+\vskip.2in
 \begin{result}
   $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \sigma} > 0$
 \end{result}
@@ -180,6 +181,18 @@ By the Implicit Function Theorem:
 	\label{eq:coret}
 \end{equation}
 So if $T \uparrow$ then $\ov{e} \uparrow$.
+
+\vskip.2in
+Now, want to know about effect of $T$ on $\tau^a$.
+\[
+  \frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial \Pi}{\partial T} = 0
+\]
+Because $\frac{\partial \Pi}{\partial T} = \frac{\ln \de_\text{L} \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]$, we are looking for
+\begin{equation}
+ 	\frac{\mathrm{d} \tau^a}{\mathrm{d} T} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial \Pi}{\partial T}}{\frac{\partial \Pi}{\partial \tau^a}} = 
+	\frac{-\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} -\frac{\ln \de_\text{L} \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
+\end{equation}
+The proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive, and the above result shows that $\frac{\mathrm{d} \ov{e}}{\mathrm{d} T}$ is positive. The second term is positive since net profits are maximized at $e_{tw}$ and $\de_L < 1$ so that its log is negative. With the leading negative signs, the numerator has both a negative and a positive part. This is not changed by the denominator, as the arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. 
 
 \vskip1in
 (Again, assuming) as $\sigma \uparrow, \ \ov{e} \downarrow$ for a given $\tau^a$.
