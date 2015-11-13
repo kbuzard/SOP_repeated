@@ -177,7 +177,7 @@ First, what does $T$ do to $\ov{e}(\tau^a)$?
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
-	\textstyle \frac{- \frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
+	- \textstyle \frac{- \frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
 	\label{eq:coret}
 \end{equation}
 So if $T \uparrow$ then $\ov{e} \uparrow$.
@@ -248,4 +248,85 @@ Note that changing $\sigma$ changes $\tau^{tw}$
 	\item $e_{tw}$ is solution to $\frac{\partial \pi}{\partial \tau}\frac{\partial \tau}{\partial \ga}\frac{\partial \ga}{\partial e} = 1$; or $\frac{\partial \pi}{\partial \tau}\frac{\partial \tau}{\partial \ga} = \frac{1}{\frac{\partial \ga}{\partial e}}$
 	\item When $\frac{\partial \ga}{\partial e} \uparrow$, RHS $\downarrow$, so LHS must go down.
 \end{itemize}
+
+\newpage
+\un{November 13, 2015}
+\begin{itemize}
+	\item I know that $\frac{\partial \tau^a}{\partial T}$ has both a negative and positive part.
+		\begin{itemize}
+			\item Shown for the general case where $\de$ is anything.
+		\end{itemize}
+	\item Now I want to know if/when $\frac{\partial^2 \tau^a}{\partial T^2}$ is positive so that I could set $\frac{\partial \tau^a}{\partial T} = 0$ and optimal T (the one that minimizes $\tau^a$)
+		\begin{itemize}
+			\item Would need to be careful of corner solutions
+			\item Will do this for case where $\de \rightarrow 1$
+				\begin{itemize}
+					\item This means $\frac{\de - \de^{T+1}}{1-\de} \rightarrow T$ and $- \frac{\de^{T+1}\ln\de}{1-\de} \rightarrow 1$
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+\vskip.2in
+Start with simplifying result for $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$. \\ Again:
+\begin{equation}
+  \frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial \Pi}{\partial T} = 0
+	\label{eq:totalderiva}
+\end{equation}
+ 
+\begin{equation}
+ 	\frac{\mathrm{d} \tau^a}{\mathrm{d} T} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial \Pi}{\partial T}}{\frac{\partial \Pi}{\partial \tau^a}} = 
+	\frac{-\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + T\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
+\end{equation}
+\begin{itemize}
+	\item $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive
+	\item $\frac{\mathrm{d} \ov{e}}{\mathrm{d} T}$ is positive:
+	  \begin{equation}
+			\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+	\textstyle \frac{  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)} {T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
+			\label{eq:coret}
+		\end{equation}
+	\item denominator is positive (proof of Corollary~\ref{cor:tdl})
+\end{itemize}
+
+\vskip.2in
+Now, on to $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$
+\[
+  \frac{\partial}{\partial T}\left[\frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial \Pi}{\partial T} \right] = 0
+\]
+\begin{equation}
+  \frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2} + \frac{\partial^2 \Pi}{\partial T\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}} \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2}+ \frac{\partial^2 \Pi}{\partial T \partial \ov{e}} \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial^2 \Pi}{\partial T^2} = 0
+	\label{eq:total2ndderiva}
+\end{equation}
+
+Going to need:
+\[
+  \frac{\partial^2 \Pi}{\partial T\partial \tau^a} = \frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a} > 0
+\]
+\[
+  \frac{\partial^2 \Pi}{\partial T \partial \ov{e}} = 0
+\]
+\[
+	\frac{\partial^2 \Pi}{\partial T^2} = 0
+\]
+To get $\frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2}$, have to do a little more work.
+\[
+  \frac{\partial}{\partial T} \left[\frac{\partial \Omega}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} +\frac{\partial \Omega}{\partial T} \right]= 0
+\]
+\[
+  \frac{\partial \Omega}{\partial \ov{e}}\frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2} + \frac{\partial^2 \Omega}{\partial T \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} +\frac{\partial^2 \Omega}{\partial T^2} = 0
+\]
+\[
+  \frac{\partial^2 \Omega}{\partial T^2} = \frac{\partial}{\partial T} \left(\frac{\partial \Omega}{\partial T} \right) = 0
+\]
+\[
+  \frac{\partial^2 \Omega}{\partial T \partial \ov{e}} = \frac{\partial}{\partial T} \left( \frac{\partial \Omega}{\partial \ov{e}}\right) = \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] > 0
+\]
+
+\vskip.2in
+So,
+\[
+  \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2} = \frac{- \frac{\partial^2 \Omega}{\partial T \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} -\frac{\partial^2 \Omega}{\partial T^2} }{\frac{\partial \Omega}{\partial \ov{e}}} = \frac{- \frac{\partial^2 \Omega}{\partial T \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} }{\frac{\partial \Omega}{\partial \ov{e}}} < 0
+\]
+
+
 \end{document}
