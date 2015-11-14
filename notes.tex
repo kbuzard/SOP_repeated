@@ -1,3 +1,4 @@
+%C:\Users\Kristy\Dropbox\Research\SOP\SOP_repeated\JIE_RR
 \documentclass[12pt]{article}
 
 \addtolength{\textwidth}{1.4in}
@@ -192,7 +193,7 @@ Because $\frac{\partial \Pi}{\partial T} = \frac{\ln \de_\text{L} \de_\text{L}^{
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} T} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial \Pi}{\partial T}}{\frac{\partial \Pi}{\partial \tau^a}} = 
 	\frac{-\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} -\frac{\ln \de_\text{L} \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
-The proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive, and the above result shows that $\frac{\mathrm{d} \ov{e}}{\mathrm{d} T}$ is positive. The second term is positive since net profits are maximized at $e_{tw}$ and $\de_L < 1$ so that its log is negative. With the leading negative signs, the numerator has both a negative and a positive part. This is not changed by the denominator, as the arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. 
+The proof of Corollary 3 shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive, and the above result shows that $\frac{\mathrm{d} \ov{e}}{\mathrm{d} T}$ is positive. The second term is positive since net profits are maximized at $e_{tw}$ and $\de_L < 1$ so that its log is negative. With the leading negative signs, the numerator has both a negative and a positive part. This is not changed by the denominator, as the arguments given in the proof of Corollary 1 show that the denominator is positive. 
 \begin{itemize}
 	\item Remember simplified version where actors are infinitely patient
 	\item Can play around with trick of looking for minimum $\tau^a$ by setting this equal to zero
@@ -283,9 +284,9 @@ Start with simplifying result for $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$. \\ A
 	  \begin{equation}
 			\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
 	\textstyle \frac{  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)} {T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
-			\label{eq:coret}
+			\label{eq:coretsimple}
 		\end{equation}
-	\item denominator is positive (proof of Corollary~\ref{cor:tdl})
+	\item denominator is positive (proof of Corollary 1)
 \end{itemize}
 
 \vskip.2in
@@ -328,5 +329,23 @@ So,
   \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2} = \frac{- \frac{\partial^2 \Omega}{\partial T \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} -\frac{\partial^2 \Omega}{\partial T^2} }{\frac{\partial \Omega}{\partial \ov{e}}} = \frac{- \frac{\partial^2 \Omega}{\partial T \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} }{\frac{\partial \Omega}{\partial \ov{e}}} < 0
 \]
 
+\vskip.2in
+Now we have everything we need for $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$. Rearranging Equation~\ref{eq:total2ndderiva}, we have
+\[
+  \frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2} = - \frac{ \frac{\partial^2 \Pi}{\partial T\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}} \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2}+ \frac{\partial^2 \Pi}{\partial T \partial \ov{e}} \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial^2 \Pi}{\partial T^2}}{\frac{\partial \Pi}{\partial \tau^a}}
+\]
+Elements of the last two terms in the denominator have been shown to be zero when $\de \rightarrow 1$, so we have
+\[
+  \frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2} = - \frac{ \frac{\partial^2 \Pi}{\partial T\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}} \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} T^2}}{\frac{\partial \Pi}{\partial \tau^a}}
+\]
+The denominator is positive, so as goes the numerator, so goes the whole thing. So let's write out the numerator:
+\begin{multline}
+  \left( \frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right)\left[\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} - \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + T\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]} \right] - \\ \left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \frac{\frac{\partial^2 \Omega}{\partial T \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} }{\frac{\partial \Omega}{\partial \ov{e}}}
+\end{multline}
 
+\begin{equation}
+			\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+	\textstyle \frac{  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)} {T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
+		\end{equation}
+		
 \end{document}
