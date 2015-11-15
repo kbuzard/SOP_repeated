@@ -343,5 +343,35 @@ The denominator is positive, so as goes the numerator, so goes the whole thing. 
   \left( \frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right)\left[\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} - \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + T\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]} \right] - \\ \left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] \frac{W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)}{\left[T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]\right]^2}
 \end{multline}
 
+\begin{multline}
+  \frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} - \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + T\right)} - \\ \frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] \left[W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)\right]}{\left[T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]\right]^2}
+\end{multline}
+		
+\newpage
+On the solution(s) to $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$:
+\begin{itemize}
+	\item $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$ has one term that is positive, one term that reverses the sign of $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$
+	\item this means if $\frac{\mathrm{d} \tau^a}{\mathrm{d} T} =0$, it can't be a global max
+		\begin{itemize}
+			\item The slope would have to start positive, end negative.
+			\item The second term in $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$ would start negative, end positive, so whole term would be positive as $T$ gets large
+			\item This means SOC CAN'T be negative everywhere. A contradiction
+		\end{itemize}
+	\item It's perfectly consistent to be a global min
+		\begin{itemize}
+			\item Let slope start negative, end positive.
+			\item The second term in $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$ would start positive, end negative, so whole term would start positive. As $T$ gets large, either stay positive (global min), or turn negative
+			\item If start positive and turn negative, would be an inflection point and slope doesn't actually turn positive
+		\end{itemize}
+	\item If $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$ positive everywhere and $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}\left(0\right) < 0$ then interior min
+	\item We know the negative part of $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$ gets smaller as $T \uparrow$
+		\begin{itemize}
+			\item If negative to start out, eventually becomes positive
+			\item If positive to start out, gets more positive. 
+				\begin{itemize}
+					\item In this case, want $T$ as small as possible.
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
 		
 \end{document}
