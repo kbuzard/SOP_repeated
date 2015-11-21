@@ -13,6 +13,12 @@
 \setlength{\parindent}{0pt}
 \linespread{1.1}
 
+\usepackage[pdftex,
+bookmarks=true,
+bookmarksnumbered=false,
+pdfview=fitH,
+bookmarksopen=true]{hyperref}
+
 \usepackage{amssymb, amsmath, amsthm, bm}
 \usepackage{graphicx,csquotes,verbatim}
 \usepackage[backend=biber,block=space,style=authoryear]{biblatex}
@@ -52,6 +58,7 @@ Miscellaneous notes on JIE R$\&$R of SOP$\_$Repeated
 \end{center}
 
 \vskip.3in
+\section{Legislative constraint}
 Legislative constraint as a function of $e$
 \begin{itemize}
 	\item I thought it would be positive at $e=0$ and turn negative as $e$ increases
@@ -62,9 +69,8 @@ Legislative constraint as a function of $e$
 \end{itemize}
 
 \newpage
-\begin{center}
-Numerical examples 
-\end{center}
+\section{Numerical examples}
+
 $\de_L = \de_{ML} =.95$ \\
 		\begin{tabular}{crrrrr}
 			      & E=.35 & E=.4 						& E=.41						& E=.42						& E=.45\\
@@ -128,6 +134,7 @@ Some summaries
 \end{itemize}
 
 \newpage
+\section{How does Optimal T vary with political strength?}
 Trying to understand what is really going on with constraint in terms of $T$
 \begin{itemize}
 	\item Want to get good intuition for why $T$ can go up as $\sigma \downarrow$.
@@ -251,7 +258,8 @@ Note that changing $\sigma$ changes $\tau^{tw}$
 \end{itemize}
 
 \newpage
-\un{November 13, 2015}
+\section{Optimal T result with perfect patience}
+November 13, 2015
 \begin{itemize}
 	\item I know that $\frac{\partial \tau^a}{\partial T}$ has both a negative and positive part.
 		\begin{itemize}
@@ -347,7 +355,8 @@ The denominator is positive, so as goes the numerator, so goes the whole thing. 
   \frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} - \left[\pi(\tau^{tw}) - e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + T\right)} - \\ \frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] \left[W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)\right]}{\left[T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]\right]^2}
 \end{multline}
 		
-\newpage
+\vskip1in
+\subsection{Solutions for optimal T}
 On the solution(s) to $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$:
 \begin{itemize}
 	\item $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} T^2}$ has one term that is positive, one term that reverses the sign of $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$
