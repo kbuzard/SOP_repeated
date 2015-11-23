@@ -388,5 +388,41 @@ In line with last point, must fully explore corner solutions
 \begin{itemize}
 	\item What is TRUE? (not just what would be convenient for me)
 \end{itemize}
-		
+
+\section[Cross Partial w.r.t. Sigma]{Cross Partial w.r.t. \texorpdfstring{$\sigma$}}
+\begin{equation}
+  \frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} \sigma \mathrm{d} T} + \frac{\partial^2 \Pi}{\partial \sigma \partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} + \frac{\partial \Pi}{\partial \ov{e}} \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} \sigma \mathrm{d} T}+ \frac{\partial^2 \Pi}{\partial \sigma \partial \ov{e}} \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} + \frac{\partial^2 \Pi}{\partial \sigma \partial T} = 0
+\end{equation}
+\begin{itemize}
+	\item Solving for second term
+	\item Already know first (+), fourth (probably convex), fifth (+), eighth (+)
+	\item Leaves four new terms to solve for. Third, sixth, seventh, ninth.
+\end{itemize}
+
+\vskip.2in
+Ninth. Need:
+\[
+	\frac{\partial}{\partial \sigma} \left[\frac{\partial \Pi}{\partial T}\right] = \frac{\partial}{\partial \sigma} \left[ - \left( \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right) \right]
+\]
+\begin{itemize}
+	\item $\sigma$ changes $\tau^{tw}$
+	\item leave $\tau^a$ alone as it's an equilibrium object
+	\item also changes how much lobby has to pay for $\tau^{tw}$ and $\tau^a$
+\end{itemize}
+
+\vskip.2in
+Conjecture:
+\begin{itemize}
+	\item When $\sigma \uparrow$, the lobby weakens $\left(\frac{\partial \gamma}{\partial e} \ \downarrow \right)$. This  means $\pi(\tau^{tw}) - e_{tw} \ \downarrow$
+	\item So probably overall gap goes down because lobby can't get as much in the trade war
+		\begin{itemize}
+			\item i.e. when lobby gets weaker, its future gain is less because it can't exert as much influence in the future (this makes sense)
+		\end{itemize}
+	\item REMEMBER: this enters negatively
+		\begin{itemize}
+			\item smaller gap means tighter constraint
+			\item a larger gap would mean a tighter constraint
+		\end{itemize}
+\end{itemize}
+	
 \end{document}
