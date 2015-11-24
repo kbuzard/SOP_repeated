@@ -408,10 +408,10 @@ Ninth. Need:
 	\item $\sigma$ changes $\tau^{tw}$
 	\item leave $\tau^a$ alone as it's an equilibrium object
 	\item also changes how much lobby has to pay for $\tau^{tw}$ and $\tau^a$
-\end{itemize}
+
 
 \vskip.2in
-Conjecture:
+\item Conjecture:
 \begin{itemize}
 	\item When $\sigma \uparrow$, the lobby weakens $\left(\frac{\partial \gamma}{\partial e} \ \downarrow \right)$. This  means $\pi(\tau^{tw}) - e_{tw} \ \downarrow$
 	\item So probably overall gap goes down because lobby can't get as much in the trade war
@@ -424,5 +424,48 @@ Conjecture:
 			\item a larger gap would mean a tighter constraint
 		\end{itemize}
 \end{itemize}
-	
+\end{itemize}
+
+\vskip.5in
+Third. Need:
+\[
+	\frac{\partial}{\partial \sigma} \left[\frac{\partial \Pi}{\partial \tau^a}\right] = \frac{\partial}{\partial \sigma} \left[ \left(1 + T\right)\left(\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right) \right]
+\]
+\begin{itemize}
+	\item For any given $\tau$, $\sigma$ doesn't affect $\pi(\tau)$.
+	\item But it \textit{does} affect how much has to paid to get $\tau$.
+	\item When $\sigma \ \uparrow$ , have to pay more and more. This is the first derivative.
+	\item As $\tau^a \ \uparrow$, $e_a \ \uparrow$, so $-e_a \ \downarrow$. As $\sigma \ \uparrow$, $e_a \ \uparrow$ further, so $-e_a \ \downarrow$ further. So this term must be negative overall.
+\end{itemize}
+
+\vskip.5in
+Seventh. Note that
+\[
+  \frac{\partial \Pi}{\partial \ov{e}} = 1 - \frac{\partial \pi}{\partial \ov{e}} = 1 - \frac{\partial \pi}{\partial \tau}\frac{\partial \tau^b}{\partial \ga}\frac{\partial \ga}{\partial \ov{e}}
+\]	
+Need
+\[
+	\frac{\partial}{\partial \sigma} \left[\frac{\partial \Pi}{\partial \ov{e}}\right] = \frac{\partial}{\partial \sigma} \left[ 1 - \frac{\partial \pi}{\partial \tau}\frac{\partial \tau^b}{\partial \ga}\frac{\partial \ga}{\partial \ov{e}} \right] = -  \frac{\partial}{\partial \sigma} \left[ \frac{\partial \pi}{\partial \tau}\frac{\partial \tau^b}{\partial \ga}\frac{\partial \ga}{\partial \ov{e}} \right]
+\]
+\[
+  = \frac{\partial \pi}{\partial \tau} \left[\frac{\partial \tau^b}{\partial \ga}\frac{\partial^2 \ga}{\partial \sigma \partial \ov{e}} + \frac{\partial^2 \tau^b}{\partial \sigma \partial \ga}\frac{\partial \ga}{\partial \ov{e}}\right] + \frac{\partial^2 \pi}{\partial \sigma \partial \tau} \frac{\partial \tau^b}{\partial \ga}\frac{\partial \ga}{\partial \ov{e}}
+\]
+\begin{itemize}
+	\item Since $\sigma$ is not involved in how $\tau$ maps to profits, $\frac{\partial^2 \pi}{\partial \sigma \partial \tau} =0$ and the second additive term is zero
+	\item We know that $\frac{\partial \pi}{\partial \tau} > 0$, so the sign of the seventh term is determined by the sign of what's inside the square brackets
+	\item $\frac{\partial^2 \tau^b}{\partial \sigma \partial \ga} = 0$: once $\ga$ is determined, it maps directly into $\tau$ given the form of the welfare function. $\sigma$ only controls how $e$ maps into $\ga$.
+	\item So we're left with $\frac{\partial \tau^b}{\partial \ga}\frac{\partial^2 \ga}{\partial \sigma \partial \ov{e}}$. We know the first term is positive, so just need to investigate $\frac{\partial^2 \ga}{\partial \sigma \partial \ov{e}}$.
+		\begin{itemize}
+			\item Can't seem to get Young's theorem working on this cross partial. Next steps: keep trying this, develop some intuition
+			\item Then finish ninth term, develop intuition for full expression
+		\end{itemize}
+\end{itemize}
+
+\vskip.5in
+Ninth
+\[
+  \frac{\partial^2 \Pi}{\partial \sigma \partial T}
+\]
+
+
 \end{document}
