@@ -466,11 +466,54 @@ Sixth
 \[
   \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} \sigma \mathrm{d} T}
 \]
-
 \[
-			\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = \frac{  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)} {T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
+	\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} = -\frac{\frac{\partial \Omega}{\partial T}}{\frac{\partial \Omega}{\partial \ov{e}}} = \frac{  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)}{T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{tw})-\pi(\tau^a) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} > 0
 \]
-This looks to be negative (I have lots of notes to type up). Would lead to completely ambiguous result, but even if it's true, maybe something in the intuition.
+\[
+  \frac{\partial}{\partial \sigma} \left[\frac{\partial \Omega}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} +\frac{\partial \Omega}{\partial T} \right]= 0
+\]
+\[
+  \frac{\partial \Omega}{\partial \ov{e}}\frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} \sigma \mathrm{d} T} + \frac{\partial^2 \Omega}{\partial \sigma \partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} T} +\frac{\partial^2 \Omega}{\partial \sigma \partial T} = 0
+\]
+We're solving for $\frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} \sigma \mathrm{d} T}$. Know that $\frac{\partial \Omega}{\partial T}$ is positive.
+\begin{itemize}
+	\item Know that $\frac{\mathrm{d} \ov{e}}{\mathrm{d} T}$ is positive.
+	\item Need two terms:
+		\begin{itemize}
+			\item $\frac{\partial^2 \Omega}{\partial \sigma \partial T} = \frac{\partial}{\partial \sigma} \left(\frac{\partial \Omega}{\partial T} \right) = \frac{\partial}{\partial \sigma}\left(T\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a)-\pi(\tau^{tw}) \right] + \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^{a}) - \pi(\tau^b(\ov{e})) \right] \right)$
+			\[
+			  = T\frac{\partial^2 \ga}{\partial \sigma \partial \ov{e}}\left[ \pi(\tau^a)-\pi(\tau^{tw}) \right] - T \frac{\partial \ga}{\partial \ov{e}} \frac{\partial \pi(\tau^{tw})}{\partial \sigma}+ \frac{\partial^2 \ga}{\partial \sigma \partial \ov{e}}\left[ \pi(\tau^{a}) - \pi(\tau^b(\ov{e})) \right] > 0
+			\]
+			Every term is negative except the $T$ and the $\frac{\partial \ga}{\partial \ov{e}}$, so the whole expression is positive.
+			\item $\frac{\partial^2 \Omega}{\partial \sigma \partial \ov{e}} = \frac{\partial}{\partial \sigma}\left(\frac{\partial \Omega}{\partial \ov{e}}\right) = \frac{\partial}{\partial \sigma}\left( W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)\right)$
+				\begin{itemize}
+					\item Get $\frac{\partial \ga}{\partial \sigma}\left[\pi_x(\tau^a) - \pi_x(\tau^{tw})\right]$ term, which is negative times negative so positive
+					\item And get $-\frac{\mathrm{d}}{\mathrm{d} \sigma} W_\text{ML}(\ga(\ov{e}),\btw)$ term, which is overall negative. But can be split into social welfare part and $(\ga-1)\left(-\frac{\partial\pi_x(\tau^{tw})}{\partial \tau^{tw}}\frac{\partial \tau^{tw}}{\partial \ga}\frac{\partial \ga}{\partial \sigma} \right)$ part. First one is clearly positive (remember, $\sigma \uparrow$ makes $\gamma \downarrow$), second is negative (these include leading negative sign).
+					\item Concavity of $\pi(\cdot)$ implies that $\frac{\partial\pi_x(\tau^{tw})}{\partial \tau^{tw}} \geq \pi_x(\tau^{tw}) - \pi_x(\tau^a)$. Can use this to show that the whole term is positive as long as
+						\[
+						  \pi_x(\tau^a) - \pi_x(\tau^{tw}) \geq \frac{\partial\pi_x(\tau^{tw})}{\partial \tau^{tw}} \frac{\partial \tau^{tw}}{\partial \ga} (\ga - 1)
+						\]
+				\end{itemize}
+		\end{itemize}
+	\item As long as $\frac{\partial^2 \Omega}{\partial \sigma \partial \ov{e}} \geq 0$, $\frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} \sigma \mathrm{d} T} > 0$.
+\end{itemize}
+
+\vskip.2in
+What is intuition? 
+\begin{itemize}
+	\item Intuition for $\frac{\partial \ov{e}}{\partial T}$ result: as $T \ \uparrow$, the legisltaure doesn't want to break the agreement. So $\ov{e}$ has to be raised to make it indifferent again because that makes it value profits more: make current gain larger through increased weight on profits AND through larger $\tau^b$; make future loss smaller by increasing $\ga$.
+		\begin{itemize}
+			\item Now, if $\sigma \uparrow$, lobby gets weaker, so legislature cares less about profits, all else equal.
+				\begin{itemize}
+					\item Will have to increase $e$ by even more to get a big enough increase in $\ga$ and $\tau^b$.
+					\item BUT have to be careful, because $\tau^{tw}$ also falls, which reduces the future loss and somewhat reduces the required $e$ to create indifference. Without some conditions, it's possible that this effect could be stronger (at least I haven't ruled it out).
+				\end{itemize}
+			\item Alternatively, from the point of view of $\frac{\partial}{\partial T}\frac{\partial \ov{e}}{\partial \sigma}$: as lobby gets weaker, cutoff $e$ goes up. And the increase in $\ov{e}$ gets larger as $T \ \uparrow$
+		\end{itemize}
+\end{itemize}
+
+\vskip.2in
+Would lead to completely ambiguous result, but even if it's true, maybe something in the intuition.
 \begin{itemize}
 	\item What does that mean for overall expression?
 \end{itemize}
