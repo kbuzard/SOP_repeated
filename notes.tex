@@ -516,7 +516,27 @@ What is intuition?
 \vskip1in
 Now putting it all together
 \begin{itemize}
-	\item 
+	\item If $\ga \uparrow$, $T^*$ should get smaller.
+		\begin{itemize}
+			\item Requires slope of $\frac{\partial \tau^a}{\partial T}$ to increase when $\ga$ increases
+			\item i.e. $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} \ga \mathrm{d} T} > 0$
+		\end{itemize}
+	\item If $\sigma \uparrow$, $T^*$ should get larger.
+		\begin{itemize}
+			\item Because $\sigma \uparrow \Rightarrow \ga \downarrow$
+			\item Requires slope of $\frac{\partial \tau^a}{\partial T}$ to decrease when $\sigma$ increases
+			\item i.e. $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} \ga \mathrm{d} T} < 0$
+		\end{itemize}
+
+\end{itemize}
+
+\[
+  \frac{\mathrm{d}^2 \tau^a}{\mathrm{d} \sigma \mathrm{d} T} = \frac{- \frac{\partial^2 \Pi}{\partial \sigma \partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} T} - \frac{\partial \Pi}{\partial \ov{e}} \frac{\mathrm{d}^2 \ov{e}}{\mathrm{d} \sigma \mathrm{d} T} - \frac{\partial^2 \Pi}{\partial \sigma \partial \ov{e}} \frac{\mathrm{d} \ov{e}}{\mathrm{d} T} - \frac{\partial^2 \Pi}{\partial \sigma \partial T}}{\frac{\partial \Pi}{\partial \tau^a}}
+\]
+I have every individual term positive except $\frac{\partial^2 \Pi}{\partial \sigma \partial \tau^a}$ and $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$.
+\begin{itemize}
+	\item $\frac{\partial^2 \Pi}{\partial \sigma \partial \tau^a}$ is negative
+	\item $\frac{\mathrm{d} \tau^a}{\mathrm{d} T}$ is probably convex. If so, taken with two negative signs, this makes the negative slope more negative and positive slope more positive. At any rate, everywhere the slope is negative becomes more negative.
 \end{itemize}
 
 
@@ -525,5 +545,6 @@ At some point, may want to verify via Young's theorem (take derivative of lobby'
 \[
   \frac{\partial \Pi}{\partial \tau^a} \frac{\partial}{\partial T} \left[\frac{\partial \tau^a}{\partial \ga }\frac{\partial \ga}{\partial \sigma }\right] + \frac{\partial^2 \Pi}{\partial T \partial \tau^a} \left[\frac{\partial \tau^a}{\partial \ga }\frac{\partial \ga}{\partial \sigma }\right] + \frac{\partial \Pi}{\partial \ov{e}} \frac{\partial}{\partial T} \left[\frac{\partial \ov{e}}{\partial \ga }\frac{\partial \ga}{\partial \sigma }\right]+ \frac{\partial^2 \Pi}{\partial T \partial \ov{e}} \left[\frac{\partial \ov{e}}{\partial \ga }\frac{\partial \ga}{\partial \sigma}\right] + \frac{\partial \Pi}{\partial \ga}\frac{\partial^2 \ga}{\partial T\partial \sigma} + \frac{\partial^2 \Pi}{\partial T \partial \ga}\frac{\partial \ga}{\partial \sigma} = 0
 \]
+
 
 \end{document}
