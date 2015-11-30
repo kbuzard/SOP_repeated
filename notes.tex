@@ -175,7 +175,7 @@ We know from Corollary 5 that $\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga}$ is posi
 \vskip1in
 Write constraint:
 \[
-  \ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a - \frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right] = 0
+  \ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right] = 0
 \]
 
 For now, assume this has an interior solution so calculus works. \\
@@ -219,7 +219,7 @@ As $\sigma \downarrow, \ \ov{e} \downarrow$ for a given $\tau^a$.
 	\item $\pi(\tau^a) - e_a$ is positive, becomes larger as $\tau^a$ rises
 \end{itemize}
 \[
-  0 \geq -\left[\ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a \right] + \frac{\de_\text{L} + \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+  0 \geq -\left[\ov{e}(\tau^a) - \pi(\tau^b(\ov{e}(\tau^a))) + \pi(\tau^a) - e_a \right] + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
 \]
 Where present part of constraint in on left and future part is on right. Remember present part must be negative.
 
@@ -521,7 +521,7 @@ Now putting it all together
 		\begin{itemize}
 			\item Because $\sigma \uparrow \Rightarrow \ga \downarrow$
 			\item Requires slope of $\frac{\partial \tau^a}{\partial T}$ to decrease when $\sigma$ increases
-			\item i.e. $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} \ga \mathrm{d} T} < 0$
+			\item i.e. $\frac{\mathrm{d}^2 \tau^a}{\mathrm{d} \sigma \mathrm{d} T} < 0$
 		\end{itemize}
 
 \end{itemize}
