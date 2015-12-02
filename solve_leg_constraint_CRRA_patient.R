@@ -1,5 +1,5 @@
 #given gamma above, solve for trade war effort level, etw$root
-E=.5
+E=.2
 ei = 1/E
 etw <- uniroot(function(cn) ( 8/49*(1+(8*(1 + ei*cn^E)-5)/(68-8*(1 + ei*cn^E)))
                              *(8*63)/((68-8*(1 + ei*cn^E))^2)*cn^(E-1)-1), lower=0, upper = 1, tol = 0.00001, maxiter = 1000)
@@ -15,9 +15,11 @@ CSytw = ((3 +3*ttw)^2)/98
 PSytw = ((4 -3*ttw)^2)/98
 
 # no discounting
-T=1
-ta = seq(.05,.058,.00001) #possible bribe values for legislator located at 0
-ea = (E*((68*ta + 5)/(8+8*ta)-1))^ei
+T=4
+ta = seq(.11,.12,.001) #possible bribe values for legislator located at 0
+#ea = (E*((68*ta + 5)/(8+8*ta)-1))^ei
+ea = ((60*ta - 3)/((1+ta)*8*ei))^(1/E)
+#ea = ((60*ta - 3)/((1+ta)*8*ei))^ei
 out = matrix(NA,length(ta),4) #pre-reserve space in output matrix
 
 PSxta = ((2 +2*ta)^2)/49 #producer and consumer surpluses (in X and Y industries) and tariff revenue at trade agreement tariff
@@ -31,7 +33,7 @@ for (j in 1:length(ta)) {
   
 #legislature's incentive constraint, with all e's set to the break e (instead of e_a and e_tw)
 f <- function (e) T*(CSxta[j] + (1 + ei*e^E)*PSxta[j] + CSyta[j] + PSyta[j] + TRta[j]) + (CSxta[j] + (1 + ei*e^E)*PSxta[j] + CSyta[j] + PSyta[j] + TRta[j]) - T*(CSxtw + (1 + ei*e^E)*PSxtw + CSytw + PSytw + TRtw) - ((1 + ei*e^E)*((2 +2*(8*(1 + ei*e^E)-5)/(68-8*(1 + ei*e^E)))^2)/49 + .5*((3 -4*(8*(1 + ei*e^E)-5)/(68-8*(1 + ei*e^E)))^2)/49 + (8*(1 + ei*e^E)-5)/(68-8*(1 + ei*e^E))/7 - 6/7*((8*(1 + ei*e^E)-5)/(68-8*(1 + ei*e^E)))^2 + CSyta[j] + PSyta[j])
-ove = uniroot(f, lower = 0, upper = .10, tol = 0.00001, maxiter = 1000) #solve for effort level that makes legislature indifferent (\ov{e} in text)
+ove = uniroot(f, lower = ea[j], upper = .10, tol = 0.000001, maxiter = 1000) #solve for effort level that makes legislature indifferent (\ov{e} in text)
 
 #This is benefit to lobby
 b1 = ((2 +2*(8*(1 + ei*ove$root^E)-5)/(68-8*(1 + ei*ove$root^E)))^2)/49
