@@ -136,7 +136,7 @@ For instance, the immediate retaliation that ensures self-enforcement in this mo
 
 I begin in the next section by describing in detail the model, which is closely related to the model in \citet{buzard2013b}. Both papers employ the separation-of-powers government structure with endogenous lobbying. While the current paper focuses on the implications of self-enforcement constraints for the optimal design of trade agreements and dispute-settlement institutions, \citet{buzard2013b} abstracts from enforcement issues and demonstrates that taking into account the separation-of-powers structure can resolve the empirical puzzle surrounding the \citet{gh94} `Protection for Sale' model, highlights the importance of the threat of ratification failures on the formation of trade agreements and develops new results about the role of political uncertainty in the policy-making process.
 
-Section~\ref{sec:eqm} then explains the way in which the trade agreement negotiation process selects a particular class of equilibria and describes that class of equilibria. I describe the structure of trade agreements in this environment in Section~\ref{sec:structure} and their properties in Section~\ref{sec:prop}. I then explore the forces shaping dispute resolution procedures in Section~\ref{sec:optimal}. Section~\ref{sec:asymmetric} explores an alternative punishment scheme. Section~\ref{sec:concl3} concludes.
+Section~\ref{sec:eqm} then explains the way in which the trade agreement negotiation process selects a particular class of equilibria and describes that class of equilibria. I describe the structure of trade agreements in this environment in Section~\ref{sec:structure} and their properties in Section~\ref{sec:prop}. I then explore the forces shaping dispute resolution procedures in Section~\ref{sec:optimal}. Section~\ref{sec:example} demonstrates these results via a simple parameterized model and Section~\ref{sec:asymmetric} explores an alternative punishment scheme. Section~\ref{sec:concl3} concludes.
 
 
 \section{The Model}
@@ -547,13 +547,30 @@ However, the model with no lobbies and one with very strong lobbies can be seen 
 
 
 
-%\section{Discussion}
-%\label{sec:dis}
+\section{An Example}
+\label{sec:example}
+It is instructive to examine a simple parameterization of the model economy. The fundamentals here are chosen to match those of \citet{bs2005} as in \citet{buzard2013b}. Home country demand, supply and profits are given by $D(P_i) = 1 - P_i$, $Q_X(P_X) = \frac{P_X}{2}$, $Q_Y(P_Y) = P_Y$, $\Pi_X(P_X) = \frac{(P_X)^2}{4}$, and $\Pi_Y(P_Y) = \frac{(P_Y)^2}{2}$ where $P_i$ is the price of good $i$ in the home country market. %Note that production function consistent with these supply functions are $F_X = \sqrt{l}$ and $F_Y = \sqrt{2l}$ where we assume $w=1$. 
+Foreign is taken to be symmetric.
 
+This implies Home-country imports of $X$ and exports of $Y$ of $M_X(P_X)= 1 - \frac{3}{2}P_X$ and $E_Y(P_Y)= 2P_Y -1$, with foreign imports of $Y$ and exports of $X$ given by $M_Y^*(P_Y^*)= 1 - \frac{3}{2}P_Y^*$ and $E_X(P_X^*)= 2P_X^* -1$. With the only trade policy instruments being tariffs on import competing goods, world prices are $P_X = P_X^W + \tau$, $P_X^* = P_X^W$, $P_Y^* = P_Y^W + \tau^*$, and $P_Y = P_Y^W$. Market clearing implies that world and home prices of $X$ are $P_X^W = \frac{4-3\tau}{7}$ and $P_X = \frac{4+4\tau}{7}$, symmetric for $Y$. \\
 
+\subsection{Trade War Tariffs}
+The median legislator's welfare can be written as 
+\begin{multline*}
+  W_{\mathit{ML}}^X(\tau,\ga(e,\ve)) + W_{\mathit{ML}}^Y(\tau^*) = \\
+	\left\{\frac{9}{98} - \frac{5}{49}\tau - \frac{34}{49}\tau^2 +\frac{1}{98}\ga(e,\ve)\left[ 8 + 16\tau + 8\tau^2 \right] \right\}+ \frac{25}{98} - \frac{3}{49}\tau^* + \frac{9}{49}(\tau^*)^2.
+\end{multline*}
+%where $W_{\mathit{ML}}^X(\tau,\ga(e,\ve))$ is the utility derived from consumer surplus, producer surplus and tariff revenues in the import-competing industry and $W_{\mathit{ML}}^Y(\tau^*)$ is the utility derived from consumer and producer surplus in the exporting industry.
 
-%\section{Extensions}
-%\label{sec:ext}
+When setting the trade-war tariff, the legislature maximizes $W_{\mathit{ML}}(\tau, \tau^*) = W_{\mathit{ML}}^X(\tau) + W_{\mathit{ML}}^Y(\tau^*)$ by choice of $\tau$ given $\tau^*$. As there are no interactions between $\tau$ and $\tau^*$, the legislature maximizes $W_{\mathit{ML}}^X(\tau)$ only (in curly braces above) and sets the trade war tariff
+\[
+  \tau^{tw} = \frac{8\ga(e,\ve)-5}{68-8\ga(e,\ve)}
+\]
+via Equation~\ref{eq:leguni}. $\tau^{tw}$ is increasing in $e$ and the second order condition is satisfied for $\ga < 17/2$, which is the value of $\ga$ for which the lobby achieves the prohibitive tariff. The effective trade war tariff for all $\ga \geq 17/2$ remains at the prohibitive level of $\tau^{tw} = \frac{1}{6}$.
+
+In the event of a trade war and facing this tariff-setting behavior by the legislature, the lobby maximizes $\pi\left(\tau^{tw}\left(\ga\left(e_{tw}\right)\right)\right) - e_{tw}$.
+
+In order to predict the trade war tariff, the political weighting function must be specified. In order to demonstrate comparative statics on $\frac{\partial \ga}{\partial e}$, I will use the constant absolute risk aversion form so that the slope of $\ga$ can be altered without affecting its curvature. That is, I take $\ga(e) = 2.25 - \exp(-a\cdot e)$. Facing this specification of the political process, when $a=40$, the lobby maximizes its objective function at $e_{tw} = 0.00252$, which produces a trade war tariff of $0.1008$.
 
 
 \section{Alternative Punishments}
