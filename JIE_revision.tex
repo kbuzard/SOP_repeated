@@ -558,27 +558,27 @@ This implies Home-country imports of $X$ and exports of $Y$ of $M_X(P_X)= 1 - \f
 \subsection{Trade War Tariffs}
 The median legislator's welfare can be written as 
 \begin{multline*}
-  W_{\mathit{ML}}^X(\tau,\ga(e,\ve)) + W_{\mathit{ML}}^Y(\tau^*) = \\
-	\left\{\frac{9}{98} - \frac{5}{49}\tau - \frac{34}{49}\tau^2 +\frac{1}{98}\ga(e,\ve)\left[ 8 + 16\tau + 8\tau^2 \right] \right\}+ \frac{25}{98} - \frac{3}{49}\tau^* + \frac{9}{49}(\tau^*)^2.
+  W_{\mathit{ML}}^X(\tau,\ga(e)) + W_{\mathit{ML}}^Y(\tau^*) = \\
+	\left\{\frac{9}{98} - \frac{5}{49}\tau - \frac{34}{49}\tau^2 +\frac{1}{98}\ga(e)\left[ 8 + 16\tau + 8\tau^2 \right] \right\}+ \frac{25}{98} - \frac{3}{49}\tau^* + \frac{9}{49}(\tau^*)^2.
 \end{multline*}
 %where $W_{\mathit{ML}}^X(\tau,\ga(e,\ve))$ is the utility derived from consumer surplus, producer surplus and tariff revenues in the import-competing industry and $W_{\mathit{ML}}^Y(\tau^*)$ is the utility derived from consumer and producer surplus in the exporting industry.
 
 When setting the trade-war tariff, the legislature maximizes $W_{\mathit{ML}}(\tau, \tau^*) = W_{\mathit{ML}}^X(\tau) + W_{\mathit{ML}}^Y(\tau^*)$ by choice of $\tau$ given $\tau^*$. As there are no interactions between $\tau$ and $\tau^*$, the legislature maximizes $W_{\mathit{ML}}^X(\tau)$ only (in curly braces above) and sets the trade war tariff
 \[
-  \tau^{tw} = \frac{8\ga(e,\ve)-5}{68-8\ga(e,\ve)}
+  \tau^{tw} = \frac{8\ga(e)-5}{68-8\ga(e)}
 \]
 via Equation~\ref{eq:leguni}. $\tau^{tw}$ is increasing in $e$ and the second order condition is satisfied for $\ga < 17/2$, which is the value of $\ga$ for which the lobby achieves the prohibitive tariff. The effective trade war tariff for all $\ga \geq 17/2$ remains at the prohibitive level of $\tau^{tw} = \frac{1}{6}$.
 
 In the event of a trade war and facing this tariff-setting behavior by the legislature, the lobby maximizes $\pi\left(\tau^{tw}\left(\ga\left(e_{tw}\right)\right)\right) - e_{tw}$.
 
-In order to predict the trade war tariff, the political weighting function must be specified. In order to demonstrate comparative statics on $\frac{\partial \ga}{\partial e}$, I will use the constant absolute risk aversion form so that the slope of $\ga$ can be altered without affecting its curvature. That is, I take $\ga(e) = 2.25 - \exp(-a\cdot e)$. Facing this specification of the political process, when $a=40$, the lobby maximizes its objective function at $e_{tw} = 0.00252$, which produces a trade war tariff of $0.1008$. When $a=50$, the lobby maximizes its objective function at $e_{tw} = 0.00866$, which produces a trade war tariff of $0.1416$. Note that when $a$ increases, the slope of $\ga$ increases; that is, the marginal expenditure by the lobby has a greater impact on the weight its concerns receive in the legislature's decision-making.
+In order to predict the trade war tariff, the political weighting function must be specified. In order to demonstrate comparative statics on $\frac{\partial \ga}{\partial e}$, I will use the constant absolute risk aversion form so that the slope of $\ga$ can be altered without affecting its curvature. That is, I take $\ga(e) = 2.25 - \exp(-a\cdot e)$. Facing this specification of the political process, when $a=40$, the lobby maximizes its objective function at $e_{tw} = 0.00252$, which produces a trade war tariff of $0.1008$. When $a=50$, the lobby maximizes its objective function at $e_{tw} = 0.00866$, which produces a trade war tariff of $0.1416$. Note that when $a$ increases, the slope of $\ga$ increases; that is, the marginal expenditure by the lobby has a greater impact on the weight its concerns receive in the legislature's decision-making. I interpret this to mean that the lobby becomes more influential as $a$ rises.
 
 \subsection{Self-Enforcing Trade Agreement Tariffs}
-Begin by assuming the median legislature and lobby have identical patience levels of $0.95$, that is $\de_{ML} = \de_L = 0.95$. Given the above specification of the economy, when $a=40$, the optimal punishment length in $T=4$. Here, the trade agreement tariff is $\tau^a = 0.09508$ and the level of expenditure required of the lobby to induce the legislature to break the trade agreement, $\ov{e}(\bta)$, is $0.004669$.
+Begin by assuming the median legislature and lobby have identical patience levels of $0.95$, that is $\de_{ML} = \de_L = 0.95$. Given the above specification of the economy, when $a=40$, the optimal punishment length in $T=4$. Here, the trade agreement tariff is $\tau^a = 0.09508$.
 
 Corollary~\ref{cor:tdl} indicates that when the lobby becomes more patient, the best achievable trade agreement tariff will increase. Indeed, if we raise $\de_L$ to $0.96$, $\tau^a$ rises to $0.09514$. On the other hand, Corollary~\ref{cor:tdm} tells us that the trade agreement tariff falls when the legislature becomes more patient. When $\de_L = 0.95$ and $\de_{ML} = 0.06$, $\tau^a$ falls to $0.09502$.
 
-Turning to the impact of changes in the political weighting function, Corollary~\ref{cor:tg} speaks to exogenous shifts in $\ga(e)$. I model this with a change in the intercept, changing from $\ga(e) = 2.25 - \exp(-40\cdot e)$ to $\ga(e) = 2.26 - \exp(-40\cdot e)$ when $\de_{ML} = \de_L = 0.95$ and $T=4$. In this case, we see the predicted increase in $\tau^a$ to $0.09777$.
+Turning to the impact of changes in the political weighting function, Corollary~\ref{cor:tg} speaks to exogenous shifts in $\ga(e)$. I model this with a change in the intercept, changing from $\ga(e) = 2.25 - \exp(-40\cdot e)$ to $\ga(e) = 2.26 - \exp(-40\cdot e)$. When $\de_{ML} = \de_L = 0.95$ and $T=4$, we see the predicted increase in $\tau^a$ to $0.09777$.
 
 Finally, when $a$ increases to $50$, corresponding to an increase in $\frac{\partial \ga}{\partial e}$, the lowest self-enforcing trade agreement tariff of $0.1394$ occurs when $T=3$, in line with Proposition~\ref{res:3}. As the lobby becomes more influential, shorter punishments achieve lower trade agreement tariffs.
 
