@@ -545,12 +545,23 @@ At some point, may want to verify via Young's theorem (take derivative of lobby'
 \newpage
 \section{Dixit, Grossman and Helpman analogy}
 \begin{itemize}
-	\item Lobby offers contribution schedule
+	\item Lobby offers contribution schedule (can be very simple: just one $(e,\tau)$ pair, $e=0$ for everything else)
 	\item Government maximizes $W + g(e)$
+		\begin{itemize}
+			\item Note that $CS_X + \ga(e) \cdot PS_X + CS_Y + PS_Y +TR = W + \left( \ga(e) - 1 \right) PS_X$
+		\end{itemize}
 	\item Sectioning from my paper:
 		\begin{itemize}
 			\item[3.1] Same (execs)
-			\item[3.2] Government chooses unilateral 
+			\item[3.2] Trade war
+				\begin{itemize}
+					\item Government chooses unilateral $\tau$ as $\frac{\partial W}{\partial \tau} + \frac{\partial g(e)}{\partial \tau} = 0$
+						\begin{itemize}
+							\item How to think about lobby's contribution schedule?
+							\item DGH Proposition 1: principal (lobby) has to provide at least agent's (gov'ts) outside option; as long as this constraint is satisfied, lobby can propose $\tau$ and payment that maximizes his own utility
+							\item DGH Proposition 3 (p. 760-61): simplifies so we don't need to look for contribution functions, only eqm values
+						\end{itemize}
+				\end{itemize}
 		\end{itemize}
 \end{itemize}
 
