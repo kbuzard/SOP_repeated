@@ -621,6 +621,30 @@ Comparisons
 \end{itemize}
 
 \vskip.2in
-
+Examples
+\begin{itemize}
+	\item Use numeric example from BS2005 in R (DGH.r)
+	\item Isomorphism I've already calculated: if $G = W + e$ then $\ga(e) = 1 + \frac{e}{\pi_x}$
+	\item Lobby's optimization:
+		\[
+		  W(\tau,e(\tau)) = W(0,0)
+		\]
+		\[
+		  W(\tau) + e = W(0)
+		\]
+		\[
+		  e = W(0) - W(\tau)
+		\]
+			
+			\begin{itemize}
+				\item This forms a contribution schedule
+				\item Lobby chooses the pair $(\tau,e)$ that maximizes $\pi(\tau) - e$
+			\end{itemize}
+	\item Make sure these are unilateral changes in $\tau$ in the program
+	\item Then compare to my old way: $\frac{\partial \pi}{\partial \tau} \frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e} = 1$ ($e$ changes with $\tau$ directly depending on shape of $\ga$, then government maximizes w.r.t. $\tau$
+		\begin{itemize}
+			\item NEXT: go into R program and sort it out
+		\end{itemize}
+\end{itemize}
 
 \end{document}
