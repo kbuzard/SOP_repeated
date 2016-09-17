@@ -37,8 +37,8 @@ RC = arrayInd(ind,c(dim(pi),dim(pi))) #row/column version of maximand location
 bl = ((2 +2*0)^2)/49           #baseline for lobby: profits when tau = 0
 e = PSx - bl                   #effort level giving all excess profits over tau=0 to gov't
 
-g = e^.9*PSx                   #little g(e) function to add to social welfare
-G = W + e^.9*PSx               #gov't welfare a la DGH97
+g = e^1.2                       #little g(e) function to add to social welfare
+G = W + g                      #gov't welfare a la DGH97
 plot(G)
 
 value = max(G) #the value at which profits are maximized (over non-negative values)
