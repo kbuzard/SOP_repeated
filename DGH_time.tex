@@ -58,6 +58,65 @@ Notes on 2nd round of revisions for JIE of SOP$\_$Repeated
 \end{center}
 
 \vskip.3in
+\section{Interpretation: SOP vs. time inconsistency}
+\textbf{Referee 1 Point 1}: \\
+I believe the interpretation of the model as representing two branches of the government is arbitrary. It is more realistic to interpret the model as representing the preferences of a government with time-inconsistent preferences, such that ex ante the government's objective is to maximize social welfare, but at the time of implementing the agreement it might be influenced by lobby group activities. \\
+
+I understand that the author has tried to modify the interpretation of the model to address this concern, but in my view the modification was insufficient. \\
+
+\vskip.2in
+\textbf{Editor Point 5}:\\
+Regarding Referee 1's idea about time-inconsistent preferences, I guess I am ok with your separation-of-powers interpretation (subject to the cavets I expressed in my first-round letter), but I also think it would be useful to discuss a possible alternative interpretation along the lines of Referee 1's idea. I am thinking of the Maggi and Rodriguez-Clare setting, where there is a unitary government that cares about welfare and contributions, but at the stage of signing the agreement ("ex ante" stage) the lobby has no influence on the government, because the lobby cares only about the short run (due to the fact that specific capital is mobile in the long run). The way I think about this interpretation is slightly different from Referee 1, in that there is no time inconsistency of preferences: the government has the same preferences across time, but ex-ante the lobby is not active. I am not sure whether a Maggi and Rodriguez-Clare specification of this kind would yield similar results as yours. This might be an interesting question to discuss, and if the answer is yes, it would be useful to point out that the model admits also this alternative interpretation.
+\begin{itemize}
+	\item Note this also connects to analysis section
+\end{itemize}
+
+
+\newpage
+\section{Continuation payoffs and changes in the preferences}
+\textbf{Editor Comment 1}: \\
+I agree with Referee 2 that there are still problems with the analysis. Correcting these problems is a necessary (though not sufficient) condition for me to move forward with this paper. You will need to convince us beyond the reasonable doubt that the analysis is correct. \\
+
+\textbf{Editor Point 8}:\\
+The way you write the key program in (9)-(11) is confusing because you have an ``e" floating around, and it is not clear where it should be evaluated. Unless I am missing something, in some places this should be $\ov{e}(\tau^a)$ and in other places it should be $e^a$. It would also be helpful to write $e^a$ as a function of $tau^a$. Since the choice variable in the program is $\tau^a$, you should make clear what is a function of $\tau^a$ and what is not. \\
+
+\textbf{Referee 1 Point 3}: \\
+It is assumed that the current legislator evaluates future welfare (i.e., the continuation payoffs) based on the expected preferences of the future government, which will be induced by lobbying efforts in the future. Alternatively, it could be assumed that the current legislator evaluates future profits based on its current preferences. \\
+
+The latter assumption might be more consistent with the premise of the model, which is essentially a decision-making model with time-inconsistent preferences. Moreover, I think the results related to self-enforceability of the agreement will continue to hold if the author adopts the latter assumption. \\
+
+Some discussion of this point could be illuminating. \\
+
+\textbf{Referee 2 Point 3}: \\
+ I am confused about one basic aspect of the incentive constraint for the legislature. Consider the RHS of (7) on page 16. If the lobby chooses e and the legislature decides to select its best response given e, $\tau^R(e)$, and thereby breaks the agreement, then a T-period punishment is launched in the next period. The notation in (7) (and likewise in (10)) suggests that the lobby continues choosing the same e, thus generating the same gamma(e), during the punishment phase. I don't see why this would be the case. Wouldn't the lobby instead choose the effort level $e_{tw}$ that is determined in the first-order condition given by (6)? And indeed, if we look at the lobby incentive constraint, as given by the RHS of (8) (and likewise in (11))), we see that that constraint does assume that $e_{tw}$ is used by the lobby during the punishment phase. I can't tell exactly what is going on here. There could be an oversight, or I could be misunderstanding the notation. At a minimum, some clarification is needed. \\
+
+This consideration also leads to a further concern/question. If my point above is correct and the lobby should be modeled in (7) as choosing $e_{tw}$ in the punishment phase, and if $e_{tw} > e$, then would the legislature ever deviate (even for e in the non-triggering range as currently defined) in order to trigger a trade war and thereby enjoy the higher $e_{tw}$ and thus the higher gamma that the trade war elicits? Recall that $W_{ML}$ is increasing in e as an independent argument. Is this potential incentive captured? \\
+
+\textbf{Referee 2 Point v}: \\
+Page 20: Related to comment 3 above, I don't follow why in (12) that e can't change from e-bar as we move into the trade war.
+
+\vskip.5in
+\un{My response}:\\
+Under the alternative suggested by Referee 2, Equation (7) would be modified from 
+\begin{multline}
+  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta) \geq \\
+	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\btw).
+\end{multline}
+to
+\begin{multline}
+  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e^a),\bta) \geq \\
+	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e^{tw}),\btw).
+\end{multline}
+
+That is, the current-period median legislator would evaluate the current-period incentive constraint using a mixture of his own weight on import-competing profits and those of the legislators who are median in the future in the trade agreement and trade-war scenarios.
+\begin{itemize}
+	\item What if you don't like the median legislator interpretation and want to think of it as a unitary decision-maker who faces different amounts of lobbying effort?
+		\begin{itemize}
+			\item Think about what would happen in a simpler repeated game...
+		\end{itemize}
+\end{itemize}
+
+\newpage
 \section{Dixit, Grossman and Helpman analogy}
 \textbf{Editor Point 3}: \\
 You state that your specification of legislature preferences can be seen as a special case of the Dixit-Grossman-Helpman (DGH) model. It would be helpful if you could substantiate this claim. More specifically, let us consider a simple version of the DGH specification in your setting. Suppose you modify your model only in two ways. First, suppose the legislature preferences are given by W+g(e), where g(e) is an increasing and concave function of contributions (while the lobby preferences remain the same). And second, suppose the lobby offers a contribution schedule e(t) before the legislature chooses the tariff. The question is: would this model deliver the same results as yours (at least qualitatively)? Note that in this setting you can focus on a simple all-or-nothing contribution schedule, of the kind "if you give me a 5$\%$ tariff I give you $\$$100, otherwise you get nothing." Intuitively the promised contribution will just compensate the legislator for the loss associated with the requested tariff, so the analysis might not be hard.  If this DGH version of your model yields similar qualitative results, pointing out this "isomorphism" would help you in several ways. First, it would provide "foundations" for your assumed legislature preferences, in terms of a model (DGH) that people are familiar with. Second, this would help address my question 2 above: in the DGH model we can think of e as money, and I think it would be reasonable to stick with your current definition of aggregate welfare (even though in principle one might question this definition of aggregate welfare when utility is not transferrable). And third, you could examine whether your results rely on the presence of diminishing marginal utility from contributions: what would happen if g is linear (as in the basic Protection for Sale model) rather than strictly concave? \\
@@ -204,63 +263,6 @@ Examples
 There is a question in my mind about the definition of welfare and the objective functions of the executive and the legislature. As I understand it, the lobbying effort involves a resource cost (this is not a cash transfer), and this cost in principle should be reflected in the expression for welfare. Viewed from a different perspective: you assume that the exceutive and the legislature care about import-competing profits, and thus about the lobby in a broad sense, but don't care about the resource cost of effort that the lobby incurs, and this seems hard to justify. I am sorry to be raising this issue at this stage and not in the previous round, but I became aware of it recently.
 
 \newpage
-\section{Interpretation: SOP vs. time inconsistency}
-\textbf{Referee 1 Point 1}: \\
-I believe the interpretation of the model as representing two branches of the government is arbitrary. It is more realistic to interpret the model as representing the preferences of a government with time-inconsistent preferences, such that ex ante the government's objective is to maximize social welfare, but at the time of implementing the agreement it might be influenced by lobby group activities. \\
-
-I understand that the author has tried to modify the interpretation of the model to address this concern, but in my view the modification was insufficient. \\
-
-\vskip.2in
-\textbf{Editor Point 5}:\\
-Regarding Referee 1's idea about time-inconsistent preferences, I guess I am ok with your separation-of-powers interpretation (subject to the cavets I expressed in my first-round letter), but I also think it would be useful to discuss a possible alternative interpretation along the lines of Referee 1's idea. I am thinking of the Maggi and Rodriguez-Clare setting, where there is a unitary government that cares about welfare and contributions, but at the stage of signing the agreement ("ex ante" stage) the lobby has no influence on the government, because the lobby cares only about the short run (due to the fact that specific capital is mobile in the long run). The way I think about this interpretation is slightly different from Referee 1, in that there is no time inconsistency of preferences: the government has the same preferences across time, but ex-ante the lobby is not active. I am not sure whether a Maggi and Rodriguez-Clare specification of this kind would yield similar results as yours. This might be an interesting question to discuss, and if the answer is yes, it would be useful to point out that the model admits also this alternative interpretation.
-\begin{itemize}
-	\item Note this also connects to analysis section
-\end{itemize}
-
-
-\newpage
-\section{Continuation payoffs and changes in the preferences}
-\textbf{Editor Comment 1}: \\
-I agree with Referee 2 that there are still problems with the analysis. Correcting these problems is a necessary (though not sufficient) condition for me to move forward with this paper. You will need to convince us beyond the reasonable doubt that the analysis is correct. \\
-
-\textbf{Editor Point 8}:\\
-The way you write the key program in (9)-(11) is confusing because you have an ``e" floating around, and it is not clear where it should be evaluated. Unless I am missing something, in some places this should be $\ov{e}(\tau^a)$ and in other places it should be $e^a$. It would also be helpful to write $e^a$ as a function of $tau^a$. Since the choice variable in the program is $\tau^a$, you should make clear what is a function of $\tau^a$ and what is not. \\
-
-\textbf{Referee 1 Point 3}: \\
-It is assumed that the current legislator evaluates future welfare (i.e., the continuation payoffs) based on the expected preferences of the future government, which will be induced by lobbying efforts in the future. Alternatively, it could be assumed that the current legislator evaluates future profits based on its current preferences. \\
-
-The latter assumption might be more consistent with the premise of the model, which is essentially a decision-making model with time-inconsistent preferences. Moreover, I think the results related to self-enforceability of the agreement will continue to hold if the author adopts the latter assumption. \\
-
-Some discussion of this point could be illuminating. \\
-
-\textbf{Referee 2 Point 3}: \\
- I am confused about one basic aspect of the incentive constraint for the legislature. Consider the RHS of (7) on page 16. If the lobby chooses e and the legislature decides to select its best response given e, $\tau^R(e)$, and thereby breaks the agreement, then a T-period punishment is launched in the next period. The notation in (7) (and likewise in (10)) suggests that the lobby continues choosing the same e, thus generating the same gamma(e), during the punishment phase. I don't see why this would be the case. Wouldn't the lobby instead choose the effort level $e_{tw}$ that is determined in the first-order condition given by (6)? And indeed, if we look at the lobby incentive constraint, as given by the RHS of (8) (and likewise in (11))), we see that that constraint does assume that $e_{tw}$ is used by the lobby during the punishment phase. I can't tell exactly what is going on here. There could be an oversight, or I could be misunderstanding the notation. At a minimum, some clarification is needed. \\
-
-This consideration also leads to a further concern/question. If my point above is correct and the lobby should be modeled in (7) as choosing $e_{tw}$ in the punishment phase, and if $e_{tw} > e$, then would the legislature ever deviate (even for e in the non-triggering range as currently defined) in order to trigger a trade war and thereby enjoy the higher $e_{tw}$ and thus the higher gamma that the trade war elicits? Recall that $W_{ML}$ is increasing in e as an independent argument. Is this potential incentive captured? \\
-
-\textbf{Referee 2 Point v}: \\
-Page 20: Related to comment 3 above, I don't follow why in (12) that e can't change from e-bar as we move into the trade war.
-
-\vskip.5in
-\un{My response}:\\
-Under the alternative suggested by Referee 2, Equation (7) would be modified from 
-\begin{multline}
-  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta) \geq \\
-	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\btw).
-\end{multline}
-to
-\begin{multline}
-  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e^a),\bta) \geq \\
-	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e^{tw}),\btw).
-\end{multline}
-
-That is, the current-period median legislator would evaluate the current-period incentive constraint using a mixture of his own weight on import-competing profits and those of the legislators who are median in the future in the trade agreement and trade-war scenarios.
-\begin{itemize}
-	\item What if you don't like the median legislator interpretation and want to think of it as a unitary decision-maker who faces different amounts of lobbying effort?
-		\begin{itemize}
-			\item Think about what would happen in a simpler repeated game...
-		\end{itemize}
-\end{itemize}
 
 
 \end{document}
