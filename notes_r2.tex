@@ -133,15 +133,21 @@ What editor proposes:
 					\item Need to re-write Equation 12, which defines $\ov{e}$
 						\begin{itemize}	
 							\item What \textit{is} $\ov{e}$? It's what the lobby has to pay to get the legislature to break the trade agreement
-							\item I think I've been conceiving of it wrong. It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model. I don't know how to think about it in the DGH version yet.
-							\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
-							\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
-								\begin*{multline}
+							\begin{multline}
+						W_{\text{ML}}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta)  \geq \\
+	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_{\text{ML}}(\ga(e),\btw)
+  \label{ine:leg2}
+					\end{multline}
+
+						\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
+						\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
+								\begin{multline*}
 									W(\bta) + g(0) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(0)\right] = \\
 	W(\tau^b,\tau^{*a}) +g(e) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(e)\right] ?
-								\end*{multline}
-						\end{itemize}
+								\end{multline*}
+						\item Note: It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model.
 				\end{itemize}
+			\item[6] Optimal dispute settlement: depends on how government IC changes
 		\end{itemize}
 \end{itemize}
 
