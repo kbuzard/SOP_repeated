@@ -141,11 +141,21 @@ What editor proposes:
 
 						\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
 						\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
-								\begin{multline*}
-									W(\bta) + g(0) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(0)\right] = \\
-	W(\tau^b,\tau^{*a}) +g(e) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(e)\right] ?
-								\end{multline*}
 						\item Note: It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model.
+							\begin{multline*}
+								W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
+	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
+							\end{multline*}
+							Lemma 1:
+							\begin{equation}
+								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a)\right]}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
+							\end{equation}
+							Lemma 2:
+							\begin{equation*}
+								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
+							\end{equation*}
 				\end{itemize}
 			\item[6] Optimal dispute settlement: depends on how government IC changes
 		\end{itemize}
