@@ -191,6 +191,25 @@ Comparisons
 \end{itemize}
 
 \vskip.2in
+On (3): In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen according to the lobbying effort applied in the break stage $(\ov{e})$ because this determines the identity of the median legislator. The median legislator in the current period gets to pick the tariff in the current period.
+\begin{itemize}
+	\item In DGH, the lobby presents a unitary gov't with a schedule of $(\tau,e)$ pairs.
+		\begin{itemize}
+			\item The editor has suggested that I can choose a very simple take-it-or-leave-it schedule with one just pair or $e=0$, but in order for my calculus-based results to hold up, I think I need a differentiable schedule.
+			\item At any rate, no one in the government gets to 'pick' $\tau$ on its own; a particular $\tau$ is demanded in return for a particular $e$. They are a bundle constructed by the lobby.
+			\item In my model, who the decision-maker IS is determined by the lobby's chosen $e$.
+		\end{itemize}
+	\item Is it possible to have a DGH-style indifference condition in the spirit of my model, i.e. $e$ determines the median legislator?
+		\begin{itemize}
+			\item In a normal repeated game, players choose current period action to maximize the whole stream of payoffs; that's not what happens in my model. The current player makes his decision with a view to influencing who will be the median legislator in the future.
+			\item Current player finds $\tau$ that maximizes current payoffs, then checks to see whether it will also maximize future payoffs. If it doesn't, he switches to trade agreement tariff.
+				\begin{itemize}
+					\item That is, the maximization program for current player is complex: has to find optimal $\tau$ if he's going to break, then compare total payoff stream under $\tau^b(\ov{e})$ to total payoff under $\tau^a$.
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+\vskip.2in
 Examples
 \begin{itemize}
 	\item Use numeric example from BS2005 in R (DGH.r)
