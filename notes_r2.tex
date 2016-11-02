@@ -134,7 +134,6 @@ What editor proposes:
 	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_{\text{ML}}(\ga(e),\btw)
   \label{ine:leg2}
 					\end{multline}
-
 						\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
 						\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
 						\item Note: It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model.
@@ -142,6 +141,11 @@ What editor proposes:
 								W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
 	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
 							\end{multline*}
+							The lobby's payment / requested tariff pair maximize the lobby's future income stream by paying legislature no more than necessary to break
+								\begin{itemize}
+									\item If legislature doesn't break, it'll choose $\left(\tau^a,e_a\right)$, which is set by trade agreement
+									\item Lobby isn't going to set indifference condition to a WORSE outcome (i.e. $\left(\tau^{opt},0\right)$
+								\end{itemize}
 							Lemma 1:
 							\begin{equation}
 								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
