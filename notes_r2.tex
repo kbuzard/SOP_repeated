@@ -137,10 +137,11 @@ What editor proposes:
 						\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
 						\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
 						\item Note: It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model.
-							\begin{multline*}
+							\begin{multline}
 								W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
 	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
-							\end{multline*}
+								\label{eq:newleg}
+							\end{multline}
 							The lobby's payment / requested tariff pair maximize the lobby's future income stream by paying legislature no more than necessary to break
 								\begin{itemize}
 									\item If legislature doesn't break, it'll choose $\left(\tau^a,e_a\right)$, which is set by trade agreement
@@ -172,6 +173,12 @@ What editor proposes:
 					\item For the purposes of Sections 5 and 6, we must have $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) > 0$. Otherwise there would be no interior solution and we wouldn't be interested in these results.
 				\end{itemize}
 			Is it harder to believe $W(\bta) +g(e_a) > W(\btw) + g(\ov{e})$? No, I don't think so.
+				\begin{itemize}
+					\item Here, $\ov{e}, \tau^b$ pair is chosen to make it true: they're chosen to make Expression (\ref{eq:newleg}) hold with equality by profix maximizing behavior of lobby. In order to get lobby to defect, by this equation, the above inequality must hold.
+					\item To be clear, to get an eqm with $\bta < \btw$, there needs to be a $\bta < \btw$ where the lobby loses money at every $\left(\tau^b,\ov{e}\right)$ pair that is determined by Expression (\ref{eq:newleg}). We simplify this problem by finding the best pair for the lobby and making sure that one is not profitable.
+					\item There is no 'extra' relationship with the determination of $\tau^b$ that could get in the way as in the base formulation
+					\item Bottom line: no harder to believe this inequality holds than the DGH version; perhaps even a bit easier
+				\end{itemize}
 		\end{itemize}
 \end{itemize}
 
