@@ -366,6 +366,46 @@ Notes:
 	\item Inherent in this story is the baseline where the lobby is not active (``$G^0,V^0$''), which is hard to square with my formulation
 \end{itemize}
 
+\vskip.2in
+How does weak binding agreement compare to strong-binding agreement?
+\begin{itemize}
+	\item Lobby pays less (nothing) for trade agreement tariff
+	\item Median legislator when trade agreement is in place is $\ga(0)$ instead of $\ga(e_a)$, so not `efficient' in this sense.
+	\item Nothing changes in trade war
+	\item Median legislator's repeated-game incentive constraint is unchanged, so Lemmas 1 and 2 are unchanged
+	\item Lobby's incentive constraint is still satisfied at $\bta = \btn$, so soln always exists:
+		\begin{equation}
+			e \geq \pi(\tau^b(e)) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+		\end{equation}
+		At $\tau^a = \tau^{tw}$, we have
+		\[
+			e \geq \pi(\tau^b(e)) - \pi(\tau^{tw}) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^{tw}) \right]
+		\]
+		\[
+			e \geq \pi(\tau^b(e)) - \pi(\tau^{tw}) - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} e_{tw}
+		\]
+		\[
+			\pi(\tau^{tw}) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} e_{tw} \geq \pi(\tau^b(e)) - e 
+		\]
+	 Because net profits are maximized at $\tau^{tw}$, this must hold for all $e$.
+	\item Lobby's constraint under strong binding is easier to satify than under tariff cap:
+		\begin{multline*}
+			e \geq \pi(\tau^b(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right] \\
+		\geq \pi(\tau^b(e)) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+		\end{multline*}
+	\item The question: for a given $T,\de_L,\de_{ML}$, is $\tau^a$ lower under strong binding or tariff cap?
+		\begin{itemize}
+			\item In order to have an interior solution, need $\ov{e}(\bta)$ to not decrease too quickly after its peak before lobby's constraint can be satisfied (if lobby's constraint were satisfied before reaching the peak of $\ov{e}(\bta)$, that would be great, but it doesn't affect any of the arguments below because it's the same in both the weak and strong binding cases).
+			\item Recall $\ov{e}$ is concave in $\bta$ and need $\ov{e} \geq e^{tw}$. These facts don't change. The $\ov{e}(\bta)$ schedule does not change. 
+			\item As $\tau^a$ increases, net profits under agreement increase. They go up more under strong binding. $\ov{e}(\bta)$ is decreasing at the same rate regardless of whether lobby is paying $e_a$.
+			\item Strong binding version in which $e_a$ is not being paid has a better chance of the constraint being satisfied / if the constraint is satisfied in both cases, will be satisfied at lower $\bta$.
+			\item So strong binding is better for welfare-maximizing executive
+			\item Strong binding is worse for the median legislator during the trade agreement phase: there's a mismatch between policy and $\ga(0)$ as opposed to perfectly matching the state under tariff cap.
+			\item Strong binding is worse for median legislator under break $\ov{e}$; he has no chance of receiving any lobbying effort during trade agreement phase. But this is all ex-post. Doesn't affect leg IC.
+			\item So can see tariff cap, once again, as mechanism for ensuring that rents are distributed ex-post.
+		\end{itemize}
+\end{itemize}
+
 
 
 \newpage
