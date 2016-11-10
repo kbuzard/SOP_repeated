@@ -618,7 +618,6 @@ It will also be possible to explore whether accounting for the endogeneity of po
 % The appendix command is issued once, prior to all appendices, if any.
 \appendix
 
-
 \section{Mathematical Details}
 \noindent \textbf{\hypertarget{Cor_et}{Proof of Lemma~\ref{lem:et}}}: \\
 Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\left(\cdot\right)$ and $\Pi\left(\cdot\right)$, for notational convenience, these equations can be represented as\footnote{Note that all expressions also depend on the fundamentals of the welfare function---$D,Q_X,Q_Y$---but these are suppressed for simplicity.}
@@ -646,10 +645,11 @@ Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partia
 \vskip.4in
 \noindent \textbf{\hypertarget{Lem_ets}{Proof of Lemma~\ref{lem:ets}}}: \\
 By the Implicit Function Theorem:
-\begin{equation*}
+\begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
 	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
-\end{equation*}
+	\label{eq:corets}
+\end{equation}
 
 \noindent The numerator is negative since the median legislator's welfare decreases in the foreign tariff (note that two other terms in the numerator cancel each other). The denominator is shown to be negative in the proof of Lemma~\ref{lem:et}. Combined with the negative numerator and the leading negative sign, the expression is negative. $\hfill\blacksquare$
 
@@ -752,8 +752,21 @@ If the model is interpreted as having a unitary government, there is only one de
   \label{ine:leg3}
 \end{multline}
 
+The lobbying constraint is unchanged.
 
+Lemmas \ref{lem:et} and \ref{lem:ets} continue to hold, although their proofs are modified slightly. Equations~\ref{eq:coret} and ~\ref{eq:corets} become
+\begin{equation*}
+ 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
+	\textstyle \frac{\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} \hskip.5in 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(e_a),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
+\end{equation*}
+The first is positive and the second is negative, just as for the non-unitary model. The central insights of the model are qualitatively the same...
 
+Equation~\ref{ine:T}
+\begin{multline}
+ 	\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi(\tau^{tw}) - \pi(\tau^a) \right]} \\
+	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+\end{multline}
 
 \end{document}
 
