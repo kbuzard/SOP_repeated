@@ -618,11 +618,6 @@ It will also be possible to explore whether accounting for the endogeneity of po
 % The appendix command is issued once, prior to all appendices, if any.
 \appendix
 
-\section{Alternative Models}
-
-The model analyzed in this paper can be interpreted as .... \citet{mrc2007} with a non-unitary government.
-
-Here I compare the results of this paper to a model with a unitary government, as this would seem to bring the model most closely into alignment with \citet{mrc2007} and a large part of the literature. I will end the section by substantiating my claim in Section~\ref{sec:stage} that the government welfare function used here can be interpreted as a special case of the one proposed by \citet{dgh97}.
 
 \section{Mathematical Details}
 \noindent \textbf{\hypertarget{Cor_et}{Proof of Lemma~\ref{lem:et}}}: \\
@@ -739,5 +734,26 @@ Because $\frac{\partial \Pi}{\partial \ga} = -\frac{\de_\text{L} - \de_\text{L}^
 As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive. The trade war tariff is increasing in $\ga$, as are net trade war profits. With the everywhere-positive discount term multiplying these two positive terms, we have another negative term because of the negative sign. Thus the numerator is negative.
 
 The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga}$ is positive when combined with the leading negative sign. $\hfill\blacksquare$
+
+
+\section{Alternative Models}
+
+The model analyzed in this paper can be interpreted as .... \citet{mrc2007} with a non-unitary government.
+
+Here I compare the results of this paper to a model with a unitary government, as this would seem to bring the model most closely into alignment with \citet{mrc2007} and a large part of the literature. I will end the section by substantiating my claim in Section~\ref{sec:stage} that the government welfare function used here can be interpreted as a special case of the one proposed by \citet{dgh97}.
+
+\subsection{Unitary Government}
+In the model with a non-unitary government, the lobby's effort $e$ determines the identity of the decision maker. Thus the decision maker at the time the lobby is pushing for the agreement to be broken ($e=e_b$, and $e=\ov{e}$ at minimum) is different from the decision maker during the trade war phase $(e = e_{tw})$ and the decision maker during a trade agreement phase ($e=e_a$). The weight on the lobbying industry's profits changes with lobbying effort because lobbying effort determines a different median voter in the legislature or government more generally. However, when the median legislator during a `break' phase is evaluating her incentive constraint, she values future tariff choices --- which will be determined by whoever is median in the future --- with her own preferences. Although she will not be the decision maker in the future, there is no reason for her to evaluate future welfare according to some other legislator's preference.
+
+If the model is interpreted as having a unitary government, there is only one decision maker. There is a fixed mapping from lobbying effort to the weight the decision maker places on the lobby's profits, and the realization of this weight changes with the realization of lobbying effort. Thus, predicting future lobbying effort, the decision maker knows what the realization of her weight on the lobby's profits will be and evaluates the incentive constraint accordingly. Equation (\ref{ine:leg2}) would be modified to
+\begin{multline}
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_a),\bta) - W_{\text{ML}}(\ga(e_{tw}),\btw) \right] \geq \\
+	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) - W_{\text{ML}}(\ga(e),\bta)
+  \label{ine:leg3}
+\end{multline}
+
+
+
+
 \end{document}
 
