@@ -760,13 +760,23 @@ Lemmas \ref{lem:et} and \ref{lem:ets} continue to hold, although their proofs ar
 	\textstyle \frac{\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]} \hskip.5in 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
 	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(e_a),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 \end{equation*}
-The first is positive and the second is negative, just as for the non-unitary model. The central insights of the model are qualitatively the same...
+The first is positive and the second is negative, just as for the non-unitary model. Thus the central insights are qualitatively the same as for the model with a non-unitary decision-maker at the break stage.
 
-Equation~\ref{ine:T}
+The results of Section~\ref{sec:optimal} hold for a significantly smaller set of parameters, however. Equation~\ref{ine:T} becomes
 \begin{multline}
- 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]} \\
+ 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(e_a),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right]} \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a \right]
 \end{multline}
 
+Note, in particular, that the additive term $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]$ disappears from the denominator of the first summand, that is, from the expression for $\frac{\partial \ov{e}}{\partial T}.$ Now $-\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}$ can be factored out of each of the summands if $\de_{ML} = \de_L$. In this case, the expression is either positive, zero, or negative for all values of $T$. An interior solution in $T$ only exists when the expression evaluated at $T=0$ is positive and $\de_{ML} < \de_L$. In this case, the positive, first term goes to zero faster than the negative, second term and the expression becomes zero for some finite value of $T$.
+
+This comparison between the non-unitary model of the paper and the alternative, unitary model helps to highlight part of the mechanism underlying Results~\ref{res:opt1} and \ref{res:3} on optimal punishments. As is usual, the increase in $\ov{e}$ as $T$ increases comes from the interaction of a direct effect and an indirect effect. When $T$ increases, the direct effect is that the decision maker experiences more punishment periods and so is less willing to break the agreement. In order to restore indifference, $\ov{e}$ has to be raised (the indirect effect) so that the decision maker places more weight on the lobby's profits and therefore is more willing to break the agreement for the same $\bta$.
+
+The direct effect decreases to $0$ as $T$ increases, that is, at the same rate in $\de$ as the benefit to the lobby. The change to these terms is the increment in the discount function with which they are evaluated, which is decreasing to 0 in $T$.
+
+In the unitary model, the indirect effect (denominator of $\frac{\partial \ov{e}}{\partial T}$) is constant in $T$. That is, because $\ov{e}$ is determined only by the current period realization of lobbying effort, the future profits of the lobby are not taken into consideration. The government instead evaluates punishment period profits from the point of view of the lobbying effort it expects to experience in those periods. 
+
+In contrast, when $e$ increases in the non-unitary model, the government cares about the benefit to the lobby in both the current period and during every punishment period. The indirect effect increases to $\frac{\de}{1-\de}$ as $T$ increases, making $\frac{\partial \ov{e}}{\partial T}$ decrease toward zero at a faster rate than the benefit to the lobby. At some $T$, the increase in $\ov{e}$ can no longer outweigh the increase in the benefit to the lobby.
+		
 \end{document}
 
