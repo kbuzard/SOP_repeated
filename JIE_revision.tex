@@ -175,10 +175,10 @@ As the economy is fully separable and the economic and political structures are 
 
 The home lobby's payoff within a period is
 \begin{equation}
-  U_\text{L} = \pi(\tau)-e
+  U_\text{L} = \pi_X(\tau)-e
   \label{eq:lv3}
 \end{equation}
-where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good. I assume the lobby's contribution is observable to its own legislature but is not observable to the foreign legislature.\footnote{The implication of this assumption is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected. See for reference \citet{gh95}, page 685-686.} I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
+where $\pi_X(\cdot)$ is the current-period profit of the import-competing industry and $\tau$ is the home country's tariff on the import good. I assume the lobby's contribution is observable to its own legislature but is not observable to the foreign legislature.\footnote{The implication of this assumption is that the lobby can directly influence only the home legislature, and so the influence of one country's lobby on the other country's legislature occurs only through the tariffs selected. See for reference \citet{gh95}, page 685-686.} I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
 
 %Values of $\tau$ that are of particular interest are $\tau^a, \ \tau^{tw}, \tau^p$ and $\tau^b$, respectively the trade agreement, trade war, punishment and break tariffs. The corresponding effort levels are notated as $e_a$ to influence the applied tariff under the trade agreement, $e_{tw}$ in the trade war, $e_p$ to influence the punishment tariff and $e_b$ to influence the break decision. 
 
@@ -275,12 +275,12 @@ Given the tariff caps that are chosen by the executives, any deviation from the 
 		\label{eq:leguni}
 \end{equation}
 
-The lobby chooses its effort $e$ given the above best response tariff-setting behavior by maximizing its profits net of effort: $\pi\left(\tau^R\left(\ga\left(e\right)\right)\right) - e$. This implies a first order condition of
+The lobby chooses its effort $e$ given the above best response tariff-setting behavior by maximizing its profits net of effort: $\pi_X\left(\tau^R\left(\ga\left(e\right)\right)\right) - e$. This implies a first order condition of
 \begin{equation}
-	\frac{\mathrm{d} \pi(\tau^R(\ga(e)))}{\mathrm{d} e} = 1
+	\frac{\mathrm{d} \pi_X(\tau^R(\ga(e)))}{\mathrm{d} e} = 1
   \label{eq:lobtw}
 \end{equation}
-That is, during this phase, the lobby chooses the level of effort that equates its expected marginal increase in profits with its marginal payment. I label this effort level $e_{tw}$ because the result of unilateral optimization within the stage-game is taken to be the trade war outcome. Similarly, I label $\tau^R(\ga(e_{tw}))$ as $\tau^{tw}$, the trade war tariff.\footnote{The most general condition that ensures that the lobby's second order condition holds is the following: $\left| \frac{\partial \tau}{\partial \ga}\frac{\partial^2 \ga}{\partial e^2}\right|>\frac{\partial \pi}{\partial \tau}\left[\frac{\partial \ga}{\partial e}\right]^2\frac{\frac{\partial^2 \pi}{\partial \tau^2}}{\left[\text{ML's SOC}\right]^2}$. Note that to ensure concavity of the lobby's objective function, it's important that the decreasing returns to lobbying effort outweigh the direct impact of effort in increasing the weighting function. Also, if profits either increase too fast in tariffs or are too convex, the second order condition can be violated.\label{fn:lobsoc}}
+That is, during this phase, the lobby chooses the level of effort that equates its expected marginal increase in profits with its marginal payment. I label this effort level $e_{tw}$ because the result of unilateral optimization within the stage-game is taken to be the trade war outcome. Similarly, I label $\tau^R(\ga(e_{tw}))$ as $\tau^{tw}$, the trade war tariff.\footnote{The most general condition that ensures that the lobby's second order condition holds is the following: $\left| \frac{\partial \tau}{\partial \ga}\frac{\partial^2 \ga}{\partial e^2}\right|>\frac{\partial \pi_X}{\partial \tau}\left[\frac{\partial \ga}{\partial e}\right]^2\frac{\frac{\partial^2 \pi_X}{\partial \tau^2}}{\left[\text{ML's SOC}\right]^2}$. Note that to ensure concavity of the lobby's objective function, it's important that the decreasing returns to lobbying effort outweigh the direct impact of effort in increasing the weighting function. Also, if profits either increase too fast in tariffs or are too convex, the second order condition can be violated.\label{fn:lobsoc}}
 
 \subsection{Conditions for Cooperation}
 \label{sec:coop}
@@ -302,7 +302,7 @@ Built into this condition is the legislature's applied tariff-setting behavior w
 
 The condition for the lobby is given in Expression~\ref{ine:lob}. Under the trade agreement, a break in the trade agreement, and punishment period, the lobby receives its profits at the chosen tariff level net of the effort level it exerts:
 \begin{equation}
-  \pi(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^a) - e_a \right] \geq \pi(\tau^R(e)) - e + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} \right] .
+  \pi_X(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^a) - e_a \right] \geq \pi_X(\tau^R(e)) - e + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) - e_{tw} \right] .
   \label{ine:lob}
 \end{equation}
 
@@ -320,7 +320,7 @@ The trade agreement tariffs are thus chosen by the executives according to the f
 and
 \end{center}
 \begin{equation}
-  e \geq \pi(\tau^R(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]
+  e \geq \pi_X(\tau^R(e)) - \pi_X(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) -e_{tw} - \pi_X(\tau^a) + e_a\right]
   \label{ine:lob2}
 \end{equation}
 where Inequalities \ref{ine:leg2} and \ref{ine:lob2} are simple rearrangements of \ref{ine:leg} and \ref{ine:lob}.
@@ -363,11 +363,11 @@ The following equation, which is simply Expression~\ref{ine:leg2} at equality, d
 \end{multline}
 This calculation of precise indifference is possible because it is assumed here that the political process is certain---that is, all actors know precisely how lobbying effort affects the identity of the median legislator through $\ga(e)$.
 
-Given the effort level required to break the agreement, the lobby will compare its current and future payoffs from inducing a dispute $\left(\pi(\tau^b(\ov{e})) - \ov{e}(\bta) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw}\right] \right)$ to the profit stream from the trade agreement $\left(\pi(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^a) -e_a\right] \right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}(\bta)$. If the latter is larger, the lobby chooses to lobby only for the trade agreement tariff and the agreement remains in force. On the other hand, if the former is larger, the lobby induces the most profitable possible break.\footnote{Recall that the lobby's myopic profits are maximized at $e_{tw}$. This implies that if $\ov{e} < e_{tw}$, the lobby will break the agreement by exerting effort level $e_{tw}$ since its net profits are higher than if it only exerted effort level $\ov{e}$ in this case.} 
+Given the effort level required to break the agreement, the lobby will compare its current and future payoffs from inducing a dispute $\left(\pi_X(\tau^b(\ov{e})) - \ov{e}(\bta) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) -e_{tw}\right] \right)$ to the profit stream from the trade agreement $\left(\pi_X(\tau^a) - e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^a) -e_a\right] \right)$. With the appropriate substitutions and rearrangements, this is just Condition (\ref{ine:lob2}) evaluated at $\ov{e}(\bta)$. If the latter is larger, the lobby chooses to lobby only for the trade agreement tariff and the agreement remains in force. On the other hand, if the former is larger, the lobby induces the most profitable possible break.\footnote{Recall that the lobby's myopic profits are maximized at $e_{tw}$. This implies that if $\ov{e} < e_{tw}$, the lobby will break the agreement by exerting effort level $e_{tw}$ since its net profits are higher than if it only exerted effort level $\ov{e}$ in this case.} 
 
 Anticipating this decision-making process of the lobby, the executives maximize social welfare by choosing the lowest tariffs such that the trade agreement they negotiate remains in force. They raise tariffs to the point that makes the lobby indifferent between exerting effort $\ov{e}(\bta)$ to break the trade agreement and $e_a$ to receive the trade agreement tariff.\footnote{Here I assume that the lobby chooses $e_a$ when indifferent; if the opposite assumption were made, trade agreement tariffs would have to be raised by an additional $\varepsilon$.} That is, they choose tariffs so that the following equation holds:
 \begin{equation}
-  \ov{e}(\bta) - \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) + e_a\right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a \right] = 0
+  \ov{e}(\bta) - \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) + e_a\right] - \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) -e_{tw} - \pi_X(\tau^a) + e_a \right] = 0
   \label{eq:lob2}
 \end{equation}
 This is simply the lobby's constraint evaluated at $\ov{e}(\bta)$ when the lobby is indifferent.\footnote{By construction, the legislative constraint will always be slack in equilibrium. The $\ov{e}(\bta)$ schedule is calculated to make the median legislator indifferent between cooperating and initiating a dispute but then in equilibrium $\bta$ is chosen so that the lobby does not break the agreement. When the lobby's effort level is less than $\ov{e}(\bta)$, the median legislator cannot prefer to break the agreement since her preferred tariff is lower when the lobby's effort is $e_a$ than when it is $\ov{e}(\bta)$.}
@@ -390,7 +390,7 @@ Proof: See the \hyperlink{Lem_ets}{Appendix}.
 
 When the trade agreement is symmetric, $\tau^a = \tau^{*a}$. In this case, $\ov{e}$ is concave in the trade agreement tariffs since the legislature's optimum in terms of $\tau^a$ is at $\tau^{tw}$ while its optimum in terms of $\tau^{*a}$ is at zero.
 
-The concavity of this $\ov{e}(\bta)$ function implies that there may not be a truly interior solution to the executives' problem. Of course whenever the solution to the problem in the absence of lobbies cannot be satisfied for any $\bta < \btw$, then the solution to the executives' problem will also be $\btw$. It may also be the case that there is a solution $\bta < \btw$ in the absence of the lobbies but that the lobbying constraint cannot be satisfied at any value other than the trade war tariff. The lobbying constraint will, however, always be satisfied at $\tau^a = \tau^{tw}$ because there $\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) - e_a =0$. Most of the results of this paper do not apply to this kind of solution, but it always exists and so a solution to the problem is guaranteed.
+The concavity of this $\ov{e}(\bta)$ function implies that there may not be a truly interior solution to the executives' problem. Of course whenever the solution to the problem in the absence of lobbies cannot be satisfied for any $\bta < \btw$, then the solution to the executives' problem will also be $\btw$. It may also be the case that there is a solution $\bta < \btw$ in the absence of the lobbies but that the lobbying constraint cannot be satisfied at any value other than the trade war tariff. The lobbying constraint will, however, always be satisfied at $\tau^a = \tau^{tw}$ because there $\pi_X(\tau^{tw}) -e_{tw} - \pi_X(\tau^a) - e_a =0$. Most of the results of this paper do not apply to this kind of solution, but it always exists and so a solution to the problem is guaranteed.
 
 To see when an equilibrium of interest exists, recall that we need $\ov{e} \geq e_{tw}$ in order for the lobby's constraint to be  satisfied for $\tau^a$ strictly less than $\tau^{tw}$. Even though it may appear at first sight that the constraint could be satisfied at a $\bta$ for which $\ov{e} < e_{tw}$, in fact the lobby would choose the higher level of effort $e_{tw}$ at which its net profits are maximized, breaking this incentive constraint. 
 
@@ -498,7 +498,7 @@ This is why the standard environment with no lobby gives no model-based predicti
 
 The lobby's constraint
 \[
-  e \geq \pi(\tau^b(e)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+  e \geq \pi_X(\tau^b(e)) - \pi_X(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a \right]
 \]
 works in the opposite direction in relation to $T$. Here, the lobby benefits in each dispute period, and so the total profit from a dispute is increasing in $T$. Thus we have
 \begin{customlemma}{4}
@@ -510,8 +510,8 @@ Although the interaction of the impact of the length of the punishment on these 
 
 As the executives choose the smallest $\bta$ that makes the lobby indifferent at $\ov{e}(\bta)$, we must analyze the lobby's constraint evaluated at $\ov{e}(\bta)$ (Expression \ref{eq:lob2}) to determine the optimal length of punishment $T$. Obtaining the derivative of $\ov{e}(\bta)$ from Equation~\ref{eq:leg2} via the Implicit Function Theorem, the derivative of the lobby's constraint with respect to $T$ is
 \begin{multline}
- 	\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi(\tau^{tw}) - \pi(\tau^a) \right]} \\
-	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+ 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]} \\
+	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a \right]
  	\label{ine:T}
 \end{multline}
 If this expression is negative for all $T$, the lobby's constraint is most slack at $T=0$. The optimal punishment length cannot be zero, however, because the median legislator's constraint cannot be satisfied with a punishment period of length zero. In this case, which occurs only when the lobby is extraordinarily strong relative to the legislature, we must invoke an ad-hoc constraint on the minimum feasible length.
@@ -519,14 +519,14 @@ If this expression is negative for all $T$, the lobby's constraint is most slack
 On the other hand, if this expression is positive for all $T$, the constraint is most slack as $T$ approaches infinity and so we are in a case similar to that of the model without lobbying where a ad-hoc renegotiation constraint determines the upper bound on the punishment length. Here, the legislative constraint outweighs concerns about provoking lobbying effort. Perhaps of most interest are intermediate cases where the optimal $T$ is interior---that is, the punishment length optimally balances the need to punish legislators for deviating with that of not rewarding lobbies too much for provoking a dispute.
 
 The intuition is clearest if we examine the case of perfectly patient actors, that is, let $\de_\text{L}$ and $\de_\text{ML} \rightarrow 1$. In essence, this removes the influence of the period of cheater's payoffs in which the interests of the legislature and the lobby are aligned (both do better in the defection phase) and exposes the differences between them in the dispute phase. In the limit, the derivative of the constraint with respect to $T$ becomes
-\begin{equation}
-  \left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) }{\frac{\partial \ga}{\partial e} \left\{
-  \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] + T \left[ \pi(\tau^{tw}) - \pi(\tau^a) \right]\right\}} - \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+\begin{multline}
+  \left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) }{\frac{\partial \ga}{\partial e} \left\{
+  \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right] + T \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]\right\}} \\ - \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a \right]
  	\label{ine:Tdelta1}
-\end{equation}
-The proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right)$ is positive. $\ov{e}$ is determined so that $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ is always positive,\footnote{See the discussion in the proof of Corollary~\ref{cor:edm} for a full treatment.} so the numerator of the first fraction is positive. The trade-agreement tariff is always lower than both the trade war tariff and the cheater's tariff $\left(\tau^b\left(\ov{e}\right)\right)$ and $\frac{\partial \ga}{\partial e}$ is positive by Assumption \ref{as:ga_c3}, so the denominator is always positive. Note that the only influence of $T$ on the entire expression is through this denominator, so the value of the expression is decreasing in $T$.
+\end{multline}
+The proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right)$ is positive. $\ov{e}$ is determined so that $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ is always positive,\footnote{See the discussion in the proof of Corollary~\ref{cor:edm} for a full treatment.} so the numerator of the first fraction is positive. The trade-agreement tariff is always lower than both the trade war tariff and the cheater's tariff $\tau^b\left(\ov{e}\right)$ and $\frac{\partial \ga}{\partial e}$ is positive by Assumption \ref{as:ga_c3}, so the denominator is always positive. Note that the only influence of $T$ on the entire expression is through this denominator, so the value of the expression is decreasing in $T$.
 
-The second term, the lobby's gain from a break in the trade agreement, is always at least weakly positive since the trade agreement tariff will never be larger than $\tau^{tw}$. Note that whenever the lobby's constraint must be satisfied by choosing $\tau^a$ such that $\pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a =0$, Expression~\ref{ine:Tdelta1} is always positive so that the optimal $T$ is the largest possible value. Essentially, only the legislature's incentives are of concern in this case.
+The second term, the lobby's gain from a break in the trade agreement, is always at least weakly positive since the trade agreement tariff will never be larger than $\tau^{tw}$. Note that whenever the lobby's constraint must be satisfied by choosing $\tau^a$ such that $\pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a =0$, Expression~\ref{ine:Tdelta1} is always positive so that the optimal $T$ is the largest possible value. Essentially, only the legislature's incentives are of concern in this case.
 
 In the case of interest where the lobby potentially has an interest in breaking the agreement, the right-hand term is strictly positive. Here where we've taken $\de_\text{L} \rightarrow 1$, the rate of change of the lobby's gain is constant.
 
@@ -571,7 +571,7 @@ When setting the trade-war tariff, the legislature maximizes $W_{\mathit{ML}}(\t
 \]
 via Equation~\ref{eq:leguni}. $\tau^{tw}$ is increasing in $e$ and the second order condition is satisfied for $\ga < 17/2$, which is the value of $\ga$ for which the lobby achieves the prohibitive tariff. The effective trade war tariff for all $\ga \geq 17/2$ remains at the prohibitive level of $\tau^{tw} = \frac{1}{6}$.
 
-In the event of a trade war and facing this tariff-setting behavior by the legislature, the lobby maximizes $\pi\left(\tau^{tw}\left(\ga\left(e_{tw}\right)\right)\right) - e_{tw}$.
+In the event of a trade war and facing this tariff-setting behavior by the legislature, the lobby maximizes $\pi_X\left(\tau^{tw}\left(\ga\left(e_{tw}\right)\right)\right) - e_{tw}$.
 
 In order to predict the trade war tariff, the political weighting function must be specified. In order to demonstrate comparative statics on $\frac{\partial \ga}{\partial e}$, I will use the constant absolute risk aversion form so that the slope of $\ga$ can be altered without affecting its curvature. That is, I take $\ga(e) = 2.25 - \exp(-a\cdot e)$. Facing this specification of the political process, when $a=40$, the lobby maximizes its objective function at $e_{tw} = 0.00252$, which produces a trade war tariff of $0.1008$. When $a=50$, the lobby maximizes its objective function at $e_{tw} = 0.00866$, which produces a trade war tariff of $0.1416$. Note that when $a$ increases, the slope of $\ga$ increases; that is, the marginal expenditure by the lobby has a greater impact on the weight its concerns receive in the legislature's decision-making. I interpret this to mean that the lobby becomes more influential as $a$ rises.
 
@@ -634,7 +634,7 @@ Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 	\label{eq:coret}
 \end{equation}
 
@@ -647,7 +647,7 @@ Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partia
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 	\label{eq:corets}
 \end{equation}
 
@@ -658,7 +658,7 @@ By the Implicit Function Theorem:
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{L}} = -\frac{\frac{\partial \Pi}{\partial \de_\text{L}}}{\frac{\partial \Pi}{\partial \tau^a}} = 
-	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{L}^T + T \de_\text{L}^{T+1}}{\left(1-\de_\text{L} \right)^2} \left[\pi_X(\tau^{tw}) -e_{tw} - \pi_X(\tau^a) + e_a\right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi_X(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
 
 First I will show that $\frac{1 - \left(T+1\right)\de^T + T \de^{T+1}}{(1-\de)^2}$ is positive. Focusing on the numerator and rearranging, we have
@@ -680,7 +680,7 @@ Looking at the denominator, the discounting term is positive, so the term in par
 By the Implicit Function Theorem:
 \begin{equation}
  	\textstyle \frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}} = -\frac{\frac{\partial \Omega}{\partial \de_\text{ML}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\frac{ \frac{1 - \left(T+1\right)\de_\text{ML}^T + T \de_\text{ML}^{T+1}}{\left(1-\de_\text{ML} \right)^2} \left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{ML}^T + T \de_\text{ML}^{T+1}}{\left(1-\de_\text{ML} \right)^2} \left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
  	\label{eq:e_de}
 \end{equation}
 
@@ -698,14 +698,14 @@ There is no direct effect of $\de_\text{ML}$ on this equation, so $\frac{\partia
 
 \begin{equation}
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{ML}} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}}{\frac{\partial \Pi}{\partial \tau^a}} = -
-	\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)\cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
+	\frac{\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}}\right)\cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi_X(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
 
 The total effect of $\ov{e}$ on $\Pi$ is the negative of the lobby's FOC, that is
 \[
-  \frac{\mathrm{d} }{\mathrm{d} \ov{e}} \left[\ov{e} - \pi\left(\tau^b(\ov{e})\right) \right]  = 1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} = - \left(\frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} - 1 \right).
+  \frac{\mathrm{d} }{\mathrm{d} \ov{e}} \left[\ov{e} - \pi_X\left(\tau^b(\ov{e})\right) \right]  = 1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} = - \left(\frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} - 1 \right).
 \]
-The lobby's FOC decreases to the right of $e_{tw}$ since $e_{tw}$ is the optimum $\left( \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} = 1 \text{ at } e = e_{tw} \right)$. Since we must have $\ov{e} \geq e_{tw}$ in equilibrium in order for the lobby's constraint to bind, the effect of $\ov{e}$ on $\Pi$ is positive. In addition, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}$ is positive by Corollary~\ref{cor:edm}, so the numerator is positive. 
+The lobby's FOC decreases to the right of $e_{tw}$ since $e_{tw}$ is the optimum $\left( \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} = 1 \text{ at } e = e_{tw} \right)$. Since we must have $\ov{e} \geq e_{tw}$ in equilibrium in order for the lobby's constraint to bind, the effect of $\ov{e}$ on $\Pi$ is positive. In addition, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}}$ is positive by Corollary~\ref{cor:edm}, so the numerator is positive. 
 
 By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator is positive. Since there is a leading negative sign, $\frac{\mathrm{d} \tau^a}{\mathrm{d} \de_\text{ML}}$ is negative. $\hfill\blacksquare$
 
@@ -715,7 +715,7 @@ By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} = -\frac{\frac{\partial \Omega}{\partial \ga}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] - \left[ \pi(\tau^b(e)) - \pi(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^a) - \pi(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(e)) - \pi(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \left[ \pi_X(\tau^b(e)) - \pi_X(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(e)) - \pi_X(\tau^{a}) \right]}
 \end{equation}
 keeping in mind that the numerator is simplified by the envelope theorem. We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga}{\partial \ov{e}}} < 0$. $\hfill\blacksquare$
 
@@ -726,12 +726,12 @@ Differentiating the lobby's condition, Equation~\ref{eq:lob3} with respect to $\
 \[
   \frac{\partial \Pi}{\partial \tau^a}\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga} + \frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} + \frac{\partial \Pi}{\partial \ga} = 0
 \]
-Because $\frac{\partial \Pi}{\partial \ga} = -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]$, we are looking for
+Because $\frac{\partial \Pi}{\partial \ga} = -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi_X(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]$, we are looking for
 \begin{equation}
  	\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}- \frac{\partial \Pi}{\partial \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
-	\frac{\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
+	\frac{\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi_X(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi_X(\tau^a)}{\partial \tau^a} - \frac{\partial e_a}{\partial \tau^a}\right]}
 \end{equation}
-As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}}\right)$ is positive. The trade war tariff is increasing in $\ga$, as are net trade war profits. With the everywhere-positive discount term multiplying these two positive terms, we have another negative term because of the negative sign. Thus the numerator is negative.
+As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}}\right)$ is positive. The trade war tariff is increasing in $\ga$, as are net trade war profits. With the everywhere-positive discount term multiplying these two positive terms, we have another negative term because of the negative sign. Thus the numerator is negative.
 
 The arguments given in the proof of Corollary~\ref{cor:tdl} show that the denominator is positive. Therefore $\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga}$ is positive when combined with the leading negative sign. $\hfill\blacksquare$
 
@@ -757,15 +757,15 @@ The lobbying constraint is unchanged.
 Lemmas \ref{lem:et} and \ref{lem:ets} continue to hold, although their proofs are modified slightly. Equations~\ref{eq:coret} and ~\ref{eq:corets} become
 \begin{equation*}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]} \hskip.5in 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(e_a),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi(\tau^b(\ov{e})) - \pi(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]} \hskip.5in 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(e_a),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 \end{equation*}
 The first is positive and the second is negative, just as for the non-unitary model. The central insights of the model are qualitatively the same...
 
 Equation~\ref{ine:T}
 \begin{multline}
- 	\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi(\tau^b(\ov{e})) - \pi(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi(\tau^{tw}) - \pi(\tau^a) \right]} \\
-	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
+ 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right] + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]} \\
+	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a \right]
 \end{multline}
 
 \end{document}
