@@ -785,8 +785,6 @@ In Section~\ref{sec:stage}, I claim that the government welfare function present
 Here, the lobby offers a contribution schedule of pairs of effort levels and tariff. Following \citet{dgh97}, I assume these pairs reflect the fact that the lobby has all the bargaining power in its relationship with the government. (can be very simple: just one $(e,\tau)$ pair, $e=0$ for everything else).
 
 Denote the government's welfare function as $W_G(\tau,\tau^*,e(\tau)) = W(\tau,\tau^*) + g(e(\tau))$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare. 
-
-
 		
 
 
@@ -813,48 +811,19 @@ In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen a
 
 
 \vskip.2in
-The structure of the trade-agreement-setting phase does not change (Section~\ref{sec:zero}). 
-\begin{itemize}
-	\item[3.2] Trade war
-	\item Government evaluates welfare (unilateral because $\tau^*$ doesn't change) at the TIOLI offer of the lobby and at the value $\left(\tau^{opt}\right)$ that satisfies $\frac{\partial W}{\partial \tau} = 0$ [nothing the leg does here will change the contribution]. Chooses which one maximizes welfare.
-		\begin{itemize}
-			\item DGH Proposition 1: principal (lobby) has to provide at least agent's (gov'ts) outside option; as long as this constraint is satisfied, lobby can propose $\tau$ and payment that maximizes his own utility
-			\item DGH Proposition 3 (p. 760-61): simplifies so we don't need to look for contribution functions, only eqm values
-			\item Assume lobby has all the bargaining power as in DGH97. Then lobby calculates $\left(\tau,e\right)$ schedule from
-								\[
-									W(\tau) +g(e) = W(\tau^{opt}) +g(0)
-								\]
-								Assume $g(0) = 0$. Then
-								\[
-									g(e) = W(\tau^{opt}) - W(\tau)
-								\]
-								\[
-									e = g^{-1}\left[W(\tau^{opt}) - W(\tau)\right]
-								\]
-		\end{itemize}
-	\item[4] I think the break phase is essentially the same, but the way it is calculated is different
-				\begin{itemize}
-					\item Lobby first determines $\ov{e}$, then decides whether it's worthwhile paying $\ov{e}$
-					\item Need to re-write Equation 12, which defines $\ov{e}$
-						\begin{itemize}	
-							\item What \textit{is} $\ov{e}$? It's what the lobby has to pay to get the legislature to break the trade agreement
-							\begin{multline}
-						W_{\text{ML}}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta)  \geq \\
-	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_{\text{ML}}(\ga(e),\btw)
-					\end{multline}
-						\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
-						\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
-						\item Note: It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model.
-							\begin{multline}
-								W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
+The structure of the trade-agreement-setting phase does not change (Section~\ref{sec:zero}). In the trade war, the government will be presented with a contribution schedule of lobbying effort, tariff pairs that can be denoted as a function $e(\tau)$. The government then maximizes $W_G(\tau,\tau^*,e(\tau))$ unilaterally.
+
+Given Propositions 1 and 3 of \citet{dgh97} and the assumption that the lobby has all the bargaining power, the lobby calculates $\left(\tau,e\right)$ schedule from $W(\tau) +g(e) = W(\tau^{opt}) +g(0)$ where $\tau^{opt}$ is the government's optimal unilateral tariff in the absence of lobbying effort. If we assume $g(0) = 0$, $e = g^{-1}\left[W(\tau^{opt}) - W(\tau)\right]$.
+								
+The break phase is also altered. Here, the legislature's repeated-game incentive constraint is altered qualitatively and therefore the lobby's incentive constraint changes quantitatively (although not qualitatively). Equation~\ref{eq:leg2}, which defines how much the lobby must pay to break the trade agreement (i.e. $\ov{e}$), must therefore be re-written.
+
+When lobby has all the bargaining power, the $(\ov{e},\tau^b)$ schedule makes the legislature indifferent between breaking the trade agreement or abiding by it, maximizing the lobby's future income stream by paying the legislature no more than necessary to break the break agreement. Note that in contrast to the trade war environment, if the legislature doesn't break the trade agreement, the institutional environment is such that the outside option is $\left(\tau^a,e_a\right)$. The legislature's incentive constraint is then
+	\begin{multline}
+		W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
 	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
-								\label{eq:newleg}
-							\end{multline}
-							The lobby's payment / requested tariff pair maximize the lobby's future income stream by paying legislature no more than necessary to break
-								\begin{itemize}
-									\item If legislature doesn't break, it'll choose $\left(\tau^a,e_a\right)$, which is set by trade agreement
-									\item Lobby isn't going to set indifference condition to a WORSE outcome (i.e. $\left(\tau^{opt},0\right)$
-								\end{itemize}
+		\label{eq:newleg}
+	\end{multline}
+					
 							Lemma 1:
 							\begin{equation}
 								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
@@ -865,8 +834,9 @@ The structure of the trade-agreement-setting phase does not change (Section~\ref
 								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} =
 	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
 							\end{equation*}
-				\end{itemize}
-			\item[6] Optimal dispute settlement: depends on how government IC changes
+			
+\newpage
+Optimal dispute settlement: depends on how government IC changes
 			  \begin{multline}
 					\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a) - W(\btw) - g(\ov{e}) \right]}{\left[ 1 + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \right] \frac{\partial g(e)}{\partial e} } \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
@@ -887,8 +857,7 @@ The structure of the trade-agreement-setting phase does not change (Section~\ref
 					\item There is no 'extra' relationship with the determination of $\tau^b$ that could get in the way as in the base formulation
 					\item Bottom line: no harder to believe this inequality holds than the DGH version; perhaps even a bit easier
 				\end{itemize}
-		\end{itemize}
-\end{itemize}
+
 		
 \end{document}
 
