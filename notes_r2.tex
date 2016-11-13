@@ -67,31 +67,6 @@ I have slightly clarified the discussion around Results 2 and 3 in the four para
 You state that your specification of legislature preferences can be seen as a special case of the Dixit-Grossman-Helpman (DGH) model. It would be helpful if you could substantiate this claim. More specifically, let us consider a simple version of the DGH specification in your setting. Suppose you modify your model only in two ways. First, suppose the legislature preferences are given by W+g(e), where g(e) is an increasing and concave function of contributions (while the lobby preferences remain the same). And second, suppose the lobby offers a contribution schedule e(t) before the legislature chooses the tariff. The question is: would this model deliver the same results as yours (at least qualitatively)? Note that in this setting you can focus on a simple all-or-nothing contribution schedule, of the kind "if you give me a 5$\%$ tariff I give you $\$$100, otherwise you get nothing." Intuitively the promised contribution will just compensate the legislator for the loss associated with the requested tariff, so the analysis might not be hard.  If this DGH version of your model yields similar qualitative results, pointing out this "isomorphism" would help you in several ways. First, it would provide "foundations" for your assumed legislature preferences, in terms of a model (DGH) that people are familiar with. Second, this would help address my question 2 above: in the DGH model we can think of e as money, and I think it would be reasonable to stick with your current definition of aggregate welfare (even though in principle one might question this definition of aggregate welfare when utility is not transferrable). And third, you could examine whether your results rely on the presence of diminishing marginal utility from contributions: what would happen if g is linear (as in the basic Protection for Sale model) rather than strictly concave? \\
 
 \vskip.5in
-DGH97 paper:
-\begin{itemize}
-	\item Truthful contribution schedule is a device for solving equilibrium in their model. It's not a best response function, but lobby has to be best responding in equilibrium.
-		\begin{itemize}
-			\item Proposition 3: $G(a^0,e^T(a^0,u^0)) = \max_a G(a,0)$
-			\item $e^T(a^0,u^0)$ is essentially $\phi(a^0,u^0)$, which is defined implicitly in eqn3 (p. 760) as
-				\[
-				  U\left[ a, \phi(a^0,u^0)\right] = u^0
-				\]
-			\item if $G = W + g(e)$ and $e=0$ and $g(0) = 0$, then $a^* = \tau^{\text{opt}}$
-			\item Then rewrite as 
-				\[
-				  G(\tau^0,e^T(\tau^0,u^0)) = \max_a G(\tau^{\text{opt}},0)
-				\]
-					\begin{itemize}
-						\item Right hand side provides a number
-						\item Ignoring arguments of $e^T$ function, LHS traces out $\left(\tau,e\right)$ pairs that satisfy the equation given $g(e)$.
-						\item For lobby to be best responding, it MUST pick the pair that maximizes $\pi(\tau) - e$. \textit{This} concern must be what sets $u^0$.
-					\end{itemize}
-		\end{itemize}
-	\item Corollary to Prop 1 / Prop 3: Gov't gets utility equal to outside option. Is this true when there is just one lobby?
-	\item Combining the two previous facts, gov't getting outside option will set $u^0$ (eqm utility) and anchor contribution schedule (just have to be careful of zero contributions)
-\end{itemize}
-
-\vskip.2in
 What editor proposes:
 \begin{itemize}
 	\item Lobby offers contribution schedule (can be very simple: just one $(e,\tau)$ pair, $e=0$ for everything else)
@@ -100,15 +75,38 @@ What editor proposes:
 			\item Note that $CS_X + \ga(e) \cdot PS_X + CS_Y + PS_Y +TR = W + \left( \ga(e) - 1 \right) PS_X$
 			\item Also note that there may be a problem of interpretation: DGH fundamentally makes unitary actor indifferent, instead of my set-up where $e=0$ and $e=\ov{e}$ lead to two different decision makers
 		\end{itemize}
-	\item Sectioning from my paper:
+\end{itemize}
+
+\vskip.2in
+In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen according to the lobbying effort applied in the break stage $(\ov{e})$ because this determines the identity of the median legislator. The median legislator in the current period gets to pick the tariff in the current period.
+\begin{itemize}
+	\item In DGH, the lobby presents a unitary gov't with a schedule of $(\tau,e)$ pairs.
 		\begin{itemize}
-			\item[3.1] Same (execs)
-			\item[3.2] Trade war
-				\item Government evaluates welfare (unilateral because $\tau^*$ doesn't change) at the TIOLI offer of the lobby and at the value $\left(\tau^{opt}\right)$ that satisfies $\frac{\partial W}{\partial \tau} = 0$ [nothing the leg does here will change the contribution]. Chooses which one maximizes welfare.
-						\begin{itemize}
-							\item DGH Proposition 1: principal (lobby) has to provide at least agent's (gov'ts) outside option; as long as this constraint is satisfied, lobby can propose $\tau$ and payment that maximizes his own utility
-							\item DGH Proposition 3 (p. 760-61): simplifies so we don't need to look for contribution functions, only eqm values
-							\item Assume lobby has all the bargaining power as in DGH97. Then lobby calculates $\left(\tau,e\right)$ schedule from
+			\item The editor has suggested that I can choose a very simple take-it-or-leave-it schedule with one just pair or $e=0$, but in order for my calculus-based results to hold up, I think I need a differentiable schedule.
+			\item At any rate, no one in the government gets to 'pick' $\tau$ on its own; a particular $\tau$ is demanded in return for a particular $e$. They are a bundle constructed by the lobby.
+			\item In my model, who the decision-maker IS is determined by the lobby's chosen $e$.
+		\end{itemize}
+	\item Is it possible to have a DGH-style indifference condition in the spirit of my model, i.e. $e$ determines the median legislator?
+		\begin{itemize}
+			\item In a normal repeated game, players choose current period action to maximize the whole stream of payoffs; that's not what happens in my model. The current player makes his decision with a view to influencing who will be the median legislator in the future.
+			\item Current player finds $\tau$ that maximizes current payoffs, then checks to see whether it will also maximize future payoffs. If it doesn't, he switches to trade agreement tariff.
+				\begin{itemize}
+					\item That is, the maximization program for current player is complex: has to find optimal $\tau$ if he's going to break, then compare total payoff stream under $\tau^b(\ov{e})$ to total payoff under $\tau^a$.
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+
+
+Sectioning from my paper:
+\begin{itemize}
+	\item[3.1] Same (execs)
+	\item[3.2] Trade war
+	\item Government evaluates welfare (unilateral because $\tau^*$ doesn't change) at the TIOLI offer of the lobby and at the value $\left(\tau^{opt}\right)$ that satisfies $\frac{\partial W}{\partial \tau} = 0$ [nothing the leg does here will change the contribution]. Chooses which one maximizes welfare.
+		\begin{itemize}
+			\item DGH Proposition 1: principal (lobby) has to provide at least agent's (gov'ts) outside option; as long as this constraint is satisfied, lobby can propose $\tau$ and payment that maximizes his own utility
+			\item DGH Proposition 3 (p. 760-61): simplifies so we don't need to look for contribution functions, only eqm values
+			\item Assume lobby has all the bargaining power as in DGH97. Then lobby calculates $\left(\tau,e\right)$ schedule from
 								\[
 									W(\tau) +g(e) = W(\tau^{opt}) +g(0)
 								\]
@@ -119,11 +117,10 @@ What editor proposes:
 								\[
 									e = g^{-1}\left[W(\tau^{opt}) - W(\tau)\right]
 								\]
-						\end{itemize}
-				\end{itemize}
-			\item[3.3] Nothing seems to change
-			\item[3.4] Nothing seems to change
-			\item[4] I think the break phase is essentially the same, but the way it is calculated is different
+		\end{itemize}
+	\item[3.3] Nothing seems to change
+	\item[3.4] Nothing seems to change
+	\item[4] I think the break phase is essentially the same, but the way it is calculated is different
 				\begin{itemize}
 					\item Lobby first determines $\ov{e}$, then decides whether it's worthwhile paying $\ov{e}$
 					\item Need to re-write Equation 12, which defines $\ov{e}$
@@ -182,80 +179,6 @@ What editor proposes:
 		\end{itemize}
 \end{itemize}
 
-\vskip.2in
-Comparisons
-\begin{itemize}
-	\item Note that in GH94, claim is that IN EQUILIBRIUM, government behaves as if it maximizes a weighted sum of the groups' utilities ($1+a$ for those represented by lobbies; $a$ for those not represented; pg. 10 of PDF). But this is in equilibrium: there's a lot going on out of equilibrium that leads us there!
-		\begin{itemize}
-			\item I haven't proved this to myself, but that must also depend on lobbies having all the bargaining power
-		\end{itemize}
-	\item In DGH, $G(\tau^0,e^0) = \max_\tau (\tau,0)$
-		\begin{itemize}
-			\item This is \un{not} generally true in my model
-			\item I think the slippage is in bargaining power. DGH paradigm assumes lobby essentially make TIOLI offer.
-			\item $\ga(e)$ formulation in essence distributes bargaining power more generally
-				\begin{itemize}
-					\item Is it okay to characterize it this way?
-					\item If so, does bargaining power vary with effort? Seems mixed up with diminishing returns to effort.
-				\end{itemize}
-			\item $W + \Phi(e)$ of Limao and Tovar gives decreasing returns; then explicitly models bargaining power through Nash bargain instead of menu auction (as far as I can tell--I can't find it clearly specified).
-		\end{itemize}
-	\item In DGH, essentially lobby chooses its favorite $(\tau,e)$ pair from among all the possible ones that make the Gov't indifferent.
-		\begin{itemize}
-			\item Is it possible that this is equivalent to $\frac{\partial \pi}{\partial e} = 1$?
-			\item seems like the pair that satisfies that equation might not be available
-			\item When I calculate the various $(\tau,e)$ pairs to 'compare' government welfare levels, this comes from the government welfare function: each $e$ induces an optimal $\tau$ and then I get an optimal value function
-				\begin{itemize}
-					\item Lobby doesn't care about these varying welfare levels. Chooses $(\tau,e)$ pair that maximizes $\pi - e$
-				\end{itemize}
-		\end{itemize}
-\end{itemize}
-
-\vskip.2in
-In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen according to the lobbying effort applied in the break stage $(\ov{e})$ because this determines the identity of the median legislator. The median legislator in the current period gets to pick the tariff in the current period.
-\begin{itemize}
-	\item In DGH, the lobby presents a unitary gov't with a schedule of $(\tau,e)$ pairs.
-		\begin{itemize}
-			\item The editor has suggested that I can choose a very simple take-it-or-leave-it schedule with one just pair or $e=0$, but in order for my calculus-based results to hold up, I think I need a differentiable schedule.
-			\item At any rate, no one in the government gets to 'pick' $\tau$ on its own; a particular $\tau$ is demanded in return for a particular $e$. They are a bundle constructed by the lobby.
-			\item In my model, who the decision-maker IS is determined by the lobby's chosen $e$.
-		\end{itemize}
-	\item Is it possible to have a DGH-style indifference condition in the spirit of my model, i.e. $e$ determines the median legislator?
-		\begin{itemize}
-			\item In a normal repeated game, players choose current period action to maximize the whole stream of payoffs; that's not what happens in my model. The current player makes his decision with a view to influencing who will be the median legislator in the future.
-			\item Current player finds $\tau$ that maximizes current payoffs, then checks to see whether it will also maximize future payoffs. If it doesn't, he switches to trade agreement tariff.
-				\begin{itemize}
-					\item That is, the maximization program for current player is complex: has to find optimal $\tau$ if he's going to break, then compare total payoff stream under $\tau^b(\ov{e})$ to total payoff under $\tau^a$.
-				\end{itemize}
-		\end{itemize}
-\end{itemize}
-
-\vskip.2in
-Examples
-\begin{itemize}
-	\item Use numeric example from BS2005 in R (DGH.r)
-	\item Isomorphism I've already calculated: if $G = W + e$ then $\ga(e) = 1 + \frac{e}{\pi_x}$
-	\item Lobby's optimization:
-		\[
-		  W(\tau,e(\tau)) = W(0,0)
-		\]
-		\[
-		  W(\tau) + e = W(0)
-		\]
-		\[
-		  e = W(0) - W(\tau)
-		\]
-			
-			\begin{itemize}
-				\item This forms a contribution schedule
-				\item Lobby chooses the pair $(\tau,e)$ that maximizes $\pi(\tau) - e$
-			\end{itemize}
-	\item Make sure these are unilateral changes in $\tau$ in the program
-	\item Then compare to my old way: $\frac{\partial \pi}{\partial \tau} \frac{\partial \tau}{\partial \ga} \frac{\partial \ga}{\partial e} = 1$ ($e$ changes with $\tau$ directly depending on shape of $\ga$, then government maximizes w.r.t. $\tau$
-		\begin{itemize}
-			\item NEXT: go into R program and sort it out
-		\end{itemize}
-\end{itemize}
 
 \vskip.5in
 \subsection{Subtract effort in gov't welfare function}
