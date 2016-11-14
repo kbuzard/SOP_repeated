@@ -767,6 +767,7 @@ The results of Section~\ref{sec:optimal} hold for a significantly smaller set of
 \begin{multline}
  	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(e_a),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right]} \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a \right]
+	\label{eq:uniopt}
 \end{multline}
 
 Note, in particular, that the additive term $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]$ disappears from the denominator of the first summand, that is, from the expression for $\frac{\partial \ov{e}}{\partial T}.$ Now $-\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}$ can be factored out of each of the summands if $\de_{ML} = \de_L$. In this case, the expression is either positive, zero, or negative for all values of $T$. An interior solution in $T$ only exists when the expression evaluated at $T=0$ is positive and $\de_{ML} < \de_L$. In this case, the positive, first term goes to zero faster than the negative, second term and the expression becomes zero for some finite value of $T$.
@@ -780,9 +781,11 @@ In the unitary model, the indirect effect (denominator of $\frac{\partial \ov{e}
 In contrast, when $e$ increases in the non-unitary model, the government cares about the benefit to the lobby in both the current period and during every punishment period. The indirect effect increases to $\frac{\de}{1-\de}$ as $T$ increases, making $\frac{\partial \ov{e}}{\partial T}$ decrease toward zero at a faster rate than the benefit to the lobby. At some $T$, the increase in $\ov{e}$ can no longer outweigh the increase in the benefit to the lobby.
 
 \subsection{Dixit, Grossman and Helpman (1997)-Style Model}
-In Section~\ref{sec:stage}, I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in \citet{dgh97}. Here I show that, under the non-unitary government assumption, the \citet{dgh97} model specialized to this environment produces results that are qualitatively the same as those in the main body of the paper.
+In Section~\ref{sec:stage}, I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in \citet{dgh97}. Here I examine the \citet{dgh97} model specialized to this environment. Because the \citet{dgh97} model is fundamentally a unitary government model, the relevant benchmark is the unitary version of the model in Section~\ref{sec:unitary}. I demonstrate below that the results of the two unitary models are qualitatively the same. Thus only minor differences arise between the non-unitary model of the paper and the \citet{dgh97}, version and they derive from the unitary government assumption.
 
-Here, the lobby offers a contribution schedule of pairs of effort levels and tariff. Following \citet{dgh97}, I assume these pairs reflect the fact that the lobby has all the bargaining power in its relationship with the government.
+To be clear about the differences, the non-unitary model examined in the body of the paper assumes that different levels of lobbying effort result in different \textit{decision-makers}. In the unitary model of \citet{dgh97}, one decision maker makes different decisions depending on the level of lobbying effort. This is important in the context of the repeated game. Whereas the unitary decision-maker evaluates future welfare according to the lobbying effort she expects to experience in the future, the non-unitary decision-maker knows that different decision-makers will be in power and evaluates future welfare with her own preferences.
+
+In the auction-menu set-up of the \citet{dgh97} model, there does not seem to be a natural alternative to the unitary government interpretation. The lobby offers a contribution schedule of pairs of effort levels and tariffs and the government chooses among pairs. In the non-unitary model, each effort level choice determines a different government, so this kind of choice is not possible. I therefore follow this unitary government assumption as well as the assumption that the lobby has all the bargaining power in its relationship with the government.
 
 Denote the government's welfare function as $W_G(\tau,\tau^*,e(\tau)) = W(\tau,\tau^*) + g(e(\tau))$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare. The structure of the trade-agreement-setting phase does not change (Section~\ref{sec:zero}). In the trade war, the government will be presented with a contribution schedule of lobbying effort, tariff pairs that can be denoted as a function $e(\tau)$. The government then maximizes $W_G(\tau,\tau^*,e(\tau))$ unilaterally.
 
@@ -793,7 +796,7 @@ The break phase is also altered. Here, the legislature's repeated-game incentive
 When lobby has all the bargaining power, the $(\ov{e},\tau^b)$ schedule makes the legislature indifferent between breaking the trade agreement or abiding by it, maximizing the lobby's future income stream by paying the legislature no more than necessary to break the break agreement. Note that in contrast to the trade war environment, if the legislature doesn't break the trade agreement, the institutional environment is such that the outside option is $\left(\tau^a,e_a\right)$. The legislature's incentive constraint is then
 	\begin{multline}
 		W(\bta) + g(e_a(\tau^a)) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a(\tau^a))\right] = \\
-	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
+	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(e_{tw})\right]
 		\label{eq:newleg}
 	\end{multline}
 					
@@ -802,47 +805,24 @@ The main construction in Section~\ref{sec:structure} remains qualitatively the s
 Lemma 1:
 	\begin{equation*}
 		\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a(\tau^a))\right]}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a(\tau^a))\right]}{\frac{\partial g(e)}{\partial \ov{e}} }
   \end{equation*}
 							
 Lemma 2:
 	\begin{equation*}
 		\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\frac{\partial g(e)}{\partial \ov{e}} }
 	\end{equation*}
 							
-The denominators have the same sign, but are different from the main model in that the lobby's profit differentials do not appear here because the $g(\cdot)$ function is additively separable from profits, whereas $\ga(\cdot)$ is not. Their numerators are not changed much: $W(\bta) + g(e_a(\tau^a))$ is the equivalent of $W_{ML}(\ga(e_a),\bta)$ in this alternative model. The substantive change is that the expression is evaluated at $e_a$ instead of $\ov{e}$ because indifference must be created here by contrast to the outside option. 
+The denominators have the same sign, but are different from those in Section~\ref{sec:unitary} in that the lobby's profit differentials do not appear here because the $g(\cdot)$ function is additively separable from profits, whereas $\ga(\cdot)$ is not. Their numerators are not changed much: $W(\bta) + g(e_a(\tau^a))$ is the equivalent of $W_{ML}(\ga(e_a),\bta)$ in this alternative model. The substantive change is that the expression is evaluated at $e_a$ instead of $\ov{e}$ because indifference must be created here by comparison to welfare evaluated at the outside option. 
 
-
-\vskip.2in
-In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen according to the lobbying effort applied in the break stage $(\ov{e})$ because this determines the identity of the median legislator. The median legislator in the current period gets to pick the tariff in the current period.
-\begin{itemize}
-	\item Also note that there may be a problem of interpretation: DGH fundamentally makes unitary actor indifferent, instead of my set-up where $e=0$ and $e=\ov{e}$ lead to two different decision makers
-	\item In DGH, the lobby presents a unitary gov't with a schedule of $(\tau,e)$ pairs.
-		\begin{itemize}
-			\item The editor has suggested that I can choose a very simple take-it-or-leave-it schedule with one just pair or $e=0$, but in order for my calculus-based results to hold up, I think I need a differentiable schedule.
-			\item At any rate, no one in the government gets to 'pick' $\tau$ on its own; a particular $\tau$ is demanded in return for a particular $e$. They are a bundle constructed by the lobby.
-			\item In my model, who the decision-maker IS is determined by the lobby's chosen $e$.
-		\end{itemize}
-	\item Is it possible to have a DGH-style indifference condition in the spirit of my model, i.e. $e$ determines the median legislator?
-		\begin{itemize}
-			\item In a normal repeated game, players choose current period action to maximize the whole stream of payoffs; that's not what happens in my model. The current player makes his decision with a view to influencing who will be the median legislator in the future.
-			\item Current player finds $\tau$ that maximizes current payoffs, then checks to see whether it will also maximize future payoffs. If it doesn't, he switches to trade agreement tariff.
-				\begin{itemize}
-					\item That is, the maximization program for current player is complex: has to find optimal $\tau$ if he's going to break, then compare total payoff stream under $\tau^b(\ov{e})$ to total payoff under $\tau^a$.
-				\end{itemize}
-		\end{itemize}
-\end{itemize}
-			
-\newpage
-As for the results on optimal dispute settlement, with the government incentive constraint altered to Expression~\ref{eq:newleg}, Expression~\ref{ine:T} for the change in the constraint when $T$ changes is 
+As for the results on optimal dispute settlement, with the government incentive constraint altered to Expression~\ref{eq:newleg}, Expression~\ref{eq:uniopt} for the change in the constraint when $T$ changes is 
 	\begin{multline}
-		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(\ov{e}) \right]}{\left[ 1 + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \right] \frac{\partial g(e)}{\partial e} } \\
+		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(\ov{e}) \right]}{ \frac{\partial g(e)}{\partial e} } \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a(\tau^a) \right]
 	\end{multline}
-The only change is to the expression for $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$. The denominator changes as in Lemmas~\ref{lem:et} and \ref{lem:ets} and converges to $\frac{\de}{1-\de}$ as $T \rightarrow \infty$ just as in the main formulation. Likewise, the numerator converges to $0$.
+The only change is to the expression for $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$. The denominator changes as in Lemmas~\ref{lem:et} and \ref{lem:ets} and is constant in $T$ just as in the unitary model of Section~\ref{sec:unitary}. Likewise, the numerator converges to $0$.
 
-\newpage
 We do need the condition that $W(\bta) +g(e_a(\tau^a)) > W(\btw) + g(\ov{e})$, that is, that the trade war is actually a punishment for the government. But the lobby must choose the $\tau^b,\ov{e}$ pairs via Equation~\ref{eq:newleg} to make $W(\tau^b,\tau^{*a}) +g(\ov{e}) > W(\bta) + g(e_a(\tau^a))$ since $\tau^b$ must be greater than $\tau^a$ in order for the trade agreement to be violated. This implies the previous inequality.
 
 In order for a non-trivial trade agreement equilibrium to exist, that is, where $\bta < \btw$, it must be the case that there is a $\bta < \btw$ at which the lobby loses money at every $\left(\tau^b,\ov{e}\right)$ pair that is determined by Expression (\ref{eq:newleg}). As long as it is not profitable for the lobby to induce a break at the pair that maximizes the lobby's profit, this condition is ensured. The conditions for the existence of a non-trivial trade agreement are a bit simpler in the \citet{dgh97}-style model because the determination of $\tau^b$ is more direct.
