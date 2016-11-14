@@ -607,10 +607,10 @@ It will also be possible to explore whether accounting for the endogeneity of po
 
 \section{Bibliography}
 \bibliographystyle{aea}
-\bibliography{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements} %dell home laptop
+%\bibliography{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements} %dell home laptop
 %\bibliography{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
 %\bibliography{C:/Users/kbuzard/Dropbox/Research/xBibs/tradeagreements} %surface
-%\bibliography{C:/Apps-SU/Dropbox/Research/xBibs/tradeagreements} %work
+\bibliography{C:/Apps-SU/Dropbox/Research/xBibs/tradeagreements} %work
 %\bibliography{C:/Users/wallis/Dropbox/Research/xBibs/tradeagreements} %wallis
 
 
@@ -782,10 +782,36 @@ In contrast, when $e$ increases in the non-unitary model, the government cares a
 \subsection{Dixit, Grossman and Helpman (1997)-Style Model}
 In Section~\ref{sec:stage}, I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in \citet{dgh97}. Here I show that, under the non-unitary government assumption, the \citet{dgh97} model specialized to this environment produces results that are qualitatively the same as those in the main body of the paper.
 
-Here, the lobby offers a contribution schedule of pairs of effort levels and tariff. Following \citet{dgh97}, I assume these pairs reflect the fact that the lobby has all the bargaining power in its relationship with the government. (can be very simple: just one $(e,\tau)$ pair, $e=0$ for everything else).
+Here, the lobby offers a contribution schedule of pairs of effort levels and tariff. Following \citet{dgh97}, I assume these pairs reflect the fact that the lobby has all the bargaining power in its relationship with the government.
 
-Denote the government's welfare function as $W_G(\tau,\tau^*,e(\tau)) = W(\tau,\tau^*) + g(e(\tau))$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare. 
-		
+Denote the government's welfare function as $W_G(\tau,\tau^*,e(\tau)) = W(\tau,\tau^*) + g(e(\tau))$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare. The structure of the trade-agreement-setting phase does not change (Section~\ref{sec:zero}). In the trade war, the government will be presented with a contribution schedule of lobbying effort, tariff pairs that can be denoted as a function $e(\tau)$. The government then maximizes $W_G(\tau,\tau^*,e(\tau))$ unilaterally.
+
+Given Propositions 1 and 3 of \citet{dgh97} and the assumption that the lobby has all the bargaining power, the lobby calculates $\left(\tau,e\right)$ schedule from $W(\tau) +g(e) = W(\tau^{opt}) +g(0)$ where $\tau^{opt}$ is the government's optimal unilateral tariff in the absence of lobbying effort. If we assume $g(0) = 0$, $e = g^{-1}\left[W(\tau^{opt}) - W(\tau)\right]$.
+								
+The break phase is also altered. Here, the legislature's repeated-game incentive constraint is altered qualitatively and therefore the lobby's incentive constraint changes quantitatively (although not qualitatively). Equation~\ref{eq:leg2}, which defines how much the lobby must pay to break the trade agreement (i.e. $\ov{e}$), must therefore be re-written.
+
+When lobby has all the bargaining power, the $(\ov{e},\tau^b)$ schedule makes the legislature indifferent between breaking the trade agreement or abiding by it, maximizing the lobby's future income stream by paying the legislature no more than necessary to break the break agreement. Note that in contrast to the trade war environment, if the legislature doesn't break the trade agreement, the institutional environment is such that the outside option is $\left(\tau^a,e_a\right)$. The legislature's incentive constraint is then
+	\begin{multline}
+		W(\bta) + g(e_a(\tau^a)) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a(\tau^a))\right] = \\
+	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
+		\label{eq:newleg}
+	\end{multline}
+					
+The main construction in Section~\ref{sec:structure} remains qualitatively the same, as Lemmas~\ref{lem:et} and \ref{lem:ets} continue to hold. 
+					
+Lemma 1:
+	\begin{equation*}
+		\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a(\tau^a))\right]}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
+  \end{equation*}
+							
+Lemma 2:
+	\begin{equation*}
+		\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} =
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
+	\end{equation*}
+							
+The denominators have the same sign, but are different from the main model in that the lobby's profit differentials do not appear here because the $g(\cdot)$ function is additively separable from profits, whereas $\ga(\cdot)$ is not. Their numerators are not changed much: $W(\bta) + g(e_a(\tau^a))$ is the equivalent of $W_{ML}(\ga(e_a),\bta)$ in this alternative model. The substantive change is that the expression is evaluated at $e_a$ instead of $\ov{e}$ because indifference must be created here by contrast to the outside option. 
 
 
 \vskip.2in
@@ -807,57 +833,19 @@ In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen a
 				\end{itemize}
 		\end{itemize}
 \end{itemize}
-
-
-
-\vskip.2in
-The structure of the trade-agreement-setting phase does not change (Section~\ref{sec:zero}). In the trade war, the government will be presented with a contribution schedule of lobbying effort, tariff pairs that can be denoted as a function $e(\tau)$. The government then maximizes $W_G(\tau,\tau^*,e(\tau))$ unilaterally.
-
-Given Propositions 1 and 3 of \citet{dgh97} and the assumption that the lobby has all the bargaining power, the lobby calculates $\left(\tau,e\right)$ schedule from $W(\tau) +g(e) = W(\tau^{opt}) +g(0)$ where $\tau^{opt}$ is the government's optimal unilateral tariff in the absence of lobbying effort. If we assume $g(0) = 0$, $e = g^{-1}\left[W(\tau^{opt}) - W(\tau)\right]$.
-								
-The break phase is also altered. Here, the legislature's repeated-game incentive constraint is altered qualitatively and therefore the lobby's incentive constraint changes quantitatively (although not qualitatively). Equation~\ref{eq:leg2}, which defines how much the lobby must pay to break the trade agreement (i.e. $\ov{e}$), must therefore be re-written.
-
-When lobby has all the bargaining power, the $(\ov{e},\tau^b)$ schedule makes the legislature indifferent between breaking the trade agreement or abiding by it, maximizing the lobby's future income stream by paying the legislature no more than necessary to break the break agreement. Note that in contrast to the trade war environment, if the legislature doesn't break the trade agreement, the institutional environment is such that the outside option is $\left(\tau^a,e_a\right)$. The legislature's incentive constraint is then
-	\begin{multline}
-		W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
-	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
-		\label{eq:newleg}
-	\end{multline}
-					
-							Lemma 1:
-							\begin{equation}
-								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a)\right]}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
-							\end{equation}
-							Lemma 2:
-							\begin{equation*}
-								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
-							\end{equation*}
 			
 \newpage
-Optimal dispute settlement: depends on how government IC changes
-			  \begin{multline}
-					\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a) - W(\btw) - g(\ov{e}) \right]}{\left[ 1 + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \right] \frac{\partial g(e)}{\partial e} } \\
-	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
-				\end{multline}
-				Numerator of $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$ and denominator $\rightarrow \frac{\de}{1-\de}$, just as in basic formulation
-				\begin{itemize}
-					\item Need numerator of $\frac{\partial \ov{e}}{\partial T}$ to be positive, i.e. $W(\bta) +g(e_a) > W(\btw) + g(\ov{e})$
-					\item If not, trade war is not a punishment for the legislature
-					\item Analogy to main formulation: IF there's an equilibrium with $\tau^a < \tau^{tw}$, $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ must be positive.
-					\item If there's no $\ov{e}$ that satisfies inequality (10), then no $\tau^a < \tau^{tw}$ is self-enforcing.
-					\item The last paragraph on pg. 19 restricts attention to this case, \textbf{may need to clarify it}; bottom of pg 21 to middle of pg. 22 discusses existence of eqm with $\tau^a < \tau^{tw}$ in detail
-					\item For the purposes of Sections 5 and 6, we must have $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) > 0$. Otherwise there would be no interior solution and we wouldn't be interested in these results.
-				\end{itemize}
-			Is it harder to believe $W(\bta) +g(e_a) > W(\btw) + g(\ov{e})$? No, I don't think so.
-				\begin{itemize}
-					\item Here, $\ov{e}, \tau^b$ pair is chosen to make it true: they're chosen to make Expression (\ref{eq:newleg}) hold with equality by profix maximizing behavior of lobby. In order to get lobby to defect, by this equation, the above inequality must hold.
-					\item To be clear, to get an eqm with $\bta < \btw$, there needs to be a $\bta < \btw$ where the lobby loses money at every $\left(\tau^b,\ov{e}\right)$ pair that is determined by Expression (\ref{eq:newleg}). We simplify this problem by finding the best pair for the lobby and making sure that one is not profitable.
-					\item There is no 'extra' relationship with the determination of $\tau^b$ that could get in the way as in the base formulation
-					\item Bottom line: no harder to believe this inequality holds than the DGH version; perhaps even a bit easier
-				\end{itemize}
+As for the results on optimal dispute settlement, with the government incentive constraint altered to Expression~\ref{eq:newleg}, Expression~\ref{ine:T} for the change in the constraint when $T$ changes is 
+	\begin{multline}
+		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(\ov{e}) \right]}{\left[ 1 + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \right] \frac{\partial g(e)}{\partial e} } \\
+	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a(\tau^a) \right]
+	\end{multline}
+The only change is to the expression for $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$. The denominator changes as in Lemmas~\ref{lem:et} and \ref{lem:ets} and converges to $\frac{\de}{1-\de}$ as $T \rightarrow \infty$ just as in the main formulation. Likewise, the numerator converges to $0$.
 
+\newpage
+We do need the condition that $W(\bta) +g(e_a(\tau^a)) > W(\btw) + g(\ov{e})$, that is, that the trade war is actually a punishment for the government. But the lobby must choose the $\tau^b,\ov{e}$ pairs via Equation~\ref{eq:newleg} to make $W(\tau^b,\tau^{*a}) +g(\ov{e}) > W(\bta) + g(e_a(\tau^a))$ since $\tau^b$ must be greater than $\tau^a$ in order for the trade agreement to be violated. This implies the previous inequality.
+
+In order for a non-trivial trade agreement equilibrium to exist, that is, where $\bta < \btw$, it must be the case that there is a $\bta < \btw$ at which the lobby loses money at every $\left(\tau^b,\ov{e}\right)$ pair that is determined by Expression (\ref{eq:newleg}). As long as it is not profitable for the lobby to induce a break at the pair that maximizes the lobby's profit, this condition is ensured. The conditions for the existence of a non-trivial trade agreement are a bit simpler in the \citet{dgh97}-style model because the determination of $\tau^b$ is more direct.
 		
 \end{document}
 
