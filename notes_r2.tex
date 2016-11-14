@@ -66,118 +66,9 @@ I have slightly clarified the discussion around Results 2 and 3 in the four para
 \textbf{Editor Point 3}: \\
 You state that your specification of legislature preferences can be seen as a special case of the Dixit-Grossman-Helpman (DGH) model. It would be helpful if you could substantiate this claim. More specifically, let us consider a simple version of the DGH specification in your setting. Suppose you modify your model only in two ways. First, suppose the legislature preferences are given by W+g(e), where g(e) is an increasing and concave function of contributions (while the lobby preferences remain the same). And second, suppose the lobby offers a contribution schedule e(t) before the legislature chooses the tariff. The question is: would this model deliver the same results as yours (at least qualitatively)? Note that in this setting you can focus on a simple all-or-nothing contribution schedule, of the kind "if you give me a 5$\%$ tariff I give you $\$$100, otherwise you get nothing." Intuitively the promised contribution will just compensate the legislator for the loss associated with the requested tariff, so the analysis might not be hard.  If this DGH version of your model yields similar qualitative results, pointing out this "isomorphism" would help you in several ways. First, it would provide "foundations" for your assumed legislature preferences, in terms of a model (DGH) that people are familiar with. Second, this would help address my question 2 above: in the DGH model we can think of e as money, and I think it would be reasonable to stick with your current definition of aggregate welfare (even though in principle one might question this definition of aggregate welfare when utility is not transferrable). And third, you could examine whether your results rely on the presence of diminishing marginal utility from contributions: what would happen if g is linear (as in the basic Protection for Sale model) rather than strictly concave? \\
 
-\vskip.5in
-What editor proposes:
-\begin{itemize}
-	\item Lobby offers contribution schedule (can be very simple: just one $(e,\tau)$ pair, $e=0$ for everything else)
-	\item Government maximizes $W + g(e)$
-		\begin{itemize}
-			\item Note that $CS_X + \ga(e) \cdot PS_X + CS_Y + PS_Y +TR = W + \left( \ga(e) - 1 \right) PS_X$
-			\item Also note that there may be a problem of interpretation: DGH fundamentally makes unitary actor indifferent, instead of my set-up where $e=0$ and $e=\ov{e}$ lead to two different decision makers
-		\end{itemize}
-\end{itemize}
-
-\vskip.2in
-In my model, I argue that the break tariff $(\tau^b(\ov{e}))$ should be chosen according to the lobbying effort applied in the break stage $(\ov{e})$ because this determines the identity of the median legislator. The median legislator in the current period gets to pick the tariff in the current period.
-\begin{itemize}
-	\item In DGH, the lobby presents a unitary gov't with a schedule of $(\tau,e)$ pairs.
-		\begin{itemize}
-			\item The editor has suggested that I can choose a very simple take-it-or-leave-it schedule with one just pair or $e=0$, but in order for my calculus-based results to hold up, I think I need a differentiable schedule.
-			\item At any rate, no one in the government gets to 'pick' $\tau$ on its own; a particular $\tau$ is demanded in return for a particular $e$. They are a bundle constructed by the lobby.
-			\item In my model, who the decision-maker IS is determined by the lobby's chosen $e$.
-		\end{itemize}
-	\item Is it possible to have a DGH-style indifference condition in the spirit of my model, i.e. $e$ determines the median legislator?
-		\begin{itemize}
-			\item In a normal repeated game, players choose current period action to maximize the whole stream of payoffs; that's not what happens in my model. The current player makes his decision with a view to influencing who will be the median legislator in the future.
-			\item Current player finds $\tau$ that maximizes current payoffs, then checks to see whether it will also maximize future payoffs. If it doesn't, he switches to trade agreement tariff.
-				\begin{itemize}
-					\item That is, the maximization program for current player is complex: has to find optimal $\tau$ if he's going to break, then compare total payoff stream under $\tau^b(\ov{e})$ to total payoff under $\tau^a$.
-				\end{itemize}
-		\end{itemize}
-\end{itemize}
 
 
 
-Sectioning from my paper:
-\begin{itemize}
-	\item[3.1] Same (execs)
-	\item[3.2] Trade war
-	\item Government evaluates welfare (unilateral because $\tau^*$ doesn't change) at the TIOLI offer of the lobby and at the value $\left(\tau^{opt}\right)$ that satisfies $\frac{\partial W}{\partial \tau} = 0$ [nothing the leg does here will change the contribution]. Chooses which one maximizes welfare.
-		\begin{itemize}
-			\item DGH Proposition 1: principal (lobby) has to provide at least agent's (gov'ts) outside option; as long as this constraint is satisfied, lobby can propose $\tau$ and payment that maximizes his own utility
-			\item DGH Proposition 3 (p. 760-61): simplifies so we don't need to look for contribution functions, only eqm values
-			\item Assume lobby has all the bargaining power as in DGH97. Then lobby calculates $\left(\tau,e\right)$ schedule from
-								\[
-									W(\tau) +g(e) = W(\tau^{opt}) +g(0)
-								\]
-								Assume $g(0) = 0$. Then
-								\[
-									g(e) = W(\tau^{opt}) - W(\tau)
-								\]
-								\[
-									e = g^{-1}\left[W(\tau^{opt}) - W(\tau)\right]
-								\]
-		\end{itemize}
-	\item[3.3] Nothing seems to change
-	\item[3.4] Nothing seems to change
-	\item[4] I think the break phase is essentially the same, but the way it is calculated is different
-				\begin{itemize}
-					\item Lobby first determines $\ov{e}$, then decides whether it's worthwhile paying $\ov{e}$
-					\item Need to re-write Equation 12, which defines $\ov{e}$
-						\begin{itemize}	
-							\item What \textit{is} $\ov{e}$? It's what the lobby has to pay to get the legislature to break the trade agreement
-							\begin{multline}
-						W_{\text{ML}}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta)  \geq \\
-	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_{\text{ML}}(\ga(e),\btw)
-  \label{ine:leg2}
-					\end{multline}
-						\item In base model, the $\tau$ for the current period is chosen in response to current period $e$; this decision is made differently (potentially) than the decision to break. Is there a similar separation between the decisions in the DGH version of the model?
-						\item When lobby has all the bargaining power, there's a schedule $(\ov{e},\tau^b)$ that makes leg indifferent between breaking the trade agreement or abiding by it ($\tau^b$ no longer a direct fcn of $\ov{e}$)
-						\item Note: It's not necessarily the minimum $e$. Yes, $\ov{e}$ must satisfy (something like) Equation (7), but lobby may make higher profits choosing an $e$ higher than the minimum one in the base model.
-							\begin{multline}
-								W(\bta) + g(e_a) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[W(\bta) + g(e_a)\right] = \\
-	W(\tau^b,\tau^{*a}) +g(\ov{e}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W(\btw) + g(\ov{e})\right]
-								\label{eq:newleg}
-							\end{multline}
-							The lobby's payment / requested tariff pair maximize the lobby's future income stream by paying legislature no more than necessary to break
-								\begin{itemize}
-									\item If legislature doesn't break, it'll choose $\left(\tau^a,e_a\right)$, which is set by trade agreement
-									\item Lobby isn't going to set indifference condition to a WORSE outcome (i.e. $\left(\tau^{opt},0\right)$
-								\end{itemize}
-							Lemma 1:
-							\begin{equation}
-								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a)\right]}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
-							\end{equation}
-							Lemma 2:
-							\begin{equation*}
-								\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\left[1+\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\right] \frac{\partial g(e)}{\partial \ov{e}} }
-							\end{equation*}
-				\end{itemize}
-			\item[6] Optimal dispute settlement: depends on how government IC changes
-			  \begin{multline}
-					\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a) - W(\btw) - g(\ov{e}) \right]}{\left[ 1 + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \right] \frac{\partial g(e)}{\partial e} } \\
-	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a \right]
-				\end{multline}
-				Numerator of $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$ and denominator $\rightarrow \frac{\de}{1-\de}$, just as in basic formulation
-				\begin{itemize}
-					\item Need numerator of $\frac{\partial \ov{e}}{\partial T}$ to be positive, i.e. $W(\bta) +g(e_a) > W(\btw) + g(\ov{e})$
-					\item If not, trade war is not a punishment for the legislature
-					\item Analogy to main formulation: IF there's an equilibrium with $\tau^a < \tau^{tw}$, $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw)$ must be positive.
-					\item If there's no $\ov{e}$ that satisfies inequality (10), then no $\tau^a < \tau^{tw}$ is self-enforcing.
-					\item The last paragraph on pg. 19 restricts attention to this case, \textbf{may need to clarify it}; bottom of pg 21 to middle of pg. 22 discusses existence of eqm with $\tau^a < \tau^{tw}$ in detail
-					\item For the purposes of Sections 5 and 6, we must have $W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) > 0$. Otherwise there would be no interior solution and we wouldn't be interested in these results.
-				\end{itemize}
-			Is it harder to believe $W(\bta) +g(e_a) > W(\btw) + g(\ov{e})$? No, I don't think so.
-				\begin{itemize}
-					\item Here, $\ov{e}, \tau^b$ pair is chosen to make it true: they're chosen to make Expression (\ref{eq:newleg}) hold with equality by profix maximizing behavior of lobby. In order to get lobby to defect, by this equation, the above inequality must hold.
-					\item To be clear, to get an eqm with $\bta < \btw$, there needs to be a $\bta < \btw$ where the lobby loses money at every $\left(\tau^b,\ov{e}\right)$ pair that is determined by Expression (\ref{eq:newleg}). We simplify this problem by finding the best pair for the lobby and making sure that one is not profitable.
-					\item There is no 'extra' relationship with the determination of $\tau^b$ that could get in the way as in the base formulation
-					\item Bottom line: no harder to believe this inequality holds than the DGH version; perhaps even a bit easier
-				\end{itemize}
-		\end{itemize}
-\end{itemize}
 
 
 \vskip.5in
@@ -437,6 +328,10 @@ ii). Page 12: The notation $W_E$ and $W*_E$ is used in (3) before being formally
 \end{itemize}
 
 iii). Page 16: The author sometimes refers to "continuation values" as corresponding to current payoffs plus discounted future payoffs, but I think the more conventional use of the term refers only to the latter (i.e., to the V terms in the incentive constraint).
+\begin{itemize}
+\renewcommand\labelitemi{-}
+	\item \textit{Thank you for pointing this out. I have clarified the terminology wherever it is not clear that I'm referring to the future discounted stream of payoffs from period $t+1$ [pages 16, 19]}
+\end{itemize}
 
 iv). Page 19: The author says that, in the absence of a trade agreement, the lobby has no incentive to be active. I don't know what this means - wouldn't the lobby still choose $e_{tw}$ in that case?
 \begin{itemize}
