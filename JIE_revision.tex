@@ -636,20 +636,20 @@ Labeling the left sides of Equations~\ref{eq:leg2} and \ref{eq:lob2} as $\Omega\
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 	\label{eq:coret}
 \end{equation}
 
 \noindent In order for the lobby's incentive constraint (Equation~\ref{eq:lob2}) to hold in equilibrium, $\ov{e}$ must be at least as large as $e_{tw}$. Since the executives have no incentive to set the trade agreement tariff above the trade war tariff, this means that $\tau^a \leq \tau^{tw} \leq \tau^b(\ov{e}(\tau^a))$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is (weakly) to the right of $\tau^a$, implying that the numerator is (weakly) positive.
 
-Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a \leq \tau^{tw} \leq \tau^b(\ov{e}(\tau^a))$. Therefore the denominator is negative.\footnote{Note that when $\tau^a = \tau^{tw} = \tau^b(\ov{e}(\tau^a))$, only the trivial trade agreement is possible and so this result and those that build upon it are not of interest.} Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
+Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga(\ov{e})}{\partial e}$ is positive. Both profit differences are negative since $\tau^a \leq \tau^{tw} \leq \tau^b(\ov{e}(\tau^a))$. Therefore the denominator is negative.\footnote{Note that when $\tau^a = \tau^{tw} = \tau^b(\ov{e}(\tau^a))$, only the trivial trade agreement is possible and so this result and those that build upon it are not of interest.} Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Lem_ets}{Proof of Lemma~\ref{lem:ets}}}: \\
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(\ov{e}),\bta)} {\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 	\label{eq:corets}
 \end{equation}
 
@@ -682,7 +682,7 @@ Looking at the denominator, the discounting term is positive, so the term in par
 By the Implicit Function Theorem:
 \begin{equation}
  	\textstyle \frac{\mathrm{d} \ov{e}}{\mathrm{d} \de_\text{ML}} = -\frac{\frac{\partial \Omega}{\partial \de_\text{ML}}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\frac{ \frac{1 - \left(T+1\right)\de_\text{ML}^T + T \de_\text{ML}^{T+1}}{\left(1-\de_\text{ML} \right)^2} \left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
+	\frac{ \frac{1 - \left(T+1\right)\de_\text{ML}^T + T \de_\text{ML}^{T+1}}{\left(1-\de_\text{ML} \right)^2} \left[  W_\text{ML}(\ga(\ov{e}),\bta) - W_\text{ML}(\ga(\ov{e}),\btw) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
  	\label{eq:e_de}
 \end{equation}
 
@@ -717,9 +717,9 @@ By the same argument as in the proof of Corollary~\ref{cor:tdl}, the denominator
 By the Implicit Function Theorem:
 \begin{equation}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} = -\frac{\frac{\partial \Omega}{\partial \ga}}{\frac{\partial \Omega}{\partial \ov{e}}} = -
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \left[ \pi_X(\tau^b(e)) - \pi_X(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] -  \frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(e)) - \pi_X(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] - \left[ \pi_X(\tau^b(e)) - \pi_X(\tau^{a}) \right]}{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^a) - \pi_X(\tau^{tw}) \right] -  \frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^b(e)) - \pi_X(\tau^{a}) \right]}
 \end{equation}
-keeping in mind that the numerator is simplified by the envelope theorem. We can factor $\frac{\partial \ga}{\partial \ov{e}}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga}{\partial \ov{e}}} < 0$. $\hfill\blacksquare$
+keeping in mind that the numerator is simplified by the envelope theorem. We can factor $\frac{\partial \ga(\ov{e})}{\partial e}$ out of the denominator and cancel the rest, leaving $-\frac{1}{\frac{\partial \ga(\ov{e})}{\partial e}} < 0$. $\hfill\blacksquare$
 
 
 \vskip.4in
@@ -760,19 +760,19 @@ The lobbying constraint is unchanged.
 Lemmas \ref{lem:et} and \ref{lem:ets} continue to hold, although their proofs are modified slightly. Equations~\ref{eq:coret} and ~\ref{eq:corets} become
 \begin{equation*}
  	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]} \hskip.5in 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(e_a(\tau^a)),\bta)}{\frac{\partial \ga}{\partial \ov{e}}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
+	\textstyle \frac{\frac{\partial}{\partial \tau^a}W_\text{ML}(\ga(\ov{e}),\bta)}{\frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]} \hskip.5in 	\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} = 
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \frac{\partial}{\partial \tau^{*a}}W_\text{ML}(\ga(e_a(\tau^a)),\bta)}{\frac{\partial \ga(\ov{e})}{\partial e}\left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^{a}) \right]}
 \end{equation*}
 The first is positive and the second is negative, just as for the non-unitary model. Thus the central insights are qualitatively the same as for the model with a non-unitary decision-maker at the break stage.
 
 The results of Section~\ref{sec:optimal} hold for a significantly smaller set of parameters, however. Equation~\ref{ine:T} becomes
 \begin{multline}
- 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(e_a(\tau^a)),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right]}{\frac{\partial \ga}{\partial \ov{e}} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right]} \\
+ 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(e_a(\tau^a)),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right]}{\frac{\partial \ga(\ov{e})}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right]} \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a(\tau^a) \right]
 	\label{eq:uniopt}
 \end{multline}
 
-Note, in particular, that the additive term $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]$ disappears from the denominator of the first summand, that is, from the expression for $\frac{\partial \ov{e}}{\partial T}.$ Now $-\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}$ can be factored out of each of the summands if $\de_{ML} = \de_L$. In this case, the expression is either positive, zero, or negative for all values of $T$. An interior solution in $T$ only exists when the expression evaluated at $T=0$ is positive and $\de_{ML} < \de_L$. In this case, the positive, first term goes to zero faster than the negative, second term and the expression becomes zero for some finite value of $T$.
+Note, in particular, that the additive term $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga(\ov{e})}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]$ disappears from the denominator of the first summand, that is, from the expression for $\frac{\partial \ov{e}}{\partial T}.$ Now $-\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}$ can be factored out of each of the summands if $\de_{ML} = \de_L$. In this case, the expression is either positive, zero, or negative for all values of $T$. An interior solution in $T$ only exists when the expression evaluated at $T=0$ is positive and $\de_{ML} < \de_L$. In this case, the positive, first term goes to zero faster than the negative, second term and the expression becomes zero for some finite value of $T$.
 
 This comparison between the non-unitary model of the paper and the alternative, unitary model helps to highlight part of the mechanism underlying Results~\ref{res:opt1} and \ref{res:3} on optimal punishments. As is usual, the increase in $\ov{e}$ as $T$ increases comes from the interaction of a direct effect and an indirect effect. When $T$ increases, the direct effect is that the decision maker experiences more punishment periods and so is less willing to break the agreement. In order to restore indifference, $\ov{e}$ has to be raised (the indirect effect) so that the decision maker places more weight on the lobby's profits and therefore is more willing to break the agreement for the same $\bta$.
 
@@ -815,20 +815,20 @@ The main construction in Section~\ref{sec:structure} remains qualitatively the s
 Lemma 1:
 	\begin{equation*}
 		\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^a} = -\frac{\frac{\partial \Omega}{\partial \tau^a}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a(\tau^a))\right]}{\frac{\partial g(e)}{\partial \ov{e}} }
+	\textstyle \frac{\left[1+ \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \right]\frac{\partial}{\partial \tau^a}\left[W(\bta) + g(e_a(\tau^a))\right]}{\frac{\partial g(\ov{e})}{\partial e} }
   \end{equation*}
 							
 Lemma 2:
 	\begin{equation*}
 		\frac{\mathrm{d} \ov{e}}{\mathrm{d} \tau^{*a}} = -\frac{\frac{\partial \Omega}{\partial \tau^{*a}}}{\frac{\partial \Omega}{\partial \ov{e}}} =
-	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\frac{\partial g(e)}{\partial \ov{e}} }
+	\textstyle \frac{\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}  \frac{\partial}{\partial \tau^{*a}}W(\bta)}{\frac{\partial g(\ov{e})}{\partial e} }
 	\end{equation*}
 							
 The denominators have the same sign, but are different from those in Section~\ref{sec:unitary} in that the lobby's profit differentials do not appear here because the $g(\cdot)$ function is additively separable from profits, whereas $\ga(\cdot)$ is not. Their numerators are not changed much: $W(\bta) + g(e_a(\tau^a))$ is the equivalent of $W_{ML}(\ga(e_a(\tau^a)),\bta)$ in this alternative model. The substantive change is that the expression is evaluated at $e_a(\tau^a)$ instead of $\ov{e}$ because indifference must be created here by comparison to welfare evaluated at the outside option. 
 
 As for the results on optimal dispute settlement, with the government incentive constraint altered to Expression~\ref{eq:newleg}, Expression~\ref{eq:uniopt} for the change in the constraint when $T$ changes is 
 	\begin{multline}
-		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(e_{tw}) \right]}{ \frac{\partial g(e)}{\partial \ov{e}} } \\
+		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(e_{tw}) \right]}{ \frac{\partial g(\ov{e})}{\partial e} } \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a(\tau^a) \right]
 	\end{multline}
 The only change is to the expression for $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$. The denominator changes as in Lemmas~\ref{lem:et} and \ref{lem:ets} and is constant in $T$ just as in the unitary model of Section~\ref{sec:unitary}. Likewise, the numerator converges to $0$.
