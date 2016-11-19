@@ -290,21 +290,21 @@ Here I focus on the key issue of the conditions under which the legislature deci
 
 Recall that the trade agreement is broken when the legislature chooses a tariff that is higher than the trade agreement level, $\tau^a$. A tariff level that would violate the trade agreement is chosen in the same manner as the trade war tariff, that is, according to Equation~\ref{eq:leguni}. The legislature will, however, only choose to break the trade agreement if the discounted stream of payoffs it receives from breaking the agreement is higher than the discounted stream of payoffs it receives from abiding by the agreement. The incentive constraint for the median legislator is a condition on the trade agreement tariffs $\bta$ for a given $T$. It can be written as
 \[
-  W_\text{ML}(\ga(e),\bta) + \de_\text{ML} V^A_\text{ML} \geq W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \de_\text{ML} V^P_\text{ML}
+  W_\text{ML}(\ga(e_b),\bta) + \de_\text{ML} V^A_\text{ML} \geq W_\text{ML}(\ga(e_b),\tau^R(e_b),\tau^{*a}) + \de_\text{ML} V^P_\text{ML}
 \]
-where $V^A_\text{ML}$ is the median legislator's continuation value from the period after the break decision when it abides by the trade agreement $V^P_\text{ML}$ is the analogous continuation value when it defects and is punished.
+where $V^A_\text{ML}$ is the median legislator's continuation value from the period after the break decision when it abides by the trade agreement $V^P_\text{ML}$ is the analogous continuation value when it defects and is punished. I denote lobbying effort during a period in which the legislature could break the trade agreement as $e_b$.
 
 If the Nash reversion punishment lasts for $T$ periods, then the only part of the discounted payoff stream that need be considered is the current period and the following $T$ periods: after those $T$ periods, the trade agreement will be in force so the continuation value from period $T+1$ on will be the same whether or not the agreement is broken. Therefore we have\footnote{Note that $\de + \de^2 + \ldots + \de^l = \sum_{k=1}^l \de^k= \sum_{k=1}^\infty \de^k - \sum_{k=l+1}^\infty \de^k = \frac{\de}{1-\de} - \frac{\de^{l+1}}{1-\de} = \frac{\de - \de^{l+1}}{1-\de} $.}
 \begin{multline}
-  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta) \geq \\
-	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\btw).
+  W_\text{ML}(\ga(e_b),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\bta) \geq \\
+	W_\text{ML}(\ga(e_b),\tau^R(e_b),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e_b),\btw).
   \label{ine:leg}
 \end{multline}
-Built into this condition is the legislature's applied tariff-setting behavior when the lobby's effort level is below the cutoff value $\ov{e}(\bta)$ that leads the legislature to break the trade agreement. Label the effort level at which the legislature chooses a particular $\tau^a$ as its optimal unilateral tariff as $e_a(\tau^a)$. The determination of $\ov{e}(\bta)$ is described in the next section. For any effort level weakly between $e_a(\tau^a)$ and $\ov{e}(\bta)$, the legislature chooses $\tau^a$ as the applied tariff. If the effort level is below $e_a(\tau^a)$, the legislature chooses the corresponding applied tariff, which is necessarily less than $\tau^a$. Because the lobby's net profits are highest at $\tau^{tw}$, when the lobby does not choose $\ov{e}(\bta)$, it will necessarily choose $e_a(\tau^a)$ and the applied tariff will be $\tau^a$.
+Built into this condition is the legislature's applied tariff-setting behavior when $e_b$ is below the cutoff value $\ov{e}(\bta)$ that leads the legislature to break the trade agreement. Label the effort level at which the legislature chooses a particular $\tau^a$ as its optimal unilateral tariff as $e_a(\tau^a)$. The determination of $\ov{e}(\bta)$ is described in the next section. For any $e_b$ weakly between $e_a(\tau^a)$ and $\ov{e}(\bta)$, the legislature chooses $\tau^a$ as the applied tariff. If $e_b < e_a(\tau^a)$, the legislature chooses the corresponding applied tariff, which is necessarily less than $\tau^a$. Because the lobby's net profits are highest at $\tau^{tw}$, when the lobby does not choose $\ov{e}(\bta)$, it will necessarily choose $e_a(\tau^a)$ and the applied tariff will be $\tau^a$.
 
 The condition for the lobby is given in Expression~\ref{ine:lob}. Under the trade agreement, a break in the trade agreement, and punishment period, the lobby receives its profits at the chosen tariff level net of the effort level it exerts:
 \begin{multline}
-  \pi_X(\tau^a) - e_a(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^a) - e_a(\tau^a) \right] \geq \\ \pi_X(\tau^R(e)) - e + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) - e_{tw} \right] .
+  \pi_X(\tau^a) - e_a(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^a) - e_a(\tau^a) \right] \geq \\ \pi_X(\tau^R(e_b)) - e_b + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) - e_{tw} \right] .
   \label{ine:lob}
 \end{multline}
 
@@ -314,15 +314,15 @@ The trade agreement tariffs are thus chosen by the executives according to the f
   \label{prob:max}
 \end{equation}
 \begin{multline}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e),\bta) - W_{\text{ML}}(\ga(e),\btw) \right] \geq \\
-	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) - W_{\text{ML}}(\ga(e),\bta)
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_{\text{ML}}(\ga(e_b),\btw) \right] \geq \\
+	W_{\text{ML}}(\ga(e_b),\tau^R(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
   \label{ine:leg2}
 \end{multline}
 \begin{center}
 and
 \end{center}
 \begin{equation}
-  e \geq \pi_X(\tau^R(e)) - \pi_X(\tau^a) + e_a(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) -e_{tw} - \pi_X(\tau^a) + e_a(\tau^a)\right]
+  e_b \geq \pi_X(\tau^R(e_b)) - \pi_X(\tau^a) + e_a(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) -e_{tw} - \pi_X(\tau^a) + e_a(\tau^a)\right]
   \label{ine:lob2}
 \end{equation}
 where Inequalities \ref{ine:leg2} and \ref{ine:lob2} are simple rearrangements of \ref{ine:leg} and \ref{ine:lob}.
@@ -335,7 +335,7 @@ I now turn to a full description of the strategies and incentives for the equili
 
 Note again that, although the stage game has two phases and the players within a country may use non-public information within a stage game, the equilibrium is in public perfect strategies so players condition their behavior only on the publicly-observable history of tariffs across periods.
 
-At time $t=1$, in any period following a period when the trade agreement has been adhered to, or after the successful completion of a punishment, the lobby chooses $e =e_a(\tau^a)$ and the legislature chooses $\tau^a$, that is, to abide by the agreement by implementing the tariff cap.
+At time $t=1$, in any period following a period when the trade agreement has been adhered to, or after the successful completion of a punishment, the lobby chooses $e_b =e_a(\tau^a)$ and the legislature chooses $\tau^a$, that is, to abide by the agreement by implementing the tariff cap.
 
 Any period $t$ in which a violation of the agreement occurred $j+1$ periods previous for $j \in [0,T-1]$ with limited Nash reversion punishments initiated $j<T$ periods previous and followed in every period until $t$ will be labeled a punishment period. In a punishment period, the lobby chooses $e \geq e_{tw}$ and the legislature chooses a tariff at least as large as its unilateral best response given $e$. Players ignore any deviations from punishment-period prescribed play.\footnote{$T$-period Nash reversion punishments are not necessarily public perfect since the players may want to influence the future path of play during punishment periods. Public perfection can be ensured by specifying that all players ignore any deviations from the punishment by any other player.}
 
@@ -482,8 +482,8 @@ Examples of phenomena that would shift $\ga(\cdot)$ abound: the lobby becoming m
 \label{sec:optimal}
 In an environment without lobbying, \citet{krw} show that social welfare increases (that is, trade-agreement tariffs can be reduced) as punishments are made stronger. This can be seen here if we restrict attention to the legislature's constraint:
 \begin{multline*}
-  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e),\bta) - W_\text{ML}(\ga(e),\btw) \right] \geq \\
-	W_\text{ML}(\ga(e),\tau^b(e),\tau^{*a}) - W_\text{ML}(\ga(e),\bta)
+  \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_b),\bta) - W_\text{ML}(\ga(e_b),\btw) \right] \geq \\
+	W_\text{ML}(\ga(e_b),\tau^b(e_b),\tau^{*a}) - W_\text{ML}(\ga(e_b),\bta)
 \end{multline*}
 This constraint is made less binding as $T$ increases---that is, as we increase the number of periods of punishment. The intuition is straightforward: the per-period punishment is felt for more periods as the one period of gain from defecting remains the same. Thus larger deviation payoffs remain consistent with equilibrium cooperation as $T$ increases.
 
@@ -500,7 +500,7 @@ This is why the standard environment with no lobby gives no model-based predicti
 
 The lobby's constraint
 \[
-  e \geq \pi_X(\tau^b(e)) - \pi_X(\tau^a) + e_a(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a(\tau^a) \right]
+  e_b \geq \pi_X(\tau^b(e_b)) - \pi_X(\tau^a) + e_a(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a(\tau^a) \right]
 \]
 works in the opposite direction in relation to $T$. Here, the lobby benefits in each dispute period, and so the total profit from a dispute is increasing in $T$. Thus we have
 \begin{customlemma}{4}
@@ -640,9 +640,9 @@ By the Implicit Function Theorem:
 	\label{eq:coret}
 \end{equation}
 
-\noindent In order for the lobby's incentive constraint (Equation~\ref{eq:lob2}) to hold in equilibrium, $\ov{e}$ must be at least as large as $e_{tw}$. Since the executives have no incentive to set the trade agreement tariff above the trade war tariff, this means that $\tau^a \leq \tau^{tw} \leq \tau^b$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is (weakly) to the right of $\tau^a$, implying that the numerator is (weakly) positive.
+\noindent In order for the lobby's incentive constraint (Equation~\ref{eq:lob2}) to hold in equilibrium, $\ov{e}$ must be at least as large as $e_{tw}$. Since the executives have no incentive to set the trade agreement tariff above the trade war tariff, this means that $\tau^a \leq \tau^{tw} \leq \tau^b(\ov{e}(\tau^a))$. Therefore $\ov{e}$ will be set so that the median legislator's ideal point is (weakly) to the right of $\tau^a$, implying that the numerator is (weakly) positive.
 
-Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a \leq \tau^{tw} \leq \tau^b$. Therefore the denominator is negative.\footnote{Note that when $\tau^a = \tau^{tw} = \tau^b$, only the trivial trade agreement is possible and so this result and those that build upon it are not of interest.} Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
+Turning to the denominator, $\ga$ is assumed increasing in $e$ so $\frac{\partial \ga}{\partial \ov{e}}$ is positive. Both profit differences are negative since $\tau^a \leq \tau^{tw} \leq \tau^b(\ov{e}(\tau^a))$. Therefore the denominator is negative.\footnote{Note that when $\tau^a = \tau^{tw} = \tau^b(\ov{e}(\tau^a))$, only the trivial trade agreement is possible and so this result and those that build upon it are not of interest.} Combined with the positive numerator and the leading negative sign, the expression is positive. $\hfill\blacksquare$
 
 \vskip.4in
 \noindent \textbf{\hypertarget{Lem_ets}{Proof of Lemma~\ref{lem:ets}}}: \\
@@ -730,7 +730,7 @@ Differentiating the lobby's condition, Equation~\ref{eq:lob3} with respect to $\
 \]
 Because $\frac{\partial \Pi}{\partial \ga} = -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi_X(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]$, we are looking for
 \begin{equation}
- 	\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}- \frac{\partial \Pi}{\partial \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
+ 	\frac{\mathrm{d} \tau^a}{\mathrm{d} \ga} = -\frac{\frac{\partial \Pi}{\partial \ov{e}}\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}+ \frac{\partial \Pi}{\partial \ga}}{\frac{\partial \Pi}{\partial \tau^a}} = -
 	\frac{\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}}\right) \cdot \frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga} -\frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\left[\left(\frac{\partial \pi_X(\tau^{tw})}{\partial \tau^{tw}} - \frac{\partial e_{tw}}{\partial \tau^{tw}}\right)\frac{\partial \tau^{tw}}{\partial \ga} \right]}{\left(1 + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}}\right)\left[\frac{\partial \pi_X(\tau^a)}{\partial \tau^a} - \frac{\partial e_a(\tau^a)}{\partial \tau^a}\right]}
 \end{equation}
 As shown in the proof of Corollary~\ref{cor:eg}, $\frac{\mathrm{d} \ov{e}}{\mathrm{d} \ga}$ is negative, whereas the proof of Corollary~\ref{cor:tdm} shows that $\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}}\right)$ is positive. The trade war tariff is increasing in $\ga$, as are net trade war profits. With the everywhere-positive discount term multiplying these two positive terms, we have another negative term because of the negative sign. Thus the numerator is negative.
@@ -746,12 +746,12 @@ In this appendix, I first compare the results of this paper to those from a mode
 
 \subsection{Unitary Government}
 \label{sec:unitary}
-In the model with a non-unitary government, the lobby's effort $e$ determines the identity of the decision maker. Thus the decision maker at the time the lobby is pushing for the agreement to be broken ($e=e_b$, and $e=\ov{e}$ at minimum) is different from the decision maker during the trade war phase $(e = e_{tw})$ and the decision maker during a trade agreement phase ($e=e_a(\tau^a)$). The weight on the lobbying industry's profits changes with lobbying effort because lobbying effort determines a different median voter in the legislature or government more generally. However, when the median legislator during a `break' phase is evaluating her incentive constraint, she values future tariff choices --- which will be determined by whoever is median in the future --- with her own preferences. Although she will not be the decision maker in the future, there is no reason for her to evaluate future welfare according to some other legislator's preference.
+In the model with a non-unitary government, the lobby's effort $e$ determines the identity of the decision maker. Thus the decision maker at the time the lobby is pushing for the agreement to be broken ($e=e_b$, where $e_b$ must be at least $\ov{e}$ in order to get a median legislator who will break the agreement) is different from the decision maker during the trade war phase $(e = e_{tw})$ and the decision maker during a trade agreement phase ($e=e_a(\tau^a)$). The weight on the lobbying industry's profits changes with lobbying effort because lobbying effort determines a different median voter in the legislature or government more generally. However, when the median legislator during a `break' phase is evaluating her incentive constraint, she values future tariff choices --- which will be determined by whoever is median in the future --- with her own preferences. Although she will not be the decision maker in the future, there is no reason for her to evaluate future welfare according to some other legislator's preference.
 
 If the model is interpreted as having a unitary government, there is only one decision maker. There is a fixed mapping from lobbying effort to the weight the decision maker places on the lobby's profits, and the realization of this weight changes with the realization of lobbying effort. Thus, predicting future lobbying effort, the decision maker knows what the realization of her weight on the lobby's profits will be and evaluates the incentive constraint accordingly. Equation (\ref{ine:leg2}) would be modified to
 \begin{multline}
   \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} \left[W_\text{ML}(\ga(e_a(\tau^a)),\bta) - W_{\text{ML}}(\ga(e_{tw}),\btw) \right] \geq \\
-	W_{\text{ML}}(\ga(e),\tau^R(e),\tau^{*a}) - W_{\text{ML}}(\ga(e),\bta)
+	W_{\text{ML}}(\ga(e_b),\tau^R(e_b),\tau^{*a}) - W_{\text{ML}}(\ga(e_b),\bta)
   \label{ine:leg3}
 \end{multline}
 
@@ -767,12 +767,12 @@ The first is positive and the second is negative, just as for the non-unitary mo
 
 The results of Section~\ref{sec:optimal} hold for a significantly smaller set of parameters, however. Equation~\ref{ine:T} becomes
 \begin{multline}
- 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(e_a(\tau^a)),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right]}{\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right]} \\
+ 	\left(1 - \frac{\mathrm{d} \pi_X}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W_\text{ML}(\ga(e_a(\tau^a)),\bta) - W_\text{ML}(\ga(e_{tw}),\btw) \right]}{\frac{\partial \ga}{\partial \ov{e}} \left[ \pi_X(\tau^b(\ov{e})) - \pi_X(\tau^a) \right]} \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi_X(\tau^{tw}) - e_{tw} -\pi_X(\tau^a) + e_a(\tau^a) \right]
 	\label{eq:uniopt}
 \end{multline}
 
-Note, in particular, that the additive term $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial e} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]$ disappears from the denominator of the first summand, that is, from the expression for $\frac{\partial \ov{e}}{\partial T}.$ Now $-\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}$ can be factored out of each of the summands if $\de_{ML} = \de_L$. In this case, the expression is either positive, zero, or negative for all values of $T$. An interior solution in $T$ only exists when the expression evaluated at $T=0$ is positive and $\de_{ML} < \de_L$. In this case, the positive, first term goes to zero faster than the negative, second term and the expression becomes zero for some finite value of $T$.
+Note, in particular, that the additive term $\frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}}\frac{\partial \ga}{\partial \ov{e}} \left[ \pi_X(\tau^{tw}) - \pi_X(\tau^a) \right]$ disappears from the denominator of the first summand, that is, from the expression for $\frac{\partial \ov{e}}{\partial T}.$ Now $-\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}$ can be factored out of each of the summands if $\de_{ML} = \de_L$. In this case, the expression is either positive, zero, or negative for all values of $T$. An interior solution in $T$ only exists when the expression evaluated at $T=0$ is positive and $\de_{ML} < \de_L$. In this case, the positive, first term goes to zero faster than the negative, second term and the expression becomes zero for some finite value of $T$.
 
 This comparison between the non-unitary model of the paper and the alternative, unitary model helps to highlight part of the mechanism underlying Results~\ref{res:opt1} and \ref{res:3} on optimal punishments. As is usual, the increase in $\ov{e}$ as $T$ increases comes from the interaction of a direct effect and an indirect effect. When $T$ increases, the direct effect is that the decision maker experiences more punishment periods and so is less willing to break the agreement. In order to restore indifference, $\ov{e}$ has to be raised (the indirect effect) so that the decision maker places more weight on the lobby's profits and therefore is more willing to break the agreement for the same $\bta$.
 
@@ -780,11 +780,11 @@ The direct effect decreases to $0$ as $T$ increases, that is, at the same rate i
 
 In the unitary model, the indirect effect (denominator of $\frac{\partial \ov{e}}{\partial T}$) is constant in $T$. That is, because $\ov{e}$ is determined only by the current period realization of lobbying effort, the future profits of the lobby are not taken into consideration. The government instead evaluates punishment period profits from the point of view of the lobbying effort it expects to experience in those periods. 
 
-In contrast, when $e$ increases in the non-unitary model, the government cares about the benefit to the lobby in both the current period and during every punishment period. The indirect effect increases to $\frac{\de}{1-\de}$ as $T$ increases, making $\frac{\partial \ov{e}}{\partial T}$ decrease toward zero at a faster rate than the benefit to the lobby. At some $T$, the increase in $\ov{e}$ can no longer outweigh the increase in the benefit to the lobby.
+In contrast, when $e_b$ increases in the non-unitary model, the government cares about the benefit to the lobby in both the current period and during every punishment period. The indirect effect increases to $\frac{\de}{1-\de}$ as $T$ increases, making $\frac{\partial \ov{e}}{\partial T}$ decrease toward zero at a faster rate than the benefit to the lobby. At some $T$, the increase in $\ov{e}$ can no longer outweigh the increase in the benefit to the lobby.
 
 \subsection{Dixit, Grossman and Helpman (1997)-Style Model}
 \label{sec:dgh}
-In Section~\ref{sec:stage}, I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in \citet{dgh97}. They specify government welfare as $G(a,c)$ where $a$ is the policy vector ($(\tau,\tau^*)$ and $c$ is a vector of payments from each lobby ($e$). 
+In Section~\ref{sec:stage}, I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in \citet{dgh97}. They specify government welfare as $G(a,c)$ where $a$ is the policy vector $\left(\left(\tau,\tau^*\right)\right)$ and $c$ is a vector of payments from each lobby ($e$). 
 
 Here I examine a version of the \citet{dgh97} model specialized to this environment. Because the \citet{dgh97} model is fundamentally a unitary government model, the relevant benchmark is the unitary version of the model in Section~\ref{sec:unitary}. I demonstrate that the results of the two unitary models are qualitatively the same. Thus only minor differences arise between the non-unitary model of the paper and the \citet{dgh97} version and they derive from the unitary government assumption, which is already highlighted is Section~\ref{sec:unitary}.
 
@@ -828,7 +828,7 @@ The denominators have the same sign, but are different from those in Section~\re
 
 As for the results on optimal dispute settlement, with the government incentive constraint altered to Expression~\ref{eq:newleg}, Expression~\ref{eq:uniopt} for the change in the constraint when $T$ changes is 
 	\begin{multline}
-		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(e_{tw}) \right]}{ \frac{\partial g(e)}{\partial e} } \\
+		\left(1 - \frac{\mathrm{d} \pi}{\mathrm{d} \ov{e}} \right) \frac{ -\frac{\de_\text{ML}^{T+1}\ln\de_\text{ML}}{1-\de_\text{ML}}\left[  W(\bta) +g(e_a(\tau^a)) - W(\btw) - g(e_{tw}) \right]}{ \frac{\partial g(e)}{\partial \ov{e}} } \\
 	+  \frac{\de_\text{L}^{T+1} \ln \de_\text{L}}{1-\de_\text{L}} \left[ \pi(\tau^{tw}) - e_{tw} -\pi(\tau^a) + e_a(\tau^a) \right]
 	\end{multline}
 The only change is to the expression for $\frac{\partial \ov{e}}{\partial T} \rightarrow 0$. The denominator changes as in Lemmas~\ref{lem:et} and \ref{lem:ets} and is constant in $T$ just as in the unitary model of Section~\ref{sec:unitary}. Likewise, the numerator converges to $0$.
