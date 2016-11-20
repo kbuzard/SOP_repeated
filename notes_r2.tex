@@ -127,8 +127,13 @@ Regarding Referee 1's idea about time-inconsistent preferences, I guess I am ok 
 \newpage
 \section{Continuation payoffs and changes in the preferences}
 \textbf{Editor Comment 1}: \\
-I agree with Referee 2 that there are still problems with the analysis. Correcting these problems is a necessary (though not sufficient) condition for me to move forward with this paper. You will need to convince us beyond the reasonable doubt that the analysis is correct. \\
+I agree with Referee 2 that there are still problems with the analysis. Correcting these problems is a necessary (though not sufficient) condition for me to move forward with this paper. You will need to convince us beyond the reasonable doubt that the analysis is correct.
+\begin{itemize}
+\renewcommand\labelitemi{-}
+	\item \textit{Please see below.}
+\end{itemize}
 
+\vskip.2in
 \textbf{Editor Point 8}:\\
 The way you write the key program in (9)-(11) is confusing because you have an ``e" floating around, and it is not clear where it should be evaluated. Unless I am missing something, in some places this should be $\ov{e}(\tau^a)$ and in other places it should be $e^a$. It would also be helpful to write $e^a$ as a function of $tau^a$. Since the choice variable in the program is $\tau^a$, you should make clear what is a function of $\tau^a$ and what is not.
 \begin{itemize}
@@ -138,46 +143,46 @@ The way you write the key program in (9)-(11) is confusing because you have an `
 	\item \textit{I have labeled any $e$ that is not meant to describe a general functional form such as in Assumption 1 as $e_b$. This is what you will now see, for instance, in Equations (10) and (11). Note that the value of $e_b$ that generally of most interest is $\ov{e}(\bta)$, and that in equilibrium $e_b =0$.}
 \end{itemize}
 
+\vskip.2in
 \textbf{Referee 1 Point 3}: \\
 It is assumed that the current legislator evaluates future welfare (i.e., the continuation payoffs) based on the expected preferences of the future government, which will be induced by lobbying efforts in the future. Alternatively, it could be assumed that the current legislator evaluates future profits based on its current preferences. \\
 
 The latter assumption might be more consistent with the premise of the model, which is essentially a decision-making model with time-inconsistent preferences. Moreover, I think the results related to self-enforceability of the agreement will continue to hold if the author adopts the latter assumption. \\
 
-Some discussion of this point could be illuminating. \\
+Some discussion of this point could be illuminating.
 
+\begin{itemize}
+\renewcommand\labelitemi{-}
+	\item \textit{I believe that the setup in the body of the paper is consistent with the ``latter assumption,'' and so I'm happy to read this argument that it is more consistent with the premise of the model. I have labeled this difference as an assumption as to whether the decision-maker is unitary or non-unitary. I believe it is what underlies the concerns of Referee 2 below about the analysis. I have therefore added Appendix B.1 to analyze the `unitary' version of the model. All of the results go through unchanged in a qualitative sense with one small exception: the parameter space over which there is a strictly positive and finite optimal punishment length is smaller in the unitary model. This is a direct result of the fact that the lobbying effort at the time of the break decision does not interact with the lobby's future profits from the point of view of the government.}
+\end{itemize}
+
+\vskip.2in
 \textbf{Referee 2 Point 3}: \\
- I am confused about one basic aspect of the incentive constraint for the legislature. Consider the RHS of (7) on page 16. If the lobby chooses e and the legislature decides to select its best response given e, $\tau^R(e)$, and thereby breaks the agreement, then a T-period punishment is launched in the next period. The notation in (7) (and likewise in (10)) suggests that the lobby continues choosing the same e, thus generating the same gamma(e), during the punishment phase. I don't see why this would be the case. Wouldn't the lobby instead choose the effort level $e_{tw}$ that is determined in the first-order condition given by (6)? And indeed, if we look at the lobby incentive constraint, as given by the RHS of (8) (and likewise in (11))), we see that that constraint does assume that $e_{tw}$ is used by the lobby during the punishment phase. I can't tell exactly what is going on here. There could be an oversight, or I could be misunderstanding the notation. At a minimum, some clarification is needed. \\
+ I am confused about one basic aspect of the incentive constraint for the legislature. Consider the RHS of (7) on page 16. If the lobby chooses e and the legislature decides to select its best response given e, $\tau^R(e)$, and thereby breaks the agreement, then a T-period punishment is launched in the next period. The notation in (7) (and likewise in (10)) suggests that the lobby continues choosing the same e, thus generating the same gamma(e), during the punishment phase. I don't see why this would be the case. Wouldn't the lobby instead choose the effort level $e_{tw}$ that is determined in the first-order condition given by (6)? And indeed, if we look at the lobby incentive constraint, as given by the RHS of (8) (and likewise in (11))), we see that that constraint does assume that $e_{tw}$ is used by the lobby during the punishment phase. I can't tell exactly what is going on here. There could be an oversight, or I could be misunderstanding the notation. At a minimum, some clarification is needed.
+\begin{itemize}
+\renewcommand\labelitemi{-}
+	\item \textit{I agree with you about the effort levels put forth by the lobby. I think the confusion comes from the fact that I did not clearly explain how the assumption of a non-unitary legislature translates into this incentive constraint. In the non-unitary legislature, if the current period incentive constraint evaluated $\ga(\cdot)$ at the future values of lobbying effort, this would be interpreted as the current-period median legislator evaluating the current-period incentive constraint using a mixture of his own weight on import-competing profits with those of the legislators who are median in the future in the trade agreement and trade-war scenarios. The first major step I have taken to clarify the incentive constraint is the analysis in Appendix B.1 of the unitary model (described above), which I would guess is the model you had in mind. I discuss the differences at length in the beginning of that Appendix.} 
+	\item \textit{The second major step I have taken to clarify the incentive constraint is the addition of the following paragraph immediately following Equation 12:}
+	\quote{Note that the median legislator, whose identity is determined by the lobby's effort level $e_b$, evaluates future payoffs according to her own political economy weight, $\ga(e_b)$. Of course, depending on legislator $e_b$'s choice, either legislator $e_a$ or legislator $e_{tw}$ will be the decision maker in those future periods. But legislator $e_b$, who is the decision maker in the current period, maximizes her own welfare given the predicted behavior of future decision makers.}
+\end{itemize}
 
+\vskip.1in
 This consideration also leads to a further concern/question. If my point above is correct and the lobby should be modeled in (7) as choosing $e_{tw}$ in the punishment phase, and if $e_{tw} > e$, then would the legislature ever deviate (even for e in the non-triggering range as currently defined) in order to trigger a trade war and thereby enjoy the higher $e_{tw}$ and thus the higher gamma that the trade war elicits? Recall that $W_{ML}$ is increasing in e as an independent argument. Is this potential incentive captured?
 \begin{itemize}
 \renewcommand\labelitemi{-}
 	\item \textit{That $\ov{e}$ must be greater than $e_{tw}$ is a requirement for a non-trivial trade agreement to be enforceable (see Footnote 22 and the three paragraphs leading up to Result 1), because the \textit{lobby} would always prefer $e_{tw}$ to any lower effort level.}
 \end{itemize}
 
-
+\vskip.2in
 \textbf{Referee 2 Point v}: \\
 Page 20: Related to comment 3 above, I don't follow why in (12) that e can't change from e-bar as we move into the trade war.
-
-\vskip.5in
-\un{My response}:\\
-Under the alternative suggested by Referee 2, Equation (7) would be modified from 
-\begin{multline}
-  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\bta) \geq \\
-	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e),\btw).
-\end{multline}
-to
-\begin{multline}
-  W_\text{ML}(\ga(e),\bta) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e^a),\bta) \geq \\
-	W_\text{ML}(\ga(e),\tau^R(e),\tau^{*a}) + \frac{\de_\text{ML} - \de_\text{ML}^{T+1}}{1-\de_\text{ML}} W_\text{ML}(\ga(e^{tw}),\btw).
-\end{multline}
-
-That is, the current-period median legislator would evaluate the current-period incentive constraint using a mixture of his own weight on import-competing profits and those of the legislators who are median in the future in the trade agreement and trade-war scenarios.
 \begin{itemize}
-	\item What if you don't like the median legislator interpretation and want to think of it as a unitary decision-maker who faces different amounts of lobbying effort?
-		\begin{itemize}
-			\item Think about what would happen in a simpler repeated game...
-		\end{itemize}
+\renewcommand\labelitemi{-}
+	\item \textit{Please see response to} Referee 2 Point 3.
 \end{itemize}
+
+
+
 
 
 \newpage
