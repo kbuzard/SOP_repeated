@@ -845,6 +845,26 @@ The only change is to the expression for $\frac{\partial \ov{e}}{\partial T} \ri
 We do need the condition that $W(\bta) +g(e_a(\tau^a)) > W(\btw) + g(e_{tw})$, that is, that the trade war is actually a punishment for the government. $e_a$ is determined by an equation just like \ref{eq:dgh} but replacing $W(\tau^{opt},\tau^{tw*})$ with $W(\tau^{opt},\tau^{a*})$. The latter is higher, so we must have $W(\bta) +g(e_a(\tau^a)) > W(\btw) + g(e_{tw})$.
 
 In order for a non-trivial trade agreement equilibrium to exist, that is, where $\bta < \btw$, it must be the case that there is a $\bta < \btw$ at which the lobby loses money at every $\left(\tau^b,\ov{e}\right)$ pair that is determined by Expression (\ref{eq:newleg}). As long as it is not profitable for the lobby to induce a break at the pair that maximizes the lobby's profit, this condition is ensured. The conditions for the existence of a non-trivial trade agreement are a bit simpler in the \citet{dgh97}-style model because the determination of $\tau^b$ is more direct.
-		
+
+\subsection{Strong Bindings}
+If the trade agreement involves strong bindings instead of tariff caps (i.e. weak bindings), the legislature must deliver $\tau^a$ and the lobby's optimal effort during a period in which the trade agreement holds is $e_a = 0$. That the lobby pays less---here, nothing---for the protection it receives under the trade agreement is the only change from the base model.
+
+This means that nothing changes in the trade war. Likewise nothing changes in the legislature's repeated-game incentive constraint, and so Lemmas~\ref{lem:et} and \ref{lem:ets} are undisturbed by the change to strong bindings.
+
+It is the lobby's incentive constraint that changes since the lobby no longer need pay $e_a$ for the trade agreement tariff. This makes the lobby's incentive constraint easier to satisfy for strong bindings at a given $\bta$. This can be seen in the next inequality, where the right-hand side of the incentive constraint becomes smaller:
+\begin{multline*}
+	e_b \geq \pi(\tau^b(e_b)) - \pi(\tau^a) + e_a + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) + e_a\right] \\
+		\geq \pi(\tau^b(e_b)) - \pi(\tau^a) + \frac{\de_\text{L} - \de_\text{L}^{T+1}}{1-\de_\text{L}} \left[\pi(\tau^{tw}) -e_{tw} - \pi(\tau^a) \right]
+\end{multline*}
+The lobby's incentive constraint is still satisfied at $\bta = \btn$, so a solution always exists. In order to have an interior solution, it must be that the lobby's constraint is satisfied before $\ov{e}(\bta)$ reaches its peak or that $\ov{e}(\bta)$ does not decrease too quickly after its peak before lobby's constraint can be satisfied.
+
+Because the change to strong bindings does not influence the legislature's incentive constraint, the $\ov{e}(\bta)$ schedule is the same in the weak and strong bindings cases. In both cases, as $\tau^a$ increases, net profits under the trade agreement increase. However, they go up \textit{more} under strong bindings. Because $\ov{e}(\bta)$ is decreasing at the same rate in both cases, a strong-binding agreement in which the lobby is not paying $e_a$ will satisfy the constraint the constraint at a lower level of $\bta$. For some parameter values, there will be a non-trivial trade agreement under strong bindings but not under weak bindings.
+
+Welfare comparisons here are nuanced. From the point of view of a welfare-maximizing executive, welfare is higher under the strong-binding agreement because lower trade agreement tariffs can be self-enforced.
+
+Turning to the median legislator during the trade agreement phase, it depends upon the comparison we make. Under the weak-binding agreement, the median legislator is chosen to match the tariff that will be applied, that is $e_a$ to match $\tau^a$. Under the strong-binding agreement, $\tau^a$ will still be applied, but the median legislator is the one associated with $e=0$ who prefers a lower tariff. Under the weak-binding agreement, the tariff is political efficient in that it matches the political-economy weight of the decision maker. Under the strong-binding agreement, the tariff is no longer politically efficient in this sense. Instead, there's a mismatch between the tariff and $\ga(0)$. Thus the median legislator when bindings are weak would tend to experience a reduction in welfare because the trade agreement tariff is being reduced below her optimal unilateral tariff; typically this reduction will not be outweighed by the increase in welfare of reducing the foreign tariff. From the point of view of the median legislator under the strong binding---the legislator identified by $\ga(0)$---the strong-binding trade agreement tariff is unambiguously better in welfare terms.
+
+As in \citet{mrc2007}, tariff caps in this model serve to keep the lobby `in the game.' Although the lobby's self-enforcement constraint is not binding in equilibrium, a tariff cap makes the lobby's self-enforcement constraint harder to satisfy and thus requires a higher trade agreement tariff for self-enforcement. From the ex-ante point of view, that of the executives in this model, strong bindings are therefore preferable. Tariff caps could be viewed as a way to commit to setting higher trade agreement tariffs and therefore as a mechanism for ensuring that rents are distributed to protectionists ex-post.
+
 \end{document}
 
