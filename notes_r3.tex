@@ -55,6 +55,8 @@ bookmarksopen=true]{hyperref}
 \begin{document}
 Dear Editor and Referees, \\
 
+I really appreciate just how closely you have read the manuscript. \\
+
 I am yet again grateful for your very constructive feedback on this manuscript. I have ... \\
 
 What hasn't changed ...  \\
@@ -78,20 +80,31 @@ The "non-unitary" interpretation of your model is not entirely clear to me. When
 \end{comment}
 
 
+\newpage
+\section{Clarify definition of break tariff}
+\textbf{Referee 2 Point 1}:\\
+It seems that that (7) implicitly assumes that $\tau^R(e_b) > \tau^a$. Is that right? If so, please be explicit.
+
+%\begin{itemize}
+%\renewcommand\labelitemi{-}
+%	\item \textit{I }
+%\end{itemize}
+
+
 \vskip.5in
 \section{Clarify statement of lobby's incentive constraint}
 \textbf{Editor Point 2}:\\
-I think the way you write and analyse the lobby's incentive constraint is still not very clear. I would explain things in the following sequence: (a) the relevant level of $e_b$ in constraint (8) is the best deviation effort, i.e. the optimal effort conditional on inducing a break of the agreement; (b) the best deviation effort is given by $max{e_{tw},e^bar(\tau^a)}$; (c) in order for a non-trivial agreement to be possible, there must exist some $\tau^a< \tau^{tw}$ such that $e_{tw}<e^bar(\tau^a)$; (d) to avoid any confusion, I would write constraint (13) evaluated at $\max{e_{tw},e^bar(\tau^a)}$, rather than at $e^bar(\tau^a)$. Part of the reason I found the current exposition confusing is that your constraint (13) assumes $e_{tw}<e^bar(\tau^a)$, but this restriction is imposed and discussed only after writing constraint (13). \\
+I think the way you write and analyse the lobby's incentive constraint is still not very clear. I would explain things in the following sequence: (a) the relevant level of $e_b$ in constraint (8) is the best deviation effort, i.e. the optimal effort conditional on inducing a break of the agreement; (b) the best deviation effort is given by $\max \left\{e_{tw},\ov{e}(\tau^a)\right\}$; (c) in order for a non-trivial agreement to be possible, there must exist some $\tau^a< \tau^{tw}$ such that $e_{tw}<\ov{e}(\tau^a)$; (d) to avoid any confusion, I would write constraint (13) evaluated at $\max \left\{e_{tw},\ov{e}(\tau^a)\right\}$, rather than at $\ov{e}(\tau^a)$. Part of the reason I found the current exposition confusing is that your constraint (13) assumes $e_{tw}<\ov{e}(\tau^a)$, but this restriction is imposed and discussed only after writing constraint (13). \\
 
-\vskip.2in
+\vskip.4in
 \textbf{Referee 2 Point 3}:\\
 I believe (8) only need hold for $e_b \geq \ov{e}(\tau^a)$. I believe (8) would fail for $e_b = \ov{e}(\tau^a) - \varepsilon$, right? This seems confusing because (8) seems to be stated for any $e_b$.
 
-\vskip.2in
+\vskip.4in
 \textbf{Referee 2 Point 5}:\\
 I found the program on page 18 a little confusing. Equation (11) puts a constraint on $e_b$, essentially requiring that $e_b \geq \ov{e}(\tau^a)$ if I understand. Equation (10) seems to be directed toward a value for $e_b$ such as $e_a(\tau^a)$; that is used on the equilibrium path. If we were to take the program as a mathematical object, (11) would seem to define the range of $e_b$ that is to be considered in (10). I don't think that is what is intended. I think it might be easier to define the program using $\ov{e}(\tau^a)$ instead of waiting to define that function later.
 
-\vskip.2in
+\vskip.4in
 \textbf{Referee 2 Point 6}:\\
 Equations (12) and (13) finally define the IC constraints using $\ov{e}(\tau^a)$. In comparison to (7) - (10), (12) replaces $\tau^R(e_b)$ with $\tau^b(\ov{e})$. Is there a difference between the $\tau^R$ and $\tau^b$ functions? If these are referring to the same functions, I suggest sticking with the former notation so as to minimize the burden on the reader. A similar remark applies to (13) in relation to (8) - (11).
 
@@ -108,7 +121,7 @@ Equations (12) and (13) finally define the IC constraints using $\ov{e}(\tau^a)$
 Probably I am missing something, but I find the argument in paragraph 4 of page 19 confusing. You say that in the punishment phase the lobby chooses some effort level weakly higher than $e_{tw}$. But consider an extremely high level of effort: how can this be credible? And how is this statement consistent with (7) and (8), where the punishment effort is $e_{tw}$? And don't you need to pin down the exact level of effort in the punishment phase in order to write the incentive constraints?
 \begin{itemize}
 \renewcommand\labelitemi{-}
-	\item \textit{I've }
+	\item \textit{I've changed the passage to specify that the lobby chooses exactly $e_{tw}$ and that the legislature best responds. In an earlier version with more complicated punishments, the more general specification helped to simplify the `punishments for the punishments' layer of analysis, but this is no longer necessary (equilibrium behavior was still the same, but it's quite true that I did not state this clearly). Thank you for pointing this out.}
 \end{itemize}
 
 \begin{comment}
@@ -194,17 +207,7 @@ The paper still has various typos and a thorough proofreading is needed.
 \end{itemize}
 
 
-\vskip.5in
-\section{Clarify definition of break tariff}
-\textbf{Referee 2 Point 1}:\\
-It seems that that (7) implicitly assumes that $\tau^R(e_b) > \tau^a$. Is that right? If so, please be explicit.
-
-\begin{itemize}
-\renewcommand\labelitemi{-}
-	\item \textit{I }
-\end{itemize}
-
-
+\begin{comment}
 \vskip.5in
 \section{Reconsider labeling of break effort level}
 \textbf{Referee 2 Point 2}:\\
@@ -214,7 +217,7 @@ It is a little awkward to use $e_b$ to call to mind a ``break'' when under (7) w
 \renewcommand\labelitemi{-}
 	\item \textit{I agree that this is awkward. I have tried to come up with some terminology and notation that means ``tries to disrupt the agreement but is not necessarily successful. I have not been at all successful. I apologize.}
 \end{itemize}
-
+\end{comment}
 
 \vskip.5in
 \section{Add graph?}
